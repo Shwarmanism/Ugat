@@ -1,0 +1,2 @@
+# Ugat
+Filipino-Dialect Lemmatizer
