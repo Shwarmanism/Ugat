@@ -1,0 +1,67 @@
+{
+  "VERB": {
+    "prefix_rules": [
+      { "prefix": "ag", "replace_with": "" },
+      { "prefix": "nag", "replace_with": "" },
+      { "prefix": "mang", "replace_with": "" },
+      { "prefix": "manag", "replace_with": "" },
+      { "prefix": "ma", "replace_with": "" },
+      { "prefix": "naka", "replace_with": "" },
+      { "prefix": "maka", "replace_with": "" },
+      { "prefix": "na", "replace_with": "" },
+      { "prefix": "pa", "replace_with": "" },
+      { "prefix": "paka", "replace_with": "" },
+      { "prefix": "panag", "replace_with": "" },
+      { "prefix": "pang", "replace_with": "" },
+      { "prefix": "ipan", "replace_with": "" },
+      { "prefix": "i", "replace_with": "" },
+      { "prefix": "in", "replace_with": "" }
+    ],
+    "infix_rules": [
+      { "infix": "in", "replace_with": "" }  
+    ],
+    "suffix_rules": [
+      { "suffix": "en", "replace_with": "" },
+      { "suffix": "an", "replace_with": "" },
+      { "suffix": "an", "replace_with": "" },
+      { "suffix": "em", "replace_with": "" },
+      { "suffix": "am", "replace_with": "" }
+    ],
+    "reduplication_rules": [
+      { "pattern": "CV-redup", "apply": "remove_first_syllable" },
+      { "pattern": "CVC-redup", "apply": "remove_CVC_redup" }
+    ]
+  },
+
+  "NOUN": {
+    "prefix_rules": [
+      { "prefix": "ka", "replace_with": "" },
+      { "prefix": "pag", "replace_with": "" },
+      { "prefix": "panag", "replace_with": "" },
+      { "prefix": "paka", "replace_with": "" },
+      { "prefix": "taga", "replace_with": "" },
+      { "prefix": "mang", "replace_with": "" },
+      { "prefix": "manag", "replace_with": "" }
+    ],
+    "suffix_rules": [
+      { "suffix": "an", "replace_with": "" },
+      { "suffix": "na", "replace_with": "" },
+      { "suffix": "ko", "replace_with": "" },
+      { "suffix": "mo", "replace_with": "" },
+      { "suffix": "da", "replace_with": "" }
+    ],
+    "infix_rules": []
+  },
+
+  "ADJ": {
+    "prefix_rules": [
+      { "prefix": "naka", "replace_with": "" },
+      { "prefix": "nag", "replace_with": "" },
+      { "prefix": "napa", "replace_with": "" },
+      { "prefix": "napaka", "replace_with": "" },
+      { "prefix": "ma", "replace_with": "" }
+    ],
+    "suffix_rules": [],
+    "infix_rules": []
+  }
+}

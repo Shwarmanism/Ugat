@@ -1,0 +1,24 @@
+{
+  "language": "ilocano",
+  "rules": {
+    "prefixes": [
+      "ag", "nag", "mang", "ma", "na", "pa", "pag", "maki",
+      "makapag", "um", "mangipa", "mangi", "maka", "naka"
+    ],
+    "suffixes": [
+      "en", "an", "em", "en", "na", "yo"
+    ],
+    "infixes": [
+      "in", "um"
+    ],
+    "reduplication": {
+      "cv": true,
+      "cvc": true,
+      "full": true
+    },
+    "special_rules": {
+      "vowel_shift": ["a-e", "o-u"],
+      "imperatives": ["ka"]
+    }
+  }
+}

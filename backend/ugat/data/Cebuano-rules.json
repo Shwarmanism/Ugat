@@ -1,0 +1,24 @@
+{
+  "language": "cebuano",
+  "rules": {
+    "prefixes": [
+      "ma", "mag", "nag", "mi", "ni", "mo", "maka", "nakig", "makig", "naka",
+      "pa", "pag", "pang", "pamang", "tag", "taga", "ka", "tiga"
+    ],
+    "suffixes": [
+      "on", "an", "hon", "i", "a", "ay", "ha"
+    ],
+    "infixes": [
+      "um", "in", "gin"
+    ],
+    "reduplication": {
+      "cv": true,
+      "cvc": true,
+      "full": true
+    },
+    "special_rules": {
+      "vowel_shift": ["o-u", "e-i"],
+      "imperatives": ["a", "ha"]
+    }
+  }
+}

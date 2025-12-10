@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ugat - Philippine Dialect Lemmatizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="pattern-header"></div>
+    
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo" onclick="showPage('home')">
+                <svg class="logo-icon" viewBox="0 0 100 100" fill="currentColor">
+                    <path d="M50 90 L50 50 M50 50 L30 30 M50 50 L70 30 M30 30 L20 40 M70 30 L80 40 M50 50 L50 10" stroke="currentColor" stroke-width="4" fill="none"/>
+                    <circle cx="50" cy="10" r="5" fill="currentColor"/>
+                    <circle cx="20" cy="40" r="4" fill="currentColor"/>
+                    <circle cx="80" cy="40" r="4" fill="currentColor"/>
+                </svg>
+                UGAT
+            </a>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('settings')">Settings</a></li>
+                <li><a href="#" onclick="showPage('history')">History</a></li>
+                <li><a href="#" onclick="showPage('lexicon')">Lexicon</a></li>
+                <li><a href="#" onclick="showPage('about')">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <div class="container">
+            <div class="hero">
+                <h1>
+                    <svg class="root-icon" viewBox="0 0 100 100" fill="currentColor">
+                        <path d="M50 90 L50 50 M50 50 L25 25 M50 50 L75 25 M25 25 L10 35 M75 25 L90 35 M50 50 L35 65 M50 50 L65 65" stroke="#7cb342" stroke-width="5" fill="none"/>
+                        <circle cx="50" cy="10" r="8" fill="#ffc107"/>
+                        <circle cx="10" cy="35" r="6" fill="#7cb342"/>
+                        <circle cx="90" cy="35" r="6" fill="#7cb342"/>
+                        <circle cx="35" cy="65" r="5" fill="#7cb342"/>
+                        <circle cx="65" cy="65" r="5" fill="#7cb342"/>
+                    </svg>
+                    UGAT
+                </h1>
+                <p class="tagline">A Philippine Dialect Lemmatizer for Tagalog, Cebuano, and Ilocano</p>
+                <p class="subtext">Supports affix stripping, morphological analysis, and dialect-specific lemma generation.</p>
+            </div>
+
+            <div class="animation" id="animationDemo"></div>
+
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="userInput">Enter your text:</label>
+                    <textarea id="userInput" placeholder="Paste or type your word/sentence here...
+Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="dialectSelect">Select Dialect:</label>
+                    <select id="dialectSelect">
+                        <option value="auto">Auto-detect</option>
+                        <option value="tagalog">Tagalog</option>
+                        <option value="cebuano">Cebuano</option>
+                        <option value="ilocano">Ilocano</option>
+                    </select>
+                </div>
+
+                <div class="btn-center">
+                    <button class="btn" onclick="lemmatize()">Lemmatize</button>
+                </div>
+            </div>
+
+            <div class="results-section" id="resultsSection">
+                <div class="summary-panel">
+                    <div class="summary-item">
+                        <div class="summary-label">Detected Dialect</div>
+                        <div class="summary-value" id="detectedDialect">—</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-label">Tokens Processed</div>
+                        <div class="summary-value" id="tokensProcessed">0</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-label">Total Lemmas</div>
+                        <div class="summary-value" id="totalLemmas">0</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-label">Irregular Words</div>
+                        <div class="summary-value" id="irregularWords">0</div>
+                    </div>
+                </div>
+
+                <div class="results-table">
+                    <h2 style="margin-bottom: 1.5rem; color: var(--deep-brown);">Token Analysis</h2>
+                    <table id="resultsTable">
+                        <thead>
+                            <tr>
+                                <th>Token</th>
+                                <th>POS Tag</th>
+                                <th>Affixes Detected</th>
+                                <th>Candidate Roots</th>
+                                <th>Final Lemma</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsBody"></tbody>
+                    </table>
+                </div>
+
+                <div class="breakdown-section" id="breakdownSection">
+                    <h2 style="margin-bottom: 1.5rem; color: var(--deep-brown);">Morphological Breakdown</h2>
+                    <div id="breakdownContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SETTINGS PAGE -->
+    <div id="settings" class="page">
+        <div class="container">
+            <h1 style="margin-bottom: 2rem;">Settings</h1>
+            <div class="settings-panel">
+                <div class="settings-grid">
+                    <div class="settings-group">
+                        <h3>Dialect Preference</h3>
+                        <select id="settingsDialect" style="width: 100%;">
+                            <option value="auto">Auto-detect (default)</option>
+                            <option value="tagalog">Tagalog</option>
+                            <option value="cebuano">Cebuano</option>
+                            <option value="ilocano">Ilocano</option>
+                        </select>
+                    </div>
+
+                    <div class="settings-group">
+                        <h3>Show Advanced Details</h3>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="showPOS" checked>
+                            <label for="showPOS">Show POS Tags</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="showCandidates" checked>
+                            <label for="showCandidates">Show Candidate Lemmas</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="showRules" checked>
+                            <label for="showRules">Show affix rules used</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="showLexicon" checked>
+                            <label for="showLexicon">Show lexicon hits</label>
+                        </div>
+                    </div>
+
+                    <div class="settings-group">
+                        <h3>Preprocessing Options</h3>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="removePunctuation" checked>
+                            <label for="removePunctuation">Remove punctuation</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="normalizeCaps" checked>
+                            <label for="normalizeCaps">Normalize capitalization</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="removeNumbers" checked>
+                            <label for="removeNumbers">Remove numbers</label>
+                        </div>
+                    </div>
+
+                    <div class="settings-group">
+                        <h3>Output Format</h3>
+                        <select id="outputFormat" style="width: 100%;">
+                            <option value="table">Table view</option>
+                            <option value="text">Text format</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HISTORY PAGE -->
+    <div id="history" class="page">
+        <div class="container">
+            <h1 style="margin-bottom: 2rem;">Processing History</h1>
+            <div id="historyContent">
+                <div class="history-item">
+                    <div class="history-text">"Ang batang naglalaro sa labas"</div>
+                    <div class="history-meta">→ lemmas: bata, laro, labas (Tagalog) • 2 minutes ago</div>
+                </div>
+                <div class="history-item">
+                    <div class="history-text">"Nagkaon na ko ug bugas"</div>
+                    <div class="history-meta">→ lemmas: kaon, bugas (Cebuano) • 15 minutes ago</div>
+                </div>
+                <div class="history-item">
+                    <div class="history-text">"Mapan kami idiay merkado"</div>
+                    <div class="history-meta">→ lemmas: pan, merkado (Ilocano) • 1 hour ago</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LEXICON PAGE -->
+    <div id="lexicon" class="page">
+        <div class="container">
+            <h1 style="margin-bottom: 2rem;">Lexicon Viewer</h1>
+            <div class="input-section">
+                <input type="text" id="lexiconSearch" placeholder="Search root words, affixes, or irregular forms..." style="width: 100%; padding: 1rem; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                
+                <div style="margin-top: 2rem;">
+                    <button class="btn" style="margin-right: 1rem;" onclick="showLexiconTab('roots')">Root Words</button>
+                    <button class="btn" style="margin-right: 1rem; background: var(--deep-brown);" onclick="showLexiconTab('irregular')">Irregular Words</button>
+                    <button class="btn" style="background: var(--gold); color: var(--deep-brown);" onclick="showLexiconTab('affixes')">Affix Rules</button>
+                </div>
+
+                <div class="results-table" style="margin-top: 2rem;">
+                    <div id="lexiconTableContent">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Word</th>
+                                    <th>Dialect</th>
+                                    <th>POS</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>basa</td>
+                                    <td>Tagalog</td>
+                                    <td>Verb</td>
+                                    <td>Root word: to read</td>
+                                </tr>
+                                <tr>
+                                    <td>lakad</td>
+                                    <td>Tagalog</td>
+                                    <td>Verb</td>
+                                    <td>Root word: to walk</td>
+                                </tr>
+                                <tr>
+                                    <td>bata</td>
+                                    <td>Tagalog</td>
+                                    <td>Noun</td>
+                                    <td>Root word: child</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="about" class="page">
+        <div class="container">
+            <div class="about-section">
+                <h2>Project Background</h2>
+                <p>The modern landscape of Natural Language Processing (NLP) remains heavily skewed toward high-resource languages like English. Philippine languages, including major dialects such as Tagalog, Cebuano, and Ilocano, distinctly exemplify the challenge of processing low-resource languages with rich, agglutinative morphology.</p>
+                <p><strong>Ugat</strong> is an intelligent system specifically designed to accurately detect and transform inflected or derived words across major Philippine dialects into their fundamental root or base forms. By providing a dedicated solution for morphological processing, Ugat aims to bridge the gap and enhance NLP performance for these underserved languages.</p>
+            </div>
+
+            <div class="about-section">
+                <h2>The NLP Problem We Address</h2>
+                <p>Philippine languages are characterized by complex word variations systematically derived from a single root through prefixes, infixes, suffixes, and reduplication. For example, the Tagalog root word <em>basa</em> (read) can transform into:</p>
+                <ul style="margin-left: 2rem; margin-top: 1rem;">
+                    <li><strong>nagbasa</strong> — read (past tense)</li>
+                    <li><strong>bumabasa</strong> — reading (present tense)</li>
+                    <li><strong>babasahin</strong> — will be read (future tense)</li>
+                </ul>
+                <p style="margin-top: 1rem;">This morphological complexity generates vast vocabulary permutations, making it difficult for standard NLP systems to process them efficiently.</p>
+            </div>
+
+            <div class="about-section">
+                <h2>Languages Supported</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <h3>Tagalog</h3>
+                        <p>Primary language of Metro Manila and surrounding regions</p>
+                    </div>
+                    <div class="team-member">
+                        <h3>Cebuano</h3>
+                        <p>Widely spoken in Visayas and Mindanao regions</p>
+                    </div>
+                    <div class="team-member">
+                        <h3>Ilocano</h3>
+                        <p>Prominent language in northwestern region of Luzon</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h2>Development Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <h3>Danielo Kim Ang</h3>
+                        <p>CCIS, Polytechnic University of the Philippines, Manila</p>
+                    </div>
+                    <div class="team-member">
+                        <h3>Nhico Jhon Paragas</h3>
+                        <p>CCIS, Polytechnic University of the Philippines, Manila</p>
+                    </div>
+                    <div class="team-member">
+                        <h3>Kristine Patoc</h3>
+                        <p>CCIS, Polytechnic University of the Philippines, Manila</p>
+                    </div>
+                    <div class="team-member">
+                        <h3>Isaac Emmanuel Ylanan</h3>
+                        <p>CCIS, Polytechnic University of the Philippines, Manila</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h2>Contact Information</h2>
+                <p><strong>Institution:</strong> College of Computer and Information Sciences (CCIS)<br>
+                Polytechnic University of the Philippines, Manila</p>
+                <p style="margin-top: 1rem;"><strong>Email:</strong> danielokimromero@gmail.com | nj.paragas8@gmail.com | patockristine17@gmail.com | isaacylanan@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Notification Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8">
+                    <circle cx="50" cy="50" r="45"/>
+                    <path d="M30 50 L45 65 L70 35" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h2>Lemmatization Successful!</h2>
+            <p class="success-message">Your text has been processed and analyzed.</p>
+            <div class="success-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="modalTokens">0</span>
+                    <span class="stat-label">Tokens Processed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="modalLemmas">0</span>
+                    <span class="stat-label">Lemmas Found</span>
+                </div>
+            </div>
+            <button class="btn" onclick="closeSuccessModal()">View Results</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Ugat - Philippine Dialect Lemmatizer </p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Empowering low-resource Philippine languages through NLP technology</p>
+        <p>@2025 All rights reserved
+Made by students of Polytechnic University of the Philippines-Manila</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
