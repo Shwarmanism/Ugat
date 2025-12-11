@@ -1,11 +1,12 @@
 import pandas as pd
 import cebuano_affixes
 import unicodedata
-
+import os
 # ==========================================
 # 1. SETUP & LOADING
 # ==========================================
-DB_FILE = 'cebuano_roots_final.xlsx'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_FILE = os.path.join(BASE_DIR, 'cebuano_roots_final.xlsx')
 
 print(f"Loading Root Database from {DB_FILE}...")
 try:
