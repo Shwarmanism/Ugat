@@ -1,0 +1,582 @@
+{
+    "napan": {
+        "equivalent": "mapan",
+        "pos": "VERB"
+    },
+    "immay": {
+        "equivalent": "umay",
+        "pos": "VERB"
+    },
+    "innala": {
+        "equivalent": "alaen",
+        "pos": "VERB"
+    },
+    "inikkán": {
+        "equivalent": "ited",
+        "pos": "VERB"
+    },
+    "neggaw": {
+        "equivalent": "agawid",
+        "pos": "VERB"
+    },
+    "naggapu": {
+        "equivalent": "aggapu",
+        "pos": "VERB"
+    },
+    "naggawid": {
+        "equivalent": "agawid",
+        "pos": "VERB"
+    },
+    "naggibu": {
+        "equivalent": "agibu",
+        "pos": "VERB"
+    },
+    "nagbuneng": {
+        "equivalent": "agbuneng",
+        "pos": "VERB"
+    },
+    "nagkita": {
+        "equivalent": "agkita",
+        "pos": "VERB"
+    },
+    "nagaramid": {
+        "equivalent": "agar-aramid",
+        "pos": "VERB"
+    },
+    "nangngeg": {
+        "equivalent": "dengueg",
+        "pos": "VERB"
+    },
+    "nangngegan": {
+        "equivalent": "dengueg",
+        "pos": "VERB"
+    },
+    "immuli": {
+        "equivalent": "umuli",
+        "pos": "VERB"
+    },
+    "imman": {
+        "equivalent": "umann",
+        "pos": "VERB"
+    },
+    "immuliak": {
+        "equivalent": "umuli",
+        "pos": "VERB"
+    },
+    "inkeddeng": {
+        "equivalent": "kedeng",
+        "pos": "VERB"
+    },
+    "nagpaay": {
+        "equivalent": "agpaay",
+        "pos": "VERB"
+    },
+    "nagserbi": {
+        "equivalent": "agserbi",
+        "pos": "VERB"
+    },
+    "ko": {
+        "equivalent": "siak",
+        "pos": "PRON"
+    },
+    "kaniak": {
+        "equivalent": "siak",
+        "pos": "PRON"
+    },
+    "kenka": {
+        "equivalent": "sika",
+        "pos": "PRON"
+    },
+    "na": {
+        "equivalent": "isuna",
+        "pos": "PRON"
+    },
+    "kanyak": {
+        "equivalent": "siak",
+        "pos": "PRON"
+    },
+    "kanyaisuna": {
+        "equivalent": "isuna",
+        "pos": "PRON"
+    },
+    "da": {
+        "equivalent": "isúda",
+        "pos": "PRON"
+    },
+    "mi": {
+        "equivalent": "dakami",
+        "pos": "PRON"
+    },
+    "tayo": {
+        "equivalent": "datayo",
+        "pos": "PRON"
+    },
+    "dai": {
+        "equivalent": "da",
+        "pos": "PRON"
+    },
+    "ida": {
+        "equivalent": "isuda",
+        "pos": "PRON"
+    },
+    "ninno": {
+        "equivalent": "asino",
+        "pos": "PRON"
+    },
+    "ania": {
+        "equivalent": "anya",
+        "pos": "PRON"
+    },
+    "dagitoy": {
+        "equivalent": "daytoy",
+        "pos": "DEM"
+    },
+    "dagita": {
+        "equivalent": "dayta",
+        "pos": "DEM"
+    },
+    "dagidiay": {
+        "equivalent": "daydiay",
+        "pos": "DEM"
+    },
+    "daddiyat": {
+        "equivalent": "daydiay",
+        "pos": "DEM"
+    },
+    "ditoy": {
+        "equivalent": "toy",
+        "pos": "DEM"
+    },
+    "dita": {
+        "equivalent": "ta",
+        "pos": "DEM"
+    },
+    "idiay": {
+        "equivalent": "diay",
+        "pos": "DEM"
+    },
+    "amok": {
+        "equivalent": "ama",
+        "pos": "NOUN"
+    },
+    "inak": {
+        "equivalent": "ina",
+        "pos": "NOUN"
+    },
+    "anakko": {
+        "equivalent": "anak",
+        "pos": "NOUN"
+    },
+    "balayko": {
+        "equivalent": "balay",
+        "pos": "NOUN"
+    },
+    "asok": {
+        "equivalent": "aso",
+        "pos": "NOUN"
+    },
+    "imbagána": {
+        "equivalent": "baga",
+        "pos": "VERB"
+    },
+    "intedna": {
+        "equivalent": "ited",
+        "pos": "VERB"
+    },
+    "imbagánna": {
+        "equivalent": "baga",
+        "pos": "VERB"
+    },
+    "nasaysayaat": {
+        "equivalent": "nasayaat",
+        "pos": "ADJ"
+    },
+    "nababa": {
+        "equivalent": "baba",
+        "pos": "ADJ"
+    },
+    "naimbag": {
+        "equivalent": "imbag",
+        "pos": "ADJ"
+    },
+    "kadakkelan": {
+        "equivalent": "dakkel",
+        "pos": "ADJ"
+    },
+    "kabassitan": {
+        "equivalent": "bassit",
+        "pos": "ADJ"
+    },
+    "kasla": {
+        "equivalent": "awan",
+        "pos": "ADJ"
+    },
+    "ngem": {
+        "equivalent": "ngem",
+        "pos": "ADJ"
+    },
+    "saan": {
+        "equivalent": "saan",
+        "pos": "ADJ"
+    },
+    "kasta": {
+        "equivalent": "kas",
+        "pos": "ADV"
+    },
+    "kasano": {
+        "equivalent": "kas",
+        "pos": "ADV"
+    },
+    "uray": {
+        "equivalent": "awan",
+        "pos": "ADV"
+    },
+    "gapu": {
+        "equivalent": "gapu",
+        "pos": "CONJ"
+    },
+    "isu met": {
+        "equivalent": "isu",
+        "pos": "PRON+PART"
+    },
+    "ketdi": {
+        "equivalent": "ket",
+        "pos": "PART"
+    },
+    "nagna": {
+        "equivalent": "agna",
+        "pos": "VERB"
+    },
+    "nagtakder": {
+        "equivalent": "agtakder",
+        "pos": "VERB"
+    },
+    "immulog": {
+        "equivalent": "umulog",
+        "pos": "VERB"
+    },
+    "immulogak": {
+        "equivalent": "umulog",
+        "pos": "VERB"
+    },
+    "immanayon": {
+        "equivalent": "umayon",
+        "pos": "VERB"
+    },
+    "immalig": {
+        "equivalent": "umalig",
+        "pos": "VERB"
+    },
+    "nangrugi": {
+        "equivalent": "rugi",
+        "pos": "VERB"
+    },
+    "innallukoy": {
+        "equivalent": "alukoy",
+        "pos": "VERB"
+    },
+    "nangipatakder": {
+        "equivalent": "itakder",
+        "pos": "VERB"
+    },
+    "nangipukaw": {
+        "equivalent": "ipukaw",
+        "pos": "VERB"
+    },
+    "innala dagitoy": {
+        "equivalent": "alaen",
+        "pos": "VERB"
+    },
+    "nagpuon": {
+        "equivalent": "puon",
+        "pos": "VERB"
+    },
+    "innawid": {
+        "equivalent": "awid",
+        "pos": "VERB"
+    },
+    "umaddang": {
+        "equivalent": "addang",
+        "pos": "VERB"
+    },
+    "nagidda": {
+        "equivalent": "agidda",
+        "pos": "VERB"
+    },
+    "immides": {
+        "equivalent": "umides",
+        "pos": "VERB"
+    },
+    "nangnangruna": {
+        "equivalent": "nangruna",
+        "pos": "VERB"
+    },
+    "naggugudua": {
+        "equivalent": "agduadua",
+        "pos": "VERB"
+    },
+    "nangus-usar": {
+        "equivalent": "usar",
+        "pos": "VERB"
+    },
+    "immasideg": {
+        "equivalent": "umasideg",
+        "pos": "VERB"
+    },
+    "innabong": {
+        "equivalent": "abong",
+        "pos": "VERB"
+    },
+    "nangabak": {
+        "equivalent": "abak",
+        "pos": "VERB"
+    },
+    "immay-adiay": {
+        "equivalent": "umay",
+        "pos": "VERB"
+    },
+    "innala'k": {
+        "equivalent": "alaen",
+        "pos": "VERB"
+    },
+    "inikkátayo": {
+        "equivalent": "ited",
+        "pos": "VERB"
+    },
+    "naggibuk": {
+        "equivalent": "agibu",
+        "pos": "VERB"
+    },
+    "immayda": {
+        "equivalent": "umay",
+        "pos": "VERB"
+    },
+    "immayko": {
+        "equivalent": "umay",
+        "pos": "VERB"
+    },
+    "inkanto": {
+        "equivalent": "ited",
+        "pos": "VERB"
+    },
+    "intedko": {
+        "equivalent": "ited",
+        "pos": "VERB"
+    },
+    "intedda": {
+        "equivalent": "ited",
+        "pos": "VERB"
+    },
+    "pinagpukawda": {
+        "equivalent": "ipukaw",
+        "pos": "VERB"
+    },
+    "nangngegda": {
+        "equivalent": "dengueg",
+        "pos": "VERB"
+    },
+    "dagitoyen": {
+        "equivalent": "daytoy",
+        "pos": "DEM"
+    },
+    "dagitadi": {
+        "equivalent": "dayta",
+        "pos": "DEM"
+    },
+    "ditan": {
+        "equivalent": "dita",
+        "pos": "DEM"
+    },
+    "idiayen": {
+        "equivalent": "idiay",
+        "pos": "DEM"
+    },
+    "daytoy met": {
+        "equivalent": "daytoy",
+        "pos": "DEM"
+    },
+    "dayta met": {
+        "equivalent": "dayta",
+        "pos": "DEM"
+    },
+    "dagidiay met": {
+        "equivalent": "daydiay",
+        "pos": "DEM"
+    },
+    "ditatta": {
+        "equivalent": "dita",
+        "pos": "DEM"
+    },
+    "balaymi": {
+        "equivalent": "balay",
+        "pos": "NOUN"
+    },
+    "balayna": {
+        "equivalent": "balay",
+        "pos": "NOUN"
+    },
+    "tugotmo": {
+        "equivalent": "tugot",
+        "pos": "NOUN"
+    },
+    "tugotko": {
+        "equivalent": "tugot",
+        "pos": "NOUN"
+    },
+    "tugotna": {
+        "equivalent": "tugot",
+        "pos": "NOUN"
+    },
+    "asoda": {
+        "equivalent": "aso",
+        "pos": "NOUN"
+    },
+    "ina'mi": {
+        "equivalent": "ina",
+        "pos": "NOUN"
+    },
+    "anakmi": {
+        "equivalent": "anak",
+        "pos": "NOUN"
+    },
+    "anakna": {
+        "equivalent": "anak",
+        "pos": "NOUN"
+    },
+    "ammoda": {
+        "equivalent": "ammot",
+        "pos": ["VERB", "NOUN"]
+    },
+    "nalaing": {
+        "equivalent": "laing",
+        "pos": "ADJ"
+    },
+    "nangnangato": {
+        "equivalent": "ngato",
+        "pos": "ADJ"
+    },
+    "napaay": {
+        "equivalent": "paay",
+        "pos": "ADJ"
+    },
+    "nasuput": {
+        "equivalent": "suput",
+        "pos": "ADJ"
+    },
+    "napudot": {
+        "equivalent": "pudot",
+        "pos": "ADJ"
+    },
+    "nasipnget": {
+        "equivalent": "sipnget",
+        "pos": "ADJ"
+    },
+    "napigsa": {
+        "equivalent": "pigsá",
+        "pos": "ADJ"
+    },
+    "narigat": {
+        "equivalent": "rigat",
+        "pos": "ADJ"
+    },
+    "napait": {
+        "equivalent": "pait",
+        "pos": "ADJ"
+    },
+    "nasadot": {
+        "equivalent": "sadot",
+        "pos": "ADJ"
+    },
+    "ngem ket": {
+        "equivalent": "ngem",
+        "pos": "CONJ"
+    },
+    "ngata met": {
+        "equivalent": "ngata",
+        "pos": "PART"
+    },
+    "uray met": {
+        "equivalent": "uray",
+        "pos": "PART"
+    },
+    "ngem pay": {
+        "equivalent": "ngem",
+        "pos": "CONJ"
+    },
+    "ket met": {
+        "equivalent": "ket",
+        "pos": "CONJ"
+    },
+    "uray pay": {
+        "equivalent": "uray",
+        "pos": "ADV"
+    },
+    "sabali pay": {
+        "equivalent": "sabali",
+        "pos": "ADJ"
+    },
+    "ania ngarud": {
+        "equivalent": "ania",
+        "pos": "WH"
+    },
+    "asinoman": {
+        "equivalent": "asino",
+        "pos": "WH"
+    },
+    "imbatog": {
+        "equivalent": "mano",
+        "pos": "WH"
+    },
+    "manu met": {
+        "equivalent": "manu",
+        "pos": "WH"
+    },
+    "idi mano": {
+        "equivalent": "mano",
+        "pos": "WH"
+    },
+    "kasano met": {
+        "equivalent": "kasano",
+        "pos": "WH"
+    },
+    "adda pay": {
+        "equivalent": "adda",
+        "pos": "VERB"
+    },
+    "awan met": {
+        "equivalent": "awan",
+        "pos": "ADV"
+    },
+    "saan met": {
+        "equivalent": "saan",
+        "pos": ["ADJ", "ADV"]
+    },
+    "saanen": {
+        "equivalent": "saan",
+        "pos": "ADJ"
+    },
+    "wenno": {
+        "equivalent": "wen",
+        "pos": "ADV"
+    },
+    "wen met": {
+        "equivalent": "wen",
+        "pos": "ADV"
+    },
+    "lattan": {
+        "equivalent": "la",
+        "pos": "PART"
+    },
+    "tumatayab": {
+        "equivalent": "tayab",
+        "pos": "VERB"
+    },
+    "sungbat": {
+        "equivalent": "batbat",
+        "pos": "VERB"
+    },
+    "biagko": {
+        "equivalent": "biag",
+        "pos": "NOUN"
+    }
+}
