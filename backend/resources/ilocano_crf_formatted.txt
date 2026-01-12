@@ -1,0 +1,3737 @@
+Adda	adda	add	dda	BOS	ti	VERB
+ti	ti	ti	ti	Adda	balay	DET
+balay	balay	bal	lay	ti	mi	NOUN
+mi	mi	mi	mi	balay	.	PRON
+.	.	.	.	mi	EOS	PUNCT
+
+Naimbag	naimbag	nai	bag	BOS	a	ADJ
+a	a	a	a	Naimbag	bigat	PART
+bigat	bigat	big	at	a	kadakami	NOUN
+kadakami	kadakami	kada	kami	bigat	.	PRON
+.	.	.	.	kadakami	EOS	PUNCT
+
+Agkanta	agkanta	ag	anta	BOS	ti	VERB
+ti	ti	ti	ti	Agkanta	ubing	DET
+ubing	ubing	ubi	bing	ti	iti	NOUN
+iti	iti	iti	iti	ubing	eskuela	PREP
+eskuela	eskuela	esk	uela	iti	.	NOUN
+.	.	.	.	eskuela	EOS	PUNCT
+
+Mangan	mangan	man	gan	BOS	ti	VERB
+ti	ti	ti	ti	Mangan	bagas	DET
+bagas	bagas	bag	gas	ti	isuna	NOUN
+isuna	isuna	isu	na	bagas	.	PRON
+.	.	.	.	isuna	EOS	PUNCT
+
+Aggapu	aggapu	ag	gapu	BOS	ti	VERB
+ti	ti	ti	ti	Aggapu	danum	DET
+danum	danum	dan	num	ti	sadiay	NOUN
+sadiay	sadiay	sad	iay	danum	.	ADV
+.	.	.	.	sadiay	EOS	PUNCT
+
+Napintas	napintas	nap	tas	BOS	ti	ADJ
+ti	ti	ti	ti	Napintas	ubing	DET
+ubing	ubing	ubi	bing	ti	idiay	NOUN
+idiay	idiay	idi	ay	ubing	.	ADV
+.	.	.	.	idiay	EOS	PUNCT
+
+Agtrabaho	agtrabaho	ag	aho	BOS	ni	VERB
+ni	ni	ni	ni	Agtrabaho	tatang	DET
+tatang	tatang	tat	tang	ni	idiay	NOUN
+idiay	idiay	idi	ay	tatang	.	ADV
+.	.	.	.	idiay	EOS	PUNCT
+
+Sumrek	sumrek	sum	rek	BOS	ti	VERB
+ti	ti	ti	ti	Sumrek	lalaki	DET
+lalaki	lalaki	lal	aki	ti	balay	NOUN
+balay	balay	bal	lay	lalaki	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agpasyar	agpasyar	ag	yar	BOS	ti	VERB
+ti	ti	ti	ti	Agpasyar	pamilya	DET
+pamilya	pamilya	pam	ilya	ti	idiay	NOUN
+idiay	idiay	idi	ay	pamilya	.	ADV
+.	.	.	.	idiay	EOS	PUNCT
+
+Dumteng	dumteng	dum	teng	BOS	ti	VERB
+ti	ti	ti	ti	Dumteng	bisita	DET
+bisita	bisita	bis	ita	ti	rabii	NOUN
+rabii	rabii	rab	ii	bisita	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Napudno	napudno	nap	dno	BOS	a	ADJ
+a	a	a	a	Napudno	istoria	PART
+istoria	istoria	ist	oria	a	daytoy	NOUN
+daytoy	daytoy	day	toy	istoria	.	PRON
+.	.	.	.	daytoy	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	ti	VERB
+ti	ti	ti	ti	Agadal	estudiante	DET
+estudiante	estudiante	estu	diante	ti	idiay	NOUN
+idiay	idiay	idi	ay	estudiante	.	ADV
+.	.	.	.	idiay	EOS	PUNCT
+
+Agbakasyon	agbakasyon	agb	kasyon	BOS	ti	VERB
+ti	ti	ti	ti	Agbakasyon	pamilya	DET
+pamilya	pamilya	pam	ilya	ti	baybay	NOUN
+baybay	baybay	bay	bay	pamilya	.	NOUN
+.	.	.	.	baybay	EOS	PUNCT
+
+Nagawid	nagawid	nag	wid	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Nagawid	amma	DET
+amma	amma	amm	ma	dagiti	idiay	NOUN
+idiay	idiay	idi	ay	amma	.	ADV
+.	.	.	.	idiay	EOS	PUNCT
+
+Agsagana	agsagana	ags	gana	BOS	ti	VERB
+ti	ti	ti	ti	Agsagana	lamesa	DET
+lamesa	lamesa	lam	esa	ti	rabii	NOUN
+rabii	rabii	rab	ii	lamesa	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Napno	napno	nap	pno	BOS	ti	ADJ
+ti	ti	ti	ti	Napno	pinggan	DET
+pinggan	pinggan	pin	ggan	ti	danum	NOUN
+danum	danum	dan	num	pinggan	.	NOUN
+.	.	.	.	danum	EOS	PUNCT
+
+Agdalus	agdalus	agd	alus	BOS	ti	VERB
+ti	ti	ti	ti	Agdalus	ubing	DET
+ubing	ubing	ubi	bing	ti	kuarto	NOUN
+kuarto	kuarto	kua	rto	ubing	.	NOUN
+.	.	.	.	kuarto	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	ni	VERB
+ni	ni	ni	ni	Agsao	manong	DET
+manong	manong	man	ong	ni	daytoy	NOUN
+daytoy	daytoy	day	toy	manong	.	PRON
+.	.	.	.	daytoy	EOS	PUNCT
+
+Agsagana	agsagana	ags	gana	BOS	ti	VERB
+ti	ti	ti	ti	Agsagana	rabii	DET
+rabii	rabii	rab	ii	ti	sumaruno	NOUN
+sumaruno	sumaruno	sum	aruno	rabii	.	ADJ
+.	.	.	.	sumaruno	EOS	PUNCT
+
+Agmula	agmula	agm	ula	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agmula	mannigan	DET
+mannigan	mannigan	man	nigan	dagiti	nateng	NOUN
+nateng	nateng	nat	eng	mannigan	.	NOUN
+.	.	.	.	nateng	EOS	PUNCT
+
+Nalaka	nalaka	nal	aka	BOS	ti	ADJ
+ti	ti	ti	ti	Nalaka	trabaho	DET
+trabaho	trabaho	tra	baho	ti	ita	NOUN
+ita	ita	ita	ita	trabaho	.	ADV
+.	.	.	.	ita	EOS	PUNCT
+
+Aggatang	aggatang	agg	atang	BOS	ni	VERB
+ni	ni	ni	ni	Aggatang	nanang	DET
+nanang	nanang	nan	ang	ni	prutas	NOUN
+prutas	prutas	pru	tas	nanang	.	NOUN
+.	.	.	.	prutas	EOS	PUNCT
+
+Aggianus	aggianus	agg	ianus	BOS	ti	VERB
+ti	ti	ti	ti	Aggianus	lalaki	DET
+lalaki	lalaki	lal	aki	ti	dalan	NOUN
+dalan	dalan	dal	lan	lalaki	.	NOUN
+.	.	.	.	dalan	EOS	PUNCT
+
+Napigsa	napigsa	nap	gsa	BOS	ti	ADJ
+ti	ti	ti	ti	Napigsa	hangin	DET
+hangin	hangin	han	gin	ti	rabii	NOUN
+rabii	rabii	rab	ii	hangin	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Agdigos	agdigos	agd	igos	BOS	ti	VERB
+ti	ti	ti	ti	Agdigos	babae	DET
+babae	babae	bab	ae	ti	galad	NOUN
+galad	galad	gal	lad	babae	.	NOUN
+.	.	.	.	galad	EOS	PUNCT
+
+Agbuya	agbuya	agb	uya	BOS	ti	VERB
+ti	ti	ti	ti	Agbuya	pelikula	DET
+pelikula	pelikula	pel	ikula	ti	idiay	NOUN
+idiay	idiay	idi	ay	pelikula	sinehan	NOUN
+sinehan	sinehan	sin	ehan	idiay	.	NOUN
+.	.	.	.	sinehan	EOS	PUNCT
+
+Naglinis	naglinis	nag	linis	BOS	ti	VERB
+ti	ti	ti	ti	Naglinis	silid	DET
+silid	silid	sil	lid	ti	kadakami	NOUN
+kadakami	kadakami	kada	kami	silid	.	PRON
+.	.	.	.	kadakami	EOS	PUNCT
+
+Aguray	aguray	agu	ray	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Aguray	bisita	DET
+bisita	bisita	bis	ita	dagiti	iti	NOUN
+iti	iti	iti	iti	bisita	balay	PREP
+balay	balay	bal	lay	iti	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Nalinteg	nalinteg	nal	integ	BOS	ti	ADJ
+ti	ti	ti	ti	Nalinteg	dalan	DET
+dalan	dalan	dal	lan	ti	ditoy	NOUN
+ditoy	ditoy	dit	toy	dalan	.	ADV
+.	.	.	.	ditoy	EOS	PUNCT
+
+Agbirok	agbirok	agb	irok	BOS	ti	VERB
+ti	ti	ti	ti	Agbirok	sukisok	DET
+sukisok	sukisok	suk	isok	ti	kuarto	NOUN
+kuarto	kuarto	kua	rto	sukisok	.	NOUN
+.	.	.	.	kuarto	EOS	PUNCT
+
+Napnuan	napnuan	nap	nuan	BOS	ti	ADJ
+ti	ti	ti	ti	Napnuan	busog	DET
+busog	busog	bus	sog	ti	kalasag	NOUN
+kalasag	kalasag	kal	asag	busog	.	NOUN
+.	.	.	.	kalasag	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	deng	BOS	ti	VERB
+ti	ti	ti	ti	Agsardeng	tren	DET
+tren	tren	tre	ren	ti	estasion	NOUN
+estasion	estasion	est	asion	tren	.	NOUN
+.	.	.	.	estasion	EOS	PUNCT
+
+Awan	awan	awa	wan	BOS	ti	PART
+ti	ti	ti	ti	Awan	parikut	DET
+parikut	parikut	par	ikot	ti	ita	NOUN
+ita	ita	ita	ita	parikut	.	ADV
+.	.	.	.	ita	EOS	PUNCT
+
+Agkukua	agkukua	agk	kua	BOS	ni	VERB
+ni	ni	ni	ni	Agkukua	agnanayon	DET
+agnanayon	agnanayon	agn	ayon	ni	dayta	NOUN
+dayta	dayta	day	ta	agnanayon	.	PRON
+.	.	.	.	dayta	EOS	PUNCT
+
+Aglako	aglako	agl	ako	BOS	ti	VERB
+ti	ti	ti	ti	Aglako	merkado	DET
+merkado	merkado	mer	kado	ti	prutas	NOUN
+prutas	prutas	pru	tas	merkado	.	NOUN
+.	.	.	.	prutas	EOS	PUNCT
+
+Nalatak	nalatak	nal	atak	BOS	ti	ADJ
+ti	ti	ti	ti	Nalatak	marka	DET
+marka	marka	mar	ka	ti	libro	NOUN
+libro	libro	lib	bro	marka	.	NOUN
+.	.	.	.	libro	EOS	PUNCT
+
+Agdigos	agdigos	agd	igos	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agdigos	sapatos	DET
+sapatos	sapatos	sap	atos	dagiti	rabii	NOUN
+rabii	rabii	rab	ii	sapatos	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Napintas	napintas	nap	tas	BOS	ti	ADJ
+ti	ti	ti	ti	Napintas	pagay	DET
+pagay	pagay	pag	ay	ti	talon	NOUN
+talon	talon	tal	lon	pagay	.	NOUN
+.	.	.	.	talon	EOS	PUNCT
+
+Agsukat	agsukat	ags	ukat	BOS	ti	VERB
+ti	ti	ti	ti	Agsukat	damit	DET
+damit	damit	dam	mit	ti	ubing	NOUN
+ubing	ubing	ubi	bing	damit	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Agluto	agluto	agl	uto	BOS	ti	VERB
+ti	ti	ti	ti	Agluto	nanang	DET
+nanang	nanang	nan	ang	ti	sabong	NOUN
+sabong	sabong	sab	ong	nanang	.	NOUN
+.	.	.	.	sabong	EOS	PUNCT
+
+Nagmula	nagmula	nag	ula	BOS	ti	VERB
+ti	ti	ti	ti	Nagmula	lallaki	DET
+lallaki	lallaki	lal	laki	ti	bagas	NOUN
+bagas	bagas	bag	gas	lallaki	.	NOUN
+.	.	.	.	bagas	EOS	PUNCT
+
+Agdanag	agdanag	agd	anag	BOS	ni	VERB
+ni	ni	ni	ni	Agdanag	ina	DET
+ina	ina	ina	ina	ni	sadiay	NOUN
+sadiay	sadiay	sad	iay	ina	.	ADV
+.	.	.	.	sadiay	EOS	PUNCT
+
+Nabaknang	nabaknang	nab	nang	BOS	ti	ADJ
+ti	ti	ti	ti	Nabaknang	pamilya	DET
+pamilya	pamilya	pam	ilya	ti	probinsia	NOUN
+probinsia	probinsia	pro	binsia	pamilya	.	NOUN
+.	.	.	.	probinsia	EOS	PUNCT
+
+Aguli	aguli	agu	li	BOS	ti	VERB
+ti	ti	ti	ti	Aguli	ubing	DET
+ubing	ubing	ubi	bing	ti	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Nabannog	nabannog	nab	nog	BOS	ti	ADJ
+ti	ti	ti	ti	Nabannog	manong	DET
+manong	manong	man	ong	ti	rabii	NOUN
+rabii	rabii	rab	ii	manong	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Agsalun-at	agsalunat	ags	at	BOS	ti	VERB
+ti	ti	ti	ti	Agsalun-at	ubing	DET
+ubing	ubing	ubi	bing	ti	danum	NOUN
+danum	danum	dan	num	ubing	.	NOUN
+.	.	.	.	danum	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	ni	VERB
+ni	ni	ni	ni	Agserek	kabsat	DET
+kabsat	kabsat	kab	sat	ni	sadiay	NOUN
+sadiay	sadiay	sad	iay	kabsat	.	ADV
+.	.	.	.	sadiay	EOS	PUNCT
+
+Nadumaduma	nadumaduma	nad	duma	BOS	dagiti	ADJ
+dagiti	dagiti	dag	iti	Nadumaduma	bunga	DET
+bunga	bunga	bun	nga	dagiti	uma	NOUN
+uma	uma	uma	uma	bunga	.	NOUN
+.	.	.	.	uma	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	unot	BOS	ni	VERB
+ni	ni	ni	ni	Agpanunot	maestro	DET
+maestro	maestro	mae	stro	ni	leksion	NOUN
+leksion	leksion	lek	sion	maestro	.	NOUN
+.	.	.	.	leksion	EOS	PUNCT
+
+Nasayaat	nasayaat	nas	ayat	BOS	ti	ADJ
+ti	ti	ti	ti	Nasayaat	desision	DET
+desision	desision	des	ision	ti	ita	NOUN
+ita	ita	ita	ita	desision	.	ADV
+.	.	.	.	ita	EOS	PUNCT
+
+Agguudo	agguudo	agg	udo	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agguudo	karayan	DET
+karayan	karayan	kar	ayan	dagiti	nagteng	NOUN
+nagteng	nagteng	nag	teng	karayan	.	ADJ
+.	.	.	.	nagteng	EOS	PUNCT
+
+Aglugan	aglugan	agl	ugan	BOS	ti	VERB
+ti	ti	ti	ti	Aglugan	pasahero	DET
+pasahero	pasahero	pas	hero	ti	dyip	NOUN
+dyip	dyip	dyi	yip	pasahero	.	NOUN
+.	.	.	.	dyip	EOS	PUNCT
+
+Naliday	naliday	nal	iday	BOS	ti	ADJ
+ti	ti	ti	ti	Naliday	musika	DET
+musika	musika	mus	ika	ti	simbaan	NOUN
+simbaan	simbaan	sim	baan	musika	.	NOUN
+.	.	.	.	simbaan	EOS	PUNCT
+
+Agpasiar	agpasiar	agp	asiar	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agpasiar	turista	DET
+turista	turista	tur	ista	dagiti	ili	NOUN
+ili	ili	ili	ili	turista	.	NOUN
+.	.	.	.	ili	EOS	PUNCT
+
+Nagindak	nagindak	nag	indak	BOS	ti	VERB
+ti	ti	ti	ti	Nagindak	motor	DET
+motor	motor	mot	tor	ti	dalan	NOUN
+dalan	dalan	dal	lan	motor	.	NOUN
+.	.	.	.	dalan	EOS	PUNCT
+
+Agbasbasa	agbasbasa	agb	basa	BOS	ni	VERB
+ni	ni	ni	ni	Agbasbasa	estudyante	DET
+estudyante	estudyante	estu	yante	ni	libro	NOUN
+libro	libro	lib	bro	estudyante	.	NOUN
+.	.	.	.	libro	EOS	PUNCT
+
+Nabriskul	nabriskul	nab	skul	BOS	ti	ADJ
+ti	ti	ti	ti	Nabriskul	klima	DET
+klima	klima	kli	ma	ti	ili	NOUN
+ili	ili	ili	ili	klima	.	NOUN
+.	.	.	.	ili	EOS	PUNCT
+
+Agsapa	agsapa	ags	apa	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agsapa	mannalon	DET
+mannalon	mannalon	man	nalon	dagiti	uma	NOUN
+uma	uma	uma	uma	mannalon	.	NOUN
+.	.	.	.	uma	EOS	PUNCT
+
+Naglaba	naglaba	nag	laba	BOS	ti	VERB
+ti	ti	ti	ti	Naglaba	bady	DET
+bady	bady	bad	dy	ti	karayan	NOUN
+karayan	karayan	kar	ayan	bady	.	NOUN
+.	.	.	.	karayan	EOS	PUNCT
+
+Nalinteg	nalinteg	nal	integ	BOS	ti	ADJ
+ti	ti	ti	ti	Nalinteg	desiplina	DET
+desiplina	desiplina	des	iplin	ti	ubing	NOUN
+ubing	ubing	ubi	bing	desiplina	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aggatang	agg	atang	agg	atang	BOS	dagiti
+dagiti	dagiti	dag	iti	Aggatang	mannalon	DET
+mannalon	mannalon	man	nalon	dagiti	bin-i	NOUN
+bin-i	bin-i	bin	i	mannalon	.	NOUN
+.	.	.	.	bin-i	EOS	PUNCT
+
+Agkalkalkal	agkalkalkal	agk	al	BOS	ni	VERB
+ni	ni	ni	ni	Agkalkalkal	pulis	DET
+pulis	pulis	pul	lis	ni	sadiay	NOUN
+sadiay	sadiay	sad	iay	pulis	.	ADV
+.	.	.	.	sadiay	EOS	PUNCT
+
+Nabugnayan	nabugnayan	nab	gnayan	BOS	ti	ADJ
+ti	ti	ti	ti	Nabugnayan	relasyon	DET
+relasyon	relasyon	rel	asyon	ti	pamilya	NOUN
+pamilya	pamilya	pam	ilya	relasyon	.	NOUN
+.	.	.	.	pamilya	EOS	PUNCT
+
+Agsuro	agsuro	ags	uro	BOS	ni	VERB
+ni	ni	ni	ni	Agsuro	maestro	DET
+maestro	maestro	mae	stro	ni	klase	NOUN
+klase	klase	kla	se	maestro	.	NOUN
+.	.	.	.	klase	EOS	PUNCT
+
+Nakurang	nakurang	nak	urang	BOS	ti	ADJ
+ti	ti	ti	ti	Nakurang	oras	DET
+oras	oras	ora	ras	ti	trabaho	NOUN
+trabaho	trabaho	tra	baho	oras	.	NOUN
+.	.	.	.	trabaho	EOS	PUNCT
+
+Agluganan	agluganan	agl	ganan	BOS	ti	VERB
+ti	ti	ti	ti	Agluganan	sakayan	DET
+sakayan	sakayan	sak	ayan	ti	dadilig	NOUN
+dadilig	dadilig	dad	ilig	sakayan	.	NOUN
+.	.	.	.	dadilig	EOS	PUNCT
+
+Namangmang	namangmang	nam	mang	BOS	ti	ADJ
+ti	ti	ti	ti	Namangmang	ubing	DET
+ubing	ubing	ubi	bing	ti	eskuela	NOUN
+eskuela	eskuela	esk	uela	ubing	.	NOUN
+.	.	.	.	eskuela	EOS	PUNCT
+
+Agaramid	agaramid	aga	ramid	BOS	ti	VERB
+ti	ti	ti	ti	Agaramid	proyekto	DET
+proyekto	proyekto	pro	yekto	ti	grupo	NOUN
+grupo	grupo	gru	po	proyekto	.	NOUN
+.	.	.	.	grupo	EOS	PUNCT
+
+Nagpasiar	nagpasiar	nag	asiar	BOS	ni	VERB
+ni	ni	ni	ni	Nagpasiar	bisita	DET
+bisita	bisita	bis	ita	ni	taytay	NOUN
+taytay	taytay	tay	tay	bisita	.	NOUN
+.	.	.	.	taytay	EOS	PUNCT
+
+Agisagana	agisagana	agi	gana	BOS	ti	VERB
+ti	ti	ti	ti	Agisagana	seremonia	DET
+seremonia	seremonia	ser	emonia	ti	simbaan	NOUN
+simbaan	simbaan	sim	baan	seremonia	.	NOUN
+.	.	.	.	simbaan	EOS	PUNCT
+
+Nalaing	nalaing	nal	aing	BOS	ti	ADJ
+ti	ti	ti	ti	Nalaing	estudyante	DET
+estudyante	estudyante	estu	yante	ti	matematika	NOUN
+matematika	matematika	mat	ika	estudyante	.	NOUN
+.	.	.	.	matematika	EOS	PUNCT
+
+Agururay	agururay	agu	ray	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agururay	pasyente	DET
+pasyente	pasyente	pas	yente	dagiti	klinika	NOUN
+klinika	klinika	kli	nika	pasyente	.	NOUN
+.	.	.	.	klinika	EOS	PUNCT
+
+Napateg	napateg	nap	teg	BOS	ti	ADJ
+ti	ti	ti	ti	Napateg	impormasyon	DET
+impormasyon	impormasyon	imp	asyon	ti	tunggal	NOUN
+tunggal	tunggal	tun	gal	impormasyon	.	ADJ
+.	.	.	.	tunggal	EOS	PUNCT
+
+Agdawat	agdawat	agd	awat	BOS	ni	VERB
+ni	ni	ni	ni	Agdawat	empleyado	DET
+empleyado	empleyado	emp	yado	ni	permiso	NOUN
+permiso	permiso	per	miso	empleyado	.	NOUN
+.	.	.	.	permiso	EOS	PUNCT
+
+Nagbanag	nagbanag	nag	banag	BOS	ti	VERB
+ti	ti	ti	ti	Nagbanag	sistema	DET
+sistema	sistema	sis	tema	ti	opisina	NOUN
+opisina	opisina	opi	sina	sistema	.	NOUN
+.	.	.	.	opisina	EOS	PUNCT
+
+Naragsak	naragsak	nar	gsak	BOS	ti	ADJ
+ti	ti	ti	ti	Naragsak	okasion	DET
+okasion	okasion	oka	sion	ti	kasal	NOUN
+kasal	kasal	kas	sal	okasion	.	NOUN
+.	.	.	.	kasal	EOS	PUNCT
+
+Agbiag	agbiag	agb	iag	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agbiag	residente	DET
+residente	residente	res	idente	dagiti	apartemento	NOUN
+apartemento	apartemento	apa	mento	residente	.	NOUN
+.	.	.	.	apartemento	EOS	PUNCT
+
+Nalpalus	nalpalus	nal	palus	BOS	ti	ADJ
+ti	ti	ti	ti	Nalpalus	exam	DET
+exam	exam	exa	am	ti	estudiante	NOUN
+estudiante	estudyante	estu	yante	exam	.	NOUN
+.	.	.	.	estudiante	EOS	PUNCT
+
+Agsukat	agsukat	ags	ukat	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agsukat	produkto	DET
+produkto	produkto	pro	dukto	dagiti	presyo	NOUN
+presyo	presyo	pre	syo	produkto	.	NOUN
+.	.	.	.	presyo	EOS	PUNCT
+
+Naorayan	naorayan	nao	rayan	BOS	ti	ADJ
+ti	ti	ti	ti	Naorayan	serbisyo	DET
+serbisyo	serbisyo	ser	bisyo	ti	kostumer	NOUN
+kostumer	kostumer	kos	tumer	serbisyo	.	NOUN
+.	.	.	.	kostumer	EOS	PUNCT
+
+Agluksong	agluksong	agl	ksong	BOS	ti	VERB
+ti	ti	ti	ti	Agluksong	atleta	DET
+atleta	atleta	atl	eta	ti	court	NOUN
+court	court	cou	urt	atleta	.	NOUN
+.	.	.	.	court	EOS	PUNCT
+
+Nasken	nasken	nas	ken	BOS	ti	AUX
+ti	ti	ti	ti	Nasken	koordinasion	DET
+koordinasion	koordinasion	koo	nasion	ti	ahensia	NOUN
+ahensia	ahensia	ahe	nsia	koordinasion	.	NOUN
+.	.	.	.	ahensia	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agadal	ubing	DET
+ubing	ubing	ubi	bing	dagiti	eskuela	NOUN
+eskuela	eskuela	esk	uela	ubing	.	NOUN
+.	.	.	.	eskuela	EOS	PUNCT
+
+Nabaknang	nabaknang	nab	knang	BOS	ti	ADJ
+ti	ti	ti	ti	Nabaknang	kultura	DET
+kultura	kultura	kul	tura	ti	Ilokano	NOUN
+Ilokano	Ilokano	Ilo	kano	kultura	.	NOUN
+.	.	.	.	Ilokano	EOS	PUNCT
+
+Agtrabaho	agtrabaho	agt	baho	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agtrabaho	mekaniko	DET
+mekaniko	mekaniko	mek	aniko	dagiti	planta	NOUN
+planta	planta	pla	nta	mekaniko	.	NOUN
+.	.	.	.	planta	EOS	PUNCT
+
+Narigat	narigat	nar	igat	BOS	ti	ADJ
+ti	ti	ti	ti	Narigat	proseso	DET
+proseso	proseso	pro	seso	ti	rehistro	NOUN
+rehistro	rehistro	reh	istro	proseso	.	NOUN
+.	.	.	.	rehistro	EOS	PUNCT
+
+Agsubli	agsubli	ags	ubli	BOS	ni	VERB
+ni	ni	ni	ni	Agsubli	mangmantes	DET
+mangmantes	mangmantes	man	tes	ni	ili	NOUN
+ili	ili	ili	ili	mangmantes	.	NOUN
+.	.	.	.	ili	EOS	PUNCT
+
+Napno	napno	nap	pno	BOS	ti	ADJ
+ti	ti	ti	ti	Napno	sala	DET
+sala	sala	sal	ala	ti	bisita	NOUN
+bisita	bisita	bis	ita	sala	.	NOUN
+.	.	.	.	bisita	EOS	PUNCT
+
+Agipasdek	agipasdek	agi	sdek	BOS	ti	VERB
+ti	ti	ti	ti	Agipasdek	instruktor	DET
+instruktor	instruktor	ins	tor	ti	programa	NOUN
+programa	programa	pro	gram	instruktor	.	NOUN
+.	.	.	.	programa	EOS	PUNCT
+
+Nasayaat	nasayaat	nas	ayat	BOS	ti	ADJ
+ti	ti	ti	ti	Nasayaat	kalidad	DET
+kalidad	kalidad	kal	idad	ti	serbisyo	NOUN
+serbisyo	serbisyo	ser	bisyo	kalidad	.	NOUN
+.	.	.	.	serbisyo	EOS	PUNCT
+
+Aglako	aglako	agl	ako	BOS	ti	VERB
+ti	ti	ti	ti	Aglako	negosyante	DET
+negosyante	negosyante	neg	yante	ti	prutas	NOUN
+prutas	prutas	pru	tas	negosyante	.	NOUN
+.	.	.	.	prutas	EOS	PUNCT
+
+Naurnos	naurnos	nau	rnos	BOS	ti	ADJ
+ti	ti	ti	ti	Naurnos	opisina	DET
+opisina	opisina	opi	sina	ti	gidait	NOUN
+gidait	gidait	gid	ait	opisina	.	NOUN
+.	.	.	.	gidait	EOS	PUNCT
+
+Agpasyar	agpasyar	agp	syar	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agpasyar	turista	DET
+turista	turista	tur	ista	dagiti	baybay	NOUN
+baybay	baybay	bay	bay	turista	.	NOUN
+.	.	.	.	baybay	EOS	PUNCT
+
+Narigat	narigat	nar	igat	BOS	ti	ADJ
+ti	ti	ti	ti	Narigat	desision	DET
+desision	desision	des	ision	ti	pangulo	NOUN
+pangulo	pangulo	pan	gulo	desision	.	NOUN
+.	.	.	.	pangulo	EOS	PUNCT
+
+Agplano	agplano	agp	lano	BOS	ti	VERB
+ti	ti	ti	ti	Agplano	arkitekto	DET
+arkitekto	arkitekto	ark	tekto	ti	balay	NOUN
+balay	balay	bal	lay	arkitekto	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Nasagana	nasagana	nas	gana	BOS	ti	ADJ
+ti	ti	ti	ti	Nasagana	dokumento	DET
+dokumento	dokumento	dok	umento	ti	proyekto	NOUN
+proyekto	proyekto	pro	yekto	dokumento	.	NOUN
+.	.	.	.	proyekto	EOS	PUNCT
+
+Agmula	agmula	agm	ula	BOS	ti	VERB
+ti	ti	ti	ti	Agmula	mannalon	DET
+mannalon	mannalon	man	nalon	ti	mula	NOUN
+mula	mula	mul	ula	mannalon	.	NOUN
+.	.	.	.	mula	EOS	PUNCT
+
+Nangrugi	nangrugi	nang	rugi	BOS	ti	VERB
+ti	ti	ti	ti	Nangrugi	proyekto	DET
+proyekto	proyekto	pro	yekto	ti	siyudad	NOUN
+siyudad	siyudad	siy	udad	proyekto	.	NOUN
+.	.	.	.	siyudad	EOS	PUNCT
+
+Napintas	napintas	nap	intas	BOS	ti	ADJ
+ti	ti	ti	ti	Napintas	dekorasion	DET
+dekorasion	dekorasion	dek	rasion	ti	okasion	NOUN
+okasion	okasion	oka	sion	dekorasion	.	NOUN
+.	.	.	.	okasion	EOS	PUNCT
+
+Agturay	agturay	agt	uray	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agturay	pasahero	DET
+pasahero	pasahero	pas	hero	dagiti	terminal	NOUN
+terminal	terminal	ter	minal	pasahero	.	NOUN
+.	.	.	.	terminal	EOS	PUNCT
+
+Naawat	naawat	naa	wat	BOS	ti	ADJ
+ti	ti	ti	ti	Naawat	mensahe	DET
+mensahe	mensahe	men	sahe	ti	umili	NOUN
+umili	umili	umi	ili	mensahe	.	NOUN
+.	.	.	.	umili	EOS	PUNCT
+
+Agsalimetmet	agsalimetmet	ags	metmet	BOS	ti	VERB
+ti	ti	ti	ti	Agsalimetmet	guro	DET
+guro	guro	gur	uro	ti	aramid	NOUN
+aramid	aramid	ara	mid	guro	.	NOUN
+.	.	.	.	aramid	EOS	PUNCT
+
+Napigsa	napigsa	nap	igsa	BOS	ti	ADJ
+ti	ti	ti	ti	Napigsa	kampanya	DET
+kampanya	kampanya	kam	panya	ti	klima	NOUN
+klima	klima	kli	ima	kampanya	.	NOUN
+.	.	.	.	klima	EOS	PUNCT
+
+Agpatakder	agpatakder	agp	takder	BOS	ti	VERB
+ti	ti	ti	ti	Agpatakder	komite	DET
+komite	komite	kom	ite	ti	proyekto	NOUN
+proyekto	proyekto	pro	yekto	komite	.	NOUN
+.	.	.	.	proyekto	EOS	PUNCT
+
+Nabannag	nabannag	nab	annag	BOS	ti	ADJ
+ti	ti	ti	ti	Nabannag	patakaran	DET
+patakaran	patakaran	pat	karan	ti	eskuela	NOUN
+eskuela	eskuela	esk	uela	patakaran	.	NOUN
+.	.	.	.	eskuela	EOS	PUNCT
+
+Agpati	agpati	agp	ati	BOS	ni	VERB
+ni	ni	ni	ni	Agpati	lider	DET
+lider	lider	lid	der	ni	grupo	NOUN
+grupo	grupo	gru	po	lider	.	NOUN
+.	.	.	.	grupo	EOS	PUNCT
+
+Agipatang	agipatang	agi	patang	BOS	ti	VERB
+ti	ti	ti	ti	Agipatang	kasapulan	DET
+kasapulan	kasapulan	kas	apulan	ti	pamilya	NOUN
+pamilya	pamilya	fam	ilya	kasapulan	.	NOUN
+.	.	.	.	pamilya	EOS	PUNCT
+
+Agdama	agdama	agd	ama	BOS	ti	VERB
+ti	ti	ti	ti	Agdama	oras	DET
+oras	oras	ora	ras	ti	panawen	NOUN
+panawen	panawen	pan	awen	oras	?	NOUN
+?	?	?	?	panawen	EOS	PUNCT
+
+Napigsa	napigsa	nap	igsa	BOS	ti	ADJ
+ti	ti	ti	ti	Napigsa	bagyo	DET
+bagyo	bagyo	bag	gyo	ti	ili	NOUN
+ili	ili	ili	ili	bagyo	!	NOUN
+!	!	!	!	ili	EOS	PUNCT
+
+Agawat	agawat	aga	wat	BOS	ti	VERB
+ti	ti	ti	ti	Agawat	datos	DET
+datos	datos	dat	atos	ti	sistema	NOUN
+sistema	sistema	sis	tema	datos	,	NOUN
+,	,	,	,	sistema	EOS	PUNCT
+
+Nalaing	nalaing	nal	aing	BOS	ti	ADJ
+ti	ti	ti	ti	Nalaing	nadoktalan	DET
+nadoktalan	nadoktalan	nad	alan	ti	agsao	NOUN
+agsao	agsao	ags	sao	nadoktalan	;	NOUN
+;	;	;	;	agsao	EOS	PUNCT
+
+Agdawat	agdawat	agd	awat	BOS	ni	VERB
+ni	ni	ni	ni	Agdawat	ama	DET
+ama	ama	ama	ama	ni	tulong	NOUN
+tulong	tulong	tul	ong	ama	:	NOUN
+:	:	:	:	tulong	EOS	PUNCT
+
+Napintas	napintas	nap	intas	BOS	ti	ADJ
+ti	ti	ti	ti	Napintas	disenyo	DET
+disenyo	disenyo	dis	enyo	ti	balay	NOUN
+balay	balay	bal	lay	disenyo	!	NOUN
+!	!	!	!	balay	EOS	PUNCT
+
+Agsalaknib	agsalaknib	ags	knib	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agsalaknib	kameng	DET
+kameng	kameng	kam	eng	dagiti	organisasion	NOUN
+organisasion	organisasion	org	asion	kameng	;	NOUN
+;	;	;	;	organisasion	EOS	PUNCT
+
+Narigat	narigat	nar	igat	BOS	ti	ADJ
+ti	ti	ti	ti	Narigat	biag	DET
+biag	biag	bia	ag	ti	tahanan	NOUN
+tahanan	tahanan	tah	anan	biag	?	NOUN
+?	?	?	?	tahanan	EOS	PUNCT
+
+Agpili	agpili	agp	ili	BOS	ti	VERB
+ti	ti	ti	ti	Agpili	opsion	DET
+opsion	opsion	ops	ion	ti	proyekto	NOUN
+proyekto	proyekto	pro	yekto	opsion	,	NOUN
+,	,	,	,	proyekto	EOS	PUNCT
+
+Naawat	naawat	naa	wat	BOS	ti	ADJ
+ti	ti	ti	ti	Naawat	isyu	DET
+isyu	isyu	isy	syu	ti	miting	NOUN
+miting	miting	mit	ting	isyu	:	NOUN
+:	:	:	:	miting	EOS	PUNCT
+
+Agsubli	agsubli	ags	ubli	BOS	ni	VERB
+ni	ni	ni	ni	Agsubli	opisyal	DET
+opisyal	opisyal	opi	syal	ni	opisina	NOUN
+opisina	opisina	opi	sina	opisyal	!	NOUN
+!	!	!	!	opisina	EOS	PUNCT
+
+Agkuna	agkuna	agk	kuna	BOS	ni	VERB
+ni	ni	ni	ni	Agkuna	ina	DET
+ina	ina	ina	ina	ni	"salamat"	NOUN
+"	"	"	"	ina	salamat	PUNCT
+salamat	salamat	sal	amat	"	"	NOUN
+"	"	"	"	salamat	EOS	PUNCT
+
+Napigsa	napigsa	nap	igsa	BOS	ti	ADJ
+ti	ti	ti	ti	Napigsa	kasasaad	DET
+kasasaad	kasasaad	kas	saad	ti	biag	NOUN
+biag	biag	bia	ag	kasasaad	...	NOUN
+...	...	...	...	biag	EOS	PUNCT
+
+Agiturong	agiturong	agi	turong	BOS	ti	VERB
+ti	ti	ti	ti	Agiturong	tren	DET
+tren	tren	tre	ren	ti	(terminal)	NOUN
+(	(	(	(	tren	terminal	PUNCT
+terminal	terminal	ter	minal	)	)	NOUN
+)	)	)	)	terminal	EOS	PUNCT
+
+Naragsak	naragsak	nar	gsak	BOS	ti	ADJ
+ti	ti	ti	ti	Naragsak	panagtitipon	DET
+panagtitipon	panagtitipon	pan	tipon	ti	pamilya	NOUN
+pamilya	pamilya	fam	ilya	panagtitipon	!?	NOUN
+!?	!?	!?	!?	pamilya	EOS	PUNCT
+
+Agpili	agpili	agp	ili	BOS	ti	VERB
+ti	ti	ti	ti	Agpili	opsion	DET
+opsion	opsion	ops	ion	,	opsion	desision
+,	,	,	,	opsion	desision	PUNCT
+desision	desision	des	ision	ti	lider	NOUN
+lider	lider	lid	der	desision	.	NOUN
+.	.	.	.	lider	EOS	PUNCT
+
+Naawatan	naawatan	nao	watan	BOS	ti	ADJ
+ti	ti	ti	ti	Naawatan	pammati	DET
+pammati	pammati	pam	mati	ti	umili	NOUN
+umili	umili	umi	ili	pammati	:	NOUN
+:	:	:	:	umili	EOS	PUNCT
+
+Agsubli	agsubli	ags	ubli	BOS	ni	VERB
+ni	ni	ni	ni	Agsubli	doktora	DET
+doktora	doktora	dok	tora	ni	klinika	NOUN
+klinika	klinika	kli	nika	doktora	,	NOUN
+,	,	,	,	klinika	paspaset	PUNCT
+paspaset	paspaset	pas	paset	ti	pasiente	NOUN
+pasiente	pasiente	pas	iente	paspaset	.	NOUN
+.	.	.	.	pasiente	EOS	PUNCT
+
+Napintas	napintas	nap	intas	BOS	ti	ADJ
+ti	ti	ti	ti	Napintas	pelikula	DET
+pelikula	pelikula	pel	ikula	ti	sinehan	NOUN
+sinehan	sinehan	sin	ehan	pelikula	!	NOUN
+!	!	!	!	sinehan	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agsao	kabataan	DET
+kabataan	kabataan	kab	ataan	dagiti	eskuela	NOUN
+eskuela	eskuela	esk	uela	kabataan	;	NOUN
+;	;	;	;	eskuela	guro	PUNCT
+guro	guro	gur	uro	ti	ubing	NOUN
+ubing	ubing	ubi	bing	guro	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	ni	VERB
+ni	ni	ni	ni	Agsao	estudyante	DET
+estudyante	estudyante	estu	yante	ni	maestro	NOUN
+maestro	maestro	mae	stro	estudyante	?	NOUN
+?	?	?	?	maestro	EOS	PUNCT
+
+Nagtrabaho	nagtrabaho	nag	trabaho	BOS	ti	VERB
+ti	ti	ti	ti	Nagtrabaho	mangmangga	DET
+mangmangga	mangmangga	man	ngga	ti	uma	NOUN
+uma	uma	uma	uma	mangmangga	!	NOUN
+!	!	!	!	uma	EOS	PUNCT
+
+Agkita	agkita	agk	ita	BOS	ti	VERB
+ti	ti	ti	ti	Agkita	bisita	DET
+bisita	bisita	bis	ita	ti	balay	NOUN
+balay	balay	bal	lay	bisita	,	NOUN
+,	,	,	,	balay	EOS	PUNCT
+
+Napintas	napintas	nap	intas	BOS	ti	ADJ
+ti	ti	ti	ti	Napintas	disenyo	DET
+disenyo	disenyo	dis	enyo	ti	kuarto	NOUN
+kuarto	kuarto	kua	rto	disenyo	:	NOUN
+:	:	:	:	kuarto	EOS	PUNCT
+
+Agsurat	agsurat	ags	urat	BOS	ni	VERB
+ni	ni	ni	ni	Agsurat	ama	DET
+ama	ama	ama	ama	ni	surat	NOUN
+surat	surat	sur	at	ama	"Dagiti	plano"
+"	"	"	"	surat	EOS	PUNCT
+Dagiti	dagiti	dag	iti	"	plano	NOUN
+plano	plano	pla	no	Dagiti	EOS	PUNCT
+"	"	"	"	plano	EOS	PUNCT
+
+Agpasiar	agpasiar	agp	siar	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agpasiar	turista	DET
+turista	turista	tur	ista	dagiti	baybay	NOUN
+baybay	baybay	bay	bay	turista	.	NOUN
+.	.	.	.	baybay	EOS	PUNCT
+
+Nabaknang	nabaknang	nab	knang	BOS	ti	ADJ
+ti	ti	ti	ti	Nabaknang	pamilya	DET
+pamilya	pamilya	pam	ilya	ti	balay	NOUN
+balay	balay	bal	lay	pamilya	;	NOUN
+;	;	;	;	balay	EOS	PUNCT
+
+Agipatulod	agipatulod	agi	patulod	BOS	ti	VERB
+ti	ti	ti	ti	Agipatulod	surat	DET
+surat	surat	sur	at	ti	opisina	NOUN
+opisina	opisina	opi	sina	surat	!	NOUN
+!	!	!	!	opisina	EOS	PUNCT
+
+Nagbuybuya	nagbuybuya	nag	buybuya	BOS	ti	VERB
+ti	ti	ti	ti	Nagbuybuya	pelikula	DET
+pelikula	pelikula	pel	ikula	ti	sinehan	NOUN
+sinehan	sinehan	sin	ehan	pelikula	?	NOUN
+?	?	?	?	sinehan	EOS	PUNCT
+
+Agdaldalus	agdaldalus	agd	aldalus	BOS	ti	VERB
+ti	ti	ti	ti	Agdaldalus	kwarto	DET
+kwarto	kwarto	kwa	rto	ti	estudyante	NOUN
+estudyante	estudyante	estu	yante	kwarto	.	NOUN
+.	.	.	.	estudyante	EOS	PUNCT
+
+Agur-uray	agur-uray	agu	uray	BOS	ti	VERB
+ti	ti	ti	ti	Agur-uray	bus	DET
+bus	bus	bus	us	ti	terminal	NOUN
+terminal	terminal	ter	minal	bus	,	NOUN
+,	,	,	,	terminal	EOS	PUNCT
+
+Nagkarkararag	nagkarkararag	nag	karararag	BOS	ti	VERB
+ti	ti	ti	ti	Nagkarkararag	ama	DET
+ama	ama	ama	ama	ti	simbaan	NOUN
+simbaan	simbaan	sim	baan	ama	!?	NOUN
+!?	!?	!?	!?	simbaan	EOS	PUNCT
+
+Agsurot	agsurot	ags	urot	BOS	ni	VERB
+ni	ni	ni	ni	Agsurot	instruktor	DET
+instruktor	instruktor	ins	truktor	ni	estudyante	NOUN
+estudyante	estudyante	estu	yante	instruktor	:	NOUN
+:	:	:	:	estudyante	EOS	PUNCT
+
+Napigsa	napigsa	nap	igsa	BOS	ti	ADJ
+ti	ti	ti	ti	Napigsa	bagyo	DET
+bagyo	bagyo	bag	gyo	ti	barangay	NOUN
+barangay	barangay	bar	angay	bagyo	...	NOUN
+...	...	...	...	barangay	EOS	PUNCT
+
+Agiparang	agiparang	agi	parang	BOS	ti	VERB
+ti	ti	ti	ti	Agiparang	proyekto	DET
+proyekto	proyekto	pro	yekto	ti	eskuela	NOUN
+eskuela	eskuela	esk	uela	proyekto	(	NOUN
+(	(	(	(	eskuela	EOS	PUNCT
+)	)	)	)	)	EOS	PUNCT
+
+Nagbuybuya	nagbuybuya	nag	buybuya	BOS	ti	VERB
+ti	ti	ti	ti	Nagbuybuya	pelikula	DET
+pelikula	pelikula	pel	ikula	ti	sinehan	NOUN
+sinehan	sinehan	sin	ehan	pelikula	!	NOUN
+!	!	!	!	sinehan	EOS	PUNCT
+
+Agdalus	agdalus	agd	alus	BOS	ti	VERB
+ti	ti	ti	ti	Agdalus	kwarto	DET
+kwarto	kwarto	kwa	rto	ti	estudyante	NOUN
+estudyante	estudyante	estu	yante	kwarto	,	NOUN
+,	,	,	,	estudyante	EOS	PUNCT
+
+Napintas	napintas	nap	intas	BOS	ti	ADJ
+ti	ti	ti	ti	Napintas	dekorasion	DET
+dekorasion	dekorasion	dek	rasion	ti	okasion	NOUN
+okasion	okasion	oka	sion	dekorasion	?	NOUN
+?	?	?	?	okasion	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	ni	VERB
+ni	ni	ni	ni	Agsao	ama	DET
+ama	ama	ama	ama	ni	ubing	NOUN
+ubing	ubing	ubi	bing	ama	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Agsao	agsao	ags	sao	BOS	manong	VERB
+manong	manong	man	ong	Agsao	istoria	NOUN
+istoria	istoria	ist	ria	manong	.	NOUN
+.	.	.	.	istoria	EOS	PUNCT
+
+Agap	agap	aga	gap	BOS	kamotit	VERB
+kamotit	kamotit	kam	tit	Agap	.	NOUN
+.	.	.	.	kamotit	EOS	PUNCT
+
+Agum	agum	agu	gum	BOS	kayat	VERB
+kayat	kayat	kay	yat	Agum	.	NOUN
+.	.	.	.	kayat	EOS	PUNCT
+
+Agkay	agkay	agk	kay	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agkay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Aglawig	aglawig	agl	wig	BOS	aldaw	VERB
+aldaw	aldaw	ald	daw	Aglawig	.	NOUN
+.	.	.	.	aldaw	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	sapatos	VERB
+sapatos	sapatos	sap	tos	Agdigos	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Agdanag	agdanag	agd	nag	BOS	ina	VERB
+ina	ina	ina	ina	Agdanag	.	NOUN
+.	.	.	.	ina	EOS	PUNCT
+
+Agserek	agserek	ags	rek	BOS	kabsat	VERB
+kabsat	kabsat	kab	sat	Agserek	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Agpanunot	agpanunot	agp	not	BOS	maestro	VERB
+maestro	maestro	mae	tro	Agpanunot	.	NOUN
+.	.	.	.	maestro	EOS	PUNCT
+
+Agsardeng	agsardeng	ags	eng	BOS	tren	VERB
+tren	tren	tre	ren	Agsardeng	.	NOUN
+.	.	.	.	tren	EOS	PUNCT
+
+Agabel	agabel	aga	bel	BOS	abel	VERB
+abel	abel	abe	bel	Agabel	idiay	NOUN
+idiay	idiay	idi	iay	abel	pagablan	NOUN
+pagablan	pagablan	pag	lan	idiay	.	NOUN
+.	.	.	.	pagablan	EOS	PUNCT
+
+Umabut	umabut	uma	but	BOS	idiay	VERB
+idiay	idiay	idi	iay	Umabut	Manila	NOUN
+Manila	manila	man	ila	idiay	.	NOUN
+.	.	.	.	Manila	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	leksion	VERB
+leksion	leksion	lek	ion	Agadal	rabii	NOUN
+rabii	rabii	rab	bii	leksion	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Mangagas	mangagas	man	gas	BOS	mangngagas	VERB
+mangngagas	mangngagas	man	gas	Mangagas	sugat	VERB
+sugat	sugat	sug	gat	mangngagas	.	NOUN
+.	.	.	.	sugat	EOS	PUNCT
+
+Agabong	agabong	aga	ong	BOS	ubing	VERB
+ubing	ubing	ubi	ing	Agabong	balay	NOUN
+balay	balay	bal	lay	ubing	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Naimbag	naimbag	nai	bag	BOS	a	ADJ
+a	a	a	a	Naimbag	bigat	LNK
+bigat	bigat	big	gat	a	.	NOUN
+.	.	.	.	bigat	EOS	PUNCT
+
+Nangan	nangan	nan	gan	BOS	ti	VERB
+ti	ti	ti	ti	Nangan	ubing	DET
+ubing	ubing	ubi	bing	ti	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Adda	adda	add	dda	BOS	danum	VERB
+danum	danum	dan	num	Adda	idiay	NOUN
+idiay	idiay	idi	iay	danum	banga	ADV
+banga	banga	ban	nga	idiay	.	NOUN
+.	.	.	.	banga	EOS	PUNCT
+
+Napintas	napintas	nap	tas	BOS	ti	ADJ
+ti	ti	ti	ti	Napintas	balay	DET
+balay	balay	bal	lay	ti	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Nagbasa	nagbasa	nag	asa	BOS	ni	VERB
+ni	ni	ni	ni	Nagbasa	Maria	DET
+Maria	maria	mar	ria	ni	.	PROPN
+.	.	.	.	Maria	EOS	PUNCT
+
+Saan	saan	saa	aan	BOS	nga	PART
+nga	nga	nga	nga	Saan	nalaka	LNK
+nalaka	nalaka	nal	aka	nga	.	ADJ
+.	.	.	.	nalaka	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agadal	estudyante	DET
+estudyante	estudyante	est	nte	dagiti	.	NOUN
+.	.	.	.	estudyante	EOS	PUNCT
+
+Dakkel	dakkel	dak	kel	BOS	ti	ADJ
+ti	ti	ti	ti	Dakkel	aso	DET
+aso	aso	aso	aso	ti	.	NOUN
+.	.	.	.	aso	EOS	PUNCT
+
+Mapan	mapan	map	pan	BOS	kami	VERB
+kami	kami	kam	ami	Mapan	idiay	PRON
+idiay	idiay	idi	iay	kami	kalsada	ADV
+kalsada	kalsada	kal	ada	idiay	.	NOUN
+.	.	.	.	kalsada	EOS	PUNCT
+
+Nalamiis	nalamiis	nal	iis	BOS	ti	ADJ
+ti	ti	ti	ti	Nalamiis	angin	DET
+angin	angin	ang	gin	ti	.	NOUN
+.	.	.	.	angin	EOS	PUNCT
+
+Uminom	uminom	umi	nom	BOS	isuna	VERB
+isuna	isuna	isu	una	Uminom	ti	PRON
+ti	ti	ti	ti	isuna	gamot	DET
+gamot	gamot	gam	mot	ti	.	NOUN
+.	.	.	.	gamot	EOS	PUNCT
+
+Naglagto	naglagto	nag	gto	BOS	ti	VERB
+ti	ti	ti	ti	Naglagto	kanding	DET
+kanding	kanding	kan	ing	ti	.	NOUN
+.	.	.	.	kanding	EOS	PUNCT
+
+Nasipnget	nasipnget	nas	get	BOS	ti	ADJ
+ti	ti	ti	ti	Nasipnget	rabii	DET
+rabii	rabii	rab	bii	ti	.	NOUN
+.	.	.	.	rabii	EOS	PUNCT
+
+Adda	adda	add	dda	BOS	kwarta	VERB
+kwarta	kwarta	kwa	rta	Adda	idiay	NOUN
+idiay	idiay	idi	iay	kwarta	bulsa	ADV
+bulsa	bulsa	bul	lsa	idiay	.	NOUN
+.	.	.	.	bulsa	EOS	PUNCT
+
+Natayag	natayag	nat	yag	BOS	ni	ADJ
+ni	ni	ni	ni	Natayag	Pedro	DET
+Pedro	pedro	ped	dro	ni	.	PROPN
+.	.	.	.	Pedro	EOS	PUNCT
+
+Awan	awan	awa	wan	BOS	ti	VERB
+ti	ti	ti	ti	Awan	bagas	DET
+bagas	bagas	bag	gas	ti	.	NOUN
+.	.	.	.	bagas	EOS	PUNCT
+
+Nagluto	nagluto	nag	uto	BOS	ni	VERB
+ni	ni	ni	ni	Nagluto	Nanang	DET
+Nanang	nanang	nan	ang	ni	.	PROPN
+.	.	.	.	Nanang	EOS	PUNCT
+
+Napudot	napudot	nap	dot	BOS	ti	ADJ
+ti	ti	ti	ti	Napudot	ulo	DET
+ulo	ulo	ulo	ulo	ti	.	NOUN
+.	.	.	.	ulo	EOS	PUNCT
+
+Kayat	kayat	kay	yat	BOS	ko	VERB
+ko	ko	ko	ko	Kayat	ti	PRON
+ti	ti	ti	ti	ko	mansanas	DET
+mansanas	mansanas	man	nas	ti	.	NOUN
+.	.	.	.	mansanas	EOS	PUNCT
+
+Narigat	narigat	nar	gat	BOS	ti	ADJ
+ti	ti	ti	ti	Narigat	biag	DET
+biag	biag	bia	iag	ti	.	NOUN
+.	.	.	.	biag	EOS	PUNCT
+
+Gumatang	gumatang	gum	ang	BOS	ak	VERB
+ak	ak	ak	ak	Gumatang	ti	PRON
+ti	ti	ti	ti	ak	apay	DET
+apay	apay	apa	pay	ti	.	NOUN
+.	.	.	.	apay	EOS	PUNCT
+
+Adda	adda	add	dda	BOS	sabsabong	VERB
+sabsabong	sabsabong	sab	ong	Adda	idiay	NOUN
+idiay	idiay	idi	iay	sabsabong	minuyongan	ADV
+minuyongan	minuyongan	min	gan	idiay	.	NOUN
+.	.	.	.	minuyongan	EOS	PUNCT
+
+Nakasangit	nakasangit	nak	git	BOS	ti	VERB
+ti	ti	ti	ti	Nakasangit	ubing	DET
+ubing	ubing	ubi	bing	ti	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Nalaing	nalaing	nal	ing	BOS	ni	ADJ
+ni	ni	ni	ni	Nalaing	Juan	DET
+Juan	juan	jua	uan	ni	.	PROPN
+.	.	.	.	Juan	EOS	PUNCT
+
+Mabisin	mabisin	mab	sin	BOS	ti	ADJ
+ti	ti	ti	ti	Mabisin	tiyan	DET
+tiyan	tiyan	tiy	yan	ti	.	NOUN
+.	.	.	.	tiyan	EOS	PUNCT
+
+Nagpasyar	nagpasyar	nag	yar	BOS	da	VERB
+da	da	da	da	Nagpasyar	Lolo	PRON
+Lolo	lolo	lol	olo	da	.	PROPN
+.	.	.	.	Lolo	EOS	PUNCT
+
+Nasam-it	nasam-it	nas	-it	BOS	ti	ADJ
+ti	ti	ti	ti	Nasam-it	mangga	DET
+mangga	mangga	man	gga	ti	.	NOUN
+.	.	.	.	mangga	EOS	PUNCT
+
+Agtrabaho	agtrabaho	agt	aho	BOS	ni	VERB
+ni	ni	ni	ni	Agtrabaho	Tatang	DET
+Tatang	tatang	tat	ang	ni	.	PROPN
+.	.	.	.	Tatang	EOS	PUNCT
+
+Natangken	natangken	nat	ken	BOS	ti	ADJ
+ti	ti	ti	ti	Natangken	bato	DET
+bato	bato	bat	ato	ti	.	NOUN
+.	.	.	.	bato	EOS	PUNCT
+
+Agkatawa	agkatawa	agk	awa	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agkatawa	ubbing	DET
+ubbing	ubbing	ubb	ing	dagiti	.	NOUN
+.	.	.	.	ubbing	EOS	PUNCT
+
+Nabannog	nabannog	nab	nog	BOS	ni	ADJ
+ni	ni	ni	ni	Nabannog	Manong	DET
+Manong	manong	man	ong	ni	.	PROPN
+.	.	.	.	Manong	EOS	PUNCT
+
+Adda	adda	add	dda	BOS	bagyo	VERB
+bagyo	bagyo	bag	gyo	Adda	idiay	NOUN
+idiay	idiay	idi	iay	bagyo	probinsya	ADV
+probinsya	probinsya	pro	sya	idiay	.	NOUN
+.	.	.	.	probinsya	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	isuna	VERB
+isuna	isuna	isu	una	Agadal	ti	PRON
+ti	ti	ti	ti	isuna	leksion	DET
+leksion	leksion	lek	ion	ti	.	NOUN
+.	.	.	.	leksion	EOS	PUNCT
+
+Nabangsit	nabangsit	nab	sit	BOS	ti	ADJ
+ti	ti	ti	ti	Nabangsit	basura	DET
+basura	basura	bas	ura	ti	.	NOUN
+.	.	.	.	basura	EOS	PUNCT
+
+Agtaray	agtaray	agt	ray	BOS	ti	VERB
+ti	ti	ti	ti	Agtaray	kabalyo	DET
+kabalyo	kabalyo	kab	lyo	ti	.	NOUN
+.	.	.	.	kabalyo	EOS	PUNCT
+
+Naapgad	naapgad	naa	gad	BOS	ti	ADJ
+ti	ti	ti	ti	Naapgad	asin	DET
+asin	asin	asi	sin	ti	.	NOUN
+.	.	.	.	asin	EOS	PUNCT
+
+Nagligos	nagligos	nag	gos	BOS	ni	VERB
+ni	ni	ni	ni	Nagligos	Lola	DET
+Lola	lola	lol	ola	ni	.	PROPN
+.	.	.	.	Lola	EOS	PUNCT
+
+Napigsa	napigsa	nap	gsa	BOS	ti	ADJ
+ti	ti	ti	ti	Napigsa	tudo	DET
+tudo	tudo	tud	udo	ti	.	NOUN
+.	.	.	.	tudo	EOS	PUNCT
+
+Mangan	mangan	man	gan	BOS	da	VERB
+da	da	da	da	Mangan	Jose	PRON
+Jose	jose	jos	ose	da	.	PROPN
+.	.	.	.	Jose	EOS	PUNCT
+
+Natayag	natayag	nat	yag	BOS	ti	ADJ
+ti	ti	ti	ti	Natayag	kayo	DET
+kayo	kayo	kay	ayo	ti	.	NOUN
+.	.	.	.	kayo	EOS	PUNCT
+
+Adda	adda	add	dda	BOS	sida	VERB
+sida	sida	sid	ida	Adda	idiay	NOUN
+idiay	idiay	idi	iay	sida	lamisaan	ADV
+lamisaan	lamisaan	lam	aan	idiay	.	NOUN
+.	.	.	.	lamisaan	EOS	PUNCT
+
+Agawid	agawid	aga	wid	BOS	ak	VERB
+ak	ak	ak	ak	Agawid	intono	PRON
+intono	intono	int	ono	ak	.	ADV
+.	.	.	.	intono	EOS	PUNCT
+
+Nagsakit	nagsakit	nag	kit	BOS	ti	VERB
+ti	ti	ti	ti	Nagsakit	mata	DET
+mata	mata	mat	ata	ti	.	NOUN
+.	.	.	.	mata	EOS	PUNCT
+
+Nasayaat	nasayaat	nas	aat	BOS	ti	ADJ
+ti	ti	ti	ti	Nasayaat	arimid	DET
+arimid	arimid	ari	mid	ti	.	NOUN
+.	.	.	.	arimid	EOS	PUNCT
+
+Agbuya	agbuya	agb	uya	BOS	tayo	VERB
+tayo	tayo	tay	ayo	Agbuya	ti	PRON
+ti	ti	ti	ti	tayo	pilikula	DET
+pilikula	pilikula	pil	ula	ti	.	NOUN
+.	.	.	.	pilikula	EOS	PUNCT
+
+Naragsak	naragsak	nar	sak	BOS	dagiti	ADJ
+dagiti	dagiti	dag	iti	Naragsak	ubbing	DET
+ubbing	ubbing	ubb	ing	dagiti	.	NOUN
+.	.	.	.	ubbing	EOS	PUNCT
+
+Nagsurat	nagsurat	nag	rat	BOS	ni	VERB
+ni	ni	ni	ni	Nagsurat	Ana	DET
+Ana	ana	ana	ana	ni	.	PROPN
+.	.	.	.	Ana	EOS	PUNCT
+
+Agdait	agdait	agd	ait	BOS	ni	VERB
+ni	ni	ni	ni	Agdait	Ina	DET
+Ina	ina	ina	ina	ni	.	PROPN
+.	.	.	.	Ina	EOS	PUNCT
+
+Nalabaga	nalabaga	nal	aga	BOS	ti	ADJ
+ti	ti	ti	ti	Nalabaga	sabong	DET
+sabong	sabong	sab	ong	ti	.	NOUN
+.	.	.	.	sabong	EOS	PUNCT
+
+Adda	adda	add	dda	BOS	tayo	VERB
+tayo	tayo	tay	ayo	Adda	idiay	PRON
+idiay	idiay	idi	iay	tayo	simbaan	ADV
+simbaan	simbaan	sim	aan	idiay	.	NOUN
+.	.	.	.	simbaan	EOS	PUNCT
+Saan	saan	saa	aan	BOS	ka	PART
+ka	ka	ka	ka	Saan	agbuteng	PRON
+agbuteng	agbuteng	agb	eng	ka	.	VERB
+.	.	.	.	agbuteng	EOS	PUNCT
+
+Agilad	agilad	agi	lad	BOS	ni	VERB
+ni	ni	ni	ni	Agilad	kabsat	DET
+kabsat	kabsat	kab	sat	ni	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Naimbag	naimbag	nai	bag	BOS	ti	ADJ
+ti	ti	ti	ti	Naimbag	gaw-at	DET
+gaw-at	gaw-at	gaw	-at	ti	.	NOUN
+.	.	.	.	gaw-at	EOS	PUNCT
+
+Agmaneho	agmaneho	agm	eho	BOS	ni	VERB
+ni	ni	ni	ni	Agmaneho	Manong	DET
+Manong	manong	man	ong	ni	.	PROPN
+.	.	.	.	Manong	EOS	PUNCT
+
+Nasugpet	nasugpet	nas	pet	BOS	ti	ADJ
+ti	ti	ti	ti	Nasugpet	saba	DET
+saba	saba	sab	aba	ti	.	NOUN
+.	.	.	.	saba	EOS	PUNCT
+
+Adda	adda	add	dda	BOS	manok	VERB
+manok	manok	man	nok	Adda	idiay	NOUN
+idiay	idiay	idi	iay	manok	pag-arban	ADV
+pag-arban	pag-arban	pag	ban	idiay	.	NOUN
+.	.	.	.	pag-arban	EOS	PUNCT
+
+Nagtaray	nagtaray	nag	ray	BOS	ti	VERB
+ti	ti	ti	ti	Nagtaray	aso	DET
+aso	aso	aso	aso	ti	.	NOUN
+.	.	.	.	aso	EOS	PUNCT
+
+Napukaw	napukaw	nap	kaw	BOS	ti	ADJ
+ti	ti	ti	ti	Napukaw	susing	DET
+susing	susing	sus	ing	ti	.	NOUN
+.	.	.	.	susing	EOS	PUNCT
+
+Agkalap	agkalap	agk	lap	BOS	da	VERB
+da	da	da	da	Agkalap	Tatang	PRON
+Tatang	tatang	tat	ang	da	.	PROPN
+.	.	.	.	Tatang	EOS	PUNCT
+
+Naangot	naangot	naa	got	BOS	ti	ADJ
+ti	ti	ti	ti	Naangot	igid	DET
+igid	igid	igi	gid	ti	.	NOUN
+.	.	.	.	igid	EOS	PUNCT
+
+Mangan	mangan	man	gan	BOS	ti	VERB
+ti	ti	ti	ti	Mangan	baboy	DET
+baboy	baboy	bab	boy	ti	.	NOUN
+.	.	.	.	baboy	EOS	PUNCT
+
+Adda	adda	add	dda	BOS	libro	VERB
+libro	libro	lib	bro	Adda	idiay	NOUN
+idiay	idiay	idi	iay	libro	shelves	ADV
+shelves	shelves	she	ves	idiay	.	NOUN
+.	.	.	.	shelves	EOS	PUNCT
+
+Nasipnget	nasipnget	nas	get	BOS	ti	ADJ
+ti	ti	ti	ti	Nasipnget	kuarto	DET
+kuarto	kuarto	kua	rto	ti	.	NOUN
+.	.	.	.	kuarto	EOS	PUNCT
+
+Nagbunga	nagbunga	nag	nga	BOS	ti	VERB
+ti	ti	ti	ti	Nagbunga	mangga	DET
+mangga	mangga	man	gga	ti	.	NOUN
+.	.	.	.	mangga	EOS	PUNCT
+
+Nasingpet	nasingpet	nas	pet	BOS	ni	ADJ
+ni	ni	ni	ni	Nasingpet	Rosa	DET
+Rosa	rosa	ros	osa	ni	.	PROPN
+.	.	.	.	Rosa	EOS	PUNCT
+
+Agsaing	agsaing	ags	ing	BOS	ti	VERB
+ti	ti	ti	ti	Agsaing	lola	DET
+lola	lola	lol	ola	ti	.	NOUN
+.	.	.	.	lola	EOS	PUNCT
+
+Nataraki	nataraki	nat	aki	BOS	ni	ADJ
+ni	ni	ni	ni	Nataraki	kabsat	DET
+kabsat	kabsat	kab	sat	ni	.	NOUN
+.	.	.	.	kabsat	EOS	PUNCT
+
+Adda	adda	add	dda	BOS	tao	VERB
+tao	tao	tao	tao	Adda	idiay	NOUN
+idiay	idiay	idi	iay	tao	gawang	ADV
+gawang	gawang	gaw	ang	idiay	.	NOUN
+.	.	.	.	gawang	EOS	PUNCT
+
+Nagani	nagani	nag	ani	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Nagani	mannalon	DET
+mannalon	mannalon	man	lon	dagiti	.	NOUN
+.	.	.	.	mannalon	EOS	PUNCT
+
+Nasakit	nasakit	nas	kit	BOS	ti	ADJ
+ti	ti	ti	ti	Nasakit	ngipen	DET
+ngipen	ngipen	ngi	pen	ti	.	NOUN
+.	.	.	.	ngipen	EOS	PUNCT
+
+Agdigos	agdigos	agd	gos	BOS	ak	VERB
+ak	ak	ak	ak	Agdigos	diay	PRON
+diay	diay	dia	iay	ak	.	DET
+.	.	.	.	diay	EOS	PUNCT
+
+Napudot	napudot	nap	dot	BOS	ti	ADJ
+ti	ti	ti	ti	Napudot	kape	DET
+kape	kape	kap	ape	ti	.	NOUN
+.	.	.	.	kape	EOS	PUNCT
+
+Nagadal	nagadal	nag	dal	BOS	isuna	VERB
+isuna	isuna	isu	una	Nagadal	ti	PRON
+ti	ti	ti	ti	isuna	Ingles	DET
+Ingles	ingles	ing	les	ti	.	NOUN
+.	.	.	.	Ingles	EOS	PUNCT
+
+Nangina	nangina	nan	ina	BOS	ti	ADJ
+ti	ti	ti	ti	Nangina	bagas	DET
+bagas	bagas	bag	gas	ti	.	NOUN
+.	.	.	.	bagas	EOS	PUNCT
+
+Adda	adda	add	dda	BOS	ikan	VERB
+ikan	ikan	ika	kan	Adda	idiay	NOUN
+idiay	idiay	idi	iay	ikan	kalyen	ADV
+kalyen	kalyen	kal	yen	idiay	.	NOUN
+.	.	.	.	kalyen	EOS	PUNCT
+
+Agitugot	agitugot	agi	got	BOS	ka	VERB
+ka	ka	ka	ka	Agitugot	ti	PRON
+ti	ti	ti	ti	ka	payong	DET
+payong	payong	pay	ong	ti	.	NOUN
+.	.	.	.	payong	EOS	PUNCT
+
+Nadalus	nadalus	nad	lus	BOS	ti	ADJ
+ti	ti	ti	ti	Nadalus	bado	DET
+bado	bado	bad	ado	ti	.	NOUN
+.	.	.	.	bado	EOS	PUNCT
+
+Nagpasyar	nagpasyar	nag	yar	BOS	kami	VERB
+kami	kami	kam	ami	Nagpasyar	idiay	PRON
+idiay	idiay	idi	iay	kami	Vigan	ADV
+Vigan	vigan	vig	gan	idiay	.	PROPN
+.	.	.	.	Vigan	EOS	PUNCT
+
+Nabanglo	nabanglo	nab	glo	BOS	ti	ADJ
+ti	ti	ti	ti	Nabanglo	lutuan	DET
+lutuan	lutuan	lut	uan	ti	.	NOUN
+.	.	.	.	lutuan	EOS	PUNCT
+
+Adda	adda	add	dda	BOS	bisita	VERB
+bisita	bisita	bis	ita	Adda	idiay	NOUN
+idiay	idiay	idi	iay	bisita	sala	ADV
+sala	sala	sal	ala	idiay	.	NOUN
+.	.	.	.	sala	EOS	PUNCT
+
+Rugit	rugit	rug	git	BOS	ti	ADJ
+ti	ti	ti	ti	Rugit	laud	DET
+laud	laud	lau	aud	ti	.	NOUN
+.	.	.	.	laud	EOS	PUNCT
+
+Mabisin	mabisin	mab	sin	BOS	ti	ADJ
+ti	ti	ti	ti	Mabisin	bigat	DET
+bigat	bigat	big	gat	ti	.	NOUN
+.	.	.	.	bigat	EOS	PUNCT
+
+Naggapu	naggapu	nag	apu	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Naggapu	gun-od	DET
+gun-od	gun-od	gun	-od	dagiti	.	NOUN
+.	.	.	.	gun-od	EOS	PUNCT
+
+Napigsa	napigsa	nap	gsa	BOS	ti	ADJ
+ti	ti	ti	ti	Napigsa	ayat	DET
+ayat	ayat	aya	yat	ti	.	NOUN
+.	.	.	.	ayat	EOS	PUNCT
+
+Taray	taray	tar	ray	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Taray	singsing	DET
+singsing	singsing	sin	ing	dagiti	.	NOUN
+.	.	.	.	singsing	EOS	PUNCT
+
+Jopay	jopay	jop	pay	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Jopay	sangit	DET
+sangit	sangit	san	git	dagiti	.	NOUN
+.	.	.	.	sangit	EOS	PUNCT
+
+Halap	halap	hal	lap	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Halap	asping	DET
+asping	asping	asp	ing	dagiti	.	NOUN
+.	.	.	.	asping	EOS	PUNCT
+
+Tadek	tadek	tad	dek	BOS	ti	VERB
+ti	ti	ti	ti	Tadek	calbe	DET
+calbe	calbe	cal	lbe	ti	.	NOUN
+.	.	.	.	calbe	EOS	PUNCT
+
+Toy	toy	toy	toy	BOS	ti	VERB
+ti	ti	ti	ti	Toy	dalayap	DET
+dalayap	dalayap	dal	yap	ti	.	NOUN
+.	.	.	.	dalayap	EOS	PUNCT
+
+Nangngegda	nangngegda	nan	gda	BOS	ti	VERB
+ti	ti	ti	ti	Nangngegda	krimen	DET
+krimen	krimen	kri	men	ti	.	NOUN
+.	.	.	.	krimen	EOS	PUNCT
+
+Ibas	ibas	iba	bas	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Ibas	sika	DET
+sika	sika	sik	ika	dagiti	.	NOUN
+.	.	.	.	sika	EOS	PUNCT
+
+Wagas	wagas	wag	gas	BOS	ti	ADJ
+ti	ti	ti	ti	Wagas	tunaw	DET
+tunaw	tunaw	tun	naw	ti	.	NOUN
+.	.	.	.	tunaw	EOS	PUNCT
+
+A'n	a'n	a'n	a'n	BOS	ti	VERB
+ti	ti	ti	ti	A'n	pinggan	DET
+pinggan	pinggan	pin	gan	ti	.	NOUN
+.	.	.	.	pinggan	EOS	PUNCT
+
+Gimatang	gimatang	gim	ang	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Gimatang	unday	DET
+unday	unday	und	day	dagiti	.	NOUN
+.	.	.	.	unday	EOS	PUNCT
+
+Rapay	rapay	rap	pay	BOS	ni	VERB
+ni	ni	ni	ni	Rapay	Juan	DET
+Juan	juan	jua	uan	ni	.	PROPN
+.	.	.	.	Juan	EOS	PUNCT
+
+Immalig	immalig	imm	lig	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Immalig	dara	DET
+dara	dara	dar	ara	dagiti	.	NOUN
+.	.	.	.	dara	EOS	PUNCT
+
+Lahit	lahit	lah	hit	BOS	ni	VERB
+ni	ni	ni	ni	Lahit	Juan	DET
+Juan	juan	jua	uan	ni	.	PROPN
+.	.	.	.	Juan	EOS	PUNCT
+
+Duron	duron	dur	ron	BOS	ti	VERB
+ti	ti	ti	ti	Duron	gabbi	DET
+gabbi	gabbi	gab	bbi	ti	.	NOUN
+.	.	.	.	gabbi	EOS	PUNCT
+
+Alsem	alsem	als	sem	BOS	ti	ADJ
+ti	ti	ti	ti	Alsem	kamatis	DET
+kamatis	kamatis	kam	tis	ti	.	NOUN
+.	.	.	.	kamatis	EOS	PUNCT
+
+Ikat	ikat	ika	kat	BOS	ni	VERB
+ni	ni	ni	ni	Ikat	Juan	DET
+Juan	juan	jua	uan	ni	.	PROPN
+.	.	.	.	Juan	EOS	PUNCT
+
+Kuyog	kuyog	kuy	yog	BOS	ti	VERB
+ti	ti	ti	ti	Kuyog	krimen	DET
+krimen	krimen	kri	men	ti	.	NOUN
+.	.	.	.	krimen	EOS	PUNCT
+
+Japay	japay	jap	pay	BOS	ti	VERB
+ti	ti	ti	ti	Japay	lamut	DET
+lamut	lamut	lam	mut	ti	.	NOUN
+.	.	.	.	lamut	EOS	PUNCT
+
+Takder	takder	tak	der	BOS	ti	VERB
+ti	ti	ti	ti	Takder	langit	DET
+langit	langit	lan	git	ti	.	NOUN
+.	.	.	.	langit	EOS	PUNCT
+
+Igid	igid	igi	gid	BOS	ti	VERB
+ti	ti	ti	ti	Igid	gangsa	DET
+gangsa	gangsa	gan	gsa	ti	.	NOUN
+.	.	.	.	gangsa	EOS	PUNCT
+
+Sungbat	sungbat	sun	bat	BOS	ni	VERB
+ni	ni	ni	ni	Sungbat	Juan	DET
+Juan	juan	jua	uan	ni	.	PROPN
+.	.	.	.	Juan	EOS	PUNCT
+
+Daan	daan	daa	aan	BOS	ti	ADJ
+ti	ti	ti	ti	Daan	tabon	DET
+tabon	tabon	tab	bon	ti	.	NOUN
+.	.	.	.	tabon	EOS	PUNCT
+
+Dikit	dikit	dik	kit	BOS	ti	VERB
+ti	ti	ti	ti	Dikit	ebolusion	DET
+ebolusion	ebolusion	ebo	ion	ti	.	NOUN
+.	.	.	.	ebolusion	EOS	PUNCT
+
+Bagsol	bagsol	bag	sol	BOS	ti	VERB
+ti	ti	ti	ti	Bagsol	bankay	DET
+bankay	bankay	ban	kay	ti	.	NOUN
+.	.	.	.	bankay	EOS	PUNCT
+
+Kanito	kanito	kan	ito	BOS	ti	VERB
+ti	ti	ti	ti	Kanito	tampok	DET
+tampok	tampok	tam	pok	ti	.	NOUN
+.	.	.	.	tampok	EOS	PUNCT
+
+Ibur	ibur	ibu	bur	BOS	ni	VERB
+ni	ni	ni	ni	Ibur	Juan	DET
+Juan	juan	jua	uan	ni	.	PROPN
+.	.	.	.	Juan	EOS	PUNCT
+
+Dalus	dalus	dal	lus	BOS	ti	VERB
+ti	ti	ti	ti	Dalus	lawwa	DET
+lawwa	lawwa	law	wwa	ti	.	NOUN
+.	.	.	.	lawwa	EOS	PUNCT
+
+Ut-ut	ut-ut	ut-	-ut	BOS	ti	VERB
+ti	ti	ti	ti	Ut-ut	lam-ek	DET
+lam-ek	lam-ek	lam	-ek	ti	.	NOUN
+.	.	.	.	lam-ek	EOS	PUNCT
+
+Inagosto	inagosto	ina	sto	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Inagosto	lawag	DET
+lawag	lawag	law	wag	dagiti	.	NOUN
+.	.	.	.	lawag	EOS	PUNCT
+
+Igid	igid	igi	gid	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Igid	sandalia	DET
+sandalia	sandalia	san	lia	dagiti	.	NOUN
+.	.	.	.	sandalia	EOS	PUNCT
+
+Wagas	wagas	wag	gas	BOS	ti	ADJ
+ti	ti	ti	ti	Wagas	catagtag	DET
+catagtag	catagtag	cat	tag	ti	.	NOUN
+.	.	.	.	catagtag	EOS	PUNCT
+
+Saan	saan	saa	aan	BOS	ni	VERB
+ni	ni	ni	ni	Saan	Juan	DET
+Juan	juan	jua	uan	ni	.	PROPN
+.	.	.	.	Juan	EOS	PUNCT
+
+Rapay	rapay	rap	pay	BOS	ni	VERB
+ni	ni	ni	ni	Rapay	Juan	DET
+Juan	juan	jua	uan	ni	.	PROPN
+.	.	.	.	Juan	EOS	PUNCT
+
+Rikna	rikna	rik	kna	BOS	ti	VERB
+ti	ti	ti	ti	Rikna	cebago	DET
+cebago	cebago	ceb	ago	ti	.	NOUN
+.	.	.	.	cebago	EOS	PUNCT
+
+Labay	labay	lab	bay	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Labay	santol	DET
+santol	santol	san	tol	dagiti	.	NOUN
+.	.	.	.	santol	EOS	PUNCT
+
+Latta	latta	lat	tta	BOS	ti	VERB
+ti	ti	ti	ti	Latta	barekbek	DET
+barekbek	barekbek	bar	bek	ti	.	NOUN
+.	.	.	.	barekbek	EOS	PUNCT
+
+Nagidda	nagidda	nag	dda	BOS	ni	VERB
+ni	ni	ni	ni	Nagidda	Juan	DET
+Juan	juan	jua	uan	ni	.	PROPN
+.	.	.	.	Juan	EOS	PUNCT
+
+Innallukoy	innallukoy	inn	koy	BOS	ni	VERB
+ni	ni	ni	ni	Innallukoy	Juan	DET
+Juan	juan	jua	uan	ni	.	PROPN
+.	.	.	.	Juan	EOS	PUNCT
+
+Innala	innala	inn	ala	BOS	ti	VERB
+ti	ti	ti	ti	Innala	bannawag	DET
+bannawag	bannawag	ban	wag	ti	.	NOUN
+.	.	.	.	bannawag	EOS	PUNCT
+
+Immulogak	immulogak	imm	gak	BOS	ti	VERB
+ti	ti	ti	ti	Immulogak	eskoba	DET
+eskoba	eskoba	esk	oba	ti	.	NOUN
+.	.	.	.	eskoba	EOS	PUNCT
+
+Immuli	immuli	imm	uli	BOS	ti	VERB
+ti	ti	ti	ti	Immuli	abalayan	DET
+abalayan	abalayan	aba	yan	ti	.	NOUN
+.	.	.	.	abalayan	EOS	PUNCT
+
+Bangking	bangking	ban	ing	BOS	ti	ADJ
+ti	ti	ti	ti	Bangking	walo	DET
+walo	walo	wal	alo	ti	.	NOUN
+.	.	.	.	walo	EOS	PUNCT
+
+Wagayway	wagayway	wag	way	BOS	ni	VERB
+ni	ni	ni	ni	Wagayway	Juan	DET
+Juan	juan	jua	uan	ni	.	PROPN
+.	.	.	.	Juan	EOS	PUNCT
+
+Halay	halay	hal	lay	BOS	ni	VERB
+ni	ni	ni	ni	Halay	Juan	DET
+Juan	juan	jua	uan	ni	.	PROPN
+.	.	.	.	Juan	EOS	PUNCT
+
+Hamak	hamak	ham	mak	BOS	ti	ADJ
+ti	ti	ti	ti	Hamak	ceras	DET
+ceras	ceras	cer	ras	ti	.	NOUN
+.	.	.	.	ceras	EOS	PUNCT
+
+Cibil	cibil	cib	bil	BOS	ti	ADJ
+ti	ti	ti	ti	Cibil	betis	DET
+betis	betis	bet	tis	ti	.	NOUN
+.	.	.	.	betis	EOS	PUNCT
+
+Duron	duron	dur	ron	BOS	ti	VERB
+ti	ti	ti	ti	Duron	luzon	DET
+luzon	luzon	luz	zon	ti	.	NOUN
+.	.	.	.	luzon	EOS	PUNCT
+
+Julay	julay	jul	lay	BOS	ti	VERB
+ti	ti	ti	ti	Julay	al-alia	DET
+al-alia	al-alia	al-	lia	ti	.	NOUN
+.	.	.	.	al-alia	EOS	PUNCT
+
+Nangabak	nangabak	nan	bak	BOS	ti	VERB
+ti	ti	ti	ti	Nangabak	gingined	DET
+gingined	gingined	gin	ned	ti	.	NOUN
+.	.	.	.	gingined	EOS	PUNCT
+
+Rapay	rapay	rap	pay	BOS	ti	VERB
+ti	ti	ti	ti	Rapay	gabut	DET
+gabut	gabut	gab	but	ti	.	NOUN
+.	.	.	.	gabut	EOS	PUNCT
+
+Kasta	kasta	kas	sta	BOS	ti	ADJ
+ti	ti	ti	ti	Kasta	byag	DET
+byag	byag	bya	yag	ti	.	NOUN
+.	.	.	.	byag	EOS	PUNCT
+
+Rimmoray*	rimmoray*	rim	ay*	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Rimmoray*	agum	DET
+agum	agum	agu	gum	dagiti	.	NOUN
+.	.	.	.	agum	EOS	PUNCT
+
+Puraw	puraw	pur	raw	BOS	ti	ADJ
+ti	ti	ti	ti	Puraw	bateng	DET
+bateng	bateng	bat	eng	ti	.	NOUN
+.	.	.	.	bateng	EOS	PUNCT
+
+Nagbuneng	nagbuneng	nag	eng	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Nagbuneng	dedeksyon	DET
+dedeksyon	dedeksyon	ded	yon	dagiti	.	NOUN
+.	.	.	.	dedeksyon	EOS	PUNCT
+
+Kalad	kalad	kal	lad	BOS	ti	VERB
+ti	ti	ti	ti	Kalad	buto	DET
+buto	buto	but	uto	ti	.	NOUN
+.	.	.	.	buto	EOS	PUNCT
+
+Basa	basa	bas	asa	BOS	ti	ADJ
+ti	ti	ti	ti	Basa	nagan	DET
+nagan	nagan	nag	gan	ti	.	NOUN
+.	.	.	.	nagan	EOS	PUNCT
+
+Adda	adda	add	dda	BOS	aso	VERB
+aso	aso	aso	aso	Adda	idiay	NOUN
+idiay	idiay	idi	iay	aso	balay	ADV
+balay	balay	bal	lay	idiay	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Nangan	nangan	nan	gan	BOS	ti	VERB
+ti	ti	ti	ti	Nangan	ubing	DET
+ubing	ubing	ubi	bing	ti	idiay	NOUN
+idiay	idiay	idi	iay	ubing	bangkag	ADV
+bangkag	bangkag	ban	kag	idiay	.	NOUN
+.	.	.	.	bangkag	EOS	PUNCT
+
+Nagbunga	nagbunga	nag	nga	BOS	ti	VERB
+ti	ti	ti	ti	Nagbunga	mangga	DET
+mangga	mangga	man	gga	ti	idiay	NOUN
+idiay	idiay	idi	iay	mangga	inang	ADV
+inang	inang	ina	ang	idiay	.	NOUN
+.	.	.	.	inang	EOS	PUNCT
+
+Agitugot	agitugot	agi	got	BOS	ti	VERB
+ti	ti	ti	ti	Agitugot	payong	DET
+payong	payong	pay	ong	ti	ni	NOUN
+ni	ni	ni	ni	payong	Maria	DET
+Maria	maria	mar	ria	ni	.	PROPN
+.	.	.	.	Maria	EOS	PUNCT
+
+Uminom	uminom	umi	nom	BOS	ti	VERB
+ti	ti	ti	ti	Uminom	ubing	DET
+ubing	ubing	ubi	bing	ti	ti	NOUN
+ti	ti	ti	ti	ubing	gatas	DET
+gatas	gatas	gat	tas	ti	.	NOUN
+.	.	.	.	gatas	EOS	PUNCT
+
+Napintas	napintas	nap	tas	BOS	ti	ADJ
+ti	ti	ti	ti	Napintas	bado	DET
+bado	bado	bad	ado	ti	ni	NOUN
+ni	ni	ni	ni	bado	Ana	DET
+Ana	ana	ana	ana	ni	.	PROPN
+.	.	.	.	Ana	EOS	PUNCT
+
+Nagtaray	nagtaray	nag	ray	BOS	ti	VERB
+ti	ti	ti	ti	Nagtaray	aso	DET
+aso	aso	aso	aso	ti	idiay	NOUN
+idiay	idiay	idi	iay	aso	dalan	ADV
+dalan	dalan	dal	lan	idiay	.	NOUN
+.	.	.	.	dalan	EOS	PUNCT
+
+Nabanglo	nabanglo	nab	glo	BOS	ti	ADJ
+ti	ti	ti	ti	Nabanglo	sabong	DET
+sabong	sabong	sab	ong	ti	idiay	NOUN
+idiay	idiay	idi	iay	sabong	hardin	ADV
+hardin	hardin	har	din	idiay	.	NOUN
+.	.	.	.	hardin	EOS	PUNCT
+
+Agkanta	agkanta	agk	nta	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agkanta	billit	DET
+billit	billit	bil	lit	dagiti	idiay	NOUN
+idiay	idiay	idi	iay	billit	kayo	ADV
+kayo	kayo	kay	ayo	idiay	.	NOUN
+.	.	.	.	kayo	EOS	PUNCT
+
+Nalamiis	nalamiis	nal	iis	BOS	ti	ADJ
+ti	ti	ti	ti	Nalamiis	angin	DET
+angin	angin	ang	gin	ti	idiay	NOUN
+idiay	idiay	idi	iay	angin	bantay	ADV
+bantay	bantay	ban	tay	idiay	.	NOUN
+.	.	.	.	bantay	EOS	PUNCT
+
+Agsurat	agsurat	ags	rat	BOS	ti	VERB
+ti	ti	ti	ti	Agsurat	maestra	DET
+maestra	maestra	mae	tra	ti	idiay	NOUN
+idiay	idiay	idi	iay	maestra	pisara	ADV
+pisara	pisara	pis	ara	idiay	.	NOUN
+.	.	.	.	pisara	EOS	PUNCT
+
+Napudot	napudot	nap	dot	BOS	ti	ADJ
+ti	ti	ti	ti	Napudot	kape	DET
+kape	kape	kap	ape	ti	idiay	NOUN
+idiay	idiay	idi	iay	kape	tasa	ADV
+tasa	tasa	tas	asa	idiay	.	NOUN
+.	.	.	.	tasa	EOS	PUNCT
+
+Agadal	agadal	aga	dal	BOS	dagiti	VERB
+dagiti	dagiti	dag	iti	Agadal	estudyante	DET
+estudyante	estudyante	est	nte	dagiti	idiay	NOUN
+idiay	idiay	idi	iay	estudyante	eskuelaan	ADV
+eskuelaan	eskuelaan	esk	aan	idiay	.	NOUN
+.	.	.	.	eskuelaan	EOS	PUNCT
+
+Mangan	mangan	man	gan	BOS	ti	VERB
+ti	ti	ti	ti	Mangan	pamilya	DET
+pamilya	pamilya	pam	lya	ti	idiay	NOUN
+idiay	idiay	idi	iay	pamilya	lamisaan	ADV
+lamisaan	lamisaan	lam	aan	idiay	.	NOUN
+.	.	.	.	lamisaan	EOS	PUNCT
+
+Dakkel	dakkel	dak	kel	BOS	ti	ADJ
+ti	ti	ti	ti	Dakkel	balay	DET
+balay	balay	bal	lay	ti	ni	NOUN
+ni	ni	ni	ni	balay	Juan	DET
+Juan	juan	jua	uan	ni	.	PROPN
+.	.	.	.	Juan	EOS	PUNCT
+
+Agparang	agparang	agp	ang	BOS	ti	VERB
+ti	ti	ti	ti	Agparang	init	DET
+init	init	ini	nit	ti	idiay	NOUN
+idiay	idiay	idi	iay	init	langit	ADV
+langit	langit	lan	git	idiay	.	NOUN
+.	.	.	.	langit	EOS	PUNCT
+
+Nasam-it	nasam-it	nas	-it	BOS	ti	ADJ
+ti	ti	ti	ti	Nasam-it	mangga	DET
+mangga	mangga	man	gga	ti	idiay	NOUN
+idiay	idiay	idi	iay	mangga	bangkag	ADV
+bangkag	bangkag	ban	kag	idiay	.	NOUN
+.	.	.	.	bangkag	EOS	PUNCT
+
+Agmaneho	agmaneho	agm	eho	BOS	ti	VERB
+ti	ti	ti	ti	Agmaneho	tatang	DET
+tatang	tatang	tat	ang	ti	ti	NOUN
+ti	ti	ti	ti	tatang	dyip	DET
+dyip	dyip	dyi	yip	ti	.	NOUN
+.	.	.	.	dyip	EOS	PUNCT
+
+Natangken	natangken	nat	ken	BOS	ti	ADJ
+ti	ti	ti	ti	Natangken	bato	DET
+bato	bato	bat	ato	ti	idiay	NOUN
+idiay	idiay	idi	iay	bato	kalsada	ADV
+kalsada	kalsada	kal	ada	idiay	.	NOUN
+.	.	.	.	kalsada	EOS	PUNCT
+
+Agdait	agdait	agd	ait	BOS	ti	VERB
+ti	ti	ti	ti	Agdait	inang	DET
+inang	inang	ina	ang	ti	ti	NOUN
+ti	ti	ti	ti	inang	bado	DET
+bado	bado	bad	ado	ti	.	NOUN
+.	.	.	.	bado	EOS	PUNCT
+
+Nasakit	nasakit	nas	kit	BOS	ti	ADJ
+ti	ti	ti	ti	Nasakit	ulo	DET
+ulo	ulo	ulo	ulo	ti	ni	NOUN
+ni	ni	ni	ni	ulo	Lolo	DET
+Lolo	lolo	lol	olo	ni	.	PROPN
+.	.	.	.	Lolo	EOS	PUNCT
+
+Agkalap	agkalap	agk	lap	BOS	ti	VERB
+ti	ti	ti	ti	Agkalap	lakay	DET
+lakay	lakay	lak	kay	ti	idiay	NOUN
+idiay	idiay	idi	iay	lakay	baybay	ADV
+baybay	baybay	bay	bay	idiay	.	NOUN
+.	.	.	.	baybay	EOS	PUNCT
+
+Naragsak	naragsak	nar	sak	BOS	ti	ADJ
+ti	ti	ti	ti	Naragsak	pyesta	DET
+pyesta	pyesta	pye	sta	ti	idiay	NOUN
+idiay	idiay	idi	iay	pyesta	plaza	ADV
+plaza	plaza	pla	aza	idiay	.	NOUN
+.	.	.	.	plaza	EOS	PUNCT
+
+Agtaray	agtaray	agt	ray	BOS	ti	VERB
+ti	ti	ti	ti	Agtaray	kabalyo	DET
+kabalyo	kabalyo	kab	lyo	ti	idiay	NOUN
+idiay	idiay	idi	iay	kabalyo	bukid	ADV
+bukid	bukid	buk	kid	idiay	.	NOUN
+.	.	.	.	bukid	EOS	PUNCT
+
+Nabangsit	nabangsit	nab	sit	BOS	ti	ADJ
+ti	ti	ti	ti	Nabangsit	basura	DET
+basura	basura	bas	ura	ti	idiay	NOUN
+idiay	idiay	idi	iay	basura	kalsada	ADV
+kalsada	kalsada	kal	ada	idiay	.	NOUN
+.	.	.	.	kalsada	EOS	PUNCT
+
+Umay	umay	uma	may	BOS	ti	VERB
+ti	ti	ti	ti	Umay	bisita	DET
+bisita	bisita	bis	ita	ti	idiay	NOUN
+idiay	idiay	idi	iay	bisita	balay	ADV
+balay	balay	bal	lay	idiay	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Nangina	nangina	nan	ina	BOS	ti	ADJ
+ti	ti	ti	ti	Nangina	bagas	DET
+bagas	bagas	bag	gas	ti	idiay	NOUN
+idiay	idiay	idi	iay	bagas	tiendaan	ADV
+tiendaan	tiendaan	tie	aan	idiay	.	NOUN
+.	.	.	.	tiendaan	EOS	PUNCT
+
+Agsaing	agsaing	ags	ing	BOS	ti	VERB
+ti	ti	ti	ti	Agsaing	lola	DET
+lola	lola	lol	ola	ti	idiay	NOUN
+idiay	idiay	idi	iay	lola	dapugan	ADV
+dapugan	dapugan	dap	gan	idiay	.	NOUN
+.	.	.	.	dapugan	EOS	PUNCT
+
+Naapgad	naapgad	naa	gad	BOS	ti	ADJ
+ti	ti	ti	ti	Naapgad	ikan	DET
+ikan	ikan	ika	kan	ti	idiay	NOUN
+idiay	idiay	idi	iay	ikan	plato	ADV
+plato	plato	pla	ato	idiay	.	NOUN
+.	.	.	.	plato	EOS	PUNCT
+
+Agawid	agawid	aga	wid	BOS	ti	VERB
+ti	ti	ti	ti	Agawid	ama	DET
+ama	ama	ama	ama	ti	idiay	NOUN
+idiay	idiay	idi	iay	ama	balay	ADV
+balay	balay	bal	lay	idiay	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Nasingpet	nasingpet	nas	pet	BOS	ti	ADJ
+ti	ti	ti	ti	Nasingpet	ubing	DET
+ubing	ubing	ubi	bing	ti	idiay	NOUN
+idiay	idiay	idi	iay	ubing	simbaan	ADV
+simbaan	simbaan	sim	aan	idiay	.	NOUN
+.	.	.	.	simbaan	EOS	PUNCT
+
+Nagligos	nagligos	nag	gos	BOS	ti	VERB
+ti	ti	ti	ti	Nagligos	aso	DET
+aso	aso	aso	aso	ti	idiay	NOUN
+idiay	idiay	idi	iay	aso	karayan	ADV
+karayan	karayan	kar	yan	idiay	.	NOUN
+.	.	.	.	karayan	EOS	PUNCT
+
+Nalabaga	nalabaga	nal	aga	BOS	ti	ADJ
+ti	ti	ti	ti	Nalabaga	sabong	DET
+sabong	sabong	sab	ong	ti	idiay	NOUN
+idiay	idiay	idi	iay	sabong	plorera	ADV
+plorera	plorera	plo	era	idiay	.	NOUN
+.	.	.	.	plorera	EOS	PUNCT
+
+Nagani	nagani	nag	ani	BOS	ti	VERB
+ti	ti	ti	ti	Nagani	lakay	DET
+lakay	lakay	lak	kay	ti	idiay	NOUN
+idiay	idiay	idi	iay	lakay	talon	ADV
+talon	talon	tal	lon	idiay	.	NOUN
+.	.	.	.	talon	EOS	PUNCT
+
+Basa	basa	bas	asa	BOS	ti	ADJ
+ti	ti	ti	ti	Basa	daga	DET
+daga	daga	dag	aga	ti	idiay	NOUN
+idiay	idiay	idi	iay	daga	ruar	ADV
+ruar	ruar	rua	uar	idiay	.	NOUN
+.	.	.	.	ruar	EOS	PUNCT
+
+Nagbasa	nagbasa	nag	asa	BOS	ti	VERB
+ti	ti	ti	ti	Nagbasa	ubing	DET
+ubing	ubing	ubi	bing	ti	idiay	NOUN
+idiay	idiay	idi	iay	ubing	kwarto	ADV
+kwarto	kwarto	kwa	rto	idiay	.	NOUN
+.	.	.	.	kwarto	EOS	PUNCT
+
+Napukaw	napukaw	nap	kaw	BOS	ti	ADJ
+ti	ti	ti	ti	Napukaw	susing	DET
+susing	susing	sus	ing	ti	idiay	NOUN
+idiay	idiay	idi	iay	susing	bulsa	ADV
+bulsa	bulsa	bul	lsa	idiay	.	NOUN
+.	.	.	.	bulsa	EOS	PUNCT
+
+Nagbuneng	nagbuneng	nag	eng	BOS	ti	VERB
+ti	ti	ti	ti	Nagbuneng	tatang	DET
+tatang	tatang	tat	ang	ti	idiay	NOUN
+idiay	idiay	idi	iay	tatang	talon	ADV
+talon	talon	tal	lon	idiay	.	NOUN
+.	.	.	.	talon	EOS	PUNCT
+
+Puraw	puraw	pur	raw	BOS	ti	ADJ
+ti	ti	ti	ti	Puraw	bado	DET
+bado	bado	bad	ado	ti	ni	NOUN
+ni	ni	ni	ni	bado	Maria	DET
+Maria	maria	mar	ria	ni	.	PROPN
+.	.	.	.	Maria	EOS	PUNCT
+
+Nagtakder	nagtakder	nag	der	BOS	ti	VERB
+ti	ti	ti	ti	Nagtakder	sundalo	DET
+sundalo	sundalo	sun	alo	ti	idiay	NOUN
+idiay	idiay	idi	iay	sundalo	kampo	ADV
+kampo	kampo	kam	mpo	idiay	.	NOUN
+.	.	.	.	kampo	EOS	PUNCT
+
+Halang	halang	hal	ang	BOS	ti	ADJ
+ti	ti	ti	ti	Halang	sili	DET
+sili	sili	sil	ili	ti	idiay	NOUN
+idiay	idiay	idi	iay	sili	platito	ADV
+platito	platito	pla	ito	idiay	.	NOUN
+.	.	.	.	platito	EOS	PUNCT
+
+Ibas	ibas	iba	bas	BOS	ti	VERB
+ti	ti	ti	ti	Ibas	basura	DET
+basura	basura	bas	ura	ti	idiay	NOUN
+idiay	idiay	idi	iay	basura	basurahan	ADV
+basurahan	basurahan	bas	han	idiay	.	NOUN
+.	.	.	.	basurahan	EOS	PUNCT
+
+Duog	duog	duo	uog	BOS	ti	ADJ
+ti	ti	ti	ti	Duog	libro	DET
+libro	libro	lib	bro	ti	idiay	NOUN
+idiay	idiay	idi	iay	libro	ante	ADV
+ante	ante	ant	nte	idiay	.	NOUN
+.	.	.	.	ante	EOS	PUNCT
+
+Tadek	tadek	tad	dek	BOS	ti	VERB
+ti	ti	ti	ti	Tadek	baket	DET
+baket	baket	bak	ket	ti	idiay	NOUN
+idiay	idiay	idi	iay	baket	piesta	ADV
+piesta	piesta	pie	sta	idiay	.	NOUN
+.	.	.	.	piesta	EOS	PUNCT
+
+Sardam	sardam	sar	dam	BOS	ti	ADJ
+ti	ti	ti	ti	Sardam	langit	DET
+langit	langit	lan	git	ti	idiay	NOUN
+idiay	idiay	idi	iay	langit	laud	ADV
+laud	laud	lau	aud	idiay	.	NOUN
+.	.	.	.	laud	EOS	PUNCT
+
+Tagbat	tagbat	tag	bat	BOS	ti	VERB
+ti	ti	ti	ti	Tagbat	kayo	DET
+kayo	kayo	kay	ayo	ti	idiay	NOUN
+idiay	idiay	idi	iay	kayo	bakir	ADV
+bakir	bakir	bak	kir	idiay	.	NOUN
+.	.	.	.	bakir	EOS	PUNCT
+
+Alas	alas	ala	las	BOS	ti	ADJ
+ti	ti	ti	ti	Alas	kalsada	DET
+kalsada	kalsada	kal	ada	ti	idiay	NOUN
+idiay	idiay	idi	iay	kalsada	syudad	ADV
+syudad	syudad	syu	dad	idiay	.	NOUN
+.	.	.	.	syudad	EOS	PUNCT
+
+Ibaw	ibaw	iba	baw	BOS	ti	VERB
+ti	ti	ti	ti	Ibaw	bola	DET
+bola	bola	bol	ola	ti	idiay	NOUN
+idiay	idiay	idi	iay	bola	korte	ADV
+korte	korte	kor	rte	idiay	.	NOUN
+.	.	.	.	korte	EOS	PUNCT
+
+Bangking	bangking	ban	ing	BOS	ti	ADJ
+ti	ti	ti	ti	Bangking	sapatos	DET
+sapatos	sapatos	sap	tos	ti	idiay	NOUN
+idiay	idiay	idi	iay	sapatos	ay-ayam	ADV
+ay-ayam	ay-ayam	ay-	yam	idiay	.	NOUN
+.	.	.	.	ay-ayam	EOS	PUNCT
+
+Japay	japay	jap	pay	BOS	ti	VERB
+ti	ti	ti	ti	Japay	aso	DET
+aso	aso	aso	aso	ti	idiay	NOUN
+idiay	idiay	idi	iay	aso	dalan	ADV
+dalan	dalan	dal	lan	idiay	.	NOUN
+.	.	.	.	dalan	EOS	PUNCT
+
+Bile	bile	bil	ile	BOS	ti	ADJ
+ti	ti	ti	ti	Bile	baggis	DET
+baggis	baggis	bag	gis	ti	idiay	NOUN
+idiay	idiay	idi	iay	baggis	tiendaan	ADV
+tiendaan	tiendaan	tie	aan	idiay	.	NOUN
+.	.	.	.	tiendaan	EOS	PUNCT
+
+Jaray	jaray	jar	ray	BOS	ti	VERB
+ti	ti	ti	ti	Jaray	ubing	DET
+ubing	ubing	ubi	bing	ti	idiay	NOUN
+idiay	idiay	idi	iay	ubing	kwarto	ADV
+kwarto	kwarto	kwa	rto	idiay	.	NOUN
+.	.	.	.	kwarto	EOS	PUNCT
+
+Nasayaat	nasayaat	nas	aat	BOS	ti	ADJ
+ti	ti	ti	ti	Nasayaat	panawen	DET
+panawen	panawen	pan	wen	ti	idiay	NOUN
+idiay	idiay	idi	iay	panawen	probinsya	ADV
+probinsya	probinsya	pro	sya	idiay	.	NOUN
+.	.	.	.	probinsya	EOS	PUNCT
+
+Baba	baba	bab	aba	BOS	ti	VERB
+ti	ti	ti	ti	Baba	presyo	DET
+presyo	presyo	pre	syo	ti	idiay	NOUN
+idiay	idiay	idi	iay	presyo	merkado	ADV
+merkado	merkado	mer	ado	idiay	.	NOUN
+.	.	.	.	merkado	EOS	PUNCT
+
+Cibil	cibil	cib	bil	BOS	ti	ADJ
+ti	ti	ti	ti	Cibil	kaso	DET
+kaso	kaso	kas	aso	ti	idiay	NOUN
+idiay	idiay	idi	iay	kaso	korte	ADV
+korte	korte	kor	rte	idiay	.	NOUN
+.	.	.	.	korte	EOS	PUNCT
+
+Jagas	jagas	jag	gas	BOS	ti	VERB
+ti	ti	ti	ti	Jagas	sugat	DET
+sugat	sugat	sug	gat	ti	idiay	NOUN
+idiay	idiay	idi	iay	sugat	ima	ADV
+ima	ima	ima	ima	idiay	.	NOUN
+.	.	.	.	ima	EOS	PUNCT
+
+Hamak	hamak	ham	mak	BOS	ti	ADJ
+ti	ti	ti	ti	Hamak	tao	DET
+tao	tao	tao	tao	ti	idiay	NOUN
+idiay	idiay	idi	iay	tao	syudad	ADV
+syudad	syudad	syu	dad	idiay	.	NOUN
+.	.	.	.	syudad	EOS	PUNCT
+
+Halay	halay	hal	lay	BOS	ti	VERB
+ti	ti	ti	ti	Halay	bado	DET
+bado	bado	bad	ado	ti	idiay	NOUN
+idiay	idiay	idi	iay	bado	sampayan	ADV
+sampayan	sampayan	sam	yan	idiay	.	NOUN
+.	.	.	.	sampayan	EOS	PUNCT
+
+Alsem	alsem	als	sem	BOS	ti	ADJ
+ti	ti	ti	ti	Alsem	mangga	DET
+mangga	mangga	man	gga	ti	idiay	NOUN
+idiay	idiay	idi	iay	mangga	bangkag	ADV
+bangkag	bangkag	ban	kag	idiay	.	NOUN
+.	.	.	.	bangkag	EOS	PUNCT
+
+Wagayway	wagayway	wag	way	BOS	ti	VERB
+ti	ti	ti	ti	Wagayway	bandera	DET
+bandera	bandera	ban	era	ti	idiay	NOUN
+idiay	idiay	idi	iay	bandera	plasa	ADV
+plasa	plasa	pla	asa	idiay	.	NOUN
+.	.	.	.	plasa	EOS	PUNCT
+
+Wagas	wagas	wag	gas	BOS	ti	ADJ
+ti	ti	ti	ti	Wagas	ugali	DET
+ugali	ugali	uga	ali	ti	idiay	NOUN
+idiay	idiay	idi	iay	ugali	ubing	ADV
+ubing	ubing	ubi	bing	idiay	.	NOUN
+.	.	.	.	ubing	EOS	PUNCT
+
+Julay	julay	jul	lay	BOS	ti	VERB
+ti	ti	ti	ti	Julay	tali	DET
+tali	tali	tal	ali	ti	idiay	NOUN
+idiay	idiay	idi	iay	tali	kayo	ADV
+kayo	kayo	kay	ayo	idiay	.	NOUN
+.	.	.	.	kayo	EOS	PUNCT
+
+Duron	duron	dur	ron	BOS	ti	VERB
+ti	ti	ti	ti	Duron	kariton	DET
+kariton	kariton	kar	ton	ti	idiay	NOUN
+idiay	idiay	idi	iay	kariton	dalan	ADV
+dalan	dalan	dal	lan	idiay	.	NOUN
+.	.	.	.	dalan	EOS	PUNCT
+
+Lahit	lahit	lah	hit	BOS	ti	VERB
+ti	ti	ti	ti	Lahit	anak	DET
+anak	anak	ana	nak	ti	idiay	NOUN
+idiay	idiay	idi	iay	anak	tiendaan	ADV
+tiendaan	tiendaan	tie	aan	idiay	.	NOUN
+.	.	.	.	tiendaan	EOS	PUNCT
+
+Immalig	immalig	imm	lig	BOS	ti	VERB
+ti	ti	ti	ti	Immalig	pusa	DET
+pusa	pusa	pus	usa	ti	idiay	NOUN
+idiay	idiay	idi	iay	pusa	bintana	ADV
+bintana	bintana	bin	ana	idiay	.	NOUN
+.	.	.	.	bintana	EOS	PUNCT
+
+Nasugpet	nasugpet	nas	pet	BOS	ti	ADJ
+ti	ti	ti	ti	Nasugpet	saba	DET
+saba	saba	sab	aba	ti	idiay	NOUN
+idiay	idiay	idi	iay	saba	plato	ADV
+plato	plato	pla	ato	idiay	.	NOUN
+.	.	.	.	plato	EOS	PUNCT
+
+Agsangit	agsangit	ags	git	BOS	ti	VERB
+ti	ti	ti	ti	Agsangit	ubing	DET
+ubing	ubing	ubi	bing	ti	idiay	NOUN
+idiay	idiay	idi	iay	ubing	kwarto	ADV
+kwarto	kwarto	kwa	rto	idiay	.	NOUN
+.	.	.	.	kwarto	EOS	PUNCT
+
+Natakrot	natakrot	nat	rot	BOS	ti	ADJ
+ti	ti	ti	ti	Natakrot	aso	DET
+aso	aso	aso	aso	ti	idiay	NOUN
+idiay	idiay	idi	iay	aso	bangkag	ADV
+bangkag	bangkag	ban	kag	idiay	.	NOUN
+.	.	.	.	bangkag	EOS	PUNCT
+
+Nagani	nagani	nag	ani	BOS	ti	VERB
+ti	ti	ti	ti	Nagani	lakay	DET
+lakay	lakay	lak	kay	ti	idiay	NOUN
+idiay	idiay	idi	iay	lakay	taltalon	ADV
+taltalon	taltalon	tal	lon	idiay	.	NOUN
+.	.	.	.	taltalon	EOS	PUNCT
+
+Basa	basa	bas	asa	BOS	ti	ADJ
+ti	ti	ti	ti	Basa	daga	DET
+daga	daga	dag	aga	ti	idiay	NOUN
+idiay	idiay	idi	iay	daga	ag-ag	ADV
+ag-ag	ag-ag	ag-	-ag	idiay	.	NOUN
+.	.	.	.	ag-ag	EOS	PUNCT
+
+Naglayag	naglayag	nag	yag	BOS	ti	VERB
+ti	ti	ti	ti	Naglayag	barko	DET
+barko	barko	bar	rko	ti	idiay	NOUN
+idiay	idiay	idi	iay	barko	baybay	ADV
+baybay	baybay	bay	bay	idiay	.	NOUN
+.	.	.	.	baybay	EOS	PUNCT
+
+Napukaw	napukaw	nap	kaw	BOS	ti	ADJ
+ti	ti	ti	ti	Napukaw	susing	DET
+susing	susing	sus	ing	ti	idiay	NOUN
+idiay	idiay	idi	iay	susing	bag	ADV
+bag	bag	bag	bag	idiay	.	NOUN
+.	.	.	.	bag	EOS	PUNCT
+
+Nagbuneng	nagbuneng	nag	eng	BOS	ti	VERB
+ti	ti	ti	ti	Nagbuneng	lakay	DET
+lakay	lakay	lak	kay	ti	idiay	NOUN
+idiay	idiay	idi	iay	lakay	bukid	ADV
+bukid	bukid	buk	kid	idiay	.	NOUN
+.	.	.	.	bukid	EOS	PUNCT
+
+Puraw	puraw	pur	raw	BOS	ti	ADJ
+ti	ti	ti	ti	Puraw	kaldero	DET
+kaldero	kaldero	kal	ero	ti	idiay	NOUN
+idiay	idiay	idi	iay	kaldero	dapugan	ADV
+dapugan	dapugan	dap	gan	idiay	.	NOUN
+.	.	.	.	dapugan	EOS	PUNCT
+
+Halang	halang	hal	ang	BOS	ti	ADJ
+ti	ti	ti	ti	Halang	sili	DET
+sili	sili	sil	ili	ti	idiay	NOUN
+idiay	idiay	idi	iay	sili	tasa	ADV
+tasa	tasa	tas	asa	idiay	.	NOUN
+.	.	.	.	tasa	EOS	PUNCT
+
+Ibas	ibas	iba	bas	BOS	ti	VERB
+ti	ti	ti	ti	Ibas	basura	DET
+basura	basura	bas	ura	ti	idiay	NOUN
+idiay	idiay	idi	iay	basura	igid	ADV
+igid	igid	igi	gid	idiay	.	NOUN
+.	.	.	.	igid	EOS	PUNCT
+
+Duog	duog	duo	uog	BOS	ti	ADJ
+ti	ti	ti	ti	Duog	lapis	DET
+lapis	lapis	lap	pis	ti	idiay	NOUN
+idiay	idiay	idi	iay	lapis	kahon	ADV
+kahon	kahon	kah	hon	idiay	.	NOUN
+.	.	.	.	kahon	EOS	PUNCT
+
+Tadek	tadek	tad	dek	BOS	ti	VERB
+ti	ti	ti	ti	Tadek	baket	DET
+baket	baket	bak	ket	ti	idiay	NOUN
+idiay	idiay	idi	iay	baket	salaan	ADV
+salaan	salaan	sal	aan	idiay	.	NOUN
+.	.	.	.	salaan	EOS	PUNCT
+
+Sardam	sardam	sar	dam	BOS	ti	ADJ
+ti	ti	ti	ti	Sardam	oras	DET
+oras	oras	ora	ras	ti	idiay	NOUN
+idiay	idiay	idi	iay	oras	relo	ADV
+relo	relo	rel	elo	idiay	.	NOUN
+.	.	.	.	relo	EOS	PUNCT
+
+Tagbat	tagbat	tag	bat	BOS	ti	VERB
+ti	ti	ti	ti	Tagbat	kayo	DET
+kayo	kayo	kay	ayo	ti	idiay	NOUN
+idiay	idiay	idi	iay	kayo	bakir	ADV
+bakir	bakir	bak	kir	idiay	.	NOUN
+.	.	.	.	bakir	EOS	PUNCT

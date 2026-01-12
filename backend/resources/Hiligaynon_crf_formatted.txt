@@ -1,0 +1,638 @@
+Mayad	mayad	may	yad	BOS	guid	ADJ
+guid	guid	gui	uid	Mayad	.	ADV
+.	.	.	.	guid	EOS	PUNCT
+
+Mayu	mayu	may	ayu	BOS	ini	ADJ
+ini	ini	ini	ini	Mayu	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Daku	daku	dak	aku	BOS	balay	ADJ
+balay	balay	bal	lay	Daku	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Namit	namit	nam	mit	BOS	ini	ADJ
+ini	ini	ini	ini	Namit	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Bisan	bisan	bis	san	BOS	diin	ADV
+diin	diin	dii	iin	Bisan	.	ADV
+.	.	.	.	diin	EOS	PUNCT
+
+Matahum	matahum	mat	hum	BOS	bata	ADJ
+bata	bata	bat	ata	Matahum	.	NOUN
+.	.	.	.	bata	EOS	PUNCT
+
+Init	init	ini	nit	BOS	subong	ADJ
+subong	subong	sub	ong	Init	.	ADV
+.	.	.	.	subong	EOS	PUNCT
+
+Bug-at	bug-at	bug	-at	BOS	ini	ADJ
+ini	ini	ini	ini	Bug-at	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Mahadlok	mahadlok	mah	lok	BOS	siya	ADJ
+siya	siya	siy	iya	Mahadlok	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Luyag	luyag	luy	yag	BOS	ko	VERB
+ko	ko	ko	ko	Luyag	.	PRON
+.	.	.	.	ko	EOS	PUNCT
+
+Kadto	kadto	kad	dto	BOS	siya	VERB
+siya	siya	siy	iya	Kadto	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Abri	abri	abr	bri	BOS	pwertahan	VERB
+pwertahan	pwertahan	pwe	han	Abri	.	NOUN
+.	.	.	.	pwertahan	EOS	PUNCT
+
+Sira	sira	sir	ira	BOS	bintana	VERB
+bintana	bintana	bin	ana	Sira	.	NOUN
+.	.	.	.	bintana	EOS	PUNCT
+
+Lakat	lakat	lak	kat	BOS	kami	VERB
+kami	kami	kam	ami	Lakat	.	PRON
+.	.	.	.	kami	EOS	PUNCT
+
+Tulog	tulog	tul	log	BOS	bata	VERB
+bata	bata	bat	ata	Tulog	.	NOUN
+.	.	.	.	bata	EOS	PUNCT
+
+Kaon	kaon	kao	aon	BOS	sila	VERB
+sila	sila	sil	ila	Kaon	.	PRON
+.	.	.	.	sila	EOS	PUNCT
+
+Inom	inom	ino	nom	BOS	tubig	VERB
+tubig	tubig	tub	big	Inom	.	NOUN
+.	.	.	.	tubig	EOS	PUNCT
+
+Lantaw	lantaw	lan	taw	BOS	ko	VERB
+ko	ko	ko	ko	Lantaw	.	PRON
+.	.	.	.	ko	EOS	PUNCT
+
+Puli	puli	pul	uli	BOS	na	VERB
+na	na	na	na	Puli	.	PART
+.	.	.	.	na	EOS	PUNCT
+
+Hampang	hampang	ham	ang	BOS	bata	VERB
+bata	bata	bat	ata	Hampang	.	NOUN
+.	.	.	.	bata	EOS	PUNCT
+
+May	may	may	may	BOS	kwarta	VERB
+kwarta	kwarta	kwa	rta	May	.	NOUN
+.	.	.	.	kwarta	EOS	PUNCT
+
+Wala	wala	wal	ala	BOS	ko	VERB
+ko	ko	ko	ko	Wala	.	PRON
+.	.	.	.	ko	EOS	PUNCT
+
+Ari	ari	ari	ari	BOS	siya	VERB
+siya	siya	siy	iya	Ari	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Ara	ara	ara	ara	BOS	sila	VERB
+sila	sila	sil	ila	Ara	.	PRON
+.	.	.	.	sila	EOS	PUNCT
+
+Bakal	bakal	bak	kal	BOS	ko	VERB
+ko	ko	ko	ko	Bakal	.	PRON
+.	.	.	.	ko	EOS	PUNCT
+
+Baligya	baligya	bal	gya	BOS	niya	VERB
+niya	niya	niy	iya	Baligya	.	PRON
+.	.	.	.	niya	EOS	PUNCT
+
+Sulod	sulod	sul	lod	BOS	siya	VERB
+siya	siya	siy	iya	Sulod	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Gwa	gwa	gwa	gwa	BOS	sila	VERB
+sila	sila	sil	ila	Gwa	.	PRON
+.	.	.	.	sila	EOS	PUNCT
+
+Hulat	hulat	hul	lat	BOS	ko	VERB
+ko	ko	ko	ko	Hulat	.	PRON
+.	.	.	.	ko	EOS	PUNCT
+
+Dalagan	dalagan	dal	gan	BOS	bata	VERB
+bata	bata	bat	ata	Dalagan	.	NOUN
+.	.	.	.	bata	EOS	PUNCT
+
+Tan-aw	tan-aw	tan	-aw	BOS	ko	VERB
+ko	ko	ko	ko	Tan-aw	.	PRON
+.	.	.	.	ko	EOS	PUNCT
+
+Pamati	pamati	pam	ati	BOS	siya	VERB
+siya	siya	siy	iya	Pamati	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Sabta	sabta	sab	bta	BOS	ini	VERB
+ini	ini	ini	ini	Sabta	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Sugata	sugata	sug	ata	BOS	ko	VERB
+ko	ko	ko	ko	Sugata	.	PRON
+.	.	.	.	ko	EOS	PUNCT
+
+Hatag	hatag	hat	tag	BOS	niya	VERB
+niya	niya	niy	iya	Hatag	.	PRON
+.	.	.	.	niya	EOS	PUNCT
+
+Baton	baton	bat	ton	BOS	ko	VERB
+ko	ko	ko	ko	Baton	.	PRON
+.	.	.	.	ko	EOS	PUNCT
+
+Pungko	pungko	pun	gko	BOS	siya	VERB
+siya	siya	siy	iya	Pungko	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Tindog	tindog	tin	dog	BOS	bata	VERB
+bata	bata	bat	ata	Tindog	.	NOUN
+.	.	.	.	bata	EOS	PUNCT
+
+Tawa	tawa	taw	awa	BOS	sila	VERB
+sila	sila	sil	ila	Tawa	.	PRON
+.	.	.	.	sila	EOS	PUNCT
+
+Hibi	hibi	hib	ibi	BOS	bata	VERB
+bata	bata	bat	ata	Hibi	.	NOUN
+.	.	.	.	bata	EOS	PUNCT
+
+Bukas	bukas	buk	kas	BOS	na	ADJ
+na	na	na	na	Bukas	.	PART
+.	.	.	.	na	EOS	PUNCT
+
+Sirado	sirado	sir	ado	BOS	ini	ADJ
+ini	ini	ini	ini	Sirado	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Limpyo	limpyo	lim	pyo	BOS	balay	ADJ
+balay	balay	bal	lay	Limpyo	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Mahigko	mahigko	mah	gko	BOS	ini	ADJ
+ini	ini	ini	ini	Mahigko	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Bag-o	bag-o	bag	-go	BOS	sapatos	ADJ
+sapatos	sapatos	sap	tos	Bag-o	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Guba	guba	gub	uba	BOS	ini	ADJ
+ini	ini	ini	ini	Guba	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Mahaba	mahaba	mah	aba	BOS	dalan	ADJ
+dalan	dalan	dal	lan	Mahaba	.	NOUN
+.	.	.	.	dalan	EOS	PUNCT
+
+Mubo	mubo	mub	ubo	BOS	sini	ADJ
+sini	sini	sin	ini	Mubo	.	PRON
+.	.	.	.	sini	EOS	PUNCT
+
+Madasig	madasig	mad	sig	BOS	siya	ADJ
+siya	siya	siy	iya	Madasig	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Hinay	hinay	hin	nay	BOS	siya	ADJ
+siya	siya	siy	iya	Hinay	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Sugdan	sugdan	sug	dan	BOS	ta	VERB
+ta	ta	ta	ta	Sugdan	.	PRON
+.	.	.	.	ta	EOS	PUNCT
+
+Tapuson	tapuson	tap	son	BOS	na	VERB
+na	na	na	na	Tapuson	.	PART
+.	.	.	.	na	EOS	PUNCT
+
+Pangita	pangita	pan	ita	BOS	ko	VERB
+ko	ko	ko	ko	Pangita	.	PRON
+.	.	.	.	ko	EOS	PUNCT
+
+Kuha	kuha	kuh	uha	BOS	ini	VERB
+ini	ini	ini	ini	Kuha	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Ibutang	ibutang	ibu	ang	BOS	diri	VERB
+diri	diri	dir	iri	Ibutang	.	ADV
+.	.	.	.	diri	EOS	PUNCT
+
+Kuhaa	kuhaa	kuh	haa	BOS	ini	VERB
+ini	ini	ini	ini	Kuhaa	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Dal-a	dal-a	dal	-la	BOS	diri	VERB
+diri	diri	dir	iri	Dal-a	.	ADV
+.	.	.	.	diri	EOS	PUNCT
+
+Pabayaan	pabayaan	pab	yan	BOS	ini	VERB
+ini	ini	ini	ini	Pabayaan	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Ihatag	ihatag	iha	tag	BOS	niya	VERB
+niya	niya	niy	iya	Ihatag	.	PRON
+.	.	.	.	niya	EOS	PUNCT
+
+Batuna	batuna	bat	una	BOS	ini	VERB
+ini	ini	ini	ini	Batuna	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Sa	sa	sa	sa	BOS	balay	ADP
+balay	balay	bal	lay	Sa	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Sa	sa	sa	sa	BOS	gwa	ADP
+gwa	gwa	gwa	gwa	Sa	.	ADV
+.	.	.	.	gwa	EOS	PUNCT
+
+Sa	sa	sa	sa	BOS	sulod	ADP
+sulod	sulod	sul	lod	Sa	.	ADV
+.	.	.	.	sulod	EOS	PUNCT
+
+Para	para	par	ara	BOS	imo	ADP
+imo	imo	imo	imo	Para	.	PRON
+.	.	.	.	imo	EOS	PUNCT
+
+Kag	kag	kag	kag	BOS	ako	CONJ
+ako	ako	ako	ako	Kag	.	PRON
+.	.	.	.	ako	EOS	PUNCT
+
+Kag	kag	kag	kag	BOS	siya	CONJ
+siya	siya	siy	iya	Kag	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Pero	pero	per	ero	BOS	wala	CONJ
+wala	wala	wal	ala	Pero	.	VERB
+.	.	.	.	wala	EOS	PUNCT
+
+Bisan	bisan	bis	san	BOS	wala	CONJ
+wala	wala	wal	ala	Bisan	.	VERB
+.	.	.	.	wala	EOS	PUNCT
+
+Kon	kon	kon	kon	BOS	ari	CONJ
+ari	ari	ari	ari	Kon	.	VERB
+.	.	.	.	ari	EOS	PUNCT
+
+Kay	kay	kay	kay	BOS	luyag	CONJ
+luyag	luyag	luy	yag	Kay	.	VERB
+.	.	.	.	luyag	EOS	PUNCT
+
+Masadya	masadya	mas	dya	BOS	sila	ADJ
+sila	sila	sil	ila	Masadya	.	PRON
+.	.	.	.	sila	EOS	PUNCT
+
+Masubo	masubo	mas	ubo	BOS	siya	ADJ
+siya	siya	siy	iya	Masubo	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Mahimo	mahimo	mah	imo	BOS	ini	ADJ
+ini	ini	ini	ini	Mahimo	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Importante	importante	imp	nte	BOS	ini	ADJ
+ini	ini	ini	ini	Importante	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Delikado	delikado	del	ado	BOS	ini	ADJ
+ini	ini	ini	ini	Delikado	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Seguro	seguro	seg	uro	BOS	ini	ADJ
+ini	ini	ini	ini	Seguro	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Tama	tama	tam	ama	BOS	ini	ADJ
+ini	ini	ini	ini	Tama	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Sala	sala	sal	ala	BOS	ini	ADJ
+ini	ini	ini	ini	Sala	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Mahapos	mahapos	mah	pos	BOS	ini	ADJ
+ini	ini	ini	ini	Mahapos	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Budlay	budlay	bud	lay	BOS	ini	ADJ
+ini	ini	ini	ini	Budlay	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Sugid	sugid	sug	gid	BOS	ko	VERB
+ko	ko	ko	ko	Sugid	.	PRON
+.	.	.	.	ko	EOS	PUNCT
+
+Pamangkot	pamangkot	pam	kot	BOS	siya	VERB
+siya	siya	siy	iya	Pamangkot	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Sabat	sabat	sab	bat	BOS	ko	VERB
+ko	ko	ko	ko	Sabat	.	PRON
+.	.	.	.	ko	EOS	PUNCT
+
+Hambal	hambal	ham	bal	BOS	siya	VERB
+siya	siya	siy	iya	Hambal	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Tudlo	tudlo	tud	dlo	BOS	ko	VERB
+ko	ko	ko	ko	Tudlo	.	PRON
+.	.	.	.	ko	EOS	PUNCT
+
+Basaha	basaha	bas	aha	BOS	ini	VERB
+ini	ini	ini	ini	Basaha	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Sulata	sulata	sul	ata	BOS	ini	VERB
+ini	ini	ini	ini	Sulata	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Tanuma	tanuma	tan	uma	BOS	ini	VERB
+ini	ini	ini	ini	Tanuma	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Hugasa	hugasa	hug	asa	BOS	ini	VERB
+ini	ini	ini	ini	Hugasa	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Lutoa	lutoa	lut	toa	BOS	ini	VERB
+ini	ini	ini	ini	Lutoa	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Sa	sa	sa	sa	BOS	merkado	ADP
+merkado	merkado	mer	ado	Sa	.	NOUN
+.	.	.	.	merkado	EOS	PUNCT
+
+Sa	sa	sa	sa	BOS	eskwelahan	ADP
+eskwelahan	eskwelahan	esk	han	Sa	.	NOUN
+.	.	.	.	eskwelahan	EOS	PUNCT
+
+Sa	sa	sa	sa	BOS	uma	ADP
+uma	uma	uma	uma	Sa	.	NOUN
+.	.	.	.	uma	EOS	PUNCT
+
+Para	para	par	ara	BOS	bata	ADP
+bata	bata	bat	ata	Para	.	NOUN
+.	.	.	.	bata	EOS	PUNCT
+
+Kag	kag	kag	kag	BOS	nanay	CONJ
+nanay	nanay	nan	nay	Kag	.	NOUN
+.	.	.	.	nanay	EOS	PUNCT
+
+Kag	kag	kag	kag	BOS	tatay	CONJ
+tatay	tatay	tat	tay	Kag	.	NOUN
+.	.	.	.	tatay	EOS	PUNCT
+
+Apang	apang	apa	ang	BOS	budlay	CONJ
+budlay	budlay	bud	lay	Apang	.	ADJ
+.	.	.	.	budlay	EOS	PUNCT
+
+Bisan	bisan	bis	san	BOS	budlay	CONJ
+budlay	budlay	bud	lay	Bisan	.	ADJ
+.	.	.	.	budlay	EOS	PUNCT
+
+Kon	kon	kon	kon	BOS	may	CONJ
+may	may	may	may	Kon	.	VERB
+.	.	.	.	may	EOS	PUNCT
+
+Kay	kay	kay	kay	BOS	importante	CONJ
+importante	importante	imp	nte	Kay	.	ADJ
+
+Masami	masami	mas	ami	BOS	ini	ADJ
+ini	ini	ini	ini	Masami	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Mahumok	mahumok	mah	mok	BOS	ini	ADJ
+ini	ini	ini	ini	Mahumok	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Tig-a	tig-a	tig	-ga	BOS	ini	ADJ
+ini	ini	ini	ini	Tig-a	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Mabugnaw	mabugnaw	mab	naw	BOS	ini	ADJ
+ini	ini	ini	ini	Mabugnaw	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Mainit	mainit	mai	nit	BOS	ini	ADJ
+ini	ini	ini	ini	Mainit	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Mahumid	mahumid	mah	mid	BOS	ini	ADJ
+ini	ini	ini	ini	Mahumid	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Matam-is	matam-is	mat	-is	BOS	ini	ADJ
+ini	ini	ini	ini	Matam-is	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Mapait	mapait	map	ait	BOS	ini	ADJ
+ini	ini	ini	ini	Mapait	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Ma-aslom	ma-aslom	ma-	lom	BOS	ini	ADJ
+ini	ini	ini	ini	Ma-aslom	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Malum-ok	malum-ok	mal	-ok	BOS	ini	ADJ
+ini	ini	ini	ini	Malum-ok	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Nagkadto	nagkadto	nag	dto	BOS	siya	VERB
+siya	siya	siy	iya	Nagkadto	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Nagpuli	nagpuli	nag	uli	BOS	sila	VERB
+sila	sila	sil	ila	Nagpuli	.	PRON
+.	.	.	.	sila	EOS	PUNCT
+
+Nagkaon	nagkaon	nag	aon	BOS	kami	VERB
+kami	kami	kam	ami	Nagkaon	.	PRON
+.	.	.	.	kami	EOS	PUNCT
+
+Naginom	naginom	nag	nom	BOS	siya	VERB
+siya	siya	siy	iya	Naginom	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Nagbakal	nagbakal	nag	kal	BOS	ko	VERB
+ko	ko	ko	ko	Nagbakal	.	PRON
+.	.	.	.	ko	EOS	PUNCT
+
+Naglantaw	naglantaw	nag	taw	BOS	siya	VERB
+siya	siya	siy	iya	Naglantaw	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Naglakat	naglakat	nag	kat	BOS	bata	VERB
+bata	bata	bat	ata	Naglakat	.	NOUN
+.	.	.	.	bata	EOS	PUNCT
+
+Nagtulog	nagtulog	nag	log	BOS	siya	VERB
+siya	siya	siy	iya	Nagtulog	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Naghulat	naghulat	nag	lat	BOS	ko	VERB
+ko	ko	ko	ko	Naghulat	.	PRON
+.	.	.	.	ko	EOS	PUNCT
+
+Nagdalagan	nagdalagan	nag	gan	BOS	bata	VERB
+bata	bata	bat	ata	Nagdalagan	.	NOUN
+.	.	.	.	bata	EOS	PUNCT
+
+Didto	didto	did	dto	BOS	sila	ADV
+sila	sila	sil	ila	Didto	.	PRON
+.	.	.	.	sila	EOS	PUNCT
+
+Diri	diri	dir	iri	BOS	ko	ADV
+ko	ko	ko	ko	Diri	.	PRON
+.	.	.	.	ko	EOS	PUNCT
+
+Subong	subong	sub	ong	BOS	siya	ADV
+siya	siya	siy	iya	Subong	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Bwas	bwas	bwa	was	BOS	kami	ADV
+kami	kami	kam	ami	Bwas	.	PRON
+.	.	.	.	kami	EOS	PUNCT
+
+Kaina	kaina	kai	ina	BOS	sila	ADV
+sila	sila	sil	ila	Kaina	.	PRON
+.	.	.	.	sila	EOS	PUNCT
+
+Sang	sang	san	ang	BOS	ulan	ADP
+ulan	ulan	ula	lan	Sang	.	NOUN
+.	.	.	.	ulan	EOS	PUNCT
+
+Antes	antes	ant	tes	BOS	klase	ADP
+klase	klase	kla	ase	Antes	.	NOUN
+.	.	.	.	klase	EOS	PUNCT
+
+Tapus	tapus	tap	pus	BOS	trabaho	ADP
+trabaho	trabaho	tra	aho	Tapus	.	NOUN
+.	.	.	.	trabaho	EOS	PUNCT
+
+Tungod	tungod	tun	god	BOS	sini	ADP
+sini	sini	sin	ini	Tungod	.	PRON
+.	.	.	.	sini	EOS	PUNCT
+
+Para	para	par	ara	BOS	tanan	ADP
+tanan	tanan	tan	nan	Para	.	PRON
+.	.	.	.	tanan	EOS	PUNCT
+
+Malipayon	malipayon	mal	yon	BOS	siya	ADJ
+siya	siya	siy	iya	Malipayon	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Masakit	masakit	mas	kit	BOS	ini	ADJ
+ini	ini	ini	ini	Masakit	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Mahuyang	mahuyang	mah	yang	BOS	siya	ADJ
+siya	siya	siy	iya	Mahuyang	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Kusog	kusog	kus	sog	BOS	siya	ADJ
+siya	siya	siy	iya	Kusog	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Hapos	hapos	hap	pos	BOS	ini	ADJ
+ini	ini	ini	ini	Hapos	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Tama	tama	tam	ama	BOS	guid	ADJ
+guid	guid	gui	uid	Tama	.	ADV
+.	.	.	.	guid	EOS	PUNCT
+
+Sala	sala	sal	ala	BOS	guid	ADJ
+guid	guid	gui	uid	Sala	.	ADV
+.	.	.	.	guid	EOS	PUNCT
+
+Layo	layo	lay	ayo	BOS	ini	ADJ
+ini	ini	ini	ini	Layo	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Lapad	lapad	lap	pad	BOS	dalan	ADJ
+dalan	dalan	dal	lan	Lapad	.	NOUN
+.	.	.	.	dalan	EOS	PUNCT
+
+Makitid	makitid	mak	tid	BOS	ini	ADJ
+ini	ini	ini	ini	Makitid	.	PRON
+.	.	.	.	ini	EOS	PUNCT
+
+Nagubra	nagubra	nag	bra	BOS	siya	VERB
+siya	siya	siy	iya	Nagubra	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Nagtuon	nagtuon	nag	uon	BOS	siya	VERB
+siya	siya	siy	iya	Nagtuon	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Nagbasa	nagbasa	nag	asa	BOS	ko	VERB
+ko	ko	ko	ko	Nagbasa	.	PRON
+.	.	.	.	ko	EOS	PUNCT
+
+Nagsulat	nagsulat	nag	lat	BOS	siya	VERB
+siya	siya	siy	iya	Nagsulat	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Nagbakal	nagbakal	nag	kal	BOS	kami	VERB
+kami	kami	kam	ami	Nagbakal	.	PRON
+.	.	.	.	kami	EOS	PUNCT
+
+Nagluto	nagluto	nag	uto	BOS	nanay	VERB
+nanay	nanay	nan	nay	Nagluto	.	NOUN
+.	.	.	.	nanay	EOS	PUNCT
+
+Naghakot	naghakot	nag	kot	BOS	tatay	VERB
+tatay	tatay	tat	tay	Naghakot	.	NOUN
+.	.	.	.	tatay	EOS	PUNCT
+
+Nagtanum	nagtanum	nag	num	BOS	sila	VERB
+sila	sila	sil	ila	Nagtanum	.	PRON
+.	.	.	.	sila	EOS	PUNCT
+
+Naghugas	naghugas	nag	gas	BOS	bata	VERB
+bata	bata	bat	ata	Naghugas	.	NOUN
+.	.	.	.	bata	EOS	PUNCT
+
+Nagpahuway	nagpahuway	nag	way	BOS	siya	VERB
+siya	siya	siy	iya	Nagpahuway	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Didto	didto	did	dto	BOS	balay	ADV
+balay	balay	bal	lay	Didto	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Diri	diri	dir	iri	BOS	kami	ADV
+kami	kami	kam	ami	Diri	.	PRON
+.	.	.	.	kami	EOS	PUNCT
+
+Subong	subong	sub	ong	BOS	ulan	ADV
+ulan	ulan	ula	lan	Subong	.	NOUN
+.	.	.	.	ulan	EOS	PUNCT
+
+Bwas	bwas	bwa	was	BOS	klase	ADV
+klase	klase	kla	ase	Bwas	.	NOUN
+.	.	.	.	klase	EOS	PUNCT
+
+Kagina	kagina	kag	ina	BOS	sila	ADV
+sila	sila	sil	ila	Kagina	.	PRON
+.	.	.	.	sila	EOS	PUNCT
+
+Sang	sang	san	ang	BOS	aga	ADP
+aga	aga	aga	aga	Sang	.	NOUN
+.	.	.	.	aga	EOS	PUNCT
+
+Antes	antes	ant	tes	BOS	pamahaw	ADP
+pamahaw	pamahaw	pam	haw	Antes	.	NOUN
+.	.	.	.	pamahaw	EOS	PUNCT
+
+Tapus	tapus	tap	pus	BOS	klase	ADP
+klase	klase	kla	ase	Tapus	.	NOUN
+.	.	.	.	klase	EOS	PUNCT
+
+Tungod	tungod	tun	god	BOS	ulan	ADP
+ulan	ulan	ula	lan	Tungod	.	NOUN
+.	.	.	.	ulan	EOS	PUNCT
+
+Para	para	par	ara	BOS	pamilya	ADP
+pamilya	pamilya	pam	lya	Para	.	NOUN
+.	.	.	.	pamilya	EOS	PUNCT
