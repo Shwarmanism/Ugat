@@ -1,15 +1,8 @@
 {
     "lang": "ilocano",
-    "input": "Napan ti lalaki idiay merkado.",
+    "input": "Ti, ken, ngem.",
     "sentences": [
         [
-            {
-                "token": "napan",
-                "type": "irregular",
-                "root": "mapan",
-                "pos": "VERB",
-                "affixes": []
-            },
             {
                 "token": "ti",
                 "type": "function",
@@ -18,24 +11,31 @@
                 "affixes": []
             },
             {
-                "token": "lalaki",
-                "type": "root",
-                "root": "lalaki",
-                "pos": "NOUN",
+                "token": ",",
+                "type": "function",
+                "root": ",",
+                "pos": "PUNCT",
                 "affixes": []
             },
             {
-                "token": "idiay",
-                "type": "irregular",
-                "root": "diay",
-                "pos": "DEM",
-                "affixes": []
-            },
-            {
-                "token": "merkado",
+                "token": "ken",
                 "type": "morphed",
-                "root": "merkado",
+                "root": "ken",
                 "pos": "NOUN",
+                "affixes": []
+            },
+            {
+                "token": ",",
+                "type": "function",
+                "root": ",",
+                "pos": "PUNCT",
+                "affixes": []
+            },
+            {
+                "token": "ngem",
+                "type": "irregular",
+                "root": "ngem",
+                "pos": "ADJ",
                 "affixes": []
             },
             {

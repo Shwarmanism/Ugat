@@ -1,39 +1,37 @@
 import json
 from pathlib import Path
-from typing import List, Dict, Optional, Tuple
+from typing import List, Dict, Tuple
 
-# Path to resources
+# ─────────────────────────────────────────────────────────────────────────────
+# Path Configuration
+# ─────────────────────────────────────────────────────────────────────────────
 RESOURCES_DIR = Path(__file__).resolve().parent.parent.parent / "resources"
 
-# Dialect file mappings
 DIALECT_FILES = {
-    "ilocano": {
-        "rules": "Ilocano-rules.json",
-        "roots": "root_ilocano.json"
-    },
-    "cebuano": {
-        "rules": "Cebuano-rules.json",
-        "roots": "root_cebuano.json"
-    },
-    "hiligaynon": {
-        "rules": "Hiligaynon-rules.json",
-        "roots": "root_hiligaynon.json"
-    }
+    "ilocano": {"rules": "Ilocano-rules.json", "roots": "root_ilocano.json"},
+    "cebuano": {"rules": "Cebuano-rules.json", "roots": "root_cebuano.json"},
+    "hiligaynon": {"rules": "Hiligaynon-rules.json", "roots": "root_hiligaynon.json"},
 }
 
-# Cache for loaded resources
+SUPPORTED_DIALECTS = frozenset(DIALECT_FILES.keys())
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Cache - All resources loaded once and reused
+# ─────────────────────────────────────────────────────────────────────────────
 _rules_cache: Dict[str, Dict] = {}
 _roots_cache: Dict[str, Dict] = {}
+_prefixes_cache: Dict[str, Dict[str, Tuple[str, ...]]] = {}  # Pre-sorted tuples
+_suffixes_cache: Dict[str, Dict[str, Tuple[str, ...]]] = {}
 
 
 def load_rules(dialect: str) -> Dict:
-    """Load affix rules for a dialect."""
+    """Load affix rules for a dialect. Cached after first load."""
     dialect = dialect.lower()
     
     if dialect in _rules_cache:
         return _rules_cache[dialect]
     
-    if dialect not in DIALECT_FILES:
+    if dialect not in SUPPORTED_DIALECTS:
         raise ValueError(f"Unsupported dialect: {dialect}")
     
     rules_path = RESOURCES_DIR / DIALECT_FILES[dialect]["rules"]
@@ -42,52 +40,68 @@ def load_rules(dialect: str) -> Dict:
         rules = json.load(f)
     
     _rules_cache[dialect] = rules
+    
+    # Pre-compute and cache prefix/suffix lookups
+    _build_affix_caches(dialect, rules)
+    
     return rules
 
 
 def load_roots(dialect: str) -> Dict:
-    """Load root dictionary for a dialect."""
+    """Load root dictionary for a dialect. Cached after first load."""
     dialect = dialect.lower()
     
     if dialect in _roots_cache:
         return _roots_cache[dialect]
     
-    if dialect not in DIALECT_FILES:
+    if dialect not in SUPPORTED_DIALECTS:
         raise ValueError(f"Unsupported dialect: {dialect}")
     
     roots_path = RESOURCES_DIR / DIALECT_FILES[dialect]["roots"]
     
     with open(roots_path, "r", encoding="utf-8") as f:
-        roots = json.load(f)
+        _roots_cache[dialect] = json.load(f)
     
-    _roots_cache[dialect] = roots
-    return roots
+    return _roots_cache[dialect]
 
 
-def get_prefixes_by_pos(rules: Dict) -> Dict[str, List[str]]:
-    """Extract prefixes grouped by POS from rules."""
+def _build_affix_caches(dialect: str, rules: Dict) -> None:
+    """Pre-build sorted affix tuples for fast lookup."""
     pos_prefixes = {}
-    
-    for pos, pos_rules in rules.items():
-        if "prefix_rules" in pos_rules:
-            prefixes = [r["prefix"] for r in pos_rules["prefix_rules"]]
-            # Sort by length (longest first) for greedy matching
-            pos_prefixes[pos] = sorted(prefixes, key=len, reverse=True)
-    
-    return pos_prefixes
-
-
-def get_suffixes_by_pos(rules: Dict) -> Dict[str, List[str]]:
-    """Extract suffixes grouped by POS from rules."""
     pos_suffixes = {}
     
     for pos, pos_rules in rules.items():
-        if "suffix_rules" in pos_rules:
-            suffixes = [r["suffix"] for r in pos_rules["suffix_rules"]]
-            # Sort by length (longest first) for greedy matching
-            pos_suffixes[pos] = sorted(suffixes, key=len, reverse=True)
+        if isinstance(pos_rules, dict):
+            # Extract and sort prefixes (longest first)
+            if "prefix_rules" in pos_rules:
+                prefixes = [r["prefix"] for r in pos_rules["prefix_rules"] if "prefix" in r]
+                pos_prefixes[pos] = tuple(sorted(prefixes, key=len, reverse=True))
+            
+            # Extract and sort suffixes (longest first)
+            if "suffix_rules" in pos_rules:
+                suffixes = [r["suffix"] for r in pos_rules["suffix_rules"] if "suffix" in r]
+                pos_suffixes[pos] = tuple(sorted(suffixes, key=len, reverse=True))
     
-    return pos_suffixes
+    _prefixes_cache[dialect] = pos_prefixes
+    _suffixes_cache[dialect] = pos_suffixes
+
+
+def get_prefixes_by_pos(dialect: str) -> Dict[str, Tuple[str, ...]]:
+    """Get cached prefixes grouped by POS. Pre-sorted by length (longest first)."""
+    if dialect not in _prefixes_cache:
+        load_rules(dialect)  # This will populate the cache
+    return _prefixes_cache.get(dialect, {})
+
+
+def get_suffixes_by_pos(dialect: str) -> Dict[str, Tuple[str, ...]]:
+    """Get cached suffixes grouped by POS. Pre-sorted by length (longest first)."""
+    if dialect not in _suffixes_cache:
+        load_rules(dialect)  # This will populate the cache
+    return _suffixes_cache.get(dialect, {})
+
+
+# Punctuation set for O(1) lookup
+_PUNCT_CHARS = frozenset(".!?,;:")
 
 
 def predict_pos_affix(token: str, dialect: str) -> str:
@@ -95,56 +109,57 @@ def predict_pos_affix(token: str, dialect: str) -> str:
     Predict POS tag for a token using affix-based rules.
     
     Priority:
-    1. Root dictionary lookup (exact match)
-    2. Prefix pattern matching
-    3. Suffix pattern matching
-    4. Unknown
+    1. Punctuation check
+    2. Root dictionary lookup (exact match)
+    3. Prefix pattern matching (longest first)
+    4. Suffix pattern matching (longest first)
+    5. Unknown
     
     Args:
-        token: Word token (lowercase)
+        token: Word token
         dialect: Language dialect
         
     Returns:
         Predicted POS tag
     """
-    token = token.lower()
+    token_lower = token.lower()
     dialect = dialect.lower()
     
-    # Handle punctuation
-    if token in ".!?,;:":
+    # Fast path: punctuation
+    if token_lower in _PUNCT_CHARS:
         return "PUNCT"
     
-    # Load resources
-    rules = load_rules(dialect)
+    # Load cached resources
     roots = load_roots(dialect)
     
-    # Step 1: Check root dictionary
-    if token in roots:
-        return roots[token]
+    # Step 1: Check root dictionary (exact match)
+    if token_lower in roots:
+        return roots[token_lower]
+    
+    # Get cached affix lookups (pre-sorted by length)
+    pos_prefixes = get_prefixes_by_pos(dialect)
+    pos_suffixes = get_suffixes_by_pos(dialect)
+    token_len = len(token_lower)
     
     # Step 2: Check prefixes (longest match first)
-    pos_prefixes = get_prefixes_by_pos(rules)
-    
     for pos, prefixes in pos_prefixes.items():
         for prefix in prefixes:
-            if token.startswith(prefix) and len(token) > len(prefix):
+            if token_len > len(prefix) and token_lower.startswith(prefix):
                 return pos
     
     # Step 3: Check suffixes (longest match first)
-    pos_suffixes = get_suffixes_by_pos(rules)
-    
     for pos, suffixes in pos_suffixes.items():
         for suffix in suffixes:
-            if token.endswith(suffix) and len(token) > len(suffix):
+            if token_len > len(suffix) and token_lower.endswith(suffix):
                 return pos
     
-    # Step 4: Unknown
     return "UNK"
 
 
 def predict_pos_batch(tokens: List[str], dialect: str) -> List[str]:
     """
-    Predict POS tags for a list of tokens.
+    Predict POS tags for a list of tokens efficiently.
+    Pre-loads caches once then processes all tokens.
     
     Args:
         tokens: List of word tokens

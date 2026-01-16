@@ -9,19 +9,19 @@ from .schemas import (
     LemmatizeRequest, LemmatizeResponse,
     DialectsResponse, TokenResult
 )
-from pipeline import text_preprocess, pos_tagging, process_tokens
+from pipeline import text_preprocess, pos_tagging, process_tokens, SUPPORTED_DIALECTS
 
 # Create router
 router = APIRouter()
 
-# Available dialects
-VALID_DIALECTS = ["ilocano", "cebuano", "hiligaynon"]
+# Convert frozenset to list for API responses
+VALID_DIALECTS = list(SUPPORTED_DIALECTS)
 
 
 def validate_dialect(dialect: str) -> str:
     """Validate and normalize dialect name."""
     dialect = dialect.lower().strip()
-    if dialect not in VALID_DIALECTS:
+    if dialect not in SUPPORTED_DIALECTS:
         raise HTTPException(
             status_code=400,
             detail=f"Invalid dialect '{dialect}'. Valid options: {VALID_DIALECTS}"
@@ -49,18 +49,15 @@ def tag_text(request: TagRequest):
     
     try:
         # Step 1: Preprocess (segment + tokenize)
-        sentences = text_preprocess(request.text)
+        preprocessed = text_preprocess(request.text, dialect)
         
-        # Step 2: POS tagging
-        tagged_sentences = []
-        for sentence in sentences:
-            tagged = pos_tagging(sentence, dialect)
-            tagged_sentences.append(tagged)
+        # Step 2: POS tagging (returns crf_tagged and affix_tagged)
+        tagged = pos_tagging(preprocessed)
         
         return TagResponse(
             dialect=dialect,
             input_text=request.text,
-            sentences=tagged_sentences
+            sentences=tagged["crf_tagged"]
         )
     
     except Exception as e:
@@ -77,15 +74,17 @@ def lemmatize_text(request: LemmatizeRequest):
     
     try:
         # Step 1: Preprocess (segment + tokenize)
-        sentences = text_preprocess(request.text)
+        preprocessed = text_preprocess(request.text, dialect)
         
-        # Step 2 & 3: POS tagging + Token processing
+        # Step 2: POS tagging
+        tagged = pos_tagging(preprocessed)
+        
+        # Step 3: Process tokens (irregular check + morphology)
+        processed = process_tokens(tagged)
+        
+        # Convert to response format
         result_sentences = []
-        for sentence in sentences:
-            tagged = pos_tagging(sentence, dialect)
-            processed = process_tokens(tagged, dialect)
-            
-            # Convert to TokenResult objects
+        for sentence in processed["sentences"]:
             tokens = [
                 TokenResult(
                     token=item["token"],
@@ -94,7 +93,7 @@ def lemmatize_text(request: LemmatizeRequest):
                     pos=item["pos"],
                     affixes=item.get("affixes", [])
                 )
-                for item in processed
+                for item in sentence
             ]
             result_sentences.append(tokens)
         

@@ -1,0 +1,134 @@
+{
+    "dad-on": {
+        "equivalent": "dala",
+        "pos": "VERB"
+    },
+    "dad-a": {
+        "equivalent": "dala",
+        "pos": "VERB"
+    },
+    "kan-on": {
+        "equivalent": "kaon",
+        "pos": "VERB"
+    },
+    "kan-a": {
+        "equivalent": "kaon",
+        "pos": "VERB"
+    },
+    "imnon": {
+        "equivalent": "inom",
+        "pos": "VERB"
+    },
+    "imna": {
+        "equivalent": "inom",
+        "pos": "VERB"
+    },
+    "sudlan": {
+        "equivalent": "sulod",
+        "pos": "VERB"
+    },
+    "sud-an": {
+        "equivalent": "sula",
+        "pos": "NOUN"
+    },
+    "palita": {
+        "equivalent": "palit",
+        "pos": "VERB"
+    },
+    "wad-a": {
+        "equivalent": "wala",
+        "pos": "VERB"
+    },
+    "gikalimtan": {
+        "equivalent": "limot",
+        "pos": "VERB"
+    },
+    "tawga": {
+        "equivalent": "tawag",
+        "pos": "VERB"
+    },
+    "butangi": {
+        "equivalent": "butang",
+        "pos": "VERB"
+    },
+    "dungga": {
+        "equivalent": "dungog",
+        "pos": "VERB"
+    },
+    "paminaw": {
+        "equivalent": "minaw",
+        "pos": "VERB"
+    },
+    "pangutan-a": {
+        "equivalent": "kutana",
+        "pos": "VERB"
+    },
+    "ganina": {
+        "equivalent": "unian",
+        "pos": "ADV"
+    },
+    "ngan": {
+        "equivalent": "ngalan",
+        "pos": "NOUN"
+    },
+    "manguha": {
+        "equivalent": "kuha",
+        "pos": "VERB"
+    },
+    "sayaran": {
+        "equivalent": "sayad",
+        "pos": "VERB"
+    },
+    "mambad": {
+        "equivalent": "manbad",
+        "pos": "NOUN"
+    },
+    "mananabtan": {
+        "equivalent": "sabat",
+        "pos": "NOUN"
+    },
+    "manan-aw": {
+        "equivalent": "tan-aw",
+        "pos": "VERB"
+    },
+    "manukmanuk": {
+        "equivalent": "manok",
+        "pos": "NOUN"
+    },
+    "manumbaga": {
+        "equivalent": "tumbaga",
+        "pos": "NOUN"
+    },
+    "mapunti": {
+        "equivalent": "malapunti",
+        "pos": "NOUN"
+    },
+    "maruy": {
+        "equivalent": "maro",
+        "pos": "ADJECTIVE"
+    },
+    "nakusgan": {
+        "equivalent": "kusog",
+        "pos": "ADJECTIVE"
+    },
+    "nameligro": {
+        "equivalent": "peligro",
+        "pos": "NOUN"
+    },
+    "namugos": {
+        "equivalent": "pugos",
+        "pos": "VERB"
+    },
+    "tam-is": {
+        "equivalent": "tamis",
+        "pos": "ADJECTIVE"
+    },
+    "tan-aw": {
+        "equivalent": "tanaw",
+        "pos": "VERB"
+    },
+    "pan-os": {
+        "equivalent": "panos",
+        "pos": "ADJECTIVE"
+    }
+}

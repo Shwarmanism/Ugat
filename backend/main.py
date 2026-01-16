@@ -5,6 +5,7 @@ Main entry point for the API server.
 
 import sys
 from pathlib import Path
+from contextlib import asynccontextmanager
 
 # Add backend to path for imports
 backend_dir = Path(__file__).parent
@@ -13,6 +14,20 @@ sys.path.insert(0, str(backend_dir))
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api import router
+from pipeline import preload_all
+
+# =========================
+# Lifespan Event Handler
+# =========================
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Startup/shutdown event handler. Preloads all resources on startup."""
+    # Startup: preload all caches
+    preload_all()
+    yield
+    # Shutdown: cleanup if needed
+    pass
 
 # =========================
 # App Configuration
@@ -40,7 +55,8 @@ app = FastAPI(
     """,
     version="1.0.0",
     docs_url="/docs",
-    redoc_url="/redoc"
+    redoc_url="/redoc",
+    lifespan=lifespan
 )
 
 # =========================

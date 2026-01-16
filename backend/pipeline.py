@@ -1,79 +1,136 @@
 import json
 from pathlib import Path
+from functools import lru_cache
+from typing import Dict, List, Any, Optional
+
 from core import (
+    # Preprocessing
     tokenizer,
     segmenter,
+    # Tagging
     crf_predict,
     affix_predict,
     format_tokens_for_crf,
     get_available_dialects,
+    # Morphology
+    get_morph_engine,
+    lemmatize,
 )
 
-# Output path
-OUTPUT_DIR = Path(__file__).resolve().parent / "core" / "results"
-RESOURCES_DIR = Path(__file__).resolve().parent / "resources"
+# ─────────────────────────────────────────────────────────────────────────────
+# Path Configuration
+# ─────────────────────────────────────────────────────────────────────────────
+_BACKEND_DIR = Path(__file__).resolve().parent
+OUTPUT_DIR = _BACKEND_DIR / "core" / "results"
+RESOURCES_DIR = _BACKEND_DIR / "resources"
 
-# Irregular word files per dialect
+# ─────────────────────────────────────────────────────────────────────────────
+# Resource Configuration
+# ─────────────────────────────────────────────────────────────────────────────
+SUPPORTED_DIALECTS = frozenset({"ilocano", "cebuano", "hiligaynon"})
+
 IRREGULAR_FILES = {
     "ilocano": "irregular_ilocano.json",
     "cebuano": "irregular_cebuano.json",
     "hiligaynon": "irregular_hiligaynon.json",
 }
 
-# Root dictionary files per dialect
 ROOT_FILES = {
     "ilocano": "root_ilocano.json",
     "cebuano": "root_cebuano.json",
     "hiligaynon": "root_hiligaynon.json",
 }
 
-# Cache for irregular and root dictionaries
-_irregular_cache = {}
-_root_cache = {}
+# Function word POS tags that skip morphology - frozen for O(1) lookup
+FUNCTION_WORD_POS = frozenset({"DET", "CONJ", "PRON", "PUNCT", "ADP", "NUM"})
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Cache Management
+# ─────────────────────────────────────────────────────────────────────────────
+_irregular_cache: Dict[str, Dict] = {}
+_root_cache: Dict[str, Dict] = {}
+_root_set_cache: Dict[str, frozenset] = {}  # For O(1) lookups
+_initialized = False
 
 
-def load_irregular(dialect: str) -> dict:
-    """Load irregular word dictionary for a dialect."""
+def load_irregular(dialect: str) -> Dict:
+    """Load irregular word dictionary for a dialect. Cached after first load."""
     dialect = dialect.lower()
     
+    # Fast path: return cached
     if dialect in _irregular_cache:
         return _irregular_cache[dialect]
     
-    if dialect not in IRREGULAR_FILES:
+    # Validate dialect
+    if dialect not in SUPPORTED_DIALECTS:
         return {}
     
     file_path = RESOURCES_DIR / IRREGULAR_FILES[dialect]
-    
     if not file_path.exists():
+        _irregular_cache[dialect] = {}  # Cache empty to avoid re-checking
         return {}
     
     with open(file_path, "r", encoding="utf-8") as f:
-        irregular = json.load(f)
+        _irregular_cache[dialect] = json.load(f)
     
-    _irregular_cache[dialect] = irregular
-    return irregular
+    return _irregular_cache[dialect]
 
 
-def load_roots(dialect: str) -> dict:
-    """Load root word dictionary for a dialect."""
+def load_roots(dialect: str) -> Dict:
+    """Load root word dictionary for a dialect. Cached after first load."""
     dialect = dialect.lower()
     
+    # Fast path: return cached
     if dialect in _root_cache:
         return _root_cache[dialect]
     
-    if dialect not in ROOT_FILES:
+    # Validate dialect
+    if dialect not in SUPPORTED_DIALECTS:
         return {}
     
     file_path = RESOURCES_DIR / ROOT_FILES[dialect]
-    
     if not file_path.exists():
+        _root_cache[dialect] = {}  # Cache empty to avoid re-checking
+        _root_set_cache[dialect] = frozenset()
         return {}
     
     with open(file_path, "r", encoding="utf-8") as f:
-        roots = json.load(f)
+        _root_cache[dialect] = json.load(f)
     
-    _root_cache[dialect] = roots
-    return roots
+    # Pre-build frozenset for O(1) lookups
+    _root_set_cache[dialect] = frozenset(_root_cache[dialect].keys())
+    
+    return _root_cache[dialect]
+
+
+def get_root_set(dialect: str) -> frozenset:
+    """Get frozenset of root words for O(1) membership testing."""
+    dialect = dialect.lower()
+    if dialect not in _root_set_cache:
+        load_roots(dialect)  # This will populate _root_set_cache
+    return _root_set_cache.get(dialect, frozenset())
+
+
+def preload_all() -> None:
+    """
+    Preload all resources into cache at startup.
+    Call this once when server starts to warm caches.
+    """
+    global _initialized
+    if _initialized:
+        return
+    
+    print("⏳ Preloading resources...")
+    
+    for dialect in SUPPORTED_DIALECTS:
+        load_irregular(dialect)
+        load_roots(dialect)
+    
+    # Initialize morphology engine (singleton)
+    get_morph_engine()
+    
+    _initialized = True
+    print("✓ All resources preloaded")
 
 
 def text_preprocess(raw_text, lang):
@@ -140,23 +197,36 @@ def save_results(tagged_data, filename="pipeline_results.json"):
     return output_path
 
 
-def morph_rules(token, pos, lang):
+# Cached engine reference for morph_rules
+_morph_engine = None
 
-    # TODO: Implement actual morphological analysis
-    # For now, return the token as-is
+
+def morph_rules(token: str, pos: str, lang: str) -> Dict[str, Any]:
+    """
+    Apply POS-aware morphological analysis using FSM-based affix stripping.
+    
+    The POS tag is passed to the engine so that:
+    1. Only rules for that POS are applied (VERB rules for VERB, etc.)
+    2. Candidate lemma must match the same POS in the root dictionary
+    """
+    global _morph_engine
+    if _morph_engine is None:
+        _morph_engine = get_morph_engine()
+    
+    # Pass POS to engine for POS-aware rule selection and validation
+    result = _morph_engine.lemmatize(token, lang, pos)
+    
     return {
         "token": token,
-        "root": token,  # Placeholder - will be replaced with actual root extraction
-        "pos": pos,
-        "affixes": []   # Placeholder - will contain extracted affixes
+        "root": result["lemma"],
+        "pos": result.get("pos", pos),  # Use engine's POS if available
+        "affixes": result.get("affixes", []),
+        "rule": result.get("rule", "None"),
+        "status": result.get("status", "not_found")
     }
 
 
-# Function word POS tags - these don't need morphological analysis
-FUNCTION_WORD_POS = {"DET", "CONJ", "PRON", "PUNCT", "ADP", "PART", "NUM"}
-
-
-def process_tokens(tagged_data):
+def process_tokens(tagged_data: Dict) -> Dict:
     """
     Process each token: check irregular, check root, check function word, apply morphology.
     
@@ -168,21 +238,23 @@ def process_tokens(tagged_data):
     """
     lang = tagged_data["lang"].lower()
     
-    # Load dictionaries for this dialect
+    # Pre-fetch dictionaries (cached) - avoid repeated lookups
     irregular_dict = load_irregular(lang)
     root_dict = load_roots(lang)
+    root_set = get_root_set(lang)  # O(1) membership testing
     
     processed_sentences = []
     
     # Use CRF tags as primary
-    for sent_idx, tagged_sent in enumerate(tagged_data["crf_tagged"]):
+    for tagged_sent in tagged_data["crf_tagged"]:
         processed_tokens = []
         
         for token, pos in tagged_sent:
+            # Token already lowercase from tokenizer, but ensure it
             token_lower = token.lower()
             
+            # Check irregular first (most specific)
             if token_lower in irregular_dict:
-                # 1. Token is irregular - get equivalent from lexicon
                 irregular_info = irregular_dict[token_lower]
                 processed_tokens.append({
                     "token": token,
@@ -191,8 +263,8 @@ def process_tokens(tagged_data):
                     "pos": irregular_info.get("pos", pos),
                     "affixes": []
                 })
-            elif token_lower in root_dict:
-                # 2. Token is a root word - keep original
+            # Check root (O(1) frozenset lookup)
+            elif token_lower in root_set:
                 processed_tokens.append({
                     "token": token,
                     "type": "root",
@@ -200,8 +272,9 @@ def process_tokens(tagged_data):
                     "pos": root_dict[token_lower],
                     "affixes": []
                 })
+            # Check function word (O(1) frozenset lookup)
+            # DET, CONJ, PRON, PUNCT, ADP, NUM - skip morphology
             elif pos in FUNCTION_WORD_POS:
-                # 3. Token is a function word - keep original
                 processed_tokens.append({
                     "token": token,
                     "type": "function",
@@ -209,8 +282,8 @@ def process_tokens(tagged_data):
                     "pos": pos,
                     "affixes": []
                 })
+            # Apply morphological analysis
             else:
-                # 4. Token needs morphological analysis
                 morph_result = morph_rules(token, pos, lang)
                 processed_tokens.append({
                     "token": token,
@@ -264,24 +337,119 @@ def main_pipeline(raw_text, lang):
 
     
 if __name__ == "__main__":
-    # Test the full pipeline
-    text = "Napan ti lalaki idiay merkado."
-    lang = "ilocano"
-
-    print("=" * 60)
-    print("  Main Pipeline Test")
-    print("=" * 60)
-    print(f"\n  Input: {text}")
-    print(f"  Dialect: {lang}")
+    # ═══════════════════════════════════════════════════════════════════════
+    # Comprehensive Test Cases for Different Input Scenarios
+    # ═══════════════════════════════════════════════════════════════════════
     
-    # Run full pipeline
-    result = main_pipeline(text, lang)
+    TEST_SCENARIOS = [
+        # ─────────────────────────────────────────────────────────────────────
+        # ILOCANO Scenarios
+        # ─────────────────────────────────────────────────────────────────────
+        {
+            "lang": "ilocano",
+            "text": "Napan ti lalaki idiay merkado.",
+            "desc": "Mixed: irregular + function + root + morphed"
+        },
+        {
+            "lang": "ilocano",
+            "text": "Nagbasa dagiti ubbing iti libro.",
+            "desc": "Verb prefix + plural marker + preposition"
+        },
+        {
+            "lang": "ilocano",
+            "text": "Ag-zoom tayo ita!",
+            "desc": "Hyphenated borrowed word (heuristic fallback)"
+        },
+        
+        # ─────────────────────────────────────────────────────────────────────
+        # CEBUANO Scenarios
+        # ─────────────────────────────────────────────────────────────────────
+        {
+            "lang": "cebuano",
+            "text": "Mikaon ang bata sa pan.",
+            "desc": "Basic sentence with mi- prefix"
+        },
+        {
+            "lang": "cebuano",
+            "text": "Nagdula ang mga bata sa parke.",
+            "desc": "nag- prefix + plural + location"
+        },
+        {
+            "lang": "cebuano",
+            "text": "Nag-text ako sa akong mama.",
+            "desc": "Hyphenated borrowed word + pronouns"
+        },
+        {
+            "lang": "cebuano",
+            "text": "Dad-on nako ang libro.",
+            "desc": "Irregular verb (dad-on → dala)"
+        },
+        
+        # ─────────────────────────────────────────────────────────────────────
+        # HILIGAYNON Scenarios
+        # ─────────────────────────────────────────────────────────────────────
+        {
+            "lang": "hiligaynon",
+            "text": "Nagkaon ang bata sang tinapay.",
+            "desc": "Basic sentence with nag- prefix"
+        },
+        {
+            "lang": "hiligaynon",
+            "text": "Maayo ang iya obra.",
+            "desc": "Adjective + possessive + noun"
+        },
+        {
+            "lang": "hiligaynon",
+            "text": "Mag-upload ka sang litrato.",
+            "desc": "Hyphenated borrowed word (heuristic)"
+        },
+        {
+            "lang": "hiligaynon",
+            "text": "Kan-on mo ang pagkaon.",
+            "desc": "Irregular verb (kan-on → kaon)"
+        },
+        
+        # ─────────────────────────────────────────────────────────────────────
+        # Edge Cases
+        # ─────────────────────────────────────────────────────────────────────
+        {
+            "lang": "cebuano",
+            "text": "Nagdownload siya ug file.",
+            "desc": "Borrowed word without hyphen (OOV heuristic)"
+        },
+        {
+            "lang": "ilocano",
+            "text": "Ti, ken, ngem.",
+            "desc": "Function words only"
+        },
+    ]
     
-    # Display results
-    print("\n  Processed Tokens:")
-    print("  " + "-" * 55)
-    print(f"    {'Token':<15} {'Type':<10} {'Root':<15} {'POS'}")
-    print("  " + "-" * 55)
-    for sent in result["sentences"]:
-        for t in sent:
-            print(f"    {t['token']:<15} {t['type']:<10} {t['root']:<15} {t['pos']}")
+    print("=" * 75)
+    print("  UGAT-LEMMATIZER - Comprehensive Test Scenarios")
+    print("=" * 75)
+    
+    for i, scenario in enumerate(TEST_SCENARIOS, 1):
+        lang = scenario["lang"]
+        text = scenario["text"]
+        desc = scenario["desc"]
+        
+        print(f"\n┌─ Test {i}: {lang.upper()}")
+        print(f"│  Input: \"{text}\"")
+        print(f"│  Scenario: {desc}")
+        print("├" + "─" * 73)
+        
+        result = main_pipeline(text, lang)
+        
+        print(f"│  {'Token':<15} {'Type':<12} {'Root':<15} {'POS':<10} {'Affixes'}")
+        print("│  " + "-" * 70)
+        
+        for sent in result["sentences"]:
+            for t in sent:
+                affixes = ", ".join(t.get("affixes", [])) or "-"
+                print(f"│  {t['token']:<15} {t['type']:<12} {t['root']:<15} {t['pos']:<10} {affixes}")
+        
+        print("└" + "─" * 73)
+    
+    print("\n" + "=" * 75)
+    print(f"  Completed {len(TEST_SCENARIOS)} test scenarios")
+    print("=" * 75)

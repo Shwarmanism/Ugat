@@ -2,7 +2,7 @@
 Core Module
 Ugat-Lemmatizer Project
 
-Central exports for preprocessing and tagging.
+Central exports for preprocessing, tagging, and morphology.
 """
 
 # Preprocessing
@@ -16,6 +16,14 @@ from .tagger import (
     get_available_dialects,
 )
 
+# Morphology
+from .morphology import (
+    MorphologicalEngine,
+    lemmatize,
+    is_root,
+    get_engine as get_morph_engine,
+)
+
 __all__ = [
     # Preprocessing
     "tokenizer",
@@ -25,4 +33,9 @@ __all__ = [
     "affix_predict", 
     "format_tokens_for_crf",
     "get_available_dialects",
+    # Morphology
+    "MorphologicalEngine",
+    "lemmatize",
+    "is_root",
+    "get_morph_engine",
 ]
