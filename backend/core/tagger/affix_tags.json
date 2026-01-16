@@ -1,0 +1,20 @@
+{
+    "selected_dialect": "ilocano",
+    "tokens": [
+        "napan",
+        "ti",
+        "lalaki",
+        "idiay",
+        "merkado",
+        "."
+    ],
+    "sentence": "Napan ti lalaki idiay merkado.",
+    "pos_tags": [
+        "VERB",
+        "UNK",
+        "NOUN",
+        "VERB",
+        "UNK",
+        "PUNCT"
+    ]
+}
