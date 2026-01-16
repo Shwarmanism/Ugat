@@ -1,0 +1,50 @@
+{
+    "lang": "ilocano",
+    "input": "Napan ti lalaki idiay merkado.",
+    "sentences": [
+        [
+            {
+                "token": "napan",
+                "type": "irregular",
+                "root": "mapan",
+                "pos": "VERB",
+                "affixes": []
+            },
+            {
+                "token": "ti",
+                "type": "function",
+                "root": "ti",
+                "pos": "DET",
+                "affixes": []
+            },
+            {
+                "token": "lalaki",
+                "type": "root",
+                "root": "lalaki",
+                "pos": "NOUN",
+                "affixes": []
+            },
+            {
+                "token": "idiay",
+                "type": "irregular",
+                "root": "diay",
+                "pos": "DEM",
+                "affixes": []
+            },
+            {
+                "token": "merkado",
+                "type": "morphed",
+                "root": "merkado",
+                "pos": "NOUN",
+                "affixes": []
+            },
+            {
+                "token": ".",
+                "type": "function",
+                "root": ".",
+                "pos": "PUNCT",
+                "affixes": []
+            }
+        ]
+    ]
+}

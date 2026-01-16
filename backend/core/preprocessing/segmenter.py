@@ -18,7 +18,6 @@ def segmenter(text):
                 buffer = ""
                 state = "READING"
             else:
-                # no whitespace → close sentence, but DO NOT add the ch into the previous sentence
                 sentences.append(buffer.strip())
                 buffer = ch     # start new sentence cleanly
                 state = "READING"

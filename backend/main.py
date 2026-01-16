@@ -1,75 +1,96 @@
+"""
+Ugat-Lemmatizer FastAPI Application
+Main entry point for the API server.
+"""
+
+import sys
+from pathlib import Path
+
+# Add backend to path for imports
+backend_dir = Path(__file__).parent
+sys.path.insert(0, str(backend_dir))
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-from typing import List, Optional
+from api import router
 
-app = FastAPI()
+# =========================
+# App Configuration
+# =========================
 
-# 1. ALLOW CONNECTION FROM FRONTEND (CORS)
-# This allows your HTML file (running in browser) to talk to this Python script
+app = FastAPI(
+    title="Ugat-Lemmatizer API",
+    description="""
+    **Ugat-Lemmatizer** is a morphological analyzer and lemmatizer 
+    for Philippine regional languages.
+    
+    ### Supported Languages
+    - **Ilocano** (Northern Luzon)
+    - **Cebuano** (Visayas)
+    - **Hiligaynon** (Western Visayas)
+    
+    ### Features
+    - POS Tagging (CRF-based and Affix-based approaches)
+    - Lemmatization (Root word extraction)
+    - Morphological analysis
+    
+    ### Approaches
+    1. **CRF-based**: Uses trained Conditional Random Field models
+    2. **Affix-based**: Uses rule-based affix pattern matching
+    """,
+    version="1.0.0",
+    docs_url="/docs",
+    redoc_url="/redoc"
+)
+
+# =========================
+# CORS Middleware
+# =========================
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, replace "*" with your domain
+    allow_origins=["*"],  # Configure for production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# 2. DEFINE DATA MODELS (Matches the JSON in your script.js)
-class ShowDetails(BaseModel):
-    pos_tags: bool
-    candidates: bool
-    rules: bool
-    lexicon_match: bool
+# =========================
+# Include Routes
+# =========================
 
-class Preprocessing(BaseModel):
-    remove_punctuation: bool
-    normalize_caps: bool
-    remove_numbers: bool
+app.include_router(router, prefix="/api/v1", tags=["Lemmatizer"])
 
-class Settings(BaseModel):
-    show_details: ShowDetails
-    preprocessing: Preprocessing
-    output_format: str
 
-class LemmatizeRequest(BaseModel):
-    input_text: str
-    dialect: str
-    settings: Settings
+# =========================
+# Root Endpoint
+# =========================
 
-# 3. THE ENDPOINT
-@app.post("/api/lemmatize")
-async def lemmatize(payload: LemmatizeRequest):
-    print(f"Received text: '{payload.input_text}' | Dialect: {payload.dialect}")
-    
-    # --- [START] YOUR ACTUAL NLP LOGIC HERE ---
-    # You can import your own functions here. 
-    # For now, this is a placeholder that just returns the words as-is.
-    
-    words = payload.input_text.split()
-    results = []
-    
-    for word in words:
-        # Example logic: just assume everything is a noun for now
-        results.append({
-            "token": word,
-            "lemma": word.lower(),  # Replace with real lemmatizer
-            "pos": "Noun",          # Replace with real POS tagger
-            "affixes": [],
-            "candidates": [word.lower()],
-            "rule": "Default",
-            "is_irregular": False
-        })
-    # --- [END] YOUR ACTUAL NLP LOGIC HERE ---
-
+@app.get("/")
+def root():
+    """Root endpoint with API information."""
     return {
-        "detected_dialect": "Tagalog" if payload.dialect == "auto" else payload.dialect,
-        "stats": {
-            "tokens": len(words),
-            "lemmas": len(words),
-            "irregulars": 0
-        },
-        "results": results
+        "name": "Ugat-Lemmatizer API",
+        "version": "1.0.0",
+        "docs": "/docs",
+        "endpoints": {
+            "dialects": "/api/v1/dialects",
+            "tag": "/api/v1/tag",
+            "lemmatize": "/api/v1/lemmatize",
+            "health": "/api/v1/health"
+        }
     }
 
-# Run this with: uvicorn main:app --reload
+
+# =========================
+# Run Server
+# =========================
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(
+        "main:app",
+        host="0.0.0.0",
+        port=8000,
+        reload=True
+    )
