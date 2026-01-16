@@ -1,12 +1,3 @@
-"""
-Morphological Engine with POS-Aware Affix Stripping
-
-Key Principle:
-- If a token is tagged as VERB, only VERB rules are applied
-- The resulting lemma must match the same POS as the original token
-- This ensures linguistic consistency in lemmatization
-"""
-
 import os
 import json
 from typing import Dict, List, Set, Optional, Any
@@ -14,14 +5,14 @@ from typing import Dict, List, Set, Optional, Any
 
 class MorphologicalEngine:
     """
-    FSM-based Morphological Analyzer with POS-Aware Rule Application.
+    Rule-based Morphological Analyzer with POS-Aware Affix Stripping.
     
-    Flow:
-    1. Receive token + POS tag
-    2. Select rules for that specific POS
-    3. Apply stripping (infix → prefix → reduplication → suffix)
-    4. Validate: candidate lemma must be in root dict with SAME POS
-    5. Heuristic fallback for OOV words
+    Algorithm:
+    1. Check if word is already a root
+    2. Apply POS-specific affix rules (infix → prefix → reduplication → suffix)
+    3. Validate candidate against root dictionary
+    4. Fallback to all rules if POS-specific fails
+    5. Heuristic for OOV/borrowed words
     """
     
     # POS tag normalization mapping (CRF tags → rule categories)
@@ -78,9 +69,7 @@ class MorphologicalEngine:
         languages = ["cebuano", "hiligaynon", "ilocano"]
 
         for lang in languages:
-            # ─────────────────────────────────────────────────────────────────
-            # 1. LOAD RULES (POS-based affix rules)
-            # ─────────────────────────────────────────────────────────────────
+            # Load rules (POS-based affix rules)
             rules_file = os.path.join(resource_path, f"{lang.capitalize()}-rules.json")
             
             if os.path.exists(rules_file):
@@ -97,9 +86,7 @@ class MorphologicalEngine:
                 print(f" Warning: Rules file missing: {rules_file}")
                 self.AFFIX_DB[lang] = {}
 
-            # ─────────────────────────────────────────────────────────────────
-            # 2. LOAD ROOTS (word → POS dictionary)
-            # ─────────────────────────────────────────────────────────────────
+            # Load roots (word → POS dictionary)
             roots_file = os.path.join(resource_path, f"root_{lang}.json")
             
             if os.path.exists(roots_file):
@@ -123,26 +110,14 @@ class MorphologicalEngine:
             else:
                 print(f" Warning: Root file missing: {roots_file}")
 
-    # ═══════════════════════════════════════════════════════════════════════
-    # ROOT VALIDATION (POS-Aware)
-    # ═══════════════════════════════════════════════════════════════════════
+    # --- Root Validation ---
     
     def is_root(self, word: str, lang: str) -> bool:
-        """Check if word exists in root dictionary (any POS)."""
+        """Check if word exists in root dictionary."""
         return word.lower() in self.root_sets.get(lang, set())
     
     def is_root_with_pos(self, word: str, lang: str, target_pos: str) -> bool:
-        """
-        Check if word exists in root dictionary with matching POS.
-        
-        Args:
-            word: The candidate lemma
-            lang: Language/dialect
-            target_pos: Expected POS (normalized via POS_MAPPING)
-        
-        Returns:
-            True if word is a root AND has compatible POS
-        """
+        """Check if word exists in root dictionary with matching POS."""
         word = word.lower()
         roots_dict = self.roots.get(lang, {})
         
@@ -172,9 +147,7 @@ class MorphologicalEngine:
         """Get the POS of a root word, or None if not found."""
         return self.roots.get(lang, {}).get(word.lower())
 
-    # ═══════════════════════════════════════════════════════════════════════
-    # RULE EXTRACTION (POS-Specific)
-    # ═══════════════════════════════════════════════════════════════════════
+    # --- Rule Extraction ---
     
     def get_rules_for_pos(self, lang: str, pos: str) -> Dict[str, List[str]]:
         """
@@ -256,9 +229,7 @@ class MorphologicalEngine:
             "infixes": list(infixes)
         }
 
-    # ═══════════════════════════════════════════════════════════════════════
-    # STRIPPING OPERATIONS
-    # ═══════════════════════════════════════════════════════════════════════
+    # --- Stripping Operations ---
     
     def strip_infix(self, word: str, infixes: List[str], lang: str = None) -> str:
         """Remove infix if found near word beginning (position 1-2)."""
@@ -333,36 +304,15 @@ class MorphologicalEngine:
                 return word[3:]
         return word
 
-    # ═══════════════════════════════════════════════════════════════════════
-    # MAIN LEMMATIZE FUNCTION (POS-Aware)
-    # ═══════════════════════════════════════════════════════════════════════
+    # --- Main Lemmatize ---
     
     def lemmatize(self, word: str, lang: str = "cebuano", pos: str = None) -> Dict[str, Any]:
-        """
-        POS-Aware Lemmatization.
-        
-        Algorithm:
-        1. If POS provided → use only rules for that POS
-        2. Apply stripping: infix → prefix → reduplication → suffix
-        3. After each step, validate: is candidate a root with SAME POS?
-        4. If no POS match → try heuristic fallback
-        5. If still no match → fallback to all-rules approach
-        
-        Args:
-            word: Token to lemmatize
-            lang: Language/dialect
-            pos: POS tag from CRF (e.g., "VERB", "NOUN", "ADJ")
-        
-        Returns:
-            Dict with: lemma, rule, status, affixes, pos
-        """
+        """POS-aware lemmatization with infix → prefix → reduplication → suffix stripping."""
         lang = lang.lower()
         word = word.lower()
         original_word = word
         
-        # ─────────────────────────────────────────────────────────────────────
-        # STEP 0: Early exit if already a root
-        # ─────────────────────────────────────────────────────────────────────
+        # Early exit if already a root
         if self.is_root(word, lang):
             return {
                 "lemma": word,
@@ -372,9 +322,7 @@ class MorphologicalEngine:
                 "pos": self.get_root_pos(word, lang) or pos
             }
         
-        # ─────────────────────────────────────────────────────────────────────
-        # STEP 1: Get POS-specific rules
-        # ─────────────────────────────────────────────────────────────────────
+        # Get POS-specific rules
         if pos:
             rules = self.get_rules_for_pos(lang, pos)
             use_pos_validation = True
@@ -388,9 +336,7 @@ class MorphologicalEngine:
             rules = self.get_all_rules(lang)
             use_pos_validation = False
         
-        # ─────────────────────────────────────────────────────────────────────
-        # STEP 2: FSM Stripping with POS Validation
-        # ─────────────────────────────────────────────────────────────────────
+        # Apply stripping with validation
         current_form = word
         applied_affixes = []
         
@@ -516,11 +462,8 @@ class MorphologicalEngine:
                         "pos": self.get_root_pos(current_form, lang)
                     }
         
-        # ─────────────────────────────────────────────────────────────────────
-        # STEP 3: If POS-specific rules failed, try relaxed validation
-        # ─────────────────────────────────────────────────────────────────────
+        # Relaxed validation - found as root but different POS
         if use_pos_validation and self.is_root(current_form, lang):
-            # Found as root but with different POS - still valid lemma
             return {
                 "lemma": current_form,
                 "rule": "Cross-POS Match",
@@ -529,10 +472,7 @@ class MorphologicalEngine:
                 "pos": self.get_root_pos(current_form, lang)
             }
         
-        # ─────────────────────────────────────────────────────────────────────
-        # STEP 3.5: If POS-specific rules didn't strip anything, try ALL rules
-        # This handles cases where CRF mistagged (e.g., VERB tagged as NOUN)
-        # ─────────────────────────────────────────────────────────────────────
+        # Fallback: try ALL rules if POS-specific didn't work
         if use_pos_validation and not applied_affixes:
             all_rules = self.get_all_rules(lang)
             fallback_form = word
@@ -585,18 +525,14 @@ class MorphologicalEngine:
                 current_form = fallback_form
                 applied_affixes = fallback_affixes
         
-        # ─────────────────────────────────────────────────────────────────────
-        # STEP 4: Heuristic Fallback (OOV handling)
-        # ─────────────────────────────────────────────────────────────────────
+        # Heuristic fallback for OOV words
         heuristic_result = self._heuristic_fallback(
             original_word, current_form, applied_affixes, rules, lang, pos
         )
         if heuristic_result:
             return heuristic_result
         
-        # ─────────────────────────────────────────────────────────────────────
-        # STEP 5: No match found - return original
-        # ─────────────────────────────────────────────────────────────────────
+        # No match found
         return {
             "lemma": original_word,
             "rule": "None",
@@ -605,9 +541,7 @@ class MorphologicalEngine:
             "pos": pos
         }
 
-    # ═══════════════════════════════════════════════════════════════════════
-    # HEURISTIC FALLBACK (OOV Handler)
-    # ═══════════════════════════════════════════════════════════════════════
+    # --- Heuristic Fallback (OOV) ---
     
     def _heuristic_fallback(
         self,
@@ -618,31 +552,11 @@ class MorphologicalEngine:
         lang: str,
         pos: str
     ) -> Optional[Dict[str, Any]]:
-        """
-        Heuristic Fallback for Out-of-Vocabulary words.
-        
-        Rules:
-        1. Hyphen-based: "nag-text" → "text" (borrowed words)
-        2. Stripped form: If affixes were removed and stem >= 3 chars, accept it
-        
-        Args:
-            original_word: The original token
-            current_form: Current stripped form
-            applied_affixes: List of applied transformations
-            rules: Affix rules used
-            lang: Language
-            pos: POS tag
-        
-        Returns:
-            Result dict if heuristic succeeds, None otherwise
-        """
+        """Heuristic fallback for OOV words (hyphen stripping, accept stripped form)."""
         word = original_word.lower()
         prefixes = set(rules.get("prefixes", []))
         
-        # ─────────────────────────────────────────────────────────────────────
-        # Rule 1: Hyphen-based stripping (borrowed words)
-        # Examples: ag-zoom → zoom, nag-text → text, gi-download → download
-        # ─────────────────────────────────────────────────────────────────────
+        # Rule 1: Hyphen stripping for borrowed words (nag-text → text)
         if '-' in word:
             parts = word.split('-')
             
@@ -669,10 +583,7 @@ class MorphologicalEngine:
                         "pos": pos
                     }
         
-        # ─────────────────────────────────────────────────────────────────────
-        # Rule 2: Accept stripped form for OOV words
-        # If affixes were stripped but root not in dictionary, accept if valid
-        # ─────────────────────────────────────────────────────────────────────
+        # Rule 2: Accept stripped form if affixes were applied and stem >= 3 chars
         if applied_affixes and current_form != original_word:
             if len(current_form) >= 3:
                 return {
@@ -686,10 +597,7 @@ class MorphologicalEngine:
         return None
 
 
-# ═══════════════════════════════════════════════════════════════════════════
-# SINGLETON INSTANCE
-# ═══════════════════════════════════════════════════════════════════════════
-
+# Singleton instance
 _engine_instance: Optional[MorphologicalEngine] = None
 
 
@@ -702,51 +610,5 @@ def get_morph_engine() -> MorphologicalEngine:
 
 
 def lemmatize(word: str, lang: str = "cebuano", pos: str = None) -> Dict[str, Any]:
-    """
-    Convenience function for lemmatization.
-    
-    Args:
-        word: Token to lemmatize
-        lang: Language/dialect
-        pos: POS tag (optional, but recommended for accuracy)
-    
-    Returns:
-        Dict with: lemma, rule, status, affixes, pos
-    """
-    engine = get_morph_engine()
-    return engine.lemmatize(word, lang, pos)
-
-
-# ═══════════════════════════════════════════════════════════════════════════
-# TEST / DEMO
-# ═══════════════════════════════════════════════════════════════════════════
-
-if __name__ == "__main__":
-    print("=" * 70)
-    print("  POS-Aware Morphological Engine - Test Suite")
-    print("=" * 70)
-    
-    engine = get_morph_engine()
-    
-    test_cases = [
-        # (word, lang, pos, expected_lemma)
-        ("nagbasa", "ilocano", "VERB", "basa"),
-        ("nagdula", "cebuano", "VERB", "dula"),
-        ("mikaon", "cebuano", "VERB", "kaon"),
-        ("nag-text", "cebuano", "VERB", "text"),
-        ("nagdownload", "cebuano", "VERB", "download"),
-        ("ag-zoom", "ilocano", "VERB", "zoom"),
-        ("maayo", "hiligaynon", "ADJ", "maayo"),
-        ("libro", "cebuano", "NOUN", "libro"),
-        ("ubbing", "ilocano", "NOUN", "ubbing"),
-    ]
-    
-    print(f"\n{'Word':<15} {'Lang':<12} {'POS':<8} {'Lemma':<12} {'Status':<10} {'Rule'}")
-    print("-" * 70)
-    
-    for word, lang, pos, expected in test_cases:
-        result = engine.lemmatize(word, lang, pos)
-        status_icon = "✓" if result["lemma"] == expected else "✗"
-        print(f"{word:<15} {lang:<12} {pos:<8} {result['lemma']:<12} {status_icon} {result['rule']}")
-    
-    print("=" * 70)
+    """Convenience function for lemmatization."""
+    return get_morph_engine().lemmatize(word, lang, pos)

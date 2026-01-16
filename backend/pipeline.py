@@ -1,7 +1,6 @@
 import json
 from pathlib import Path
-from functools import lru_cache
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any
 
 from core import (
     # Preprocessing
@@ -21,7 +20,7 @@ from core import (
 # Path Configuration
 # ─────────────────────────────────────────────────────────────────────────────
 _BACKEND_DIR = Path(__file__).resolve().parent
-OUTPUT_DIR = _BACKEND_DIR / "core" / "results"
+OUTPUT_DIR = _BACKEND_DIR / "results"
 RESOURCES_DIR = _BACKEND_DIR / "resources"
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -304,12 +303,6 @@ def process_tokens(tagged_data: Dict) -> Dict:
 def main_pipeline(raw_text, lang):
     """
     Complete NLP pipeline from raw text to lemmatization.
-    
-    Flow:
-    1. Preprocess (segment + tokenize)
-    2. POS Tagging (CRF + Affix)
-    3. Process tokens (irregular check + morphology)
-    4. Save results
     """
     # Step 1: Preprocess
     preprocessed = text_preprocess(raw_text, lang)
@@ -320,136 +313,42 @@ def main_pipeline(raw_text, lang):
     # Step 3: Process each token (irregular check + morphology)
     processed = process_tokens(tagged)
     
-    # Step 4: Save results
+    # Step 4: Build simple result
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     output_path = OUTPUT_DIR / "pipeline_results.json"
     
+    tokens_summary = []
+    for proc_sent in processed["sentences"]:
+        for t in proc_sent:
+            tokens_summary.append({
+                "token": t["token"],
+                "lemma": t["root"],
+                "pos": t["pos"],
+                "type": t["type"],
+                "affixes": t.get("affixes", [])
+            })
+    
     result = {
-        "lang": processed["lang"],
+        "language": lang,
         "input": raw_text,
-        "sentences": processed["sentences"]
+        "total_tokens": len(tokens_summary),
+        "tokens": tokens_summary
     }
     
     with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(result, f, indent=4, ensure_ascii=False)
+        json.dump(result, f, indent=2, ensure_ascii=False)
     
     print(f"✓ Results saved to {output_path.name}")
     return result
 
     
 if __name__ == "__main__":
-    # ═══════════════════════════════════════════════════════════════════════
-    # Comprehensive Test Cases for Different Input Scenarios
-    # ═══════════════════════════════════════════════════════════════════════
+    # Quick test
+    test_text = "Nagkaon ang bata sang tinapay."
+    result = main_pipeline(test_text, "hiligaynon")
     
-    TEST_SCENARIOS = [
-        # ─────────────────────────────────────────────────────────────────────
-        # ILOCANO Scenarios
-        # ─────────────────────────────────────────────────────────────────────
-        {
-            "lang": "ilocano",
-            "text": "Napan ti lalaki idiay merkado.",
-            "desc": "Mixed: irregular + function + root + morphed"
-        },
-        {
-            "lang": "ilocano",
-            "text": "Nagbasa dagiti ubbing iti libro.",
-            "desc": "Verb prefix + plural marker + preposition"
-        },
-        {
-            "lang": "ilocano",
-            "text": "Ag-zoom tayo ita!",
-            "desc": "Hyphenated borrowed word (heuristic fallback)"
-        },
-        
-        # ─────────────────────────────────────────────────────────────────────
-        # CEBUANO Scenarios
-        # ─────────────────────────────────────────────────────────────────────
-        {
-            "lang": "cebuano",
-            "text": "Mikaon ang bata sa pan.",
-            "desc": "Basic sentence with mi- prefix"
-        },
-        {
-            "lang": "cebuano",
-            "text": "Nagdula ang mga bata sa parke.",
-            "desc": "nag- prefix + plural + location"
-        },
-        {
-            "lang": "cebuano",
-            "text": "Nag-text ako sa akong mama.",
-            "desc": "Hyphenated borrowed word + pronouns"
-        },
-        {
-            "lang": "cebuano",
-            "text": "Dad-on nako ang libro.",
-            "desc": "Irregular verb (dad-on → dala)"
-        },
-        
-        # ─────────────────────────────────────────────────────────────────────
-        # HILIGAYNON Scenarios
-        # ─────────────────────────────────────────────────────────────────────
-        {
-            "lang": "hiligaynon",
-            "text": "Nagkaon ang bata sang tinapay.",
-            "desc": "Basic sentence with nag- prefix"
-        },
-        {
-            "lang": "hiligaynon",
-            "text": "Maayo ang iya obra.",
-            "desc": "Adjective + possessive + noun"
-        },
-        {
-            "lang": "hiligaynon",
-            "text": "Mag-upload ka sang litrato.",
-            "desc": "Hyphenated borrowed word (heuristic)"
-        },
-        {
-            "lang": "hiligaynon",
-            "text": "Kan-on mo ang pagkaon.",
-            "desc": "Irregular verb (kan-on → kaon)"
-        },
-        
-        # ─────────────────────────────────────────────────────────────────────
-        # Edge Cases
-        # ─────────────────────────────────────────────────────────────────────
-        {
-            "lang": "cebuano",
-            "text": "Nagdownload siya ug file.",
-            "desc": "Borrowed word without hyphen (OOV heuristic)"
-        },
-        {
-            "lang": "ilocano",
-            "text": "Ti, ken, ngem.",
-            "desc": "Function words only"
-        },
-    ]
-    
-    print("=" * 75)
-    print("  UGAT-LEMMATIZER - Comprehensive Test Scenarios")
-    print("=" * 75)
-    
-    for i, scenario in enumerate(TEST_SCENARIOS, 1):
-        lang = scenario["lang"]
-        text = scenario["text"]
-        desc = scenario["desc"]
-        
-        print(f"\n┌─ Test {i}: {lang.upper()}")
-        print(f"│  Input: \"{text}\"")
-        print(f"│  Scenario: {desc}")
-        print("├" + "─" * 73)
-        
-        result = main_pipeline(text, lang)
-        
-        print(f"│  {'Token':<15} {'Type':<12} {'Root':<15} {'POS':<10} {'Affixes'}")
-        print("│  " + "-" * 70)
-        
-        for sent in result["sentences"]:
-            for t in sent:
-                affixes = ", ".join(t.get("affixes", [])) or "-"
-                print(f"│  {t['token']:<15} {t['type']:<12} {t['root']:<15} {t['pos']:<10} {affixes}")
-        
-        print("└" + "─" * 73)
-    
-    print("\n" + "=" * 75)
-    print(f"  Completed {len(TEST_SCENARIOS)} test scenarios")
-    print("=" * 75)
+    print(f"\nInput: {test_text}")
+    print(f"{'Token':<15} {'Lemma':<15} {'POS':<10} {'Type':<12}")
+    print("-" * 55)
+    for t in result["tokens"]:
+        print(f"{t['token']:<15} {t['lemma']:<15} {t['pos']:<10} {t['type']:<12}")

@@ -1,10 +1,3 @@
-"""
-Core Module
-Ugat-Lemmatizer Project
-
-Central exports for preprocessing, tagging, and morphology.
-"""
-
 # Preprocessing
 from .preprocessing import tokenizer, segmenter
 
