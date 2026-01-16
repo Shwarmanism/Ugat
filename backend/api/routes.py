@@ -80,7 +80,7 @@ def lemmatize_text(request: LemmatizeRequest):
         tagged = pos_tagging(preprocessed)
         
         # Step 3: Process tokens (irregular check + morphology)
-        processed = process_tokens(tagged)
+        processed = process_tokens(tagged, mode=request.mode)
         
         # Convert to response format
         result_sentences = []
