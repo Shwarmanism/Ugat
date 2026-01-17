@@ -1,0 +1,282 @@
+{
+    "kan-on": {
+        "equivalent": "kaon",
+        "pos": "VERB"
+    },
+    "kan-a": {
+        "equivalent": "kaon",
+        "pos": "VERB"
+    },
+    "dal-a": {
+        "equivalent": "dala",
+        "pos": "VERB"
+    },
+    "dad-on": {
+        "equivalent": "dala",
+        "pos": "VERB"
+    },
+    "dad-a": {
+        "equivalent": "dala",
+        "pos": "VERB"
+    },
+    "hidga": {
+        "equivalent": "higda",
+        "pos": "VERB"
+    },
+    "imna": {
+        "equivalent": "inom",
+        "pos": "VERB"
+    },
+    "imnon": {
+        "equivalent": "inom",
+        "pos": "VERB"
+    },
+    "imnan": {
+        "equivalent": "inom",
+        "pos": "VERB"
+    },
+    "sudla": {
+        "equivalent": "sulod",
+        "pos": "VERB"
+    },
+    "sudlon": {
+        "equivalent": "sulod",
+        "pos": "VERB"
+    },
+    "sudlan": {
+        "equivalent": "sulod",
+        "pos": "VERB"
+    },
+    "gan-it": {
+        "equivalent": "gabot",
+        "pos": "VERB"
+    },
+    "ko": {
+        "equivalent": "akon",
+        "pos": "PRON"
+    },
+    "mo": {
+        "equivalent": "imo",
+        "pos": "PRON"
+    },
+    "g": {
+        "equivalent": "kag",
+        "pos": "CONJ"
+    },
+    "sad-an": {
+        "equivalent": "sala",
+        "pos": "VERB"
+    },
+    "wad-a": {
+        "equivalent": "wala",
+        "pos": "VERB"
+    },
+    "wad-an": {
+        "equivalent": "wala",
+        "pos": "VERB"
+    },
+    "tun-an": {
+        "equivalent": "tuon",
+        "pos": "VERB"
+    },
+    "patyon": {
+        "equivalent": "patay",
+        "pos": "VERB"
+    },
+    "sakyan": {
+        "equivalent": "sakay",
+        "pos": "VERB"
+    },
+    "atpan": {
+        "equivalent": "atop",
+        "pos": "VERB"
+    },
+    "tamnan": {
+        "equivalent": "tanom",
+        "pos": "VERB"
+    },
+    "him-on": {
+        "equivalent": "himo",
+        "pos": "VERB"
+    },
+    "buksan": {
+        "equivalent": "bukas",
+        "pos": "VERB"
+    },
+    "hipsan": {
+        "equivalent": "hipos",
+        "pos": "VERB"
+    },
+    "tak-an": {
+        "equivalent": "taka",
+        "pos": "VERB"
+    },
+    "bal-an": {
+        "equivalent": "balo",
+        "pos": "VERB"
+    },
+    "tipnon": {
+        "equivalent": "tipon",
+        "pos": "VERB"
+    },
+    "ig-an": {
+        "equivalent": "igo",
+        "pos": "VERB"
+    },
+    "taw-an": {
+        "equivalent": "hatag",
+        "pos": "VERB"
+    },
+    "kadli": {
+        "equivalent": "kadlaw",
+        "pos": "VERB"
+    },
+    "tudli": {
+        "equivalent": "tudlo",
+        "pos": "VERB"
+    },
+    "buh-i": {
+        "equivalent": "buhi",
+        "pos": "VERB"
+    },
+    "buy-i": {
+        "equivalent": "buya",
+        "pos": "VERB"
+    },
+    "agya": {
+        "equivalent": "agi",
+        "pos": "VERB"
+    },
+    "dakpon": {
+        "equivalent": "dakop",
+        "pos": "VERB"
+    },
+    "dakpan": {
+        "equivalent": "dakop",
+        "pos": "VERB"
+    },
+    "higugmaon": {
+        "equivalent": "higugma",
+        "pos": "VERB"
+    },
+    "bay-an": {
+        "equivalent": "baya",
+        "pos": "VERB"
+    },
+    "bay-i": {
+        "equivalent": "baya",
+        "pos": "VERB"
+    },
+    "takpan": {
+        "equivalent": "takop",
+        "pos": "VERB"
+    },
+    "takpon": {
+        "equivalent": "takop",
+        "pos": "VERB"
+    },
+    "sirad-i": {
+        "equivalent": "sirado",
+        "pos": "VERB"
+    },
+    "higti": {
+        "equivalent": "higot",
+        "pos": "VERB"
+    },
+    "higtan": {
+        "equivalent": "higot",
+        "pos": "VERB"
+    },
+    "pun-a": {
+        "equivalent": "puno",
+        "pos": "VERB"
+    },
+    "pun-on": {
+        "equivalent": "puno",
+        "pos": "VERB"
+    },
+    "pus-on": {
+        "equivalent": "pusa",
+        "pos": "VERB"
+    },
+    "pus-a": {
+        "equivalent": "pusa",
+        "pos": "VERB"
+    },
+    "ubson": {
+        "equivalent": "ubos",
+        "pos": "VERB"
+    },
+    "ubsa": {
+        "equivalent": "ubos",
+        "pos": "VERB"
+    },
+    "kuuna": {
+        "equivalent": "kuha",
+        "pos": "VERB"
+    },
+    "kuh-i": {
+        "equivalent": "kuha",
+        "pos": "VERB"
+    },
+    "kuh-an": {
+        "equivalent": "kuha",
+        "pos": "VERB"
+    },
+    "kapti": {
+        "equivalent": "kapot",
+        "pos": "VERB"
+    },
+    "kaptan": {
+        "equivalent": "kapot",
+        "pos": "VERB"
+    },
+    "lapti": {
+        "equivalent": "lapta",
+        "pos": "VERB"
+    },
+    "bas-a": {
+        "equivalent": "basa",
+        "pos": "VERB"
+    },
+    "bas-on": {
+        "equivalent": "basa",
+        "pos": "VERB"
+    },
+    "lut-on": {
+        "equivalent": "luto",
+        "pos": "VERB"
+    },
+    "lut-a": {
+        "equivalent": "luto",
+        "pos": "VERB"
+    },
+    "ngil-ad": {
+        "equivalent": "il-ad",
+        "pos": "ADJ"
+    },
+    "hadlukan": {
+        "equivalent": "hadlok",
+        "pos": "ADJ"
+    },
+    "kalisud": {
+        "equivalent": "lisud",
+        "pos": "NOUN"
+    },
+    "kasakit": {
+        "equivalent": "sakit",
+        "pos": "NOUN"
+    },
+    "kasubo": {
+        "equivalent": "subo",
+        "pos": "NOUN"
+    },
+    "sina": {
+        "equivalent": "ina",
+        "pos": "DEM"
+    },
+    "sino": {
+        "equivalent": "sin-o",
+        "pos": "PRON"
+    }
+}

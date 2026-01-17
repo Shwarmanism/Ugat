@@ -1,0 +1,51 @@
+{
+  "language": "hiligaynon",
+  "input": "Nagkaon ang bata sang tinapay.",
+  "total_tokens": 6,
+  "tokens": [
+    {
+      "token": "nagkaon",
+      "lemma": "kaon",
+      "pos": "VERB",
+      "type": "morphed",
+      "affixes": [
+        "prefix"
+      ]
+    },
+    {
+      "token": "ang",
+      "lemma": "ang",
+      "pos": "DET",
+      "type": "function",
+      "affixes": []
+    },
+    {
+      "token": "bata",
+      "lemma": "bata",
+      "pos": "NOUN",
+      "type": "root",
+      "affixes": []
+    },
+    {
+      "token": "sang",
+      "lemma": "sang",
+      "pos": "ADP",
+      "type": "root",
+      "affixes": []
+    },
+    {
+      "token": "tinapay",
+      "lemma": "tinapay",
+      "pos": "NOUN",
+      "type": "root",
+      "affixes": []
+    },
+    {
+      "token": ".",
+      "lemma": ".",
+      "pos": "PUNCT",
+      "type": "function",
+      "affixes": []
+    }
+  ]
+}
