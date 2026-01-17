@@ -254,7 +254,16 @@ select:focus {
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 5px 20px var(--shadow);
-    overflow-x: auto;
+    /* Make this container handle the layout, but the scroll happens in a wrapper if needed */
+}
+
+/* Scrollable Table Container */
+.table-scroll-container {
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    margin-top: 1rem;
+    border-radius: 8px;
 }
 
 table {
@@ -268,6 +277,9 @@ th {
     padding: 1rem;
     text-align: left;
     font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 td {
