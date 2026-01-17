@@ -1,40 +1,8 @@
 // Backend API URL
 const API_URL = 'http://localhost:8000/api/v1';
 
-// Mock lexicons and rules for demonstration
-const mockLexicon = {
-    hiligaynon: {
-        roots: ['basa', 'lakad', 'bata', 'saya', 'labas', 'laro', 'kain', 'inom', 'punta'],
-        irregular: {
-            'pumunta': 'punta',
-            'kumain': 'kain',
-            'uminom': 'inom'
-        },
-        affixes: {
-            prefixes: ['nag', 'mag', 'um', 'ma', 'ka', 'pa', 'na'],
-            suffixes: ['an', 'in', 'han'],
-            infixes: ['um', 'in']
-        }
-    },
-    cebuano: {
-        roots: ['kaon', 'bugas', 'tubig', 'balay'],
-        irregular: {},
-        affixes: {
-            prefixes: ['nag', 'mag', 'mi', 'mo'],
-            suffixes: ['an', 'on'],
-            infixes: ['um']
-        }
-    },
-    ilocano: {
-        roots: ['pan', 'merkado', 'balay', 'danum'],
-        irregular: {},
-        affixes: {
-            prefixes: ['nag', 'ag', 'um', 'ma'],
-            suffixes: ['an', 'en'],
-            infixes: ['um', 'in']
-        }
-    }
-};
+// Mock lexicons removed - using Backend API
+
 
 // Animation on load
 window.addEventListener('load', () => {
@@ -253,60 +221,7 @@ function closeSuccessModal() {
     }, 300);
 }
 
-// Process individual token
-function processToken(token, dialect) {
-    // Determine dialect lexicon
-    const dialectKey = dialect === 'auto' ? 'hiligaynon' : dialect;
-    const lexicon = mockLexicon[dialectKey] || mockLexicon.hiligaynon;
 
-    let lemma = token;
-    let affixes = [];
-    let candidates = [];
-    let irregular = false;
-
-    // Check irregular
-    if (lexicon.irregular[token]) {
-        lemma = lexicon.irregular[token];
-        irregular = true;
-        candidates.push(lemma);
-    } else {
-        // Strip prefixes
-        for (let prefix of lexicon.affixes.prefixes) {
-            if (token.startsWith(prefix)) {
-                affixes.push(prefix + '-');
-                lemma = token.substring(prefix.length);
-                break;
-            }
-        }
-
-        // Strip suffixes
-        for (let suffix of lexicon.affixes.suffixes) {
-            if (lemma.endsWith(suffix)) {
-                affixes.push('-' + suffix);
-                lemma = lemma.substring(0, lemma.length - suffix.length);
-                break;
-            }
-        }
-
-        candidates.push(lemma);
-
-        // Check if in lexicon, if not, use original token
-        if (!lexicon.roots.includes(lemma)) {
-            candidates.push(token);
-            // Keep the lemma as processed, or fallback to token if preferred
-        }
-    }
-
-    return {
-        token,
-        lemma,
-        pos: 'Verb', // Mock POS - in real system, this would be determined by POS tagger
-        affixes,
-        candidates,
-        irregular,
-        rule: affixes.length > 0 ? 'V-affix rule #' + Math.floor(Math.random() * 10 + 1) : 'Direct lookup'
-    };
-}
 
 // Save to history
 function saveToHistory(text, results, dialect) {
@@ -324,80 +239,136 @@ function saveToHistory(text, results, dialect) {
 }
 
 // Lexicon tab switching
-function showLexiconTab(tab) {
+async function showLexiconTab(tab) {
+    window.currentLexiconTab = tab; // Store state
     const content = document.getElementById('lexiconTableContent');
+    content.innerHTML = '<div style="text-align:center; padding: 2rem;">Loading lexicon data...</div>';
 
-    if (tab === 'roots') {
-        content.innerHTML = `
-            <table>
+    // Get selected dialect filter
+    const filterSelect = document.getElementById('lexiconDialectFilter');
+    const selectedDialect = filterSelect ? filterSelect.value : 'all';
+
+    let dialects = ['ilocano', 'cebuano', 'hiligaynon'];
+
+    // If specific dialect selected, only fetch that one
+    if (selectedDialect && selectedDialect !== 'all') {
+        dialects = [selectedDialect];
+    }
+
+    // Parallel fetch for chosen dialects
+    const requests = dialects.map(d =>
+        fetch(`${API_URL}/lexicon?type=${tab}&dialect=${d}&page_size=1000`)
+            .then(res => {
+                if (!res.ok) throw new Error(`Failed to fetch ${d}`);
+                return res.json();
+            })
+            .then(data => ({ dialect: d, items: data.items }))
+            .catch(err => ({ dialect: d, items: [], error: err }))
+    );
+
+    try {
+        const results = await Promise.all(requests);
+        let allItems = [];
+
+        // Aggregate results
+        results.forEach(r => {
+            if (r.items) {
+                r.items.forEach(item => {
+                    item._dialect = r.dialect; // Tag with dialect
+                    allItems.push(item);
+                });
+            }
+        });
+
+        // Sort by term
+        allItems.sort((a, b) => a.term.localeCompare(b.term));
+
+        // Create table inside scroll container
+        let tableHtml = '<div class="table-scroll-container"><table>';
+
+        if (tab === 'roots') {
+            tableHtml += `
                 <thead>
                     <tr>
                         <th>Word</th>
                         <th>Dialect</th>
                         <th>POS</th>
-                        <th>Notes</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr><td>basa</td><td>Hiligaynon</td><td>Verb</td><td>Root word: to read</td></tr>
-                    <tr><td>lakad</td><td>Hiligaynon</td><td>Verb</td><td>Root word: to walk</td></tr>
-                    <tr><td>bata</td><td>Hiligaynon</td><td>Noun</td><td>Root word: child</td></tr>
-                    <tr><td>saya</td><td>Hiligaynon</td><td>Noun/Adj</td><td>Root word: happy/happiness</td></tr>
-                    <tr><td>laro</td><td>Hiligaynon</td><td>Noun/Verb</td><td>Root word: play/game</td></tr>
-                    <tr><td>kaon</td><td>Cebuano</td><td>Verb</td><td>Root word: to eat</td></tr>
-                    <tr><td>bugas</td><td>Cebuano</td><td>Noun</td><td>Root word: rice</td></tr>
-                    <tr><td>pan</td><td>Ilocano</td><td>Verb</td><td>Root word: to go</td></tr>
-                    <tr><td>merkado</td><td>Ilocano</td><td>Noun</td><td>Root word: market</td></tr>
-                </tbody>
-            </table>
-        `;
-    } else if (tab === 'irregular') {
-        content.innerHTML = `
-            <table>
+                <tbody>`;
+
+            if (allItems.length === 0) {
+                tableHtml += '<tr><td colspan="3" style="text-align:center;">No data found.</td></tr>';
+            } else {
+                allItems.forEach(item => {
+                    const pos = typeof item.details === 'string' ? item.details : (item.details.pos || JSON.stringify(item.details));
+                    tableHtml += `
+                        <tr>
+                            <td>${item.term}</td>
+                            <td style="text-transform: capitalize;">${item._dialect}</td>
+                            <td>${pos}</td>
+                        </tr>`;
+                });
+            }
+
+        } else if (tab === 'irregular') {
+            tableHtml += `
                 <thead>
                     <tr>
-                        <th>Irregular Form</th>
-                        <th>Lemma</th>
-                        <th>Dialect</th>
-                        <th>Notes</th>
+                        <th>Word</th>
+                        <th>Equivalent</th>
+                        <th>POS</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr><td>pumunta</td><td>punta</td><td>Hiligaynon</td><td>Irregular verb: to go</td></tr>
-                    <tr><td>kumain</td><td>kain</td><td>Hiligaynon</td><td>Irregular verb: to eat</td></tr>
-                    <tr><td>uminom</td><td>inom</td><td>Hiligaynon</td><td>Irregular verb: to drink</td></tr>
-                    <tr><td>dumating</td><td>dating</td><td>Hiligaynon</td><td>Irregular verb: to arrive</td></tr>
-                    <tr><td>sumama</td><td>sama</td><td>Hiligaynon</td><td>Irregular verb: to accompany</td></tr>
-                </tbody>
-            </table>
-        `;
-    } else if (tab === 'affixes') {
-        content.innerHTML = `
-            <table>
+                <tbody>`;
+
+            if (allItems.length === 0) {
+                tableHtml += '<tr><td colspan="3" style="text-align:center;">No data found.</td></tr>';
+            } else {
+                allItems.forEach(item => {
+                    const equiv = item.details.equivalent || '-';
+                    const pos = item.details.pos || '-';
+                    tableHtml += `
+                        <tr>
+                            <td>${item.term}</td>
+                            <td>${equiv}</td>
+                            <td>${pos}</td>
+                        </tr>`;
+                });
+            }
+
+        } else if (tab === 'affixes') {
+            tableHtml += `
                 <thead>
                     <tr>
                         <th>Affix</th>
                         <th>Type</th>
                         <th>Dialect</th>
-                        <th>Function</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr><td>nag-</td><td>Prefix</td><td>Hiligaynon</td><td>Past tense marker (completed action)</td></tr>
-                    <tr><td>mag-</td><td>Prefix</td><td>Hiligaynon</td><td>Future/imperative marker</td></tr>
-                    <tr><td>-um-</td><td>Infix</td><td>Hiligaynon</td><td>Actor focus marker</td></tr>
-                    <tr><td>-in</td><td>Suffix</td><td>Hiligaynon</td><td>Object focus marker</td></tr>
-                    <tr><td>-an</td><td>Suffix</td><td>Hiligaynon</td><td>Locative focus marker</td></tr>
-                    <tr><td>ma-</td><td>Prefix</td><td>Hiligaynon</td><td>Accidental/abilitative marker</td></tr>
-                    <tr><td>pa-</td><td>Prefix</td><td>Hiligaynon</td><td>Causative marker</td></tr>
-                    <tr><td>ka-</td><td>Prefix</td><td>Hiligaynon</td><td>Recent completion marker</td></tr>
-                    <tr><td>mi-</td><td>Prefix</td><td>Cebuano</td><td>Past tense marker</td></tr>
-                    <tr><td>mo-</td><td>Prefix</td><td>Cebuano</td><td>Future tense marker</td></tr>
-                    <tr><td>ag-</td><td>Prefix</td><td>Ilocano</td><td>Action marker</td></tr>
-                    <tr><td>-en</td><td>Suffix</td><td>Ilocano</td><td>Object focus marker</td></tr>
-                </tbody>
-            </table>
-        `;
+                <tbody>`;
+
+            if (allItems.length === 0) {
+                tableHtml += '<tr><td colspan="3" style="text-align:center;">No data found.</td></tr>';
+            } else {
+                allItems.forEach(item => {
+                    const type = item.metadata.affix_type || '-';
+                    tableHtml += `
+                        <tr>
+                            <td>${item.term}</td>
+                            <td>${type}</td>
+                            <td style="text-transform: capitalize;">${item._dialect}</td>
+                        </tr>`;
+                });
+            }
+        }
+
+        tableHtml += '</tbody></table></div>'; // Close scroll container
+        content.innerHTML = tableHtml;
+
+    } catch (error) {
+        console.error('Error fetching lexicon:', error);
+        content.innerHTML = `<div style="text-align:center; color:red; padding: 2rem;">Error loading data: ${error.message}</div>`;
     }
 }
 
@@ -413,6 +384,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 const text = row.textContent.toLowerCase();
                 row.style.display = text.includes(query) ? '' : 'none';
             });
+        });
+    }
+
+    // Dialect Filter Event Listener
+    const dialectFilter = document.getElementById('lexiconDialectFilter');
+    if (dialectFilter) {
+        dialectFilter.addEventListener('change', function () {
+            // Re-fetch/render current active tab with new filter
+            if (window.currentLexiconTab) {
+                showLexiconTab(window.currentLexiconTab);
+            } else {
+                showLexiconTab('roots');
+            }
         });
     }
 });
