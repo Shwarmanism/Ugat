@@ -91,7 +91,8 @@ def lemmatize_text(request: LemmatizeRequest):
                     type=item["type"],
                     root=item["root"],
                     pos=item["pos"],
-                    affixes=item.get("affixes", [])
+                    affixes=item.get("affixes", []),
+                    stripped=item.get("stripped", "")
                 )
                 for item in sentence
             ]
