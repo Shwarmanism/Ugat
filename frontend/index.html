@@ -216,13 +216,27 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
                 <input type="text" id="lexiconSearch" placeholder="Search root words, affixes, or irregular forms..."
                     style="width: 100%; padding: 1rem; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
 
-                <div style="margin-top: 2rem;">
-                    <button class="btn" style="margin-right: 1rem;" onclick="showLexiconTab('roots')">Root
+                <div style="margin-top: 2rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                    <button class="btn" onclick="showLexiconTab('roots')"
+                        style="padding: 0.8rem 1.5rem; font-size: 1rem;">Root Words</button>
+                    <button class="btn" onclick="showLexiconTab('irregular')"
+                        style="padding: 0.8rem 1.5rem; font-size: 1rem; background: var(--deep-brown);">Irregular
                         Words</button>
-                    <button class="btn" style="margin-right: 1rem; background: var(--deep-brown);"
-                        onclick="showLexiconTab('irregular')">Irregular Words</button>
-                    <button class="btn" style="background: var(--gold); color: var(--deep-brown);"
-                        onclick="showLexiconTab('affixes')">Affix Rules</button>
+                    <button class="btn" onclick="showLexiconTab('affixes')"
+                        style="padding: 0.8rem 1.5rem; font-size: 1rem; background: var(--gold); color: var(--deep-brown);">Affix
+                        Rules</button>
+
+                    <div
+                        style="display: flex; align-items: center; border: 2px solid #ddd; border-radius: 8px; padding: 0 0.5rem; background: white;">
+                        <span style="font-size: 0.9rem; color: #666; margin-right: 0.5rem;">Filter:</span>
+                        <select id="lexiconDialectFilter"
+                            style="border: none; padding: 0.6rem; font-size: 1rem; background: transparent; outline: none; cursor: pointer;">
+                            <option value="all">All Dialects</option>
+                            <option value="ilocano">Ilocano</option>
+                            <option value="cebuano">Cebuano</option>
+                            <option value="hiligaynon">Hiligaynon</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="results-table" style="margin-top: 2rem;">
