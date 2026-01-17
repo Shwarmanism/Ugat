@@ -67,8 +67,12 @@ function lemmatize() {
     // Get settings
     const mode = document.getElementById('settingsMode').value;
     const outputFormat = document.getElementById('outputFormat') ? document.getElementById('outputFormat').value : 'table';
-    const showPOS = document.getElementById('showPOS').checked;
-    const showCandidates = document.getElementById('showCandidates').checked;
+    const showToken = document.getElementById('chkToken').checked;
+    const showPOS = document.getElementById('chkPOS').checked;
+    const showType = document.getElementById('chkType').checked;
+    const showAffixes = document.getElementById('chkAffixes').checked;
+    const showStripped = document.getElementById('chkStripped').checked;
+    const showLemma = document.getElementById('chkLemma').checked;
 
     // Show loading state
     const resultsBody = document.getElementById('resultsBody');
@@ -103,7 +107,8 @@ function lemmatize() {
                         type: tokenData.type,
                         affixes: tokenData.affixes,
                         lemma: tokenData.root,
-                        irregular: tokenData.type === 'irregular'
+                        irregular: tokenData.type === 'irregular',
+                        stripped: tokenData.stripped || '-'
                     });
                 });
             });
@@ -115,18 +120,53 @@ function lemmatize() {
             document.getElementById('totalLemmas').textContent = results.length; // Simplified count
             document.getElementById('irregularWords').textContent = results.filter(r => r.irregular).length;
 
-            // Populate results table
-            resultsBody.innerHTML = '';
-            results.forEach(r => {
-                const row = resultsBody.insertRow();
-                row.innerHTML = `
-                <td><strong>${r.token}</strong></td>
-                <td>${r.pos}</td>
-                <td>${r.type}</td>
-                <td>${r.affixes.join(', ') || '-'}</td>
-                <td><span class="lemma-highlight">${r.lemma}</span></td>
-            `;
-            });
+            if (outputFormat === 'text') {
+                document.getElementById('resultsTableContainer').style.display = 'none';
+                document.getElementById('resultsText').style.display = 'block';
+
+                let textReport = 'UGAT ANALYSIS REPORT\n';
+                textReport += '====================\n';
+                textReport += `Dialect: ${detectedDialect}\n`;
+                textReport += `Total Tokens: ${results.length}\n`;
+                textReport += '--------------------\n\n';
+
+                results.forEach((r, index) => {
+                    textReport += `${index + 1}. Token:   ${r.token}\n`;
+                    if (showPOS) textReport += `   POS Tag: ${r.pos}\n`;
+                    if (showType) textReport += `   Type:    ${r.type}\n`;
+                    if (showAffixes) textReport += `   Affixes: ${r.affixes.join(', ') || '-'}\n`;
+                    if (showStripped) textReport += `   Stripped: ${r.stripped}\n`;
+                    if (showLemma) textReport += `   Lemma:   ${r.lemma}\n`;
+                    textReport += '\n';
+                });
+
+                document.getElementById('resultsText').textContent = textReport;
+            } else {
+                document.getElementById('resultsTableContainer').style.display = 'block';
+                document.getElementById('resultsText').style.display = 'none';
+
+                // Manage Table Headers
+                document.getElementById('thToken').style.display = showToken ? '' : 'none';
+                document.getElementById('thPOS').style.display = showPOS ? '' : 'none';
+                document.getElementById('thType').style.display = showType ? '' : 'none';
+                document.getElementById('thAffixes').style.display = showAffixes ? '' : 'none';
+                document.getElementById('thStripped').style.display = showStripped ? '' : 'none';
+                document.getElementById('thLemma').style.display = showLemma ? '' : 'none';
+
+                // Populate results table
+                resultsBody.innerHTML = '';
+                results.forEach(r => {
+                    const row = resultsBody.insertRow();
+                    let html = '';
+                    if (showToken) html += `<td><strong>${r.token}</strong></td>`;
+                    if (showPOS) html += `<td>${r.pos}</td>`;
+                    if (showType) html += `<td>${r.type}</td>`;
+                    if (showAffixes) html += `<td>${r.affixes.join(', ') || '-'}</td>`;
+                    if (showStripped) html += `<td>${r.stripped}</td>`;
+                    if (showLemma) html += `<td><span class="lemma-highlight">${r.lemma}</span></td>`;
+                    row.innerHTML = html;
+                });
+            }
 
             // Populate breakdown
             const breakdownContent = document.getElementById('breakdownContent');
@@ -168,8 +208,11 @@ function lemmatize() {
                     dialect: dialect === 'auto' ? 'hiligaynon' : dialect,
                     mode: mode,
                     outputFormat: outputFormat,
+                    showToken: showToken,
                     showPOS: showPOS,
-                    showCandidates: showCandidates,
+                    showType: showType,
+                    showAffixes: showAffixes,
+                    showLemma: showLemma,
                     timestamp: new Date().toISOString()
                 },
                 input: input,
