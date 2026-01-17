@@ -1,6 +1,9 @@
+// Backend API URL
+const API_URL = 'http://localhost:8000/api/v1';
+
 // Mock lexicons and rules for demonstration
 const mockLexicon = {
-    tagalog: {
+    hiligaynon: {
         roots: ['basa', 'lakad', 'bata', 'saya', 'labas', 'laro', 'kain', 'inom', 'punta'],
         irregular: {
             'pumunta': 'punta',
@@ -61,68 +64,171 @@ function lemmatize() {
         return;
     }
 
-    // Mock processing
-    const tokens = input.toLowerCase().replace(/[.,!?]/g, '').split(/\s+/);
-    const results = tokens.map(token => processToken(token, dialect));
+    // Get settings
+    const mode = document.getElementById('settingsMode').value;
+    const outputFormat = document.getElementById('outputFormat') ? document.getElementById('outputFormat').value : 'table';
+    const showToken = document.getElementById('chkToken').checked;
+    const showPOS = document.getElementById('chkPOS').checked;
+    const showType = document.getElementById('chkType').checked;
+    const showAffixes = document.getElementById('chkAffixes').checked;
+    const showStripped = document.getElementById('chkStripped').checked;
+    const showLemma = document.getElementById('chkLemma').checked;
 
-    // Update summary
-    const detectedDialect = dialect === 'auto' ? 'Tagalog' : dialect.charAt(0).toUpperCase() + dialect.slice(1);
-    document.getElementById('detectedDialect').textContent = detectedDialect;
-    document.getElementById('tokensProcessed').textContent = tokens.length;
-    document.getElementById('totalLemmas').textContent = results.length;
-    document.getElementById('irregularWords').textContent = results.filter(r => r.irregular).length;
+    // Show loading state
+    const resultsBody = document.getElementById('resultsBody');
+    resultsBody.innerHTML = '<tr><td colspan="5" style="text-align:center;">Processing...</td></tr>';
 
-    // Populate results table
-    const tbody = document.getElementById('resultsBody');
-    tbody.innerHTML = '';
-    results.forEach(r => {
-        const row = tbody.insertRow();
-        row.innerHTML = `
-            <td><strong>${r.token}</strong></td>
-            <td>${r.pos}</td>
-            <td>${r.affixes.join(', ') || 'none'}</td>
-            <td>${r.candidates.join(', ')}</td>
-            <td><span class="lemma-highlight">${r.lemma}</span></td>
-        `;
-    });
+    // Call Backend API
+    fetch(`${API_URL}/lemmatize`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            text: input,
+            dialect: dialect, // API requires specific dialect
+            mode: mode
+        })
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const results = [];
+            // Flatten nested sentences structure from API
+            data.sentences.forEach(sentence => {
+                sentence.forEach(tokenData => {
+                    results.push({
+                        token: tokenData.token,
+                        pos: tokenData.pos,
+                        type: tokenData.type,
+                        affixes: tokenData.affixes,
+                        lemma: tokenData.root,
+                        irregular: tokenData.type === 'irregular',
+                        stripped: tokenData.stripped || '-'
+                    });
+                });
+            });
 
-    // Populate breakdown
-    const breakdownContent = document.getElementById('breakdownContent');
-    breakdownContent.innerHTML = '';
-    results.forEach(r => {
-        if (r.affixes.length > 0) {
-            const item = document.createElement('div');
-            item.className = 'breakdown-item';
-            item.innerHTML = `
-                <h3>Word: ${r.token}</h3>
-                <div class="breakdown-details">
-                    <div class="detail-item">
-                        <div class="detail-label">Affixes</div>
-                        <div class="detail-value">${r.affixes.join(', ')}</div>
+            // Update summary
+            const detectedDialect = data.dialect.charAt(0).toUpperCase() + data.dialect.slice(1);
+            document.getElementById('detectedDialect').textContent = detectedDialect;
+            document.getElementById('tokensProcessed').textContent = results.length;
+            document.getElementById('totalLemmas').textContent = results.length; // Simplified count
+            document.getElementById('irregularWords').textContent = results.filter(r => r.irregular).length;
+
+            if (outputFormat === 'text') {
+                document.getElementById('resultsTableContainer').style.display = 'none';
+                document.getElementById('resultsText').style.display = 'block';
+
+                let textReport = 'UGAT ANALYSIS REPORT\n';
+                textReport += '====================\n';
+                textReport += `Dialect: ${detectedDialect}\n`;
+                textReport += `Total Tokens: ${results.length}\n`;
+                textReport += '--------------------\n\n';
+
+                results.forEach((r, index) => {
+                    textReport += `${index + 1}. Token:   ${r.token}\n`;
+                    if (showPOS) textReport += `   POS Tag: ${r.pos}\n`;
+                    if (showType) textReport += `   Type:    ${r.type}\n`;
+                    if (showAffixes) textReport += `   Affixes: ${r.affixes.join(', ') || '-'}\n`;
+                    if (showStripped) textReport += `   Stripped: ${r.stripped}\n`;
+                    if (showLemma) textReport += `   Lemma:   ${r.lemma}\n`;
+                    textReport += '\n';
+                });
+
+                document.getElementById('resultsText').textContent = textReport;
+            } else {
+                document.getElementById('resultsTableContainer').style.display = 'block';
+                document.getElementById('resultsText').style.display = 'none';
+
+                // Manage Table Headers
+                document.getElementById('thToken').style.display = showToken ? '' : 'none';
+                document.getElementById('thPOS').style.display = showPOS ? '' : 'none';
+                document.getElementById('thType').style.display = showType ? '' : 'none';
+                document.getElementById('thAffixes').style.display = showAffixes ? '' : 'none';
+                document.getElementById('thStripped').style.display = showStripped ? '' : 'none';
+                document.getElementById('thLemma').style.display = showLemma ? '' : 'none';
+
+                // Populate results table
+                resultsBody.innerHTML = '';
+                results.forEach(r => {
+                    const row = resultsBody.insertRow();
+                    let html = '';
+                    if (showToken) html += `<td><strong>${r.token}</strong></td>`;
+                    if (showPOS) html += `<td>${r.pos}</td>`;
+                    if (showType) html += `<td>${r.type}</td>`;
+                    if (showAffixes) html += `<td>${r.affixes.join(', ') || '-'}</td>`;
+                    if (showStripped) html += `<td>${r.stripped}</td>`;
+                    if (showLemma) html += `<td><span class="lemma-highlight">${r.lemma}</span></td>`;
+                    row.innerHTML = html;
+                });
+            }
+
+            // Populate breakdown
+            const breakdownContent = document.getElementById('breakdownContent');
+            breakdownContent.innerHTML = '';
+            results.forEach(r => {
+                if (r.affixes && r.affixes.length > 0) {
+                    const item = document.createElement('div');
+                    item.className = 'breakdown-item';
+                    item.innerHTML = `
+                    <h3>Word: ${r.token}</h3>
+                    <div class="breakdown-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Affixes</div>
+                            <div class="detail-value">${r.affixes.join(', ')}</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Root</div>
+                            <div class="detail-value">${r.lemma}</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">POS</div>
+                            <div class="detail-value">${r.pos}</div>
+                        </div>
                     </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Root</div>
-                        <div class="detail-value">${r.lemma}</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">POS</div>
-                        <div class="detail-value">${r.pos}</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Rule Applied</div>
-                        <div class="detail-value">${r.rule}</div>
-                    </div>
-                </div>
-            `;
-            breakdownContent.appendChild(item);
-        }
-    });
+                `;
+                    breakdownContent.appendChild(item);
+                }
+            });
 
-    // Show success modal
-    showSuccessModal(tokens.length, results.length);
+            // Show success modal
+            showSuccessModal(results.length, results.length);
 
-    // Save to history
-    saveToHistory(input, results, detectedDialect);
+            // Save to history
+            saveToHistory(input, results, detectedDialect);
+
+            // Store for export/logging
+            window.lastAnalysisData = {
+                settings: {
+                    dialect: dialect === 'auto' ? 'hiligaynon' : dialect,
+                    mode: mode,
+                    outputFormat: outputFormat,
+                    showToken: showToken,
+                    showPOS: showPOS,
+                    showType: showType,
+                    showAffixes: showAffixes,
+                    showLemma: showLemma,
+                    timestamp: new Date().toISOString()
+                },
+                input: input,
+                results: results
+            };
+
+            // Log to console as requested
+            console.log("--- Ugat Analysis Data ---");
+            console.log(window.lastAnalysisData);
+            console.log("--------------------------");
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            resultsBody.innerHTML = '<tr><td colspan="5" style="text-align:center; color:red;">Error processing text. Ensure backend is running.</td></tr>';
+            alert('Error connecting to backend server.');
+        });
 }
 
 // Show success modal
@@ -137,10 +243,10 @@ function showSuccessModal(tokenCount, lemmaCount) {
 function closeSuccessModal() {
     const modal = document.getElementById('successModal');
     modal.classList.remove('show');
-    
+
     // Show results section
     document.getElementById('resultsSection').style.display = 'block';
-    
+
     // Scroll to results
     setTimeout(() => {
         document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
@@ -150,9 +256,9 @@ function closeSuccessModal() {
 // Process individual token
 function processToken(token, dialect) {
     // Determine dialect lexicon
-    const dialectKey = dialect === 'auto' ? 'tagalog' : dialect;
-    const lexicon = mockLexicon[dialectKey] || mockLexicon.tagalog;
-    
+    const dialectKey = dialect === 'auto' ? 'hiligaynon' : dialect;
+    const lexicon = mockLexicon[dialectKey] || mockLexicon.hiligaynon;
+
     let lemma = token;
     let affixes = [];
     let candidates = [];
@@ -206,21 +312,21 @@ function processToken(token, dialect) {
 function saveToHistory(text, results, dialect) {
     const lemmas = [...new Set(results.map(r => r.lemma))].join(', ');
     const historyContent = document.getElementById('historyContent');
-    
+
     const item = document.createElement('div');
     item.className = 'history-item';
     item.innerHTML = `
         <div class="history-text">"${text}"</div>
         <div class="history-meta">→ lemmas: ${lemmas} (${dialect}) • Just now</div>
     `;
-    
+
     historyContent.insertBefore(item, historyContent.firstChild);
 }
 
 // Lexicon tab switching
 function showLexiconTab(tab) {
     const content = document.getElementById('lexiconTableContent');
-    
+
     if (tab === 'roots') {
         content.innerHTML = `
             <table>
@@ -233,11 +339,11 @@ function showLexiconTab(tab) {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>basa</td><td>Tagalog</td><td>Verb</td><td>Root word: to read</td></tr>
-                    <tr><td>lakad</td><td>Tagalog</td><td>Verb</td><td>Root word: to walk</td></tr>
-                    <tr><td>bata</td><td>Tagalog</td><td>Noun</td><td>Root word: child</td></tr>
-                    <tr><td>saya</td><td>Tagalog</td><td>Noun/Adj</td><td>Root word: happy/happiness</td></tr>
-                    <tr><td>laro</td><td>Tagalog</td><td>Noun/Verb</td><td>Root word: play/game</td></tr>
+                    <tr><td>basa</td><td>Hiligaynon</td><td>Verb</td><td>Root word: to read</td></tr>
+                    <tr><td>lakad</td><td>Hiligaynon</td><td>Verb</td><td>Root word: to walk</td></tr>
+                    <tr><td>bata</td><td>Hiligaynon</td><td>Noun</td><td>Root word: child</td></tr>
+                    <tr><td>saya</td><td>Hiligaynon</td><td>Noun/Adj</td><td>Root word: happy/happiness</td></tr>
+                    <tr><td>laro</td><td>Hiligaynon</td><td>Noun/Verb</td><td>Root word: play/game</td></tr>
                     <tr><td>kaon</td><td>Cebuano</td><td>Verb</td><td>Root word: to eat</td></tr>
                     <tr><td>bugas</td><td>Cebuano</td><td>Noun</td><td>Root word: rice</td></tr>
                     <tr><td>pan</td><td>Ilocano</td><td>Verb</td><td>Root word: to go</td></tr>
@@ -257,11 +363,11 @@ function showLexiconTab(tab) {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>pumunta</td><td>punta</td><td>Tagalog</td><td>Irregular verb: to go</td></tr>
-                    <tr><td>kumain</td><td>kain</td><td>Tagalog</td><td>Irregular verb: to eat</td></tr>
-                    <tr><td>uminom</td><td>inom</td><td>Tagalog</td><td>Irregular verb: to drink</td></tr>
-                    <tr><td>dumating</td><td>dating</td><td>Tagalog</td><td>Irregular verb: to arrive</td></tr>
-                    <tr><td>sumama</td><td>sama</td><td>Tagalog</td><td>Irregular verb: to accompany</td></tr>
+                    <tr><td>pumunta</td><td>punta</td><td>Hiligaynon</td><td>Irregular verb: to go</td></tr>
+                    <tr><td>kumain</td><td>kain</td><td>Hiligaynon</td><td>Irregular verb: to eat</td></tr>
+                    <tr><td>uminom</td><td>inom</td><td>Hiligaynon</td><td>Irregular verb: to drink</td></tr>
+                    <tr><td>dumating</td><td>dating</td><td>Hiligaynon</td><td>Irregular verb: to arrive</td></tr>
+                    <tr><td>sumama</td><td>sama</td><td>Hiligaynon</td><td>Irregular verb: to accompany</td></tr>
                 </tbody>
             </table>
         `;
@@ -277,14 +383,14 @@ function showLexiconTab(tab) {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>nag-</td><td>Prefix</td><td>Tagalog</td><td>Past tense marker (completed action)</td></tr>
-                    <tr><td>mag-</td><td>Prefix</td><td>Tagalog</td><td>Future/imperative marker</td></tr>
-                    <tr><td>-um-</td><td>Infix</td><td>Tagalog</td><td>Actor focus marker</td></tr>
-                    <tr><td>-in</td><td>Suffix</td><td>Tagalog</td><td>Object focus marker</td></tr>
-                    <tr><td>-an</td><td>Suffix</td><td>Tagalog</td><td>Locative focus marker</td></tr>
-                    <tr><td>ma-</td><td>Prefix</td><td>Tagalog</td><td>Accidental/abilitative marker</td></tr>
-                    <tr><td>pa-</td><td>Prefix</td><td>Tagalog</td><td>Causative marker</td></tr>
-                    <tr><td>ka-</td><td>Prefix</td><td>Tagalog</td><td>Recent completion marker</td></tr>
+                    <tr><td>nag-</td><td>Prefix</td><td>Hiligaynon</td><td>Past tense marker (completed action)</td></tr>
+                    <tr><td>mag-</td><td>Prefix</td><td>Hiligaynon</td><td>Future/imperative marker</td></tr>
+                    <tr><td>-um-</td><td>Infix</td><td>Hiligaynon</td><td>Actor focus marker</td></tr>
+                    <tr><td>-in</td><td>Suffix</td><td>Hiligaynon</td><td>Object focus marker</td></tr>
+                    <tr><td>-an</td><td>Suffix</td><td>Hiligaynon</td><td>Locative focus marker</td></tr>
+                    <tr><td>ma-</td><td>Prefix</td><td>Hiligaynon</td><td>Accidental/abilitative marker</td></tr>
+                    <tr><td>pa-</td><td>Prefix</td><td>Hiligaynon</td><td>Causative marker</td></tr>
+                    <tr><td>ka-</td><td>Prefix</td><td>Hiligaynon</td><td>Recent completion marker</td></tr>
                     <tr><td>mi-</td><td>Prefix</td><td>Cebuano</td><td>Past tense marker</td></tr>
                     <tr><td>mo-</td><td>Prefix</td><td>Cebuano</td><td>Future tense marker</td></tr>
                     <tr><td>ag-</td><td>Prefix</td><td>Ilocano</td><td>Action marker</td></tr>
@@ -296,13 +402,13 @@ function showLexiconTab(tab) {
 }
 
 // Search functionality for lexicon
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('lexiconSearch');
     if (searchInput) {
-        searchInput.addEventListener('input', function(e) {
+        searchInput.addEventListener('input', function (e) {
             const query = e.target.value.toLowerCase();
             const rows = document.querySelectorAll('#lexiconTableContent tbody tr');
-            
+
             rows.forEach(row => {
                 const text = row.textContent.toLowerCase();
                 row.style.display = text.includes(query) ? '' : 'none';

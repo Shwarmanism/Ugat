@@ -34,9 +34,9 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
-        repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.05) 10px, rgba(255,255,255,0.05) 20px),
-        repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255,255,255,0.03) 10px, rgba(255,255,255,0.03) 20px);
+    background-image:
+        repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.05) 10px, rgba(255, 255, 255, 0.05) 20px),
+        repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.03) 10px, rgba(255, 255, 255, 0.03) 20px);
 }
 
 nav {
@@ -233,6 +233,20 @@ select:focus {
     font-size: 2rem;
     font-weight: bold;
     color: var(--warm-green);
+}
+
+.results-text {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px var(--shadow);
+    white-space: pre-wrap;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+    overflow-x: auto;
+    display: none;
 }
 
 .results-table {
@@ -471,6 +485,7 @@ footer {
         transform: translateY(50px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -495,6 +510,7 @@ footer {
         stroke-dasharray: 0, 300;
         stroke-dashoffset: 0;
     }
+
     100% {
         stroke-dasharray: 300, 300;
         stroke-dashoffset: 0;

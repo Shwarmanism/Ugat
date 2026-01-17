@@ -29,6 +29,7 @@ class LemmatizeRequest(BaseModel):
     """Request body for lemmatization endpoint."""
     text: str = Field(..., min_length=1, description="Text to lemmatize")
     dialect: str = Field(..., description="Language dialect: ilocano, cebuano, hiligaynon")
+    mode: str = Field("crf", pattern="^(crf|affix)$", description="Tagging mode: crf or affix")
     
     class Config:
         json_schema_extra = {
@@ -50,6 +51,7 @@ class TokenResult(BaseModel):
     root: str
     pos: str
     affixes: List[str] = []
+    stripped: str = ""
 
 
 class SentenceResult(BaseModel):

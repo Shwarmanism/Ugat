@@ -119,7 +119,7 @@ def preload_all() -> None:
     if _initialized:
         return
     
-    print("⏳ Preloading resources...")
+    print("[INFO] Preloading resources...")
     
     for dialect in SUPPORTED_DIALECTS:
         load_irregular(dialect)
@@ -129,7 +129,7 @@ def preload_all() -> None:
     get_morph_engine()
     
     _initialized = True
-    print("✓ All resources preloaded")
+    print("[OK] All resources preloaded")
 
 
 def text_preprocess(raw_text, lang):
@@ -225,7 +225,7 @@ def morph_rules(token: str, pos: str, lang: str) -> Dict[str, Any]:
     }
 
 
-def process_tokens(tagged_data: Dict) -> Dict:
+def process_tokens(tagged_data: Dict, mode: str = "crf") -> Dict:
     """
     Process each token: check irregular, check root, check function word, apply morphology.
     
@@ -244,8 +244,10 @@ def process_tokens(tagged_data: Dict) -> Dict:
     
     processed_sentences = []
     
-    # Use CRF tags as primary
-    for tagged_sent in tagged_data["crf_tagged"]:
+    # Select tags based on mode
+    source_tags = tagged_data["affix_tagged"] if mode == "affix" else tagged_data["crf_tagged"]
+
+    for tagged_sent in source_tags:
         processed_tokens = []
         
         for token, pos in tagged_sent:
@@ -260,7 +262,8 @@ def process_tokens(tagged_data: Dict) -> Dict:
                     "type": "irregular",
                     "root": irregular_info.get("equivalent", token),
                     "pos": irregular_info.get("pos", pos),
-                    "affixes": []
+                    "affixes": [],
+                    "stripped": ""  # Irregular words usually don't have clean stripping
                 })
             # Check root (O(1) frozenset lookup)
             elif token_lower in root_set:
@@ -269,7 +272,8 @@ def process_tokens(tagged_data: Dict) -> Dict:
                     "type": "root",
                     "root": token_lower,
                     "pos": root_dict[token_lower],
-                    "affixes": []
+                    "affixes": [],
+                    "stripped": ""
                 })
             # Check function word (O(1) frozenset lookup)
             # DET, CONJ, PRON, PUNCT, ADP, NUM - skip morphology
@@ -279,17 +283,30 @@ def process_tokens(tagged_data: Dict) -> Dict:
                     "type": "function",
                     "root": token_lower,
                     "pos": pos,
-                    "affixes": []
+                    "affixes": [],
+                    "stripped": ""
                 })
             # Apply morphological analysis
             else:
                 morph_result = morph_rules(token, pos, lang)
+                # Use regex for case-insensitive replacement to handle "Nagbasa" -> "basa"
+                import re
+                stripped_content = re.sub(re.escape(morph_result["root"]), "", token, flags=re.IGNORECASE)
+                print(f"DEBUG: Token='{token}', Root='{morph_result['root']}', Stripped='{stripped_content}'")
+                
+                # If specific affixes were found, try to reconstruct stripped from them if direct replace is messy
+                # If specific affixes were found, try to reconstruct stripped from them if direct replace is messy
+                if not stripped_content and morph_result["affixes"]:
+                     # Simple heuristic: join affixes and remove hyphens
+                     stripped_content = "".join(a.replace("-", "") for a in morph_result["affixes"])
+
                 processed_tokens.append({
                     "token": token,
                     "type": "morphed",
                     "root": morph_result["root"],
                     "pos": morph_result["pos"],
-                    "affixes": morph_result["affixes"]
+                    "affixes": morph_result["affixes"],
+                    "stripped": stripped_content
                 })
         
         processed_sentences.append(processed_tokens)
@@ -300,7 +317,7 @@ def process_tokens(tagged_data: Dict) -> Dict:
     }
 
 
-def main_pipeline(raw_text, lang):
+def main_pipeline(raw_text, lang, mode="crf"):
     """
     Complete NLP pipeline from raw text to lemmatization.
     """
@@ -311,7 +328,7 @@ def main_pipeline(raw_text, lang):
     tagged = pos_tagging(preprocessed)
     
     # Step 3: Process each token (irregular check + morphology)
-    processed = process_tokens(tagged)
+    processed = process_tokens(tagged, mode=mode)
     
     # Step 4: Build simple result
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -325,7 +342,8 @@ def main_pipeline(raw_text, lang):
                 "lemma": t["root"],
                 "pos": t["pos"],
                 "type": t["type"],
-                "affixes": t.get("affixes", [])
+                "affixes": t.get("affixes", []),
+                "stripped": t.get("stripped", "")
             })
     
     result = {
