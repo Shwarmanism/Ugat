@@ -51,6 +51,7 @@ class TokenResult(BaseModel):
     root: str
     pos: str
     affixes: List[str] = []
+    stripped: str = ""
 
 
 class SentenceResult(BaseModel):
