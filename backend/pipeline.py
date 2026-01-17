@@ -262,7 +262,8 @@ def process_tokens(tagged_data: Dict, mode: str = "crf") -> Dict:
                     "type": "irregular",
                     "root": irregular_info.get("equivalent", token),
                     "pos": irregular_info.get("pos", pos),
-                    "affixes": []
+                    "affixes": [],
+                    "stripped": ""  # Irregular words usually don't have clean stripping
                 })
             # Check root (O(1) frozenset lookup)
             elif token_lower in root_set:
@@ -271,7 +272,8 @@ def process_tokens(tagged_data: Dict, mode: str = "crf") -> Dict:
                     "type": "root",
                     "root": token_lower,
                     "pos": root_dict[token_lower],
-                    "affixes": []
+                    "affixes": [],
+                    "stripped": ""
                 })
             # Check function word (O(1) frozenset lookup)
             # DET, CONJ, PRON, PUNCT, ADP, NUM - skip morphology
@@ -281,17 +283,30 @@ def process_tokens(tagged_data: Dict, mode: str = "crf") -> Dict:
                     "type": "function",
                     "root": token_lower,
                     "pos": pos,
-                    "affixes": []
+                    "affixes": [],
+                    "stripped": ""
                 })
             # Apply morphological analysis
             else:
                 morph_result = morph_rules(token, pos, lang)
+                # Use regex for case-insensitive replacement to handle "Nagbasa" -> "basa"
+                import re
+                stripped_content = re.sub(re.escape(morph_result["root"]), "", token, flags=re.IGNORECASE)
+                print(f"DEBUG: Token='{token}', Root='{morph_result['root']}', Stripped='{stripped_content}'")
+                
+                # If specific affixes were found, try to reconstruct stripped from them if direct replace is messy
+                # If specific affixes were found, try to reconstruct stripped from them if direct replace is messy
+                if not stripped_content and morph_result["affixes"]:
+                     # Simple heuristic: join affixes and remove hyphens
+                     stripped_content = "".join(a.replace("-", "") for a in morph_result["affixes"])
+
                 processed_tokens.append({
                     "token": token,
                     "type": "morphed",
                     "root": morph_result["root"],
                     "pos": morph_result["pos"],
-                    "affixes": morph_result["affixes"]
+                    "affixes": morph_result["affixes"],
+                    "stripped": stripped_content
                 })
         
         processed_sentences.append(processed_tokens)
@@ -327,7 +342,8 @@ def main_pipeline(raw_text, lang, mode="crf"):
                 "lemma": t["root"],
                 "pos": t["pos"],
                 "type": t["type"],
-                "affixes": t.get("affixes", [])
+                "affixes": t.get("affixes", []),
+                "stripped": t.get("stripped", "")
             })
     
     result = {
