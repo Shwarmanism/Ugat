@@ -100,16 +100,19 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
 
 
 
-                <div class="results-table">
+                <pre id="resultsText" class="results-text"></pre>
+
+                <div id="resultsTableContainer" class="results-table">
                     <h2 style="margin-bottom: 1.5rem; color: var(--deep-brown);">Token Analysis</h2>
                     <table id="resultsTable">
                         <thead>
                             <tr>
-                                <th>Token</th>
-                                <th>POS Tag</th>
-                                <th>Type</th>
-                                <th>Affixes</th>
-                                <th>Lemma</th>
+                                <th id="thToken">Token</th>
+                                <th id="thPOS">POS Tag</th>
+                                <th id="thType">Type</th>
+                                <th id="thAffixes">Affixes</th>
+                                <th id="thStripped">Stripped</th>
+                                <th id="thLemma">Lemma</th>
                             </tr>
                         </thead>
                         <tbody id="resultsBody"></tbody>
@@ -130,14 +133,7 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
             <h1 style="margin-bottom: 2rem;">Settings</h1>
             <div class="settings-panel">
                 <div class="settings-grid">
-                    <div class="settings-group">
-                        <h3>Dialect Preference</h3>
-                        <select id="settingsDialect" style="width: 100%;">
-                            <option value="cebuano">Cebuano</option>
-                            <option value="ilocano">Ilocano</option>
-                            <option value="hiligaynon">Hiligaynon</option>
-                        </select>
-                    </div>
+
 
                     <div class="settings-group">
                         <h3>Mode</h3>
@@ -158,20 +154,28 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
                     <div class="settings-group">
                         <h3>Show Advanced Details</h3>
                         <div class="checkbox-group">
-                            <input type="checkbox" id="showPOS" checked>
-                            <label for="showPOS">Show POS Tags</label>
+                            <input type="checkbox" id="chkToken" checked>
+                            <label for="chkToken">Show Token</label>
                         </div>
                         <div class="checkbox-group">
-                            <input type="checkbox" id="showCandidates" checked>
-                            <label for="showCandidates">Show Candidate Lemmas</label>
+                            <input type="checkbox" id="chkPOS" checked>
+                            <label for="chkPOS">Show POS Tag</label>
                         </div>
                         <div class="checkbox-group">
-                            <input type="checkbox" id="showRules" checked>
-                            <label for="showRules">Show affix rules used</label>
+                            <input type="checkbox" id="chkType" checked>
+                            <label for="chkType">Show Type</label>
                         </div>
                         <div class="checkbox-group">
-                            <input type="checkbox" id="showLexicon" checked>
-                            <label for="showLexicon">Show lexicon hits</label>
+                            <input type="checkbox" id="chkAffixes" checked>
+                            <label for="chkAffixes">Show Affixes</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="chkStripped" checked>
+                            <label for="chkStripped">Show Stripped</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="chkLemma" checked>
+                            <label for="chkLemma">Show Lemma</label>
                         </div>
                     </div>
 
