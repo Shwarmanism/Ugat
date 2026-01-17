@@ -1,6 +1,6 @@
 {
   "language": "hiligaynon",
-  "input": "Nagkaon ang bata sang tinapay.",
+  "input": "Nagkaon ang bata sa balay.",
   "total_tokens": 6,
   "tokens": [
     {
@@ -10,42 +10,48 @@
       "type": "morphed",
       "affixes": [
         "prefix"
-      ]
+      ],
+      "stripped": "nag"
     },
     {
       "token": "ang",
       "lemma": "ang",
       "pos": "DET",
       "type": "function",
-      "affixes": []
+      "affixes": [],
+      "stripped": ""
     },
     {
       "token": "bata",
       "lemma": "bata",
       "pos": "NOUN",
       "type": "root",
-      "affixes": []
+      "affixes": [],
+      "stripped": ""
     },
     {
-      "token": "sang",
-      "lemma": "sang",
+      "token": "sa",
+      "lemma": "sa",
       "pos": "ADP",
-      "type": "root",
-      "affixes": []
+      "type": "function",
+      "affixes": [],
+      "stripped": ""
     },
     {
-      "token": "tinapay",
-      "lemma": "tinapay",
+      "token": "balay",
+      "lemma": "balay",
       "pos": "NOUN",
       "type": "root",
-      "affixes": []
+      "affixes": [],
+      "stripped": ""
     },
     {
       "token": ".",
       "lemma": ".",
       "pos": "PUNCT",
       "type": "function",
-      "affixes": []
+      "affixes": [],
+      "stripped": ""
     }
   ]
 }
