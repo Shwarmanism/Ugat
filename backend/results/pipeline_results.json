@@ -1,47 +1,53 @@
 {
-  "language": "hiligaynon",
-  "input": "Nagkaon ang bata sa balay.",
-  "total_tokens": 6,
+  "language": "cebuano",
+  "input": "Nipalit siya ug bag-o nga sakyanan.",
+  "total_tokens": 7,
   "tokens": [
     {
-      "token": "nagkaon",
-      "lemma": "kaon",
+      "token": "nipalit",
+      "lemma": "nipalit",
       "pos": "VERB",
       "type": "morphed",
-      "affixes": [
-        "prefix"
-      ],
-      "stripped": "nag"
+      "affixes": [],
+      "stripped": ""
     },
     {
-      "token": "ang",
-      "lemma": "ang",
+      "token": "siya",
+      "lemma": "siya",
+      "pos": "PRON",
+      "type": "function",
+      "affixes": [],
+      "stripped": ""
+    },
+    {
+      "token": "ug",
+      "lemma": "ug",
       "pos": "DET",
       "type": "function",
       "affixes": [],
       "stripped": ""
     },
     {
-      "token": "bata",
-      "lemma": "bata",
-      "pos": "NOUN",
+      "token": "bag-o",
+      "lemma": "bag-o",
+      "pos": "ADJECTIVE",
       "type": "root",
       "affixes": [],
       "stripped": ""
     },
     {
-      "token": "sa",
-      "lemma": "sa",
-      "pos": "ADP",
-      "type": "function",
+      "token": "nga",
+      "lemma": "nga",
+      "pos": "PART",
+      "type": "morphed",
       "affixes": [],
       "stripped": ""
     },
     {
-      "token": "balay",
-      "lemma": "balay",
+      "token": "sakyanan",
+      "lemma": "sakyanan",
       "pos": "NOUN",
-      "type": "root",
+      "type": "morphed",
       "affixes": [],
       "stripped": ""
     },

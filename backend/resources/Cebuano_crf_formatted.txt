@@ -4837,3 +4837,1368 @@ gamay	gamay	gam	may	BOS	ang	ADJ
 ang	ang	ang	ang	gamay	lamesa	DET
 lamesa	lamesa	lam	esa	ang	EOS	NOUN
 .	.	.	.	lamesa	EOS	PUNCT
+
+Gwapa	gwapa	gwa	apa	BOS	ang	ADJ
+ang	ang	ang	ang	Gwapa	babaye	DET
+babaye	babaye	bab	aye	ang	.	NOUN
+.	.	.	.	babaye	EOS	PUNCT
+
+Nagsulat	nagsulat	nag	lat	BOS	si	VERB
+si	si	si	si	Nagsulat	Juan	DET
+Juan	juan	jua	uan	si	ug	PROPN
+ug	ug	ug	ug	Juan	libro	PREP
+libro	libro	lib	bro	ug	.	NOUN
+.	.	.	.	libro	EOS	PUNCT
+
+Miadto	miadto	mia	dto	BOS	ang	VERB
+ang	ang	ang	ang	Miadto	bata	DET
+bata	bata	bat	ata	ang	sa	NOUN
+sa	sa	sa	sa	bata	eskwelahan	PREP
+eskwelahan	eskwelahan	esk	han	sa	.	NOUN
+.	.	.	.	eskwelahan	EOS	PUNCT
+
+Dako	dako	dak	ako	BOS	ang	ADJ
+ang	ang	ang	ang	Dako	balay	DET
+balay	balay	bal	lay	ang	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Moabot	moabot	moa	bot	BOS	ang	VERB
+ang	ang	ang	ang	Moabot	mga	DET
+mga	mga	mga	mga	ang	bisita	DET
+bisita	bisita	bis	ita	mga	karong	NOUN
+karong	karong	kar	ong	bisita	gabii	DET
+gabii	gabii	gab	bii	karong	.	NOUN
+.	.	.	.	gabii	EOS	PUNCT
+
+Maayo	maayo	maa	ayo	BOS	ang	ADJ
+ang	ang	ang	ang	Maayo	panahon	DET
+panahon	panahon	pan	hon	ang	karon	NOUN
+karon	karon	kar	ron	panahon	.	ADV
+.	.	.	.	karon	EOS	PUNCT
+
+Mikaon	mikaon	mik	aon	BOS	si	VERB
+si	si	si	si	Mikaon	Maria	DET
+Maria	maria	mar	ria	si	ug	PROPN
+ug	ug	ug	ug	Maria	mansanas	PREP
+mansanas	mansanas	man	nas	ug	.	NOUN
+.	.	.	.	mansanas	EOS	PUNCT
+
+Nagbasa	nagbasa	nag	asa	BOS	ang	VERB
+ang	ang	ang	ang	Nagbasa	mga	DET
+mga	mga	mga	mga	ang	estudyante	DET
+estudyante	estudyante	est	nte	mga	sa	NOUN
+sa	sa	sa	sa	estudyante	klase	PREP
+klase	klase	kla	ase	sa	.	NOUN
+.	.	.	.	klase	EOS	PUNCT
+
+Lami	lami	lam	ami	BOS	ang	ADJ
+ang	ang	ang	ang	Lami	pagkaon	DET
+pagkaon	pagkaon	pag	aon	ang	nga	NOUN
+nga	nga	nga	nga	pagkaon	giluto	PART
+giluto	giluto	gil	uto	nga	sa	VERB
+sa	sa	sa	sa	giluto	mama	PREP
+mama	mama	mam	ama	sa	.	NOUN
+.	.	.	.	mama	EOS	PUNCT
+
+Mihilak	mihilak	mih	lak	BOS	ang	VERB
+ang	ang	ang	ang	Mihilak	bata	DET
+bata	bata	bat	ata	ang	tungod	NOUN
+tungod	tungod	tun	god	bata	kay	SCONJ
+kay	kay	kay	kay	tungod	nahulog	SCONJ
+nahulog	nahulog	nah	log	kay	siya	VERB
+siya	siya	siy	iya	nahulog	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Taas	taas	taa	aas	BOS	ang	ADJ
+ang	ang	ang	ang	Taas	kahoy	DET
+kahoy	kahoy	kah	hoy	ang	sa	NOUN
+sa	sa	sa	sa	kahoy	tanaman	PREP
+tanaman	tanaman	tan	man	sa	.	NOUN
+.	.	.	.	tanaman	EOS	PUNCT
+
+Gihatag	gihatag	gih	tag	BOS	ni	VERB
+ni	ni	ni	ni	Gihatag	Pedro	DET
+Pedro	pedro	ped	dro	ni	ang	PROPN
+ang	ang	ang	ang	Pedro	libro	DET
+libro	libro	lib	bro	ang	kang	NOUN
+kang	kang	kan	ang	libro	Ana	PREP
+Ana	ana	ana	ana	kang	.	PROPN
+.	.	.	.	Ana	EOS	PUNCT
+
+Bugnaw	bugnaw	bug	naw	BOS	ang	ADJ
+ang	ang	ang	ang	Bugnaw	tubig	DET
+tubig	tubig	tub	big	ang	nga	NOUN
+nga	nga	nga	nga	tubig	gidala	PART
+gidala	gidala	gid	ala	nga	niya	VERB
+niya	niya	niy	iya	gidala	.	PRON
+.	.	.	.	niya	EOS	PUNCT
+
+Nagdula	nagdula	nag	ula	BOS	ang	VERB
+ang	ang	ang	ang	Nagdula	mga	DET
+mga	mga	mga	mga	ang	bata	DET
+bata	bata	bat	ata	mga	sa	NOUN
+sa	sa	sa	sa	bata	parke	PREP
+parke	parke	par	rke	sa	.	NOUN
+.	.	.	.	parke	EOS	PUNCT
+
+Nipuyo	nipuyo	nip	uyo	BOS	kami	VERB
+kami	kami	kam	ami	Nipuyo	sa	PRON
+sa	sa	sa	sa	kami	Cebu	PREP
+Cebu	cebu	ceb	ebu	sa	.	PROPN
+.	.	.	.	Cebu	EOS	PUNCT
+
+Nagtulog	nagtulog	nag	log	BOS	ang	VERB
+ang	ang	ang	ang	Nagtulog	iro	DET
+iro	iro	iro	iro	ang	sa	NOUN
+sa	sa	sa	sa	iro	ilalom	PREP
+ilalom	ilalom	ila	lom	sa	sa	NOUN
+sa	sa	sa	sa	ilalom	lamesa	PREP
+lamesa	lamesa	lam	esa	sa	.	NOUN
+.	.	.	.	lamesa	EOS	PUNCT
+
+Ganahan	ganahan	gan	han	BOS	ko	VERB
+ko	ko	ko	ko	Ganahan	nga	PRON
+nga	nga	nga	nga	ko	mobasa	PART
+mobasa	mobasa	mob	asa	nga	.	VERB
+.	.	.	.	mobasa	EOS	PUNCT
+
+Miabot	miabot	mia	bot	BOS	na	VERB
+na	na	na	na	Miabot	ang	ADV
+ang	ang	ang	ang	na	papa	DET
+papa	papa	pap	apa	ang	gikan	NOUN
+gikan	gikan	gik	kan	papa	sa	PREP
+sa	sa	sa	sa	gikan	trabaho	PREP
+trabaho	trabaho	tra	aho	sa	.	NOUN
+.	.	.	.	trabaho	EOS	PUNCT
+
+Gamay	gamay	gam	may	BOS	ang	ADJ
+ang	ang	ang	ang	Gamay	bunga	DET
+bunga	bunga	bun	nga	ang	sa	NOUN
+sa	sa	sa	sa	bunga	kahoy	PREP
+kahoy	kahoy	kah	hoy	sa	.	NOUN
+.	.	.	.	kahoy	EOS	PUNCT
+
+Nangutana	nangutana	nan	ana	BOS	ang	VERB
+ang	ang	ang	ang	Nangutana	maestra	DET
+maestra	maestra	mae	tra	ang	sa	NOUN
+sa	sa	sa	sa	maestra	mga	PREP
+mga	mga	mga	mga	sa	bata	DET
+bata	bata	bat	ata	mga	.	NOUN
+.	.	.	.	bata	EOS	PUNCT
+
+Pula	pula	pul	ula	BOS	ang	ADJ
+ang	ang	ang	ang	Pula	bulak	DET
+bulak	bulak	bul	lak	ang	sa	NOUN
+sa	sa	sa	sa	bulak	hardin	PREP
+hardin	hardin	har	din	sa	.	NOUN
+.	.	.	.	hardin	EOS	PUNCT
+
+Wala	wala	wal	ala	BOS	koy	VERB
+koy	koy	koy	koy	Wala	kwarta	PRON
+kwarta	kwarta	kwa	rta	koy	.	NOUN
+.	.	.	.	kwarta	EOS	PUNCT
+
+Nakakita	nakakita	nak	ita	BOS	ko	VERB
+ko	ko	ko	ko	Nakakita	ug	PRON
+ug	ug	ug	ug	ko	langgam	PREP
+langgam	langgam	lan	gam	ug	sa	NOUN
+sa	sa	sa	sa	langgam	kahoy	PREP
+kahoy	kahoy	kah	hoy	sa	.	NOUN
+.	.	.	.	kahoy	EOS	PUNCT
+
+Nindot	nindot	nin	dot	BOS	kaayo	ADJ
+kaayo	kaayo	kaa	ayo	Nindot	ang	ADV
+ang	ang	ang	ang	kaayo	simbahan	DET
+simbahan	simbahan	sim	han	ang	.	NOUN
+.	.	.	.	simbahan	EOS	PUNCT
+
+Nagdagan	nagdagan	nag	gan	BOS	ang	VERB
+ang	ang	ang	ang	Nagdagan	mga	DET
+mga	mga	mga	mga	ang	bata	DET
+bata	bata	bat	ata	mga	tungod	NOUN
+tungod	tungod	tun	god	bata	sa	SCONJ
+sa	sa	sa	sa	tungod	ulan	PREP
+ulan	ulan	ula	lan	sa	.	NOUN
+.	.	.	.	ulan	EOS	PUNCT
+
+Itom	itom	ito	tom	BOS	ang	ADJ
+ang	ang	ang	ang	Itom	buhok	DET
+buhok	buhok	buh	hok	ang	sa	NOUN
+sa	sa	sa	sa	buhok	babaye	PREP
+babaye	babaye	bab	aye	sa	.	NOUN
+.	.	.	.	babaye	EOS	PUNCT
+
+Ania	ania	ani	nia	BOS	ang	VERB
+ang	ang	ang	ang	Ania	libro	DET
+libro	libro	lib	bro	ang	sa	NOUN
+sa	sa	sa	sa	libro	lamesa	PREP
+lamesa	lamesa	lam	esa	sa	.	NOUN
+.	.	.	.	lamesa	EOS	PUNCT
+
+Midaog	midaog	mid	aog	BOS	ang	VERB
+ang	ang	ang	ang	Midaog	team	DET
+team	team	tea	eam	ang	sa	NOUN
+sa	sa	sa	sa	team	kompetisyon	PREP
+kompetisyon	kompetisyon	kom	yon	sa	.	NOUN
+.	.	.	.	kompetisyon	EOS	PUNCT
+
+Kusog	kusog	kus	sog	BOS	ang	ADJ
+ang	ang	ang	ang	Kusog	hangin	DET
+hangin	hangin	han	gin	ang	kagabii	NOUN
+kagabii	kagabii	kag	bii	hangin	.	ADV
+.	.	.	.	kagabii	EOS	PUNCT
+
+Gilutu	gilutu	gil	utu	BOS	sa	VERB
+sa	sa	sa	sa	Gilutu	mama	PREP
+mama	mama	mam	ama	sa	ang	NOUN
+ang	ang	ang	ang	mama	utan	DET
+utan	utan	uta	tan	ang	para	NOUN
+para	para	par	ara	utan	sa	PREP
+sa	sa	sa	sa	para	pamilya	PREP
+pamilya	pamilya	pam	lya	sa	.	NOUN
+.	.	.	.	pamilya	EOS	PUNCT
+
+Moadto	moadto	moa	dto	BOS	ba	VERB
+ba	ba	ba	ba	Moadto	ka	PART
+ka	ka	ka	ka	ba	sa	PRON
+sa	sa	sa	sa	ka	balay	PREP
+balay	balay	bal	lay	sa	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Nipahiyom	nipahiyom	nip	yom	BOS	ang	VERB
+ang	ang	ang	ang	Nipahiyom	batang	DET
+batang	batang	bat	ang	ang	babaye	NOUN
+babaye	babaye	bab	aye	batang	.	NOUN
+.	.	.	.	babaye	EOS	PUNCT
+
+Nag-ulan	nag-ulan	nag	lan	BOS	pag-ayo	VERB
+pag-ayo	pag-ayo	pag	ayo	Nag-ulan	kagabii	ADV
+kagabii	kagabii	kag	bii	pag-ayo	.	ADV
+.	.	.	.	kagabii	EOS	PUNCT
+
+Hayahay	hayahay	hay	hay	BOS	ang	ADJ
+ang	ang	ang	ang	Hayahay	hangin	DET
+hangin	hangin	han	gin	ang	karon	NOUN
+karon	karon	kar	ron	hangin	.	ADV
+.	.	.	.	karon	EOS	PUNCT
+
+Nagkaon	nagkaon	nag	aon	BOS	ug	VERB
+ug	ug	ug	ug	Nagkaon	nangka	PREP
+nangka	nangka	nan	gka	ug	ang	NOUN
+ang	ang	ang	ang	nangka	bata	DET
+bata	bata	bat	ata	ang	.	NOUN
+.	.	.	.	bata	EOS	PUNCT
+
+Napul-an	napul-an	nap	lan	BOS	ang	VERB
+ang	ang	ang	ang	Napul-an	iyang	DET
+iyang	iyang	iya	ang	ang	sinina	PRON
+sinina	sinina	sin	ina	iyang	.	NOUN
+.	.	.	.	sinina	EOS	PUNCT
+
+Nagdumala	nagdumala	nag	ala	BOS	ang	VERB
+ang	ang	ang	ang	Nagdumala	papa	DET
+papa	papa	pap	apa	ang	sa	NOUN
+sa	sa	sa	sa	papa	dalan	PREP
+dalan	dalan	dal	lan	sa	.	NOUN
+.	.	.	.	dalan	EOS	PUNCT
+
+Adunay	adunay	adu	nay	BOS	iro	VERB
+iro	iro	iro	iro	Adunay	sa	NOUN
+sa	sa	sa	sa	iro	sulod	PREP
+sulod	sulod	sul	lod	sa	sa	NOUN
+sa	sa	sa	sa	sulod	balay	PREP
+balay	balay	bal	lay	sa	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Malipayon	malipayon	mal	yon	BOS	ang	ADJ
+ang	ang	ang	ang	Malipayon	mga	DET
+mga	mga	mga	mga	ang	bata	DET
+bata	bata	bat	ata	mga	tungod	NOUN
+tungod	tungod	tun	god	bata	sa	SCONJ
+sa	sa	sa	sa	tungod	pista	PREP
+pista	pista	pis	sta	sa	.	NOUN
+.	.	.	.	pista	EOS	PUNCT
+
+Dili	dili	dil	ili	BOS	moadto	PART
+moadto	moadto	moa	dto	Dili	ang	VERB
+ang	ang	ang	ang	moadto	bata	DET
+bata	bata	bat	ata	ang	sa	NOUN
+sa	sa	sa	sa	bata	eskwelahan	PREP
+eskwelahan	eskwelahan	esk	han	sa	.	NOUN
+.	.	.	.	eskwelahan	EOS	PUNCT
+
+Niingon	niingon	nii	gon	BOS	si	VERB
+si	si	si	si	Niingon	Pedro	DET
+Pedro	pedro	ped	dro	si	nga	PROPN
+nga	nga	nga	nga	Pedro	moadto	PART
+moadto	moadto	moa	dto	nga	siya	VERB
+siya	siya	siy	iya	moadto	sa	PRON
+sa	sa	sa	sa	siya	Manila	PREP
+Manila	manila	man	ila	sa	.	PROPN
+.	.	.	.	Manila	EOS	PUNCT
+
+Nag-ampo	nag-ampo	nag	mpo	BOS	ang	VERB
+ang	ang	ang	ang	Nag-ampo	mga	DET
+mga	mga	mga	mga	ang	tawo	DET
+tawo	tawo	taw	awo	mga	sa	NOUN
+sa	sa	sa	sa	tawo	simbahan	PREP
+simbahan	simbahan	sim	han	sa	matag	NOUN
+matag	matag	mat	tag	simbahan	Domingo	DET
+Domingo	domingo	dom	ngo	matag	.	PROPN
+.	.	.	.	Domingo	EOS	PUNCT
+
+Sakit	sakit	sak	kit	BOS	ang	ADJ
+ang	ang	ang	ang	Sakit	ulo	DET
+ulo	ulo	ulo	ulo	ang	sa	NOUN
+sa	sa	sa	sa	ulo	bata	PREP
+bata	bata	bat	ata	sa	.	NOUN
+.	.	.	.	bata	EOS	PUNCT
+
+Nihigda	nihigda	nih	gda	BOS	ang	VERB
+ang	ang	ang	ang	Nihigda	tigulang	DET
+tigulang	tigulang	tig	ang	ang	sa	NOUN
+sa	sa	sa	sa	tigulang	katre	PREP
+katre	katre	kat	tre	sa	.	NOUN
+.	.	.	.	katre	EOS	PUNCT
+
+Ari	ari	ari	ari	BOS	diri	VERB
+diri	diri	dir	iri	Ari	aron	ADV
+aron	aron	aro	ron	diri	mokaon	SCONJ
+mokaon	mokaon	mok	aon	aron	.	VERB
+.	.	.	.	mokaon	EOS	PUNCT
+
+Nahulog	nahulog	nah	log	BOS	ang	VERB
+ang	ang	ang	ang	Nahulog	baso	DET
+baso	baso	bas	aso	ang	ug	NOUN
+ug	ug	ug	ug	baso	nabungkag	CCONJ
+nabungkag	nabungkag	nab	kag	ug	.	VERB
+.	.	.	.	nabungkag	EOS	PUNCT
+
+Hayag	hayag	hay	yag	BOS	ang	ADJ
+ang	ang	ang	ang	Hayag	bulan	DET
+bulan	bulan	bul	lan	ang	kagabii	NOUN
+kagabii	kagabii	kag	bii	bulan	.	ADV
+.	.	.	.	kagabii	EOS	PUNCT
+
+Nisira	nisira	nis	ira	BOS	ang	VERB
+ang	ang	ang	ang	Nisira	tindahan	DET
+tindahan	tindahan	tin	han	ang	sa	NOUN
+sa	sa	sa	sa	tindahan	alas	PREP
+alas	alas	ala	las	sa	otso	NOUN
+otso	otso	ots	tso	alas	.	NUM
+.	.	.	.	otso	EOS	PUNCT
+
+Ngitngit	ngitngit	ngi	git	BOS	ang	ADJ
+ang	ang	ang	ang	Ngitngit	langit	DET
+langit	langit	lan	git	ang	sa	NOUN
+sa	sa	sa	sa	langit	wala	PREP
+wala	wala	wal	ala	sa	pa	ADV
+pa	pa	pa	pa	wala	moulan	PART
+moulan	moulan	mou	lan	pa	.	VERB
+.	.	.	.	moulan	EOS	PUNCT
+
+Mihatag	mihatag	mih	tag	BOS	ang	VERB
+ang	ang	ang	ang	Mihatag	maestra	DET
+maestra	maestra	mae	tra	ang	ug	NOUN
+ug	ug	ug	ug	maestra	assignment	PREP
+assignment	assignment	ass	ent	ug	sa	NOUN
+sa	sa	sa	sa	assignment	mga	PREP
+mga	mga	mga	mga	sa	estudyante	DET
+estudyante	estudyante	est	nte	mga	human	NOUN
+human	human	hum	man	estudyante	sa	SCONJ
+sa	sa	sa	sa	human	diskusyon	PREP
+diskusyon	diskusyon	dis	yon	sa	.	NOUN
+.	.	.	.	diskusyon	EOS	PUNCT
+
+Naligo	naligo	nal	igo	BOS	na	VERB
+na	na	na	na	Naligo	ba	ADV
+ba	ba	ba	ba	na	ang	PART
+ang	ang	ang	ang	ba	bata	DET
+bata	bata	bat	ata	ang	sa	NOUN
+sa	sa	sa	sa	bata	dili	PREP
+dili	dili	dil	ili	sa	pa	PART
+pa	pa	pa	pa	dili	siya	PART
+siya	siya	siy	iya	pa	mokaon	PRON
+mokaon	mokaon	mok	aon	siya	.	VERB
+.	.	.	.	mokaon	EOS	PUNCT
+
+Kinahanglan	kinahanglan	kin	lan	BOS	nga	VERB
+nga	nga	nga	nga	Kinahanglan	mag-estudyar	PART
+mag-estudyar	mag-estudyar	mag	yar	nga	ka	VERB
+ka	ka	ka	ka	mag-estudyar	pag-ayo	PRON
+pag-ayo	pag-ayo	pag	ayo	ka	aron	ADV
+aron	aron	aro	ron	pag-ayo	makapasar	SCONJ
+makapasar	makapasar	mak	sar	aron	ka	VERB
+ka	ka	ka	ka	makapasar	sa	PRON
+sa	sa	sa	sa	ka	eksamen	PREP
+eksamen	eksamen	eks	men	sa	.	NOUN
+.	.	.	.	eksamen	EOS	PUNCT
+
+Gitubag	gitubag	git	bag	BOS	ni	VERB
+ni	ni	ni	ni	Gitubag	Maria	DET
+Maria	maria	mar	ria	ni	ang	PROPN
+ang	ang	ang	ang	Maria	pangutana	DET
+pangutana	pangutana	pan	ana	ang	sa	NOUN
+sa	sa	sa	sa	pangutana	maestra	PREP
+maestra	maestra	mae	tra	sa	samtang	NOUN
+samtang	samtang	sam	ang	maestra	nagtindog	SCONJ
+nagtindog	nagtindog	nag	dog	samtang	siya	VERB
+siya	siya	siy	iya	nagtindog	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Mas	mas	mas	mas	BOS	taas	ADV
+taas	taas	taa	aas	Mas	si	ADJ
+si	si	si	si	taas	Pedro	DET
+Pedro	pedro	ped	dro	si	kaysa	PROPN
+kaysa	kaysa	kay	ysa	Pedro	kang	PREP
+kang	kang	kan	ang	kaysa	Juan	PREP
+Juan	juan	jua	uan	kang	.	PROPN
+.	.	.	.	Juan	EOS	PUNCT
+
+Naghunahuna	naghunahuna	nag	una	BOS	ko	VERB
+ko	ko	ko	ko	Naghunahuna	nga	PRON
+nga	nga	nga	nga	ko	moabot	PART
+moabot	moabot	moa	bot	nga	siya	VERB
+siya	siya	siy	iya	moabot	ugma	PRON
+ugma	ugma	ugm	gma	siya	apan	ADV
+apan	apan	apa	pan	ugma	wala	CCONJ
+wala	wala	wal	ala	apan	siya	VERB
+siya	siya	siy	iya	wala	motungha	PRON
+motungha	motungha	mot	gha	siya	.	VERB
+.	.	.	.	motungha	EOS	PUNCT
+
+Gisultihan	gisultihan	gis	han	BOS	nako	VERB
+nako	nako	nak	ako	Gisultihan	ang	PRON
+ang	ang	ang	ang	nako	akong	DET
+akong	akong	ako	ong	ang	igsoon	PRON
+igsoon	igsoon	igs	oon	akong	nga	NOUN
+nga	nga	nga	nga	igsoon	dili	PART
+dili	dili	dil	ili	nga	niya	PART
+niya	niya	niy	iya	dili	kalimtan	PRON
+kalimtan	kalimtan	kal	tan	niya	ang	VERB
+ang	ang	ang	ang	kalimtan	iyang	DET
+iyang	iyang	iya	ang	ang	homework	PRON
+homework	homework	hom	ork	iyang	.	NOUN
+.	.	.	.	homework	EOS	PUNCT
+
+Mokaon	mokaon	mok	aon	BOS	lang	VERB
+lang	lang	lan	ang	Mokaon	ko	PART
+ko	ko	ko	ko	lang	ug	PRON
+ug	ug	ug	ug	ko	gamay	PREP
+gamay	gamay	gam	may	ug	tungod	ADJ
+tungod	tungod	tun	god	gamay	kay	SCONJ
+kay	kay	kay	kay	tungod	busog	SCONJ
+busog	busog	bus	sog	kay	pa	ADJ
+pa	pa	pa	pa	busog	ko	PART
+ko	ko	ko	ko	pa	.	PRON
+.	.	.	.	ko	EOS	PUNCT
+
+Nakakita	nakakita	nak	ita	BOS	kami	VERB
+kami	kami	kam	ami	Nakakita	ug	PRON
+ug	ug	ug	ug	kami	dakong	PREP
+dakong	dakong	dak	ong	ug	iro	ADJ
+iro	iro	iro	iro	dakong	nga	NOUN
+nga	nga	nga	nga	iro	nagdagan	PART
+nagdagan	nagdagan	nag	gan	nga	paingon	VERB
+paingon	paingon	pai	gon	nagdagan	sa	PREP
+sa	sa	sa	sa	paingon	among	PREP
+among	among	amo	ong	sa	balay	PRON
+balay	balay	bal	lay	among	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Gibasa	gibasa	gib	asa	BOS	niya	VERB
+niya	niya	niy	iya	Gibasa	ang	PRON
+ang	ang	ang	ang	niya	libro	DET
+libro	libro	lib	bro	ang	nga	NOUN
+nga	nga	nga	nga	libro	gihatag	PART
+gihatag	gihatag	gih	tag	nga	sa	VERB
+sa	sa	sa	sa	gihatag	iyang	PREP
+iyang	iyang	iya	ang	sa	amiga	PRON
+amiga	amiga	ami	iga	iyang	sa	NOUN
+sa	sa	sa	sa	amiga	wala	PREP
+wala	wala	wal	ala	sa	pa	ADV
+pa	pa	pa	pa	wala	siya	PART
+siya	siya	siy	iya	pa	mouli	PRON
+mouli	mouli	mou	uli	siya	.	VERB
+.	.	.	.	mouli	EOS	PUNCT
+
+Kon	kon	kon	kon	BOS	moulan	SCONJ
+moulan	moulan	mou	lan	Kon	ugma	VERB
+ugma	ugma	ugm	gma	moulan	dili	ADV
+dili	dili	dil	ili	ugma	kami	PART
+kami	kami	kam	ami	dili	moadto	PRON
+moadto	moadto	moa	dto	kami	sa	VERB
+sa	sa	sa	sa	moadto	beach	PREP
+beach	beach	bea	ach	sa	apan	NOUN
+apan	apan	apa	pan	beach	magdula	CCONJ
+magdula	magdula	mag	ula	apan	na	VERB
+na	na	na	na	magdula	lang	ADV
+lang	lang	lan	ang	na	kami	PART
+kami	kami	kam	ami	lang	sa	PRON
+sa	sa	sa	sa	kami	balay	PREP
+balay	balay	bal	lay	sa	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Gusto	gusto	gus	sto	BOS	nakong	VERB
+nakong	nakong	nak	ong	Gusto	mopalit	PRON
+mopalit	mopalit	mop	lit	nakong	ug	VERB
+ug	ug	ug	ug	mopalit	bag-ong	PREP
+bag-ong	bag-ong	bag	ong	ug	sapatos	ADJ
+sapatos	sapatos	sap	tos	bag-ong	apan	NOUN
+apan	apan	apa	pan	sapatos	kulang	CCONJ
+kulang	kulang	kul	ang	apan	ang	ADJ
+ang	ang	ang	ang	kulang	akong	DET
+akong	akong	ako	ong	ang	kwarta	PRON
+kwarta	kwarta	kwa	rta	akong	karon	NOUN
+karon	karon	kar	ron	kwarta	.	ADV
+.	.	.	.	karon	EOS	PUNCT
+
+Nagtan-aw	nagtan-aw	nag	naw	BOS	ang	VERB
+ang	ang	ang	ang	Nagtan-aw	mga	DET
+mga	mga	mga	mga	ang	bata	DET
+bata	bata	bat	ata	mga	sa	NOUN
+sa	sa	sa	sa	bata	telebisyon	PREP
+telebisyon	telebisyon	tel	yon	sa	samtang	NOUN
+samtang	samtang	sam	ang	telebisyon	nagkaon	SCONJ
+nagkaon	nagkaon	nag	aon	samtang	ang	VERB
+ang	ang	ang	ang	nagkaon	ilang	DET
+ilang	ilang	ila	ang	ang	mama	PRON
+mama	mama	mam	ama	ilang	ug	NOUN
+ug	ug	ug	ug	mama	nagluto	CCONJ
+nagluto	nagluto	nag	uto	ug	ang	VERB
+ang	ang	ang	ang	nagluto	ilang	DET
+ilang	ilang	ila	ang	ang	papa	PRON
+papa	papa	pap	apa	ilang	.	NOUN
+.	.	.	.	papa	EOS	PUNCT
+
+Nagdumili	nagdumili	nag	ili	BOS	siyang	VERB
+siyang	siyang	siy	ang	Nagdumili	motabang	PRON
+motabang	motabang	mot	ang	siyang	kanako	VERB
+kanako	kanako	kan	ako	motabang	tungod	PRON
+tungod	tungod	tun	god	kanako	kay	SCONJ
+kay	kay	kay	kay	tungod	busy	SCONJ
+busy	busy	bus	usy	kay	kaayo	ADJ
+kaayo	kaayo	kaa	ayo	busy	siya	ADV
+siya	siya	siy	iya	kaayo	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Gisugdan	gisugdan	gis	dan	BOS	nila	VERB
+nila	nila	nil	ila	Gisugdan	ang	PRON
+ang	ang	ang	ang	nila	trabaho	DET
+trabaho	trabaho	tra	aho	ang	sa	NOUN
+sa	sa	sa	sa	trabaho	sayo	PREP
+sayo	sayo	say	ayo	sa	pa	ADV
+pa	pa	pa	pa	sayo	aron	PART
+aron	aron	aro	ron	pa	mahuman	SCONJ
+mahuman	mahuman	mah	man	aron	nila	VERB
+nila	nila	nil	ila	mahuman	kini	PRON
+kini	kini	kin	ini	nila	sa	PRON
+sa	sa	sa	sa	kini	dili	PREP
+dili	dili	dil	ili	sa	pa	PART
+pa	pa	pa	pa	dili	mogabii	PART
+mogabii	mogabii	mog	bii	pa	.	VERB
+.	.	.	.	mogabii	EOS	PUNCT
+
+Gipangutana	gipangutana	gip	ana	BOS	nako	VERB
+nako	nako	nak	ako	Gipangutana	siya	PRON
+siya	siya	siy	iya	nako	kon	PRON
+kon	kon	kon	kon	siya	asa	SCONJ
+asa	asa	asa	asa	kon	siya	PRON
+siya	siya	siy	iya	asa	paingon	PRON
+paingon	paingon	pai	gon	siya	apan	VERB
+apan	apan	apa	pan	paingon	wala	CCONJ
+wala	wala	wal	ala	apan	siya	VERB
+siya	siya	siy	iya	wala	motubag	PRON
+motubag	motubag	mot	bag	siya	.	VERB
+.	.	.	.	motubag	EOS	PUNCT
+
+Nalipay	nalipay	nal	pay	BOS	kaayo	VERB
+kaayo	kaayo	kaa	ayo	Nalipay	ang	ADV
+ang	ang	ang	ang	kaayo	mga	DET
+mga	mga	mga	mga	ang	ginikanan	DET
+ginikanan	ginikanan	gin	nan	mga	sa	NOUN
+sa	sa	sa	sa	ginikanan	pagkadungog	PREP
+pagkadungog	pagkadungog	pag	dog	sa	nila	NOUN
+nila	nila	nil	ila	pagkadungog	nga	PRON
+nga	nga	nga	nga	nila	nakapasar	PART
+nakapasar	nakapasar	nak	sar	nga	ang	VERB
+ang	ang	ang	ang	nakapasar	ilang	DET
+ilang	ilang	ila	ang	ang	anak	PRON
+anak	anak	ana	nak	ilang	sa	NOUN
+sa	sa	sa	sa	anak	board	PREP
+board	board	boa	ard	sa	exam	NOUN
+exam	exam	exa	xam	board	.	NOUN
+.	.	.	.	exam	EOS	PUNCT
+
+Nangayo	nangayo	nan	ayo	BOS	kog	VERB
+kog	kog	kog	kog	Nangayo	tabang	PRON
+tabang	tabang	tab	ang	kog	sa	NOUN
+sa	sa	sa	sa	tabang	akong	PREP
+akong	akong	ako	ong	sa	higala	PRON
+higala	higala	hig	ala	akong	aron	NOUN
+aron	aron	aro	ron	higala	makahuman	SCONJ
+makahuman	makahuman	mak	man	aron	kog	VERB
+kog	kog	kog	kog	makahuman	pag-ayo	PRON
+pag-ayo	pag-ayo	pag	ayo	kog	sa	ADV
+sa	sa	sa	sa	pag-ayo	akong	PREP
+akong	akong	ako	ong	sa	proyekto	PRON
+proyekto	proyekto	pro	kto	akong	.	NOUN
+.	.	.	.	proyekto	EOS	PUNCT
+
+Giingnan	giingnan	gii	nan	BOS	niya	VERB
+niya	niya	niy	iya	Giingnan	ako	PRON
+ako	ako	ako	ako	niya	nga	PRON
+nga	nga	nga	nga	ako	dili	PART
+dili	dili	dil	ili	nga	ko	PART
+ko	ko	ko	ko	dili	kinahanglan	PRON
+kinahanglan	kinahanglan	kin	lan	ko	nga	VERB
+nga	nga	nga	nga	kinahanglan	mobalhin	PART
+mobalhin	mobalhin	mob	lin	nga	ug	VERB
+ug	ug	ug	ug	mobalhin	lingkuranan	PREP
+lingkuranan	lingkuranan	lin	nan	ug	tungod	NOUN
+tungod	tungod	tun	god	lingkuranan	kay	SCONJ
+kay	kay	kay	kay	tungod	maayo	SCONJ
+maayo	maayo	maa	ayo	kay	na	ADJ
+na	na	na	na	maayo	ang	ADV
+ang	ang	ang	ang	na	akong	DET
+akong	akong	ako	ong	ang	puwesto	PRON
+puwesto	puwesto	puw	sto	akong	.	NOUN
+.	.	.	.	puwesto	EOS	PUNCT
+
+Mibalik	mibalik	mib	lik	BOS	sila	VERB
+sila	sila	sil	ila	Mibalik	sa	PRON
+sa	sa	sa	sa	sila	ilang	PREP
+ilang	ilang	ila	ang	sa	baryo	PRON
+baryo	baryo	bar	ryo	ilang	human	NOUN
+human	human	hum	man	baryo	sa	SCONJ
+sa	sa	sa	sa	human	daghang	PREP
+daghang	daghang	dag	ang	sa	tuig	ADJ
+tuig	tuig	tui	uig	daghang	nga	NOUN
+nga	nga	nga	nga	tuig	nagpuyo	PART
+nagpuyo	nagpuyo	nag	uyo	nga	sa	VERB
+sa	sa	sa	sa	nagpuyo	siyudad	PREP
+siyudad	siyudad	siy	dad	sa	.	NOUN
+.	.	.	.	siyudad	EOS	PUNCT
+
+Wala	wala	wal	ala	BOS	pa	VERB
+pa	pa	pa	pa	Wala	niya	PART
+niya	niya	niy	iya	pa	mahuman	PRON
+mahuman	mahuman	mah	man	niya	ang	VERB
+ang	ang	ang	ang	mahuman	iyang	DET
+iyang	iyang	iya	ang	ang	buluhaton	PRON
+buluhaton	buluhaton	bul	ton	iyang	sa	NOUN
+sa	sa	sa	sa	buluhaton	dihang	PREP
+dihang	dihang	dih	ang	sa	niabot	SCONJ
+niabot	niabot	nia	bot	dihang	ang	VERB
+ang	ang	ang	ang	niabot	iyang	DET
+iyang	iyang	iya	ang	ang	boss	PRON
+boss	boss	bos	oss	iyang	.	NOUN
+.	.	.	.	boss	EOS	PUNCT
+
+Nagplano	nagplano	nag	ano	BOS	kami	VERB
+kami	kami	kam	ami	Nagplano	nga	PRON
+nga	nga	nga	nga	kami	moadto	PART
+moadto	moadto	moa	dto	nga	sa	VERB
+sa	sa	sa	sa	moadto	Bohol	PREP
+Bohol	bohol	boh	hol	sa	sunod	PROPN
+sunod	sunod	sun	nod	Bohol	bulan	ADJ
+bulan	bulan	bul	lan	sunod	apan	NOUN
+apan	apan	apa	pan	bulan	depende	CCONJ
+depende	depende	dep	nde	apan	pa	VERB
+pa	pa	pa	pa	depende	kini	PART
+kini	kini	kin	ini	pa	sa	PRON
+sa	sa	sa	sa	kini	among	PREP
+among	among	amo	ong	sa	budget	PRON
+budget	budget	bud	get	among	.	NOUN
+.	.	.	.	budget	EOS	PUNCT
+
+Gidala	gidala	gid	ala	BOS	nako	VERB
+nako	nako	nak	ako	Gidala	ang	PRON
+ang	ang	ang	ang	nako	akong	DET
+akong	akong	ako	ong	ang	iro	PRON
+iro	iro	iro	iro	akong	sa	NOUN
+sa	sa	sa	sa	iro	veterinarian	PREP
+veterinarian	veterinarian	vet	ian	sa	tungod	NOUN
+tungod	tungod	tun	god	veterinarian	kay	SCONJ
+kay	kay	kay	kay	tungod	masakiton	SCONJ
+masakiton	masakiton	mas	ton	kay	kaayo	ADJ
+kaayo	kaayo	kaa	ayo	masakiton	ang	ADV
+ang	ang	ang	ang	kaayo	iyang	DET
+iyang	iyang	iya	ang	ang	tiyan	PRON
+tiyan	tiyan	tiy	yan	iyang	.	NOUN
+.	.	.	.	tiyan	EOS	PUNCT
+
+Nasuko	nasuko	nas	uko	BOS	ang	VERB
+ang	ang	ang	ang	Nasuko	maestra	DET
+maestra	maestra	mae	tra	ang	sa	NOUN
+sa	sa	sa	sa	maestra	mga	PREP
+mga	mga	mga	mga	sa	estudyante	DET
+estudyante	estudyante	est	nte	mga	nga	NOUN
+nga	nga	nga	nga	estudyante	wala	PART
+wala	wala	wal	ala	nga	mohilom	VERB
+mohilom	mohilom	moh	lom	wala	bisan	VERB
+bisan	bisan	bis	san	mohilom	gisultihan	SCONJ
+gisultihan	gisultihan	gis	han	bisan	na	VERB
+na	na	na	na	gisultihan	niya	ADV
+niya	niya	niy	iya	na	sila	PRON
+sila	sila	sil	ila	niya	.	PRON
+.	.	.	.	sila	EOS	PUNCT
+
+Naglagot	naglagot	nag	got	BOS	ang	VERB
+ang	ang	ang	ang	Naglagot	bata	DET
+bata	bata	bat	ata	ang	kay	NOUN
+kay	kay	kay	kay	bata	gikawat	SCONJ
+gikawat	gikawat	gik	wat	kay	sa	VERB
+sa	sa	sa	sa	gikawat	iyang	PREP
+iyang	iyang	iya	ang	sa	higala	PRON
+higala	higala	hig	ala	iyang	ang	NOUN
+ang	ang	ang	ang	higala	iyang	DET
+iyang	iyang	iya	ang	ang	dulaan	PRON
+dulaan	dulaan	dul	aan	iyang	nga	NOUN
+nga	nga	nga	nga	dulaan	bag-o	PART
+bag-o	bag-o	bag	ago	nga	lang	ADJ
+lang	lang	lan	ang	bag-o	gipalit	PART
+gipalit	gipalit	gip	lit	lang	.	VERB
+.	.	.	.	gipalit	EOS	PUNCT
+
+Gisugo	gisugo	gis	ugo	BOS	niya	VERB
+niya	niya	niy	iya	Gisugo	ang	PRON
+ang	ang	ang	ang	niya	iyang	DET
+iyang	iyang	iya	ang	ang	anak	PRON
+anak	anak	ana	nak	iyang	nga	NOUN
+nga	nga	nga	nga	anak	molimpyo	PART
+molimpyo	molimpyo	mol	pyo	nga	sa	VERB
+sa	sa	sa	sa	molimpyo	ilang	PREP
+ilang	ilang	ila	ang	sa	kwarto	PRON
+kwarto	kwarto	kwa	rto	ilang	human	NOUN
+human	human	hum	man	kwarto	sa	SCONJ
+sa	sa	sa	sa	human	pag-eskwela	PREP
+pag-eskwela	pag-eskwela	pag	ela	sa	.	NOUN
+.	.	.	.	pag-eskwela	EOS	PUNCT
+
+Nahibalo	nahibalo	nah	alo	BOS	ba	VERB
+ba	ba	ba	ba	Nahibalo	ka	PART
+ka	ka	ka	ka	ba	kon	PRON
+kon	kon	kon	kon	ka	asa	SCONJ
+asa	asa	asa	asa	kon	ang	PRON
+ang	ang	ang	ang	asa	pinakadako	DET
+pinakadako	pinakadako	pin	ako	ang	nga	ADJ
+nga	nga	nga	nga	pinakadako	mall	PART
+mall	mall	mal	all	nga	dinhi	NOUN
+dinhi	dinhi	din	nhi	mall	sa	ADV
+sa	sa	sa	sa	dinhi	Cebu	PREP
+Cebu	cebu	ceb	ebu	sa	.	PROPN
+.	.	.	.	Cebu	EOS	PUNCT
+
+Gipahibalo	gipahibalo	gip	alo	BOS	sa	VERB
+sa	sa	sa	sa	Gipahibalo	principal	PREP
+principal	principal	pri	pal	sa	nga	NOUN
+nga	nga	nga	nga	principal	magsugod	PART
+magsugod	magsugod	mag	god	nga	ang	VERB
+ang	ang	ang	ang	magsugod	klase	DET
+klase	klase	kla	ase	ang	sa	NOUN
+sa	sa	sa	sa	klase	ala	PREP
+ala	ala	ala	ala	sa	singko	NOUN
+singko	singko	sin	gko	ala	sa	NUM
+sa	sa	sa	sa	singko	buntag	PREP
+buntag	buntag	bun	tag	sa	.	NOUN
+.	.	.	.	buntag	EOS	PUNCT
+
+Nagtuo	nagtuo	nag	tuo	BOS	siya	VERB
+siya	siya	siy	iya	Nagtuo	nga	PRON
+nga	nga	nga	nga	siya	makadaog	PART
+makadaog	makadaog	mak	aog	nga	siya	VERB
+siya	siya	siy	iya	makadaog	sa	PRON
+sa	sa	sa	sa	siya	kompetisyon	PREP
+kompetisyon	kompetisyon	kom	yon	sa	busa	NOUN
+busa	busa	bus	usa	kompetisyon	nag-ensayo	CCONJ
+nag-ensayo	nag-ensayo	nag	ayo	busa	siya	VERB
+siya	siya	siy	iya	nag-ensayo	ug	PRON
+ug	ug	ug	ug	siya	maayo	CCONJ
+maayo	maayo	maa	ayo	ug	.	ADJ
+.	.	.	.	maayo	EOS	PUNCT
+
+Gipasabot	gipasabot	gip	bot	BOS	sa	VERB
+sa	sa	sa	sa	Gipasabot	teacher	PREP
+teacher	teacher	tea	her	sa	ang	NOUN
+ang	ang	ang	ang	teacher	leksyon	DET
+leksyon	leksyon	lek	yon	ang	pag-ayo	NOUN
+pag-ayo	pag-ayo	pag	ayo	leksyon	aron	ADV
+aron	aron	aro	ron	pag-ayo	masabtan	SCONJ
+masabtan	masabtan	mas	tan	aron	sa	VERB
+sa	sa	sa	sa	masabtan	tanan	PREP
+tanan	tanan	tan	nan	sa	nga	DET
+nga	nga	nga	nga	tanan	estudyante	PART
+estudyante	estudyante	est	nte	nga	.	NOUN
+.	.	.	.	estudyante	EOS	PUNCT
+
+Maanyag	maanyag	maa	yag	BOS	ang	ADJ
+ang	ang	ang	ang	Maanyag	babaye	DET
+babaye	babaye	bab	aye	ang	nga	NOUN
+nga	nga	nga	nga	babaye	nagkanta	PART
+nagkanta	nagkanta	nag	nta	nga	sa	VERB
+sa	sa	sa	sa	nagkanta	entablado	PREP
+entablado	entablado	ent	ado	sa	.	NOUN
+.	.	.	.	entablado	EOS	PUNCT
+
+Mabuotan	mabuotan	mab	tan	BOS	ang	ADJ
+ang	ang	ang	ang	Mabuotan	bata	DET
+bata	bata	bat	ata	ang	nga	NOUN
+nga	nga	nga	nga	bata	nitabang	PART
+nitabang	nitabang	nit	bang	nga	sa	VERB
+sa	sa	sa	sa	nitabang	tigulang	PREP
+tigulang	tigulang	tig	ang	sa	.	NOUN
+.	.	.	.	tigulang	EOS	PUNCT
+
+Malipayon	malipayon	mal	yon	BOS	ang	ADJ
+ang	ang	ang	ang	Malipayon	pamilya	DET
+pamilya	pamilya	pam	lya	ang	nga	NOUN
+nga	nga	nga	nga	pamilya	nangaon	PART
+nangaon	nangaon	nan	aon	nga	sa	VERB
+sa	sa	sa	sa	nangaon	gawas	PREP
+gawas	gawas	gaw	was	sa	.	NOUN
+.	.	.	.	gawas	EOS	PUNCT
+
+Matugnaw	matugnaw	mat	naw	BOS	ang	ADJ
+ang	ang	ang	ang	Matugnaw	hangin	DET
+hangin	hangin	han	gin	ang	sa	NOUN
+sa	sa	sa	sa	hangin	kabukiran	PREP
+kabukiran	kabukiran	kab	ran	sa	.	NOUN
+.	.	.	.	kabukiran	EOS	PUNCT
+
+Matahom	matahom	mat	hom	BOS	ang	ADJ
+ang	ang	ang	ang	Matahom	panan-awon	DET
+panan-awon	panan-awon	pan	won	ang	sa	NOUN
+sa	sa	sa	sa	panan-awon	dagat	PREP
+dagat	dagat	dag	gat	sa	.	NOUN
+.	.	.	.	dagat	EOS	PUNCT
+
+Maalam	maalam	maa	lam	BOS	si	ADJ
+si	si	si	si	Maalam	Jose	DET
+Jose	jose	jos	ose	si	sa	NOUN
+sa	sa	sa	sa	Jose	klase	PREP
+klase	klase	kla	ase	sa	.	NOUN
+.	.	.	.	klase	EOS	PUNCT
+
+Mabug-at	mabug-at	mab	-at	BOS	ang	ADJ
+ang	ang	ang	ang	Mabug-at	bato	DET
+bato	bato	bat	ato	ang	nga	NOUN
+nga	nga	nga	nga	bato	gidala	PART
+gidala	gidala	gid	ala	nga	niya	VERB
+niya	niya	niy	iya	gidala	.	PRON
+.	.	.	.	niya	EOS	PUNCT
+
+Maisog	maisog	mai	sog	BOS	ang	ADJ
+ang	ang	ang	ang	Maisog	iro	DET
+iro	iro	iro	iro	ang	ni	NOUN
+ni	ni	ni	ni	iro	Pedro	DET
+Pedro	pedro	ped	dro	ni	.	NOUN
+.	.	.	.	Pedro	EOS	PUNCT
+
+Limpyo	limpyo	lim	pyo	BOS	ang	ADJ
+ang	ang	ang	ang	Limpyo	kwarto	DET
+kwarto	kwarto	kwa	rto	ang	ni	NOUN
+ni	ni	ni	ni	kwarto	Ana	DET
+Ana	ana	ana	ana	ni	.	NOUN
+.	.	.	.	Ana	EOS	PUNCT
+
+Dako	dako	dak	ako	BOS	ang	ADJ
+ang	ang	ang	ang	Dako	balay	DET
+balay	balay	bal	lay	ang	sa	NOUN
+sa	sa	sa	sa	balay	kanto	PREP
+kanto	kanto	kan	nto	sa	.	NOUN
+.	.	.	.	kanto	EOS	PUNCT
+
+Nagdagan	nagdagan	nag	gan	BOS	ang	VERB
+ang	ang	ang	ang	Nagdagan	bata	DET
+bata	bata	bat	ata	ang	paingon	NOUN
+paingon	paingon	pai	gon	bata	sa	ADP
+sa	sa	sa	sa	paingon	eskwelahan	PREP
+eskwelahan	eskwelahan	esk	han	sa	.	NOUN
+.	.	.	.	eskwelahan	EOS	PUNCT
+
+Nikaon	nikaon	nik	aon	BOS	si	VERB
+si	si	si	si	Nikaon	Juan	DET
+Juan	juan	jua	uan	si	ug	NOUN
+ug	ug	ug	ug	Juan	mangga	DET
+mangga	mangga	man	gga	ug	.	NOUN
+.	.	.	.	mangga	EOS	PUNCT
+
+Magluto	magluto	mag	uto	BOS	kita	VERB
+kita	kita	kit	ita	Magluto	ug	PRON
+ug	ug	ug	ug	kita	isda	DET
+isda	isda	isd	sda	ug	para	NOUN
+para	para	par	ara	isda	sa	ADP
+sa	sa	sa	sa	para	paniudto	PREP
+paniudto	paniudto	pan	dto	sa	.	NOUN
+.	.	.	.	paniudto	EOS	PUNCT
+
+Nagtuon	nagtuon	nag	uon	BOS	ang	VERB
+ang	ang	ang	ang	Nagtuon	estudyante	DET
+estudyante	estudyante	est	nte	ang	sa	NOUN
+sa	sa	sa	sa	estudyante	library	PREP
+library	library	lib	ary	sa	.	NOUN
+.	.	.	.	library	EOS	PUNCT
+
+Nagsulat	nagsulat	nag	lat	BOS	siya	VERB
+siya	siya	siy	iya	Nagsulat	ug	PRON
+ug	ug	ug	ug	siya	sulat	DET
+sulat	sulat	sul	lat	ug	kang	NOUN
+kang	kang	kan	ang	sulat	Maria	ADP
+Maria	maria	mar	ria	kang	.	NOUN
+.	.	.	.	Maria	EOS	PUNCT
+
+Nihilak	nihilak	nih	lak	BOS	ang	VERB
+ang	ang	ang	ang	Nihilak	bata	DET
+bata	bata	bat	ata	ang	kay	NOUN
+kay	kay	kay	kay	bata	gigutom	CONJ
+gigutom	gigutom	gig	tom	kay	.	ADJ
+.	.	.	.	gigutom	EOS	PUNCT
+
+Maglakaw	maglakaw	mag	kaw	BOS	ta	VERB
+ta	ta	ta	ta	Maglakaw	padung	PRON
+padung	padung	pad	ung	ta	sa	ADP
+sa	sa	sa	sa	padung	simbahan	PREP
+simbahan	simbahan	sim	han	sa	.	NOUN
+.	.	.	.	simbahan	EOS	PUNCT
+
+Gikuha	gikuha	gik	uha	BOS	niya	VERB
+niya	niya	niy	iya	Gikuha	ang	PRON
+ang	ang	ang	ang	niya	bag	DET
+bag	bag	bag	bag	ang	nako	NOUN
+nako	nako	nak	ako	bag	.	PRON
+.	.	.	.	nako	EOS	PUNCT
+
+Nagkatawa	nagkatawa	nag	awa	BOS	ang	VERB
+ang	ang	ang	ang	Nagkatawa	mga	DET
+mga	mga	mga	mga	ang	tawo	PART
+tawo	tawo	taw	awo	mga	.	NOUN
+.	.	.	.	tawo	EOS	PUNCT
+
+Nipalit	nipalit	nip	lit	BOS	si	VERB
+si	si	si	si	Nipalit	Inday	DET
+Inday	inday	ind	day	si	ug	NOUN
+ug	ug	ug	ug	Inday	bugas	DET
+bugas	bugas	bug	gas	ug	.	NOUN
+.	.	.	.	bugas	EOS	PUNCT
+
+Naa	naa	naa	naa	BOS	ang	VERB
+ang	ang	ang	ang	Naa	yawi	DET
+yawi	yawi	yaw	awi	ang	sa	NOUN
+sa	sa	sa	sa	yawi	ibabaw	PREP
+ibabaw	ibabaw	iba	baw	sa	lamesa	NOUN
+lamesa	lamesa	lam	esa	ibabaw	.	NOUN
+.	.	.	.	lamesa	EOS	PUNCT
+
+Wala	wala	wal	ala	BOS	siya	VERB
+siya	siya	siy	iya	Wala	dinhi	PRON
+dinhi	dinhi	din	nhi	siya	karon	ADV
+karon	karon	kar	ron	dinhi	.	ADV
+.	.	.	.	karon	EOS	PUNCT
+
+Kinsa	kinsa	kin	nsa	BOS	ang	PRON
+ang	ang	ang	ang	Kinsa	nag-abot	DET
+nag-abot	nag-abot	nag	bot	ang	?	VERB
+?	?	?	?	nag-abot	EOS	PUNCT
+
+Unsa	unsa	uns	nsa	BOS	ang	PRON
+ang	ang	ang	ang	Unsa	imong	DET
+imong	imong	imo	ong	ang	ngalan	PRON
+ngalan	ngalan	nga	lan	imong	?	NOUN
+?	?	?	?	ngalan	EOS	PUNCT
+
+Kanus-a	kanus-a	kan	s-a	BOS	ka	ADV
+ka	ka	ka	ka	Kanus-a	mouli	PRON
+mouli	mouli	mou	uli	ka	?	VERB
+?	?	?	?	mouli	EOS	PUNCT
+
+Asa	asa	asa	asa	BOS	ang	ADV
+ang	ang	ang	ang	Asa	cr	DET
+cr	cr	cr	cr	ang	?	NOUN
+?	?	?	?	cr	EOS	PUNCT
+
+Nindot	nindot	nin	dot	BOS	ang	ADJ
+ang	ang	ang	ang	Nindot	awit	DET
+awit	awit	awi	wit	ang	ni	NOUN
+ni	ni	ni	ni	awit	Sarah	DET
+Sarah	sarah	sar	rah	ni	.	NOUN
+.	.	.	.	Sarah	EOS	PUNCT
+
+Init	init	ini	nit	BOS	ang	ADJ
+ang	ang	ang	ang	Init	adlaw	DET
+adlaw	adlaw	adl	law	ang	karon	NOUN
+karon	karon	kar	ron	adlaw	.	ADV
+.	.	.	.	karon	EOS	PUNCT
+
+Gihatag	gihatag	gih	tag	BOS	ni	VERB
+ni	ni	ni	ni	Gihatag	Tatay	DET
+Tatay	tatay	tat	tay	ni	ang	NOUN
+ang	ang	ang	ang	Tatay	regalo	DET
+regalo	regalo	reg	alo	ang	.	NOUN
+.	.	.	.	regalo	EOS	PUNCT
+
+Nagluto	nagluto	nag	uto	BOS	si	VERB
+si	si	si	si	Nagluto	Nanay	DET
+Nanay	nanay	nan	nay	si	ug	NOUN
+ug	ug	ug	ug	Nanay	sud-an	DET
+sud-an	sud-an	sud	-an	ug	.	NOUN
+.	.	.	.	sud-an	EOS	PUNCT
+
+Namalit	namalit	nam	lit	BOS	mi	VERB
+mi	mi	mi	mi	Namalit	ug	PRON
+ug	ug	ug	ug	mi	pagkaon	DET
+pagkaon	pagkaon	pag	aon	ug	sa	NOUN
+sa	sa	sa	sa	pagkaon	merkado	PREP
+merkado	merkado	mer	ado	sa	.	NOUN
+.	.	.	.	merkado	EOS	PUNCT
+
+Nagpaabot	nagpaabot	nag	bot	BOS	ako	VERB
+ako	ako	ako	ako	Nagpaabot	sa	PRON
+sa	sa	sa	sa	ako	bus	PREP
+bus	bus	bus	bus	sa	ganina	NOUN
+ganina	ganina	gan	ina	bus	.	ADV
+.	.	.	.	ganina	EOS	PUNCT
+
+Magtuon	magtuon	mag	uon	BOS	ta	VERB
+ta	ta	ta	ta	Magtuon	para	PRON
+para	para	par	ara	ta	sa	ADP
+sa	sa	sa	sa	para	exam	PREP
+exam	exam	exa	xam	sa	ugma	NOUN
+ugma	ugma	ugm	gma	exam	.	ADV
+.	.	.	.	ugma	EOS	PUNCT
+
+Natulog	natulog	nat	log	BOS	ang	VERB
+ang	ang	ang	ang	Natulog	bata	DET
+bata	bata	bat	ata	ang	sa	NOUN
+sa	sa	sa	sa	bata	duyan	PREP
+duyan	duyan	duy	yan	sa	.	NOUN
+.	.	.	.	duyan	EOS	PUNCT
+
+Nanglimpyo	nanglimpyo	nan	pyo	BOS	si	VERB
+si	si	si	si	Nanglimpyo	Inday	DET
+Inday	inday	ind	day	si	sa	NOUN
+sa	sa	sa	sa	Inday	balay	PREP
+balay	balay	bal	lay	sa	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Gisugo	gisugo	gis	ugo	BOS	ko	VERB
+ko	ko	ko	ko	Gisugo	ni	PRON
+ni	ni	ni	ni	ko	Mama	DET
+Mama	mama	mam	ama	ni	.	NOUN
+.	.	.	.	Mama	EOS	PUNCT
+
+Nagsakay	nagsakay	nag	kay	BOS	sila	VERB
+sila	sila	sil	ila	Nagsakay	ug	PRON
+ug	ug	ug	ug	sila	jeep	DET
+jeep	jeep	jee	eep	ug	pauli	NOUN
+pauli	pauli	pau	uli	jeep	.	ADV
+.	.	.	.	pauli	EOS	PUNCT
+
+Magluto	magluto	mag	uto	BOS	ko	VERB
+ko	ko	ko	ko	Magluto	ug	PRON
+ug	ug	ug	ug	ko	paniudto	DET
+paniudto	paniudto	pan	dto	ug	.	NOUN
+.	.	.	.	paniudto	EOS	PUNCT
+
+Nikaon	nikaon	nik	aon	BOS	na	VERB
+na	na	na	na	Nikaon	ang	ADV
+ang	ang	ang	ang	na	bata	DET
+bata	bata	bat	ata	ang	.	NOUN
+.	.	.	.	bata	EOS	PUNCT
+
+Nanglimpyo	nanglimpyo	nan	pyo	BOS	sila	VERB
+sila	sila	sil	ila	Nanglimpyo	sa	PRON
+sa	sa	sa	sa	sila	balay	PREP
+balay	balay	bal	lay	sa	.	NOUN
+.	.	.	.	balay	EOS	PUNCT
+
+Kalipay	kalipay	kal	pay	BOS	sa	NOUN
+sa	sa	sa	sa	Kalipay	pamilya	PREP
+pamilya	pamilya	pam	lya	sa	.	NOUN
+.	.	.	.	pamilya	EOS	PUNCT
+
+Tigbantay	tigbantay	tig	tay	BOS	siya	NOUN
+siya	siya	siy	iya	Tigbantay	sa	PRON
+sa	sa	sa	sa	siya	tindahan	PREP
+tindahan	tindahan	tin	han	sa	.	NOUN
+.	.	.	.	tindahan	EOS	PUNCT
+
+Maayo	maayo	maa	ayo	BOS	ang	ADJ
+ang	ang	ang	ang	Maayo	buntag	DET
+buntag	buntag	bun	tag	ang	.	NOUN
+.	.	.	.	buntag	EOS	PUNCT
+
+Pinakadako	pinakadako	pin	ako	BOS	ang	ADJ
+ang	ang	ang	ang	Pinakadako	isda	DET
+isda	isda	isd	sda	ang	.	NOUN
+.	.	.	.	isda	EOS	PUNCT
+
+Balayko	balayko	bal	yko	BOS	dako	NOUN
+dako	dako	dak	ako	Balayko	.	ADJ
+.	.	.	.	dako	EOS	PUNCT
+
+Nakig-estorya	nakig-estorya	nak	rya	BOS	ang	VERB
+ang	ang	ang	ang	Nakig-estorya	mayor	DET
+mayor	mayor	may	yor	ang	sa	NOUN
+sa	sa	sa	sa	mayor	mga	PREP
+mga	mga	mga	mga	sa	tawo	PART
+tawo	tawo	taw	awo	mga	.	NOUN
+.	.	.	.	tawo	EOS	PUNCT
+
+Ipabuhat	ipabuhat	ipa	hat	BOS	ni	VERB
+ni	ni	ni	ni	Ipabuhat	Nanay	DET
+Nanay	nanay	nan	nay	ni	ang	NOUN
+ang	ang	ang	ang	Nanay	trabaho	DET
+trabaho	trabaho	tra	aho	ang	.	NOUN
+.	.	.	.	trabaho	EOS	PUNCT
+
+Mangaligo	mangaligo	man	igo	BOS	ta	VERB
+ta	ta	ta	ta	Mangaligo	sa	PRON
+sa	sa	sa	sa	ta	dagat	PREP
+dagat	dagat	dag	gat	sa	ugma	NOUN
+ugma	ugma	ugm	gma	dagat	.	ADV
+.	.	.	.	ugma	EOS	PUNCT
+
+Panglimpyo	panglimpyo	pan	pyo	BOS	kamo	VERB
+kamo	kamo	kam	amo	Panglimpyo	sa	PRON
+sa	sa	sa	sa	kamo	inyong	PREP
+inyong	inyong	iny	ong	sa	kwarto	PRON
+kwarto	kwarto	kwa	rto	inyong	.	NOUN
+.	.	.	.	kwarto	EOS	PUNCT
+
+Ihatag	ihatag	iha	tag	BOS	kini	VERB
+kini	kini	kin	ini	Ihatag	sa	PRON
+sa	sa	sa	sa	kini	imong	PREP
+imong	imong	imo	ong	sa	igsuon	PRON
+igsuon	igsuon	igs	uon	imong	.	NOUN
+.	.	.	.	igsuon	EOS	PUNCT
+
+Asa	asa	asa	asa	BOS	ang	ADV
+ang	ang	ang	ang	Asa	libromo	DET
+libromo	libromo	lib	omo	ang	?	NOUN
+?	?	?	?	libromo	EOS	PUNCT
+
+Nawala	nawala	naw	ala	BOS	ang	VERB
+ang	ang	ang	ang	Nawala	pitakako	DET
+pitakako	pitakako	pit	ako	ang	.	NOUN
+.	.	.	.	pitakako	EOS	PUNCT
+
+Dako	dako	dak	ako	BOS	ang	ADJ
+ang	ang	ang	ang	Dako	balaynamo	DET
+balaynamo	balaynamo	bal	amo	ang	sa	NOUN
+sa	sa	sa	sa	balaynamo	bukid	PREP
+bukid	bukid	buk	kid	sa	.	NOUN
+.	.	.	.	bukid	EOS	PUNCT
+
+Gitawag	gitawag	git	wag	BOS	siya	VERB
+siya	siya	siy	iya	Gitawag	sa	PRON
+sa	sa	sa	sa	siya	amigoniya	PREP
+amigoniya	amigoniya	ami	iya	sa	.	NOUN
+.	.	.	.	amigoniya	EOS	PUNCT
+
+Kini	kini	kin	ini	BOS	ang	PRON
+ang	ang	ang	ang	Kini	balaynila	DET
+balaynila	balaynila	bal	ila	ang	.	NOUN
+.	.	.	.	balaynila	EOS	PUNCT
+
+Pinakagwapa	pinakagwapa	pin	apa	BOS	si	ADJ
+si	si	si	si	Pinakagwapa	Ana	DET
+Ana	ana	ana	ana	si	sa	NOUN
+sa	sa	sa	sa	Ana	tanan	PREP
+tanan	tanan	tan	nan	sa	.	NOUN
+.	.	.	.	tanan	EOS	PUNCT
+
+Nakahigda	nakahigda	nak	gda	BOS	ang	ADJ
+ang	ang	ang	ang	Nakahigda	pasyente	DET
+pasyente	pasyente	pas	nte	ang	sa	NOUN
+sa	sa	sa	sa	pasyente	katre	PREP
+katre	katre	kat	tre	sa	.	NOUN
+.	.	.	.	katre	EOS	PUNCT
+
+Pagkabugnaw	pagkabugnaw	pag	naw	BOS	sa	ADJ
+sa	sa	sa	sa	Pagkabugnaw	hangin	DET
+hangin	hangin	han	gin	sa	karong	NOUN
+karong	karong	kar	ong	hangin	gabhiona	ADV
+gabhiona	gabhiona	gab	ona	karong	.	NOUN
+.	.	.	.	gabhiona	EOS	PUNCT
+
+Pinakadako	pinakadako	pin	ako	BOS	nga	ADJ
+nga	nga	nga	nga	Pinakadako	isda	PART
+isda	isda	isd	sda	nga	ang	NOUN
+ang	ang	ang	ang	isda	nadakpan	DET
+nadakpan	nadakpan	nad	pan	ang	.	VERB
+.	.	.	.	nadakpan	EOS	PUNCT
+
+Pakikuha	pakikuha	pak	uha	BOS	sa	VERB
+sa	sa	sa	sa	Pakikuha	baso	DET
+baso	baso	bas	aso	sa	palihog	NOUN
+palihog	palihog	pal	hog	baso	.	ADV
+.	.	.	.	palihog	EOS	PUNCT
+
+Nakig-istorya	nakig-istorya	nak	rya	BOS	siya	VERB
+siya	siya	siy	iya	Nakig-istorya	sa	PRON
+sa	sa	sa	sa	siya	pulis	PREP
+pulis	pulis	pul	lis	sa	.	NOUN
+.	.	.	.	pulis	EOS	PUNCT
+
+Maki-angayon	maki-angayon	mak	yon	BOS	ang	VERB
+ang	ang	ang	ang	Maki-angayon	iyang	DET
+iyang	iyang	iya	ang	ang	desisyon	PRON
+desisyon	desisyon	des	yon	iyang	.	NOUN
+.	.	.	.	desisyon	EOS	PUNCT
+
+Makig-alayon	makig-alayon	mak	yon	BOS	ta	VERB
+ta	ta	ta	ta	Makig-alayon	sa	PRON
+sa	sa	sa	sa	ta	gobyerno	PREP
+gobyerno	gobyerno	gob	rno	sa	.	NOUN
+.	.	.	.	gobyerno	EOS	PUNCT
+
+Paliton	paliton	pal	ton	BOS	nako	VERB
+nako	nako	nak	ako	Paliton	ang	PRON
+ang	ang	ang	ang	nako	sapatos	DET
+sapatos	sapatos	sap	tos	ang	.	NOUN
+.	.	.	.	sapatos	EOS	PUNCT
+
+Limpyohan	limpyohan	lim	han	BOS	niya	VERB
+niya	niya	niy	iya	Limpyohan	ang	PRON
+ang	ang	ang	ang	niya	lamesa	DET
+lamesa	lamesa	lam	esa	ang	.	NOUN
+.	.	.	.	lamesa	EOS	PUNCT
+
+Kuhaa	kuhaa	kuh	haa	BOS	ang	VERB
+ang	ang	ang	ang	Kuhaa	baso	DET
+baso	baso	bas	aso	ang	sa	NOUN
+sa	sa	sa	sa	baso	kusina	PREP
+kusina	kusina	kus	ina	sa	.	NOUN
+.	.	.	.	kusina	EOS	PUNCT
+
+Hatagi	hatagi	hat	agi	BOS	siya	VERB
+siya	siya	siy	iya	Hatagi	ug	PRON
+ug	ug	ug	ug	siya	tubig	DET
+tubig	tubig	tub	big	ug	palihog	NOUN
+palihog	palihog	pal	hog	tubig	.	ADV
+.	.	.	.	palihog	EOS	PUNCT
+
+Dali-a	dali-a	dal	i-a	BOS	ang	VERB
+ang	ang	ang	ang	Dali-a	imong	DET
+imong	imong	imo	ong	ang	lihok	PRON
+lihok	lihok	lih	hok	imong	.	NOUN
+.	.	.	.	lihok	EOS	PUNCT
+
+Pahibalo-a	pahibalo-a	pah	o-a	BOS	sila	VERB
+sila	sila	sil	ila	Pahibalo-a	sa	PRON
+sa	sa	sa	sa	sila	balita	PREP
+balita	balita	bal	ita	sa	.	NOUN
+.	.	.	.	balita	EOS	PUNCT
+
+Ayo-on	ayo-on	ayo	-on	BOS	ni	VERB
+ni	ni	ni	ni	Ayo-on	Kuya	DET
+Kuya	kuya	kuy	uya	ni	ang	NOUN
+ang	ang	ang	ang	Kuya	guba	DET
+guba	guba	gub	uba	ang	nga	ADJ
+nga	nga	nga	nga	guba	radjo	PART
+radjo	radjo	rad	djo	nga	.	NOUN
+.	.	.	.	radjo	EOS	PUNCT
+
+Bayran	bayran	bay	ran	BOS	ko	VERB
+ko	ko	ko	ko	Bayran	ang	PRON
+ang	ang	ang	ang	ko	utang	DET
+utang	utang	uta	ang	ang	ugma	NOUN
+ugma	ugma	ugm	gma	utang	.	ADV
+.	.	.	.	ugma	EOS	PUNCT
+
+Tindahan	tindahan	tin	han	BOS	sa	NOUN
+sa	sa	sa	sa	Tindahan	kanto	PREP
+kanto	kanto	kan	nto	sa	sarado	NOUN
+sarado	sarado	sar	ado	kanto	na	ADJ
+na	na	na	na	sarado	.	ADV
+.	.	.	.	na	EOS	PUNCT
+
+Eskwelahan	eskwelahan	esk	han	BOS	ang	NOUN
+ang	ang	ang	ang	Eskwelahan	lugar	DET
+lugar	lugar	lug	gar	ang	sa	NOUN
+sa	sa	sa	sa	lugar	pagkat-on	PREP
+pagkat-on	pagkat-on	pag	-on	sa	.	NOUN
+.	.	.	.	pagkat-on	EOS	PUNCT
+
+Dulaanan	dulaanan	dul	nan	BOS	ang	NOUN
+ang	ang	ang	ang	Dulaanan	sa	DET
+sa	sa	sa	sa	Dulaanan	mga	PREP
+mga	mga	mga	mga	sa	bata	PART
+bata	bata	bat	ata	mga	.	NOUN
+.	.	.	.	bata	EOS	PUNCT
+
+Basahanan	basahanan	bas	nan	BOS	kini	NOUN
+kini	kini	kin	ini	Basahanan	sa	PRON
+sa	sa	sa	sa	kini	library	PREP
+library	library	lib	ary	sa	.	NOUN
+.	.	.	.	library	EOS	PUNCT
+
+Katkanan	katkanan	kat	nan	BOS	ang	NOUN
+ang	ang	ang	ang	Katkanan	dakong	DET
+dakong	dakong	dak	ong	ang	kahoy	ADJ
+kahoy	kahoy	kah	hoy	dakong	.	NOUN
+.	.	.	.	kahoy	EOS	PUNCT
+
+Pag-abot	pag-abot	pag	bot	BOS	niya	ADV
+niya	niya	niy	iya	Pag-abot	nikaon	PRON
+nikaon	nikaon	nik	aon	niya	dayon	VERB
+dayon	dayon	day	yon	nikaon	siya	ADV
+siya	siya	siy	iya	dayon	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Pagbiya	pagbiya	pag	iya	BOS	mo	ADV
+mo	mo	mo	mo	Pagbiya	naghilak	PRON
+naghilak	naghilak	nag	lak	mo	siya	VERB
+siya	siya	siy	iya	naghilak	.	PRON
+.	.	.	.	siya	EOS	PUNCT
+
+Kaalam	kaalam	kaa	lam	BOS	ang	NOUN
+ang	ang	ang	ang	Kaalam	bahandi	DET
+bahandi	bahandi	bah	ndi	ang	.	NOUN
+.	.	.	.	bahandi	EOS	PUNCT
+
+Kalisud	kalisud	kal	sud	BOS	sa	NOUN
+sa	sa	sa	sa	Kalisud	kinabuhi	PREP
+kinabuhi	kinabuhi	kin	uhi	sa	karon	NOUN
+karon	karon	kar	ron	kinabuhi	.	ADV
+.	.	.	.	karon	EOS	PUNCT
+
+Pagtarong	pagtarong	pag	ong	BOS	sa	ADV
+sa	sa	sa	sa	Pagtarong	imong	PREP
+imong	imong	imo	ong	sa	pagtuon	PRON
+pagtuon	pagtuon	pag	uon	imong	.	NOUN
+.	.	.	.	pagtuon	EOS	PUNCT
+
+Namanghilam-os	namanghilam-os	nam	-os	BOS	ang	VERB
+ang	ang	ang	ang	Namanghilam-os	bata	DET
+bata	bata	bat	ata	ang	pagmata	NOUN
+pagmata	pagmata	pag	ata	bata	.	ADV
+.	.	.	.	pagmata	EOS	PUNCT
+
+Kinadak-an	kinadak-an	kin	-an	BOS	nga	NOUN
+nga	nga	nga	nga	Kinadak-an	isda	PART
+isda	isda	isd	sda	nga	ang	NOUN
+ang	ang	ang	ang	isda	nakuha	DET
+nakuha	nakuha	nak	uha	ang	.	VERB
+.	.	.	.	nakuha	EOS	PUNCT
+
+Kinagamyan	kinagamyan	kin	yan	BOS	siya	NOUN
+siya	siya	siy	iya	Kinagamyan	sa	PRON
+sa	sa	sa	sa	siya	magsuon	PREP
+magsuon	magsuon	mag	uon	sa	.	NOUN
+.	.	.	.	magsuon	EOS	PUNCT
+
+Manglaba	manglaba	man	aba	BOS	ko	VERB
+ko	ko	ko	ko	Manglaba	ugma	PRON
+ugma	ugma	ugm	gma	ko	puhon	ADV
+puhon	puhon	puh	hon	ugma	.	ADV
+.	.	.	.	puhon	EOS	PUNCT
+
+Nangita	nangita	nan	ita	BOS	siya	VERB
+siya	siya	siy	iya	Nangita	ug	PRON
+ug	ug	ug	ug	siya	trabaho	DET
+trabaho	trabaho	tra	aho	ug	.	NOUN
+.	.	.	.	trabaho	EOS	PUNCT
+
+

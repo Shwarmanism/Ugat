@@ -1,36 +1,45 @@
 {
   "VERB": {
     "prefix_rules": [
+      { "prefix": "magka", "replace_with": "" },
+      { "prefix": "nagka", "replace_with": "" },
+      { "prefix": "pakig", "replace_with": "" },
+      { "prefix": "nakig", "replace_with": "" },
+      { "prefix": "makig", "replace_with": "" },
+      { "prefix": "naka", "replace_with": "" },
+      { "prefix": "maka", "replace_with": "" },
+      { "prefix": "pagaka", "replace_with": "" },
       { "prefix": "mag", "replace_with": "" },
       { "prefix": "nag", "replace_with": "" },
+      { "prefix": "pag", "replace_with": "" },
+      { "prefix": "pang", "replace_with": "" },
+      { "prefix": "man", "replace_with": "" },
+      { "prefix": "nan", "replace_with": "" },
+      { "prefix": "mang", "replace_with": "" },
+      { "prefix": "nang", "replace_with": "" },
+      { "prefix": "gi", "replace_with": "" },  
+      { "prefix": "ga", "replace_with": "" },
       { "prefix": "mi", "replace_with": "" },
       { "prefix": "ni", "replace_with": "" },
       { "prefix": "mo", "replace_with": "" },
-      { "prefix": "maka", "replace_with": "" },
-      { "prefix": "naka", "replace_with": "" },
-      { "prefix": "nakig", "replace_with": "" },
-      { "prefix": "makig", "replace_with": "" },
+      { "prefix": "na", "replace_with": "" },
+      { "prefix": "ma", "replace_with": "" },
       { "prefix": "pa", "replace_with": "" },
-      { "prefix": "pag", "replace_with": "" },
-      { "prefix": "pang", "replace_with": "" },
-      { "prefix": "pamang", "replace_with": "" },
-      { "prefix": "mang", "replace_with": "" },
-      { "prefix": "nang", "replace_with": "" },
-      { "prefix": "maki", "replace_with": "" },
-      { "prefix": "naki", "replace_with": "" },
-      { "prefix": "paki", "replace_with": "" },
       { "prefix": "ipa", "replace_with": "" },
       { "prefix": "i", "replace_with": "" }
     ],
     "infix_rules": [
       { "infix": "um", "replace_with": "" },
       { "infix": "in", "replace_with": "" },
-      { "infix": "gin", "replace_with": "" }
+      { "infix": "ul", "replace_with": "" }, 
+      { "infix": "il", "replace_with": "" }  
     ],
     "suffix_rules": [
-      { "suffix": "on", "replace_with": "" },
-      { "suffix": "an", "replace_with": "" },
+      { "suffix": "han", "replace_with": "" },
       { "suffix": "hon", "replace_with": "" },
+      { "suffix": "an", "replace_with": "" },
+      { "suffix": "on", "replace_with": "" },
+      { "suffix": "ay", "replace_with": "" }, 
       { "suffix": "i", "replace_with": "" },
       { "suffix": "a", "replace_with": "" },
       { "suffix": "ha", "replace_with": "" }
@@ -43,40 +52,53 @@
 
   "NOUN": {
     "prefix_rules": [
-      { "prefix": "ka", "replace_with": "" },
+      { "prefix": "ting", "replace_with": "" }, 
       { "prefix": "tag", "replace_with": "" },
       { "prefix": "taga", "replace_with": "" },
       { "prefix": "tiga", "replace_with": "" },
       { "prefix": "tig", "replace_with": "" },
+      { "prefix": "isigka", "replace_with": "" }, 
+      { "prefix": "ka", "replace_with": "" },
+      { "prefix": "pan", "replace_with": "" },
       { "prefix": "pang", "replace_with": "" },
       { "prefix": "pagka", "replace_with": "" },
       { "prefix": "kina", "replace_with": "" }
     ],
     "suffix_rules": [
-      { "suffix": "an", "replace_with": "" },
+      { "suffix": "anan", "replace_with": "" }, 
+      { "suffix": "hanan", "replace_with": "" },
       { "suffix": "nan", "replace_with": "" },
+      { "suffix": "han", "replace_with": "" },
+      { "suffix": "an", "replace_with": "" },
+      { "suffix": "on", "replace_with": "" }, 
       { "suffix": "ay", "replace_with": "" },
       { "suffix": "ko", "replace_with": "" },
       { "suffix": "mo", "replace_with": "" },
       { "suffix": "niya", "replace_with": "" },
       { "suffix": "namo", "replace_with": "" },
       { "suffix": "nato", "replace_with": "" },
-      { "suffix": "nila", "replace_with": "" }
+      { "suffix": "nila", "replace_with": "" },
+      { "suffix": "ninyo", "replace_with": "" }
     ],
     "infix_rules": []
   },
 
   "ADJ": {
     "prefix_rules": [
-      { "prefix": "ma", "replace_with": "" },
-      { "prefix": "naka", "replace_with": "" },
       { "prefix": "pinaka", "replace_with": "" },
       { "prefix": "pagka", "replace_with": "" },
-      { "prefix": "ka", "replace_with": "" }
+      { "prefix": "ma", "replace_with": "" },
+      { "prefix": "naka", "replace_with": "" },
+      { "prefix": "maka", "replace_with": "" },
+      { "prefix": "ka", "replace_with": "" },
+      { "prefix": "ika", "replace_with": "" }, 
+      { "prefix": "ha", "replace_with": "" }
     ],
     "suffix_rules": [
+      { "suffix": "anon", "replace_with": "" }, 
+      { "suffix": "hanon", "replace_with": "" },
       { "suffix": "on", "replace_with": "" },
-      { "suffix": "g", "replace_with": "" }
+      { "suffix": "hun", "replace_with": "" }
     ],
     "infix_rules": []
   },
@@ -91,7 +113,7 @@
 
   "_metadata": {
     "language": "cebuano",
-    "format_version": "2.0",
-    "note": "POS-organized format for hybrid CRF+affix approach"
+    "format_version": "2.1",
+    "note": "Updated with gi-, ting-, and pronoun suffixes"
   }
 }

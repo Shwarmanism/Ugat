@@ -60,7 +60,6 @@ class MorphologicalEngine:
 
     def load_resources(self):
         """Load rules and roots from backend/resources."""
-        # Calculate path: morphology/ → core/ → backend/ → resources/
         current_dir = os.path.dirname(os.path.abspath(__file__))
         core_dir = os.path.dirname(current_dir)
         backend_dir = os.path.dirname(core_dir)
@@ -76,7 +75,6 @@ class MorphologicalEngine:
                 try:
                     with open(rules_file, "r", encoding="utf-8") as f:
                         data = json.load(f)
-                        # Store the entire POS-based structure
                         self.AFFIX_DB[lang] = data
                         print(f" Loaded Rules for {lang}")
                 except Exception as e:
@@ -95,13 +93,10 @@ class MorphologicalEngine:
                         data = json.load(f)
                         
                         if isinstance(data, dict):
-                            # Expected format: {word: POS}
                             self.roots[lang] = {k.lower(): v for k, v in data.items()}
                         elif isinstance(data, list):
-                            # Legacy format: [word, word, ...]
                             self.roots[lang] = {w.lower(): "UNKNOWN" for w in data}
                         
-                        # Build set for O(1) lookup
                         self.root_sets[lang] = set(self.roots[lang].keys())
                         print(f" Loaded {len(self.roots[lang])} roots for {lang}")
                         
@@ -130,7 +125,6 @@ class MorphologicalEngine:
         normalized_target = self.POS_MAPPING.get(target_pos.upper(), target_pos.upper())
         
         # Check for POS compatibility
-        # Root dict may have: VERB, NOUN, ADJ, ADJECTIVE, ADVERB, etc.
         root_pos_normalized = root_pos
         if root_pos in ("ADJECTIVE", "JJ"):
             root_pos_normalized = "ADJ"
@@ -139,7 +133,7 @@ class MorphologicalEngine:
         elif root_pos in ("NN", "NNS", "NNP"):
             root_pos_normalized = "NOUN"
         elif root_pos in ("ADVERB", "RB"):
-            root_pos_normalized = "ADJ"  # Adverbs often share ADJ rules
+            root_pos_normalized = "ADJ"
         
         return normalized_target == root_pos_normalized
     
@@ -150,20 +144,8 @@ class MorphologicalEngine:
     # --- Rule Extraction ---
     
     def get_rules_for_pos(self, lang: str, pos: str) -> Dict[str, List[str]]:
-        """
-        Get affix rules for a specific POS category.
-        
-        Args:
-            lang: Language/dialect
-            pos: POS tag (will be normalized)
-        
-        Returns:
-            Dict with keys: prefixes, suffixes, infixes (flat lists)
-        """
-        # Normalize POS to rule category
+        """Get affix rules for a specific POS category."""
         normalized_pos = self.POS_MAPPING.get(pos.upper(), pos.upper())
-        
-        # Get rules for this language
         lang_rules = self.AFFIX_DB.get(lang, {})
         pos_rules = lang_rules.get(normalized_pos, {})
         
@@ -171,7 +153,6 @@ class MorphologicalEngine:
         suffixes = []
         infixes = []
         
-        # Extract from POS-specific rules
         for rule in pos_rules.get("prefix_rules", []):
             if isinstance(rule, dict) and "prefix" in rule:
                 prefixes.append(rule["prefix"])
@@ -197,10 +178,7 @@ class MorphologicalEngine:
         }
     
     def get_all_rules(self, lang: str) -> Dict[str, List[str]]:
-        """
-        Get ALL affix rules for a language (all POS combined).
-        Used as fallback when POS-specific rules don't yield a result.
-        """
+        """Get ALL affix rules for a language (all POS combined)."""
         lang_rules = self.AFFIX_DB.get(lang, {})
         
         prefixes = set()
@@ -236,10 +214,8 @@ class MorphologicalEngine:
         for infix in infixes:
             if infix in word:
                 idx = word.find(infix)
-                # Infixes typically appear near the beginning
                 if 0 < idx < 3:
                     candidate = word[:idx] + word[idx + len(infix):]
-                    # If lang provided, validate against root dict
                     if lang and self.is_root(candidate, lang):
                         return candidate
                     elif not lang:
@@ -247,292 +223,133 @@ class MorphologicalEngine:
         return word
 
     def strip_prefix(self, word: str, prefixes: List[str], lang: str = None) -> str:
-        """
-        Remove prefix with root validation.
-        
-        Strategy:
-        1. Sort prefixes by length descending (try longest first)
-        2. For each prefix, check if stripped result is a valid root
-        3. If root found, return it (prefer valid roots over longest match)
-        4. If no root found, return longest match as fallback
-        """
+        """Remove prefix with root validation."""
         sorted_prefixes = sorted(prefixes, key=len, reverse=True)
         best_candidate = None
         
         for prefix in sorted_prefixes:
             if word.startswith(prefix):
                 candidate = word[len(prefix):]
-                
-                # If lang provided, prioritize candidates that are valid roots
                 if lang and self.is_root(candidate, lang):
-                    return candidate  # Found a valid root, return immediately
-                
-                # Store first (longest) match as fallback
+                    return candidate
                 if best_candidate is None:
                     best_candidate = candidate
         
         return best_candidate if best_candidate else word
 
     def strip_suffix(self, word: str, suffixes: List[str], lang: str = None) -> str:
-        """
-        Remove suffix with root validation.
-        """
+        """Remove suffix with root validation."""
         sorted_suffixes = sorted(suffixes, key=len, reverse=True)
         best_candidate = None
         
         for suffix in sorted_suffixes:
             if word.endswith(suffix):
                 candidate = word[:-len(suffix)]
-                
-                # If lang provided, prioritize candidates that are valid roots
                 if lang and self.is_root(candidate, lang):
                     return candidate
-                
                 if best_candidate is None:
                     best_candidate = candidate
         
         return best_candidate if best_candidate else word
 
-    def strip_reduplication(self, word: str) -> str:
-        """Remove CV/CVC reduplication at word beginning."""
+    def strip_reduplication(self, word: str, lang: str = None) -> str:
+        """
+        Handle 3 types of reduplication for ALL POS:
+        1. Hyphenated Full: araw-araw -> araw
+        2. Non-hyphenated Full: arawaraw -> araw
+        3. Partial (CV/CVC): lalaki -> laki, tatakbo -> takbo
+        """
+        
+        # 1. Hyphenated Reduplication (e.g., araw-araw)
+        if '-' in word:
+            parts = word.split('-')
+            # Check if all parts are identical (allows "basa-basa-basa")
+            if len(parts) >= 2 and all(p == parts[0] for p in parts):
+                return parts[0]
+
+        # 2. Non-Hyphenated Full Reduplication (e.g., arawaraw)
+        # Check if word is even length and halves are identical
+        if len(word) >= 6 and len(word) % 2 == 0:
+            half = len(word) // 2
+            first_half = word[:half]
+            second_half = word[half:]
+            
+            if first_half == second_half:
+                # SAFEGUARD: Only strip if result is a valid root to avoid 
+                # stripping words like "alaala" (root) or "paruparo" (root).
+                if lang and self.is_root(first_half, lang):
+                    return first_half
+                # If no language is provided, we can't be safe, so we skip 
+                # to avoid destroying valid non-reduplicated roots.
+        
+        # 3. Partial Reduplication (CV / CVC)
         if len(word) >= 4:
-            # Check for CV-CV reduplication (e.g., "la-la" in "lalaki")
+            # CV Reduplication (e.g., lalaki -> laki, susulat -> sulat)
+            # Checks if first 2 chars are repeated
             if word[:2] == word[2:4]:
-                return word[2:]
-            # Check for CVC-CVC pattern
+                candidate = word[2:]
+                # Prefer validation if lang is available
+                if lang and self.is_root(candidate, lang):
+                    return candidate
+                elif not lang:
+                    return candidate
+            
+            # CVC Reduplication (e.g., magtatakbo -> takbo (after mag- stripped))
+            # Checks if first 3 chars are repeated
             if len(word) >= 6 and word[:3] == word[3:6]:
-                return word[3:]
+                candidate = word[3:]
+                if lang and self.is_root(candidate, lang):
+                    return candidate
+                elif not lang:
+                    return candidate
+
         return word
 
     # --- Main Lemmatize ---
     
     def lemmatize(self, word: str, lang: str = "cebuano", pos: str = None) -> Dict[str, Any]:
-        """POS-aware lemmatization with infix → prefix → reduplication → suffix stripping."""
+        """
+        POS-aware lemmatization with AUTOMATIC FALLBACK.
+        """
         lang = lang.lower()
         word = word.lower()
         original_word = word
         
         # Early exit if already a root
         if self.is_root(word, lang):
-            return {
-                "lemma": word,
-                "rule": "Root Word",
-                "status": "found",
-                "affixes": [],
-                "pos": self.get_root_pos(word, lang) or pos
-            }
+            return self._build_result(word, "Root Word", [], pos, lang)
         
-        # Get POS-specific rules
+        # ---------------------------------------------------------
+        # PASS 1: STRICT POS MODE
+        # ---------------------------------------------------------
+        # If a POS tag is provided, try ONLY those rules first.
         if pos:
-            rules = self.get_rules_for_pos(lang, pos)
-            use_pos_validation = True
-        else:
-            # No POS provided, use all rules
-            rules = self.get_all_rules(lang)
-            use_pos_validation = False
-        
-        if not any(rules.values()):
-            # No rules found for this POS, try all rules
-            rules = self.get_all_rules(lang)
-            use_pos_validation = False
-        
-        # Apply stripping with validation
-        current_form = word
-        applied_affixes = []
-        
-        # 2a. Infix stripping
-        temp = self.strip_infix(current_form, rules["infixes"], lang)
-        if temp != current_form:
-            applied_affixes.append("infix")
-            current_form = temp
+            # We extract the logic into a helper method called _attempt_stripping
+            result = self._attempt_stripping(word, lang, rules_pos=pos)
+            if result: 
+                return result
             
-            # Validate: must match same POS
-            if use_pos_validation:
-                if self.is_root_with_pos(current_form, lang, pos):
-                    return {
-                        "lemma": current_form,
-                        "rule": "Infix Stripping",
-                        "status": "found",
-                        "affixes": applied_affixes,
-                        "pos": pos
-                    }
-            elif self.is_root(current_form, lang):
-                return {
-                    "lemma": current_form,
-                    "rule": "Infix Stripping",
-                    "status": "found",
-                    "affixes": applied_affixes,
-                    "pos": self.get_root_pos(current_form, lang)
-                }
-        
-        # 2b. Prefix stripping
-        temp = self.strip_prefix(current_form, rules["prefixes"], lang)
-        if temp != current_form:
-            applied_affixes.append("prefix")
-            current_form = temp
+            # [THIS IS THE MISSING PERSISTENCE]
+            # If we reach here, the Strict POS rules FAILED.
+            # We now implicitly say: "The CRF tag might be wrong. Let's try ALL rules."
             
-            if use_pos_validation:
-                if self.is_root_with_pos(current_form, lang, pos):
-                    return {
-                        "lemma": current_form,
-                        "rule": "Prefix Stripping",
-                        "status": "found",
-                        "affixes": applied_affixes,
-                        "pos": pos
-                    }
-            elif self.is_root(current_form, lang):
-                return {
-                    "lemma": current_form,
-                    "rule": "Prefix Stripping",
-                    "status": "found",
-                    "affixes": applied_affixes,
-                    "pos": self.get_root_pos(current_form, lang)
-                }
+        # ---------------------------------------------------------
+        # PASS 2: UNIVERSAL FALLBACK
+        # ---------------------------------------------------------
+        # Try stripping using ALL rules from ALL categories
+        # We pass rules_pos=None to signal "use all rules"
+        result = self._attempt_stripping(word, lang, rules_pos=None)
+        if result: 
+            return result
+
+        # ---------------------------------------------------------
+        # PASS 3: HEURISTICS (OOV)
+        # ---------------------------------------------------------
+        # If everything failed, try your heuristics
+        rules_all = self.get_all_rules(lang)
+        heuristic_result = self._heuristic_fallback(original_word, word, [], rules_all, lang, pos)
+        if heuristic_result: return heuristic_result
         
-        # 2c. Reduplication stripping
-        temp = self.strip_reduplication(current_form)
-        if temp != current_form:
-            applied_affixes.append("reduplication")
-            current_form = temp
-            
-            if use_pos_validation:
-                if self.is_root_with_pos(current_form, lang, pos):
-                    return {
-                        "lemma": current_form,
-                        "rule": "Reduplication Stripping",
-                        "status": "found",
-                        "affixes": applied_affixes,
-                        "pos": pos
-                    }
-            elif self.is_root(current_form, lang):
-                return {
-                    "lemma": current_form,
-                    "rule": "Reduplication Stripping",
-                    "status": "found",
-                    "affixes": applied_affixes,
-                    "pos": self.get_root_pos(current_form, lang)
-                }
-        
-        # 2d. Suffix stripping
-        temp = self.strip_suffix(current_form, rules["suffixes"], lang)
-        if temp != current_form:
-            applied_affixes.append("suffix")
-            current_form = temp
-            
-            if use_pos_validation:
-                if self.is_root_with_pos(current_form, lang, pos):
-                    return {
-                        "lemma": current_form,
-                        "rule": "Suffix Stripping",
-                        "status": "found",
-                        "affixes": applied_affixes,
-                        "pos": pos
-                    }
-            elif self.is_root(current_form, lang):
-                return {
-                    "lemma": current_form,
-                    "rule": "Suffix Stripping",
-                    "status": "found",
-                    "affixes": applied_affixes,
-                    "pos": self.get_root_pos(current_form, lang)
-                }
-        
-        # 2e. Multi-pass: Try additional suffix after prefix
-        if "prefix" in applied_affixes and "suffix" not in applied_affixes:
-            temp = self.strip_suffix(current_form, rules["suffixes"], lang)
-            if temp != current_form:
-                applied_affixes.append("suffix")
-                current_form = temp
-                
-                if use_pos_validation:
-                    if self.is_root_with_pos(current_form, lang, pos):
-                        return {
-                            "lemma": current_form,
-                            "rule": "Multi-pass Stripping",
-                            "status": "found",
-                            "affixes": applied_affixes,
-                            "pos": pos
-                        }
-                elif self.is_root(current_form, lang):
-                    return {
-                        "lemma": current_form,
-                        "rule": "Multi-pass Stripping",
-                        "status": "found",
-                        "affixes": applied_affixes,
-                        "pos": self.get_root_pos(current_form, lang)
-                    }
-        
-        # Relaxed validation - found as root but different POS
-        if use_pos_validation and self.is_root(current_form, lang):
-            return {
-                "lemma": current_form,
-                "rule": "Cross-POS Match",
-                "status": "found",
-                "affixes": applied_affixes,
-                "pos": self.get_root_pos(current_form, lang)
-            }
-        
-        # Fallback: try ALL rules if POS-specific didn't work
-        if use_pos_validation and not applied_affixes:
-            all_rules = self.get_all_rules(lang)
-            fallback_form = word
-            fallback_affixes = []
-            
-            # Try infix
-            temp = self.strip_infix(fallback_form, all_rules["infixes"], lang)
-            if temp != fallback_form:
-                fallback_affixes.append("infix")
-                fallback_form = temp
-                if self.is_root(fallback_form, lang):
-                    return {
-                        "lemma": fallback_form,
-                        "rule": "Infix Stripping (Fallback)",
-                        "status": "found",
-                        "affixes": fallback_affixes,
-                        "pos": self.get_root_pos(fallback_form, lang)
-                    }
-            
-            # Try prefix
-            temp = self.strip_prefix(fallback_form, all_rules["prefixes"], lang)
-            if temp != fallback_form:
-                fallback_affixes.append("prefix")
-                fallback_form = temp
-                if self.is_root(fallback_form, lang):
-                    return {
-                        "lemma": fallback_form,
-                        "rule": "Prefix Stripping (Fallback)",
-                        "status": "found",
-                        "affixes": fallback_affixes,
-                        "pos": self.get_root_pos(fallback_form, lang)
-                    }
-            
-            # Try suffix
-            temp = self.strip_suffix(fallback_form, all_rules["suffixes"], lang)
-            if temp != fallback_form:
-                fallback_affixes.append("suffix")
-                fallback_form = temp
-                if self.is_root(fallback_form, lang):
-                    return {
-                        "lemma": fallback_form,
-                        "rule": "Suffix Stripping (Fallback)",
-                        "status": "found",
-                        "affixes": fallback_affixes,
-                        "pos": self.get_root_pos(fallback_form, lang)
-                    }
-            
-            # Update current state for heuristic
-            if fallback_affixes:
-                current_form = fallback_form
-                applied_affixes = fallback_affixes
-        
-        # Heuristic fallback for OOV words
-        heuristic_result = self._heuristic_fallback(
-            original_word, current_form, applied_affixes, rules, lang, pos
-        )
-        if heuristic_result:
-            return heuristic_result
-        
-        # No match found
         return {
             "lemma": original_word,
             "rule": "None",
@@ -541,74 +358,109 @@ class MorphologicalEngine:
             "pos": pos
         }
 
-    # --- Heuristic Fallback (OOV) ---
-    
-    def _heuristic_fallback(
-        self,
-        original_word: str,
-        current_form: str,
-        applied_affixes: List[str],
-        rules: Dict[str, List[str]],
-        lang: str,
-        pos: str
-    ) -> Optional[Dict[str, Any]]:
-        """Heuristic fallback for OOV words (hyphen stripping, accept stripped form)."""
+    def _attempt_stripping(self, word: str, lang: str, rules_pos: str = None):
+        """
+        Helper method that runs the stripping pipeline once with a specific set of rules.
+        """
+        # 1. Select Rules
+        if rules_pos:
+            rules = self.get_rules_for_pos(lang, rules_pos)
+            if not any(rules.values()): return None
+            use_pos_validation = True
+        else:
+            rules = self.get_all_rules(lang)
+            use_pos_validation = False
+
+        current_form = word
+        applied_affixes = []
+
+        # 1. Infix
+        temp = self.strip_infix(current_form, rules["infixes"], lang)
+        if temp != current_form:
+            applied_affixes.append("infix")
+            current_form = temp
+            if self.is_root(current_form, lang):
+                 return self._build_result(current_form, "Infix Stripping", applied_affixes, rules_pos, lang)
+
+        # 2. Prefix (Loop)
+        while True:
+            temp = self.strip_prefix(current_form, rules["prefixes"], lang)
+            if temp == current_form: break
+            applied_affixes.append("prefix")
+            current_form = temp
+            
+            if use_pos_validation:
+                if self.is_root_with_pos(current_form, lang, rules_pos):
+                    return self._build_result(current_form, "Prefix Stripping", applied_affixes, rules_pos, lang)
+            elif self.is_root(current_form, lang):
+                 return self._build_result(current_form, "Prefix Stripping", applied_affixes, rules_pos, lang)
+
+        # 3. Reduplication
+        temp = self.strip_reduplication(current_form, lang)
+        if temp != current_form:
+            applied_affixes.append("reduplication")
+            current_form = temp
+            if self.is_root(current_form, lang):
+                 return self._build_result(current_form, "Reduplication Stripping", applied_affixes, rules_pos, lang)
+
+        # 4. Suffix
+        temp = self.strip_suffix(current_form, rules["suffixes"], lang)
+        if temp != current_form:
+            applied_affixes.append("suffix")
+            current_form = temp
+            if self.is_root(current_form, lang):
+                 return self._build_result(current_form, "Suffix Stripping", applied_affixes, rules_pos, lang)
+
+        # 5. Multi-pass: Try additional suffix after prefix
+        if "prefix" in applied_affixes and "suffix" not in applied_affixes:
+            temp = self.strip_suffix(current_form, rules["suffixes"], lang)
+            if temp != current_form:
+                applied_affixes.append("suffix")
+                current_form = temp
+                if self.is_root(current_form, lang):
+                    return self._build_result(current_form, "Multi-pass Stripping", applied_affixes, rules_pos, lang)
+
+        # Relaxed validation (last resort match check)
+        if not use_pos_validation and self.is_root(current_form, lang):
+             return self._build_result(current_form, "Cross-POS Match", applied_affixes, rules_pos, lang)
+        
+        # ONLY return None if all steps failed
+        return None
+
+    def _build_result(self, lemma, rule, affixes, pos, lang):
+        """Helper to format success result"""
+        return {
+            "lemma": lemma,
+            "rule": rule,
+            "status": "found",
+            "affixes": affixes,
+            "pos": self.get_root_pos(lemma, lang) or pos
+        }
+
+    def _heuristic_fallback(self, original_word: str, current_form: str, applied_affixes: List[str], rules: Dict[str, List[str]], lang: str, pos: str) -> Optional[Dict[str, Any]]:
         word = original_word.lower()
         prefixes = set(rules.get("prefixes", []))
-        
-        # Rule 1: Hyphen stripping for borrowed words (nag-text → text)
         if '-' in word:
             parts = word.split('-')
-            
             if len(parts) == 2:
                 prefix_part, stem_part = parts
-                
-                # Check if prefix matches known affix from rules
                 if prefix_part in prefixes and len(stem_part) >= 3:
-                    return {
-                        "lemma": stem_part,
-                        "rule": "Heuristic: Hyphen Stripping",
-                        "status": "heuristic",
-                        "affixes": [f"{prefix_part}-"],
-                        "pos": pos
-                    }
-                
-                # Short prefix (1-4 chars) with valid stem
+                    return { "lemma": stem_part, "rule": "Heuristic: Hyphen Stripping", "status": "heuristic", "affixes": [f"{prefix_part}-"], "pos": pos }
                 if len(prefix_part) <= 4 and len(stem_part) >= 3:
-                    return {
-                        "lemma": stem_part,
-                        "rule": "Heuristic: Hyphen Stripping",
-                        "status": "heuristic",
-                        "affixes": [f"{prefix_part}-"],
-                        "pos": pos
-                    }
-        
-        # Rule 2: Accept stripped form if affixes were applied and stem >= 3 chars
+                    return { "lemma": stem_part, "rule": "Heuristic: Hyphen Stripping", "status": "heuristic", "affixes": [f"{prefix_part}-"], "pos": pos }
         if applied_affixes and current_form != original_word:
             if len(current_form) >= 3:
-                return {
-                    "lemma": current_form,
-                    "rule": f"Heuristic: {'+'.join(applied_affixes)} (OOV)",
-                    "status": "heuristic",
-                    "affixes": applied_affixes,
-                    "pos": pos
-                }
-        
+                return { "lemma": current_form, "rule": f"Heuristic: {'+'.join(applied_affixes)} (OOV)", "status": "heuristic", "affixes": applied_affixes, "pos": pos }
         return None
 
 
-# Singleton instance
 _engine_instance: Optional[MorphologicalEngine] = None
 
-
 def get_morph_engine() -> MorphologicalEngine:
-    """Get singleton instance of MorphologicalEngine."""
     global _engine_instance
     if _engine_instance is None:
         _engine_instance = MorphologicalEngine()
     return _engine_instance
 
-
 def lemmatize(word: str, lang: str = "cebuano", pos: str = None) -> Dict[str, Any]:
-    """Convenience function for lemmatization."""
     return get_morph_engine().lemmatize(word, lang, pos)

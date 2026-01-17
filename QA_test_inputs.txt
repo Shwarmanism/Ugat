@@ -1,0 +1,121 @@
+# ==============================================================================
+# FINAL TEST CASES FOR PHILIPPINE LANGUAGE MORPHOLOGY (WITH POS TAGS)
+# Format: [DIALECT] [DIFFICULTY] Sentence | Token/POS Token/POS ...
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# ILOCANO TEST CASES
+# ------------------------------------------------------------------------------
+[ILOCANO] [SIMPLE]   Nangan ni Juan.
+EXPECTED: Nangan/VERB ni/DET Juan/NOUN ./PUNCT
+
+[ILOCANO] [SIMPLE]   Napintas ti balasang.
+EXPECTED: Napintas/ADJ ti/DET balasang/NOUN ./PUNCT
+
+[ILOCANO] [SIMPLE]   Agsursurat ti ubing.
+EXPECTED: Agsursurat/VERB ti/DET ubing/NOUN ./PUNCT
+
+[ILOCANO] [MEDIUM]   Gumatang isuna ti sapatos idiay tiendaan.
+EXPECTED: Gumatang/VERB isuna/PRON ti/DET sapatos/NOUN idiay/ADP tiendaan/NOUN ./PUNCT
+
+[ILOCANO] [MEDIUM]   Agbasbasa ti maestro iti libro.
+EXPECTED: Agbasbasa/VERB ti/DET maestro/NOUN iti/ADP libro/NOUN ./PUNCT
+
+[ILOCANO] [MEDIUM]   Saanda nga ammo nu anya ti aramidenda.
+EXPECTED: Saan/ADV da/PRON nga/PART ammo/VERB nu/CONJ anya/PRON ti/DET aramidenda/VERB ./PUNCT
+
+[ILOCANO] [COMPLEX]  Kayatna nga agawid ngem awan ti kwartana.
+EXPECTED: Kayat/VERB na/PRON nga/PART agawid/VERB ngem/CONJ awan/VERB ti/DET kwarta/NOUN na/PRON ./PUNCT
+
+[ILOCANO] [COMPLEX]  Nu agturposak, mapanak idiay Manila tapno agtrabaho.
+EXPECTED: Nu/CONJ agturpos/VERB ak/PRON ,/PUNCT mapan/VERB ak/PRON idiay/ADP Manila/NOUN tapno/CONJ agtrabaho/VERB ./PUNCT
+
+[ILOCANO] [COMPLEX]  Nagsayaat ti panahon tatta nga aldaw.
+EXPECTED: Nagsayaat/ADJ ti/DET panahon/NOUN tatta/ADV nga/PART aldaw/NOUN ./PUNCT
+
+[ILOCANO] [TRICKY]   Naimbag nga bigat.
+EXPECTED: Naimbag/ADJ nga/PART bigat/NOUN ./PUNCT
+
+[ILOCANO] [TRICKY]   Managbasa ti kabsatko.
+EXPECTED: Managbasa/ADJ ti/DET kabsat/NOUN ko/PRON ./PUNCT
+
+[ILOCANO] [TRICKY]   Maikadua a gundaway.
+EXPECTED: Maikadua/NUM a/PART gundaway/NOUN ./PUNCT
+
+# ------------------------------------------------------------------------------
+# CEBUANO TEST CASES
+# ------------------------------------------------------------------------------
+[CEBUANO] [SIMPLE]   Nikaon ang bata.
+EXPECTED: Nikaon/VERB ang/DET bata/NOUN ./PUNCT
+
+[CEBUANO] [SIMPLE]   Gwapa ang babaye.
+EXPECTED: Gwapa/ADJ ang/DET babaye/NOUN ./PUNCT
+
+[CEBUANO] [SIMPLE]   Nidagan si Pedro.
+EXPECTED: Nidagan/VERB si/DET Pedro/NOUN ./PUNCT
+
+[CEBUANO] [MEDIUM]   Nagpalit si Maria ug bag-o nga sinina.
+EXPECTED: Nagpalit/VERB si/DET Maria/NOUN ug/ADP bag-o/ADJ nga/PART sinina/NOUN ./PUNCT
+
+[CEBUANO] [MEDIUM]   Gikaon sa iring ang isda sa lamesa.
+EXPECTED: Gikaon/VERB sa/ADP iring/NOUN ang/DET isda/NOUN sa/ADP lamesa/NOUN ./PUNCT
+
+[CEBUANO] [MEDIUM]   Nanglimpyo sila sa kwarto ganina.
+EXPECTED: Nanglimpyo/VERB sila/PRON sa/ADP kwarto/NOUN ganina/ADV ./PUNCT
+
+[CEBUANO] [COMPLEX]  Wala siya kabalo kung asa gibutang ang yawe.
+EXPECTED: Wala/ADV siya/PRON kabalo/VERB kung/CONJ asa/ADV gibutang/VERB ang/DET yawe/NOUN ./PUNCT
+
+[CEBUANO] [COMPLEX]  Magkita ta puhon kung itugot sa panahon.
+EXPECTED: Magkita/VERB ta/PRON puhon/ADV kung/CONJ itugot/VERB sa/ADP panahon/NOUN ./PUNCT
+
+[CEBUANO] [COMPLEX]  Nagkasinabot ang duha ka grupo human sa taas nga istorya.
+EXPECTED: Nagkasinabot/VERB ang/DET duha/NUM ka/PART grupo/NOUN human/ADP sa/ADP taas/ADJ nga/PART istorya/NOUN ./PUNCT
+
+[CEBUANO] [TRICKY]   Gikapoy na ko.
+EXPECTED: Gikapoy/VERB na/ADV ko/PRON ./PUNCT
+
+[CEBUANO] [TRICKY]   Ikatulo nga higayon.
+EXPECTED: Ikatulo/NUM nga/PART higayon/NOUN ./PUNCT
+
+[CEBUANO] [TRICKY]   Ting-ulan na pud.
+EXPECTED: Ting-ulan/NOUN na/ADV pud/ADV ./PUNCT
+
+# ------------------------------------------------------------------------------
+# HILIGAYNON TEST CASES
+# ------------------------------------------------------------------------------
+[HILIGAYNON] [SIMPLE]   Nagdalagan ang ido.
+EXPECTED: Nagdalagan/VERB ang/DET ido/NOUN ./PUNCT
+
+[HILIGAYNON] [SIMPLE]   Maanyag ang dalaga.
+EXPECTED: Maanyag/ADJ ang/DET dalaga/NOUN ./PUNCT
+
+[HILIGAYNON] [SIMPLE]   Naghibi si Nene.
+EXPECTED: Naghibi/VERB si/DET Nene/NOUN ./PUNCT
+
+[HILIGAYNON] [MEDIUM]   Nagakaon sila sang pansit sa balay.
+EXPECTED: Nagakaon/VERB sila/PRON sang/DET pansit/NOUN sa/ADP balay/NOUN ./PUNCT
+
+[HILIGAYNON] [MEDIUM]   Ginahimo ni Tatay ang silya sa guwa.
+EXPECTED: Ginahimo/VERB ni/DET Tatay/NOUN ang/DET silya/NOUN sa/ADP guwa/NOUN ./PUNCT
+
+[HILIGAYNON] [MEDIUM]   Mabug-at ang bato nga iya gindala.
+EXPECTED: Mabug-at/ADJ ang/DET bato/NOUN nga/PART iya/PRON gindala/VERB ./PUNCT
+
+[HILIGAYNON] [COMPLEX]  Wala siya sang kwarta pambakal sang pagkaon.
+EXPECTED: Wala/ADV siya/PRON sang/DET kwarta/NOUN pambakal/VERB sang/DET pagkaon/NOUN ./PUNCT
+
+[HILIGAYNON] [COMPLEX]  Tani makapasa ako sa eksamin buwas.
+EXPECTED: Tani/ADV makapasa/VERB ako/PRON sa/ADP eksamin/NOUN buwas/ADV ./PUNCT
+
+[HILIGAYNON] [COMPLEX]  Malipayon nga nagahampang ang mga bata sa plaza.
+EXPECTED: Malipayon/ADJ nga/PART nagahampang/VERB ang/DET mga/PART bata/NOUN sa/ADP plaza/NOUN ./PUNCT
+
+[HILIGAYNON] [TRICKY]   Palakaon si Toto.
+EXPECTED: Palakaon/ADJ si/DET Toto/NOUN ./PUNCT
+
+[HILIGAYNON] [TRICKY]   Manugbulong siya.
+EXPECTED: Manugbulong/NOUN siya/PRON ./PUNCT
+
+[HILIGAYNON] [TRICKY]   Kaonon mo ini.
+EXPECTED: Kaonon/VERB mo/PRON ini/PRON ./PUNCT

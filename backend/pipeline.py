@@ -362,8 +362,8 @@ def main_pipeline(raw_text, lang, mode="crf"):
     
 if __name__ == "__main__":
     # Quick test
-    test_text = "Nagkaon ang bata sang tinapay."
-    result = main_pipeline(test_text, "hiligaynon")
+    test_text = "Nipalit siya ug bag-o nga sakyanan."
+    result = main_pipeline(test_text, "cebuano")
     
     print(f"\nInput: {test_text}")
     print(f"{'Token':<15} {'Lemma':<15} {'POS':<10} {'Type':<12}")

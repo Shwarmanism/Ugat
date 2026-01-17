@@ -1,6 +1,23 @@
 {
   "VERB": {
     "prefix_rules": [
+      { "prefix": "naga", "replace_with": "" }, 
+      { "prefix": "maga", "replace_with": "" },
+      { "prefix": "gina", "replace_with": "" }, 
+      { "prefix": "nagaka", "replace_with": "" },
+      { "prefix": "magaka", "replace_with": "" },
+      { "prefix": "pagpang", "replace_with": "" },
+      { "prefix": "makig", "replace_with": "" },
+      { "prefix": "nakig", "replace_with": "" },
+      { "prefix": "pakig", "replace_with": "" },
+      { "prefix": "magpa", "replace_with": "" },
+      { "prefix": "nagpa", "replace_with": "" },
+      { "prefix": "mangin", "replace_with": "" },
+      { "prefix": "nangin", "replace_with": "" },
+      { "prefix": "magin", "replace_with": "" },
+      { "prefix": "nagin", "replace_with": "" },
+      { "prefix": "magka", "replace_with": "" },
+      { "prefix": "nagka", "replace_with": "" },
       { "prefix": "mag", "replace_with": "" },
       { "prefix": "nag", "replace_with": "" },
       { "prefix": "ga", "replace_with": "" },
@@ -11,22 +28,11 @@
       { "prefix": "maki", "replace_with": "" },
       { "prefix": "naki", "replace_with": "" },
       { "prefix": "paki", "replace_with": "" },
-      { "prefix": "makig", "replace_with": "" },
-      { "prefix": "nakig", "replace_with": "" },
-      { "prefix": "pakig", "replace_with": "" },
-      { "prefix": "magpa", "replace_with": "" },
-      { "prefix": "nagpa", "replace_with": "" },
       { "prefix": "pa", "replace_with": "" },
       { "prefix": "pag", "replace_with": "" },
       { "prefix": "pang", "replace_with": "" },
       { "prefix": "mang", "replace_with": "" },
       { "prefix": "nang", "replace_with": "" },
-      { "prefix": "mangin", "replace_with": "" },
-      { "prefix": "nangin", "replace_with": "" },
-      { "prefix": "magin", "replace_with": "" },
-      { "prefix": "nagin", "replace_with": "" },
-      { "prefix": "magka", "replace_with": "" },
-      { "prefix": "nagka", "replace_with": "" },
       { "prefix": "ipa", "replace_with": "" },
       { "prefix": "i", "replace_with": "" },
       { "prefix": "gin", "replace_with": "" }
@@ -40,8 +46,17 @@
       { "suffix": "an", "replace_with": "" },
       { "suffix": "hon", "replace_with": "" },
       { "suffix": "han", "replace_with": "" },
+      { "suffix": "ay", "replace_with": "" }, 
       { "suffix": "i", "replace_with": "" },
-      { "suffix": "a", "replace_with": "" }
+      { "suffix": "a", "replace_with": "" },
+      { "suffix": "ko", "replace_with": "" },
+      { "suffix": "mo", "replace_with": "" },
+      { "suffix": "niya", "replace_with": "" },
+      { "suffix": "ta", "replace_with": "" },
+      { "suffix": "namon", "replace_with": "" },
+      { "suffix": "naton", "replace_with": "" },
+      { "suffix": "ninyo", "replace_with": "" },
+      { "suffix": "nila", "replace_with": "" }
     ],
     "reduplication_rules": [
       { "pattern": "CV-redup", "apply": "remove_first_syllable" },
@@ -51,6 +66,8 @@
 
   "NOUN": {
     "prefix_rules": [
+      { "prefix": "manug", "replace_with": "" },
+      { "prefix": "manog", "replace_with": "" },
       { "prefix": "ka", "replace_with": "" },
       { "prefix": "tag", "replace_with": "" },
       { "prefix": "taga", "replace_with": "" },
@@ -80,24 +97,27 @@
 
   "ADJ": {
     "prefix_rules": [
-      { "prefix": "ma", "replace_with": "" },
-      { "prefix": "maka", "replace_with": "" },
-      { "prefix": "naka", "replace_with": "" },
+      { "prefix": "pala", "replace_with": "" },
       { "prefix": "pinaka", "replace_with": "" },
       { "prefix": "pagka", "replace_with": "" },
+      { "prefix": "naka", "replace_with": "" },
+      { "prefix": "maka", "replace_with": "" },
+      { "prefix": "ma", "replace_with": "" },
       { "prefix": "ka", "replace_with": "" },
-      { "prefix": "mala", "replace_with": "" }
+      { "prefix": "mala", "replace_with": "" },
+      { "prefix": "ha", "replace_with": "" } 
     ],
     "infix_rules": [],
     "suffix_rules": [
       { "suffix": "on", "replace_with": "" },
-      { "suffix": "non", "replace_with": "" }
+      { "suffix": "non", "replace_with": "" },
+      { "suffix": "anon", "replace_with": "" }
     ],
     "reduplication_rules": [
       { "pattern": "full-redup", "apply": "intensification" }
     ]
   },
-
+  
   "ADV": {
     "prefix_rules": [
       { "prefix": "pag", "replace_with": "" },
