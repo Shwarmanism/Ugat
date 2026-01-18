@@ -360,10 +360,10 @@ def main_pipeline(raw_text, lang, mode="crf"):
     return result
 
     
-if __name__ == "__main__":
+if __name__ == "__main__":  
     # Quick test
-    test_text = "Nipalit siya ug bag-o nga sakyanan."
-    result = main_pipeline(test_text, "cebuano")
+    test_text = "Ang kamatuoran mogawas ra."
+    result = main_pipeline(test_text, "cebuano", mode="crf")
     
     print(f"\nInput: {test_text}")
     print(f"{'Token':<15} {'Lemma':<15} {'POS':<10} {'Type':<12}")

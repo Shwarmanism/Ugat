@@ -1,52 +1,38 @@
 {
   "language": "cebuano",
-  "input": "Nipalit siya ug bag-o nga sakyanan.",
-  "total_tokens": 7,
+  "input": "Ang kamatuoran mogawas ra.",
+  "total_tokens": 5,
   "tokens": [
     {
-      "token": "nipalit",
-      "lemma": "nipalit",
-      "pos": "VERB",
-      "type": "morphed",
-      "affixes": [],
-      "stripped": ""
-    },
-    {
-      "token": "siya",
-      "lemma": "siya",
-      "pos": "PRON",
-      "type": "function",
-      "affixes": [],
-      "stripped": ""
-    },
-    {
-      "token": "ug",
-      "lemma": "ug",
+      "token": "ang",
+      "lemma": "ang",
       "pos": "DET",
       "type": "function",
       "affixes": [],
       "stripped": ""
     },
     {
-      "token": "bag-o",
-      "lemma": "bag-o",
-      "pos": "ADJECTIVE",
+      "token": "kamatuoran",
+      "lemma": "kamatuoran",
+      "pos": "NOUN",
       "type": "root",
       "affixes": [],
       "stripped": ""
     },
     {
-      "token": "nga",
-      "lemma": "nga",
-      "pos": "PART",
+      "token": "mogawas",
+      "lemma": "gawas",
+      "pos": "ADVERB",
       "type": "morphed",
-      "affixes": [],
-      "stripped": ""
+      "affixes": [
+        "prefix"
+      ],
+      "stripped": "mo"
     },
     {
-      "token": "sakyanan",
-      "lemma": "sakyanan",
-      "pos": "NOUN",
+      "token": "ra",
+      "lemma": "ra",
+      "pos": "PART",
       "type": "morphed",
       "affixes": [],
       "stripped": ""
