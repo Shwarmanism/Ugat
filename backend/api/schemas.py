@@ -3,13 +3,23 @@ Pydantic schemas for API request/response validation.
 Ugat-Lemmatizer Project
 """
 
-from typing import List, Optional, Dict, Any, Union
+from typing import List, Optional, Dict, Any, Union, Literal
 from pydantic import BaseModel, Field
 
 
 # =========================
 # Shared Models
 # =========================
+
+# =========================
+# Shared Models
+# =========================
+
+class MismatchDetails(BaseModel):
+    """Details for a dialect mismatch implementation."""
+    detected: str
+    confidence: float
+    scores: Dict[str, int]
 
 class LexiconEntry(BaseModel):
     """Entry in the lexicon search results."""
@@ -50,6 +60,7 @@ class LemmatizeRequest(BaseModel):
     text: str = Field(..., min_length=1, description="Text to lemmatize")
     dialect: str = Field(..., description="Language dialect: ilocano, cebuano, hiligaynon")
     mode: str = Field("crf", pattern="^(crf|affix)$", description="Tagging mode: crf or affix")
+    force: bool = Field(False, description="Force processing even if dialect mismatch is detected")
     
     class Config:
         json_schema_extra = {
@@ -102,6 +113,7 @@ class TagResponse(BaseModel):
 
 class LemmatizeResponse(BaseModel):
     """Response for lemmatization endpoint."""
+    status: Literal["success"] = "success"
     dialect: str
     input_text: str
     sentences: List[List[TokenResult]]
@@ -125,6 +137,29 @@ class DialectsResponse(BaseModel):
     """Response for available dialects endpoint."""
     available_dialects: List[str]
 
+
+class MismatchResponse(BaseModel):
+    """Response when a dialect mismatch is detected."""
+    status: Literal["error"] = "error"
+    error_code: str = "DIALECT_MISMATCH"
+    message: str
+    detected_dialect: str
+    confidence_scores: Dict[str, float]  # Percentages (0-100)
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "status": "error",
+                "error_code": "DIALECT_MISMATCH",
+                "message": "Input appears to be Hiligaynon, not Cebuano.",
+                "detected_dialect": "hiligaynon",
+                "confidence_scores": {
+                    "cebuano": 15.5,
+                    "hiligaynon": 84.5,
+                    "ilocano": 0.0
+                }
+            }
+        }
 
 class ErrorResponse(BaseModel):
     """Error response schema."""
