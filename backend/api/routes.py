@@ -4,9 +4,10 @@ Endpoints for POS tagging and lemmatization.
 """
 
 from fastapi import APIRouter, HTTPException
+from typing import Union
 from .schemas import (
     TagRequest, TagResponse,
-    LemmatizeRequest, LemmatizeResponse,
+    LemmatizeRequest, LemmatizeResponse, MismatchResponse,
     DialectsResponse, TokenResult,
     LexiconSearchResponse, LexiconEntry
 )
@@ -173,15 +174,44 @@ def tag_text(request: TagRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@router.post("/lemmatize", response_model=LemmatizeResponse)
+@router.post("/lemmatize", response_model=Union[LemmatizeResponse, MismatchResponse])
 def lemmatize_text(request: LemmatizeRequest):
     """
     Full lemmatization pipeline.
     Preprocesses text, tags POS, and extracts root words.
+    Includes dialect verification.
     """
     dialect = validate_dialect(request.dialect)
     
     try:
+        # Step 0: Dialect Verification
+        # We access the verifier from pipeline.py (it's initialized there)
+        from pipeline import _verifier
+        
+        # Only verify if NOT forced
+        if not request.force:
+            verification = _verifier.get_confidence(request.text, dialect)
+            
+            if not verification['is_match']:
+                # Calculate percentages for response
+                raw_scores = verification['scores']
+                total_score = sum(raw_scores.values())
+            
+                breakdown = {}
+                if total_score > 0:
+                    for d, score in raw_scores.items():
+                        breakdown[d] = round((score / total_score) * 100, 1)
+                else:
+                    breakdown = {d: 0.0 for d in ["ilocano", "cebuano", "hiligaynon"]}
+                    
+                return MismatchResponse(
+                    message="The input patterns suggest a different dialect.",
+                    detected_dialect=verification['detected'],
+                    confidence_scores=breakdown,
+                    status="error",
+                    error_code="DIALECT_MISMATCH"
+                )
+
         # Step 1: Preprocess (segment + tokenize)
         preprocessed = text_preprocess(request.text, dialect)
         
