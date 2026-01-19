@@ -356,6 +356,44 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
         </div>
     </div>
 
+    <!-- Mismatch Notification Modal -->
+    <div id="mismatchModal" class="modal">
+        <div class="modal-content warning-modal">
+            <div class="warning-header">
+                <div class="warning-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <h2>Dialect Mismatch Detected</h2>
+            </div>
+
+            <p class="warning-message">
+                The input patterns suggest a different dialect than <strong><span
+                        id="selectedDialectDisplay"></span></strong>.
+            </p>
+
+            <!-- Confidence Visualization -->
+            <div class="confidence-container" id="confidenceContainer">
+                <!-- Dynamically populated -->
+            </div>
+
+            <div class="modal-actions-vertical">
+                <button class="btn btn-primary" onclick="switchToSuggested()" id="btnTransfer">
+                    Transfer to <span id="btnSuggestedName">...</span>
+                </button>
+                <button class="btn btn-secondary" onclick="keepCurrentDialect()">
+                    Continue with <span id="btnCurrentName">...</span>
+                </button>
+                <button class="btn btn-text" onclick="cancelProcessing()">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Success Notification Modal -->
     <div id="successModal" class="modal">
         <div class="modal-content success-modal">
