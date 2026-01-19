@@ -22,7 +22,10 @@ function showPage(pageId) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Main lemmatization function
+// Global variables for mismatch handling
+let pendingMismatchData = null;
+
+// Main lemmatize function
 function lemmatize() {
     const input = document.getElementById('userInput').value.trim();
     const dialect = document.getElementById('dialectSelect').value;
@@ -65,138 +68,181 @@ function lemmatize() {
             return response.json();
         })
         .then(data => {
-            const results = [];
-            // Flatten nested sentences structure from API
-            data.sentences.forEach(sentence => {
-                sentence.forEach(tokenData => {
-                    results.push({
-                        token: tokenData.token,
-                        pos: tokenData.pos,
-                        type: tokenData.type,
-                        affixes: tokenData.affixes,
-                        lemma: tokenData.root,
-                        irregular: tokenData.type === 'irregular',
-                        stripped: tokenData.stripped || '-'
-                    });
-                });
-            });
+            // --- MOCK TRIGGER FOR DEMO ---
+            // If input contains "mismatch" (case-insensitive), force a mismatch scenario
+            if (input.toLowerCase().includes("mismatch")) {
+                // Mock a detected dialect that involves the other dialects
+                // If user selected cebuano, suggest hiligaynon
+                const suggestions = ['hiligaynon', 'cebuano', 'ilocano'];
+                const randomOther = suggestions.find(d => d !== dialect) || 'hiligaynon';
 
-            // Update summary
-            const detectedDialect = data.dialect.charAt(0).toUpperCase() + data.dialect.slice(1);
-            document.getElementById('detectedDialect').textContent = detectedDialect;
-            document.getElementById('tokensProcessed').textContent = results.length;
-            document.getElementById('totalLemmas').textContent = results.length; // Simplified count
-            document.getElementById('irregularWords').textContent = results.filter(r => r.irregular).length;
+                data.detected_dialect = randomOther;
+                data.dialect_probabilities = {};
 
-            if (outputFormat === 'text') {
-                document.getElementById('resultsTableContainer').style.display = 'none';
-                document.getElementById('resultsText').style.display = 'block';
+                // Assign probabilities
+                data.dialect_probabilities[randomOther] = 0.75;
+                data.dialect_probabilities[dialect] = 0.15;
+                // Assign rest to third one
+                const third = suggestions.find(d => d !== dialect && d !== randomOther);
+                if (third) data.dialect_probabilities[third] = 0.10;
+            }
+            // -----------------------------
 
-                let textReport = 'UGAT ANALYSIS REPORT\n';
-                textReport += '====================\n';
-                textReport += `Dialect: ${detectedDialect}\n`;
-                textReport += `Total Tokens: ${results.length}\n`;
-                textReport += '--------------------\n\n';
+            // Check for dialect mismatch
+            if (data.detected_dialect && data.detected_dialect !== dialect) {
+                // Store data for "Continue" action
+                pendingMismatchData = {
+                    input,
+                    data,
+                    settings: { mode, outputFormat, showToken, showPOS, showType, showAffixes, showLemma, showStripped },
+                    detected: data.detected_dialect
+                };
 
-                results.forEach((r, index) => {
-                    textReport += `${index + 1}. Token:   ${r.token}\n`;
-                    if (showPOS) textReport += `   POS Tag: ${r.pos}\n`;
-                    if (showType) textReport += `   Type:    ${r.type}\n`;
-                    if (showAffixes) textReport += `   Affixes: ${r.affixes.join(', ') || '-'}\n`;
-                    if (showStripped) textReport += `   Stripped: ${r.stripped}\n`;
-                    if (showLemma) textReport += `   Lemma:   ${r.lemma}\n`;
-                    textReport += '\n';
-                });
-
-                document.getElementById('resultsText').textContent = textReport;
-            } else {
-                document.getElementById('resultsTableContainer').style.display = 'block';
-                document.getElementById('resultsText').style.display = 'none';
-
-                // Manage Table Headers
-                document.getElementById('thToken').style.display = showToken ? '' : 'none';
-                document.getElementById('thPOS').style.display = showPOS ? '' : 'none';
-                document.getElementById('thType').style.display = showType ? '' : 'none';
-                document.getElementById('thAffixes').style.display = showAffixes ? '' : 'none';
-                document.getElementById('thStripped').style.display = showStripped ? '' : 'none';
-                document.getElementById('thLemma').style.display = showLemma ? '' : 'none';
-
-                // Populate results table
-                resultsBody.innerHTML = '';
-                results.forEach(r => {
-                    const row = resultsBody.insertRow();
-                    let html = '';
-                    if (showToken) html += `<td><strong>${r.token}</strong></td>`;
-                    if (showPOS) html += `<td>${r.pos}</td>`;
-                    if (showType) html += `<td>${r.type}</td>`;
-                    if (showAffixes) html += `<td>${r.affixes.join(', ') || '-'}</td>`;
-                    if (showStripped) html += `<td>${r.stripped}</td>`;
-                    if (showLemma) html += `<td><span class="lemma-highlight">${r.lemma}</span></td>`;
-                    row.innerHTML = html;
-                });
+                showMismatchModal(dialect, data.detected_dialect, data.dialect_probabilities);
+                // Clear loading state slightly
+                resultsBody.innerHTML = '<tr><td colspan="5" style="text-align:center;">Paused (Mismatch Detected)</td></tr>';
+                return;
             }
 
-            // Populate breakdown
-            const breakdownContent = document.getElementById('breakdownContent');
-            breakdownContent.innerHTML = '';
-            results.forEach(r => {
-                if (r.affixes && r.affixes.length > 0) {
-                    const item = document.createElement('div');
-                    item.className = 'breakdown-item';
-                    item.innerHTML = `
-                    <h3>Word: ${r.token}</h3>
-                    <div class="breakdown-details">
-                        <div class="detail-item">
-                            <div class="detail-label">Affixes</div>
-                            <div class="detail-value">${r.affixes.join(', ')}</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Root</div>
-                            <div class="detail-value">${r.lemma}</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">POS</div>
-                            <div class="detail-value">${r.pos}</div>
-                        </div>
-                    </div>
-                `;
-                    breakdownContent.appendChild(item);
-                }
-            });
-
-            // Show success modal
-            showSuccessModal(results.length, results.length);
-
-            // Save to history
-            saveToHistory(input, results, detectedDialect);
-
-            // Store for export/logging
-            window.lastAnalysisData = {
-                settings: {
-                    dialect: dialect === 'auto' ? 'hiligaynon' : dialect,
-                    mode: mode,
-                    outputFormat: outputFormat,
-                    showToken: showToken,
-                    showPOS: showPOS,
-                    showType: showType,
-                    showAffixes: showAffixes,
-                    showLemma: showLemma,
-                    timestamp: new Date().toISOString()
-                },
-                input: input,
-                results: results
-            };
-
-            // Log to console as requested
-            console.log("--- Ugat Analysis Data ---");
-            console.log(window.lastAnalysisData);
-            console.log("--------------------------");
+            // Proceed with rendering results (extracted to helper for reuse)
+            renderResults(data, { outputFormat, showToken, showPOS, showType, showAffixes, showStripped, showLemma, dialect, input, mode });
         })
         .catch(error => {
             console.error('Error:', error);
             resultsBody.innerHTML = '<tr><td colspan="5" style="text-align:center; color:red;">Error processing text. Ensure backend is running.</td></tr>';
-            alert('Error connecting to backend server.');
+            // alert('Error connecting to backend server.'); // Suppress alert for better UX
         });
+}
+
+// Render Results Helper
+function renderResults(data, config) {
+    const results = [];
+    // Flatten nested sentences structure from API
+    data.sentences.forEach(sentence => {
+        sentence.forEach(tokenData => {
+            results.push({
+                token: tokenData.token,
+                pos: tokenData.pos,
+                type: tokenData.type,
+                affixes: tokenData.affixes,
+                lemma: tokenData.root,
+                irregular: tokenData.type === 'irregular',
+                stripped: tokenData.stripped || '-'
+            });
+        });
+    });
+
+    // Update summary
+    const detectedDialect = (data.dialect || config.dialect).charAt(0).toUpperCase() + (data.dialect || config.dialect).slice(1);
+    document.getElementById('detectedDialect').textContent = detectedDialect;
+    document.getElementById('tokensProcessed').textContent = results.length;
+    document.getElementById('totalLemmas').textContent = results.length; // Simplified count
+    document.getElementById('irregularWords').textContent = results.filter(r => r.irregular).length;
+
+    if (config.outputFormat === 'text') {
+        document.getElementById('resultsTableContainer').style.display = 'none';
+        document.getElementById('resultsText').style.display = 'block';
+
+        let textReport = 'UGAT ANALYSIS REPORT\n';
+        textReport += '====================\n';
+        textReport += `Dialect: ${detectedDialect}\n`;
+        textReport += `Total Tokens: ${results.length}\n`;
+        textReport += '--------------------\n\n';
+
+        results.forEach((r, index) => {
+            textReport += `${index + 1}. Token:   ${r.token}\n`;
+            if (config.showPOS) textReport += `   POS Tag: ${r.pos}\n`;
+            if (config.showType) textReport += `   Type:    ${r.type}\n`;
+            if (config.showAffixes) textReport += `   Affixes: ${r.affixes.join(', ') || '-'}\n`;
+            if (config.showStripped) textReport += `   Stripped: ${r.stripped}\n`;
+            if (config.showLemma) textReport += `   Lemma:   ${r.lemma}\n`;
+            textReport += '\n';
+        });
+
+        document.getElementById('resultsText').textContent = textReport;
+    } else {
+        document.getElementById('resultsTableContainer').style.display = 'block';
+        document.getElementById('resultsText').style.display = 'none';
+        const resultsBody = document.getElementById('resultsBody');
+
+        // Manage Table Headers
+        document.getElementById('thToken').style.display = config.showToken ? '' : 'none';
+        document.getElementById('thPOS').style.display = config.showPOS ? '' : 'none';
+        document.getElementById('thType').style.display = config.showType ? '' : 'none';
+        document.getElementById('thAffixes').style.display = config.showAffixes ? '' : 'none';
+        document.getElementById('thStripped').style.display = config.showStripped ? '' : 'none';
+        document.getElementById('thLemma').style.display = config.showLemma ? '' : 'none';
+
+        // Populate results table
+        resultsBody.innerHTML = '';
+        results.forEach(r => {
+            const row = resultsBody.insertRow();
+            let html = '';
+            if (config.showToken) html += `<td><strong>${r.token}</strong></td>`;
+            if (config.showPOS) html += `<td>${r.pos}</td>`;
+            if (config.showType) html += `<td>${r.type}</td>`;
+            if (config.showAffixes) html += `<td>${r.affixes.join(', ') || '-'}</td>`;
+            if (config.showStripped) html += `<td>${r.stripped}</td>`;
+            if (config.showLemma) html += `<td><span class="lemma-highlight">${r.lemma}</span></td>`;
+            row.innerHTML = html;
+        });
+    }
+
+    // Populate breakdown
+    const breakdownContent = document.getElementById('breakdownContent');
+    breakdownContent.innerHTML = '';
+    results.forEach(r => {
+        if (r.affixes && r.affixes.length > 0) {
+            const item = document.createElement('div');
+            item.className = 'breakdown-item';
+            item.innerHTML = `
+            <h3>Word: ${r.token}</h3>
+            <div class="breakdown-details">
+                <div class="detail-item">
+                    <div class="detail-label">Affixes</div>
+                    <div class="detail-value">${r.affixes.join(', ')}</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Root</div>
+                    <div class="detail-value">${r.lemma}</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">POS</div>
+                    <div class="detail-value">${r.pos}</div>
+                </div>
+            </div>
+        `;
+            breakdownContent.appendChild(item);
+        }
+    });
+
+    // Show success modal
+    showSuccessModal(results.length, results.length);
+
+    // Save to history
+    saveToHistory(config.input, results, detectedDialect);
+
+    // Store for export/logging
+    window.lastAnalysisData = {
+        settings: {
+            dialect: config.dialect === 'auto' ? 'hiligaynon' : config.dialect,
+            mode: config.mode,
+            outputFormat: config.outputFormat,
+            showToken: config.showToken,
+            showPOS: config.showPOS,
+            showType: config.showType,
+            showAffixes: config.showAffixes,
+            showLemma: config.showLemma,
+            timestamp: new Date().toISOString()
+        },
+        input: config.input,
+        results: results
+    };
+
+    // Log to console as requested
+    console.log("--- Ugat Analysis Data ---");
+    console.log(window.lastAnalysisData);
+    console.log("--------------------------");
 }
 
 // Show success modal
@@ -400,3 +446,94 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+// --- Mismatch Modal Helper Functions ---
+
+function showMismatchModal(currentDialect, suggestedDialect, probabilities) {
+    const modal = document.getElementById('mismatchModal');
+
+    // Update Text
+    document.getElementById('selectedDialectDisplay').textContent = capitalize(currentDialect);
+
+    // Update Action Buttons
+    document.getElementById('btnSuggestedName').textContent = capitalize(suggestedDialect);
+    document.getElementById('btnCurrentName').textContent = capitalize(currentDialect);
+
+    // Visualization
+    const container = document.getElementById('confidenceContainer');
+    container.innerHTML = '';
+
+    // Sort probabilities
+    const sorted = Object.entries(probabilities || {}).sort(([, a], [, b]) => b - a);
+
+    sorted.forEach(([d, score]) => {
+        const percentage = Math.round(score * 100);
+        const isSuggested = d === suggestedDialect;
+
+        const item = document.createElement('div');
+        item.className = `confidence-item ${isSuggested ? 'suggested' : ''}`;
+        item.innerHTML = `
+            <div class="conf-row">
+                <span>${capitalize(d)}</span>
+                <span>${percentage}%</span>
+            </div>
+            <div class="conf-bar-bg">
+                <div class="conf-bar-fill" style="width: 0%"></div>
+            </div>
+        `;
+        container.appendChild(item);
+
+        // Animate bar
+        setTimeout(() => {
+            item.querySelector('.conf-bar-fill').style.width = `${percentage}%`;
+        }, 100);
+    });
+
+    modal.classList.add('show');
+}
+
+function keepCurrentDialect() {
+    if (pendingMismatchData) {
+        // Proceed with original request
+        renderResults(pendingMismatchData.data, {
+            ...pendingMismatchData.settings,
+            dialect: document.getElementById('dialectSelect').value,
+            input: pendingMismatchData.input
+        });
+
+        // Clear pending
+        pendingMismatchData = null;
+    }
+    closeMismatchModal();
+}
+
+function switchToSuggested() {
+    if (pendingMismatchData) {
+        const newDialect = pendingMismatchData.detected;
+
+        // Update UI
+        document.getElementById('dialectSelect').value = newDialect;
+
+        // Re-run processing with new dialect
+        closeMismatchModal();
+        setTimeout(lemmatize, 100); // Small delay to allow UI update
+
+        pendingMismatchData = null;
+    }
+}
+
+function cancelProcessing() {
+    pendingMismatchData = null;
+    closeMismatchModal();
+    // Clear loading state
+    document.getElementById('resultsBody').innerHTML = '';
+}
+
+function closeMismatchModal() {
+    document.getElementById('mismatchModal').classList.remove('show');
+}
+
+function capitalize(s) {
+    if (!s) return '';
+    return s.charAt(0).toUpperCase() + s.slice(1);
+}
