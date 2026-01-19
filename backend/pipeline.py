@@ -42,6 +42,12 @@ ROOT_FILES = {
     "hiligaynon": "root_hiligaynon.json",
 }
 
+RULES_FILES = {
+    "ilocano": "Ilocano-rules.json",
+    "cebuano": "Cebuano-rules.json",
+    "hiligaynon": "Hiligaynon-rules.json",
+}
+
 # Function word POS tags that skip morphology - frozen for O(1) lookup
 FUNCTION_WORD_POS = frozenset({"DET", "CONJ", "PRON", "PUNCT", "ADP", "NUM"})
 
@@ -50,6 +56,7 @@ FUNCTION_WORD_POS = frozenset({"DET", "CONJ", "PRON", "PUNCT", "ADP", "NUM"})
 # ─────────────────────────────────────────────────────────────────────────────
 _irregular_cache: Dict[str, Dict] = {}
 _root_cache: Dict[str, Dict] = {}
+_rules_cache: Dict[str, Dict] = {}
 _root_set_cache: Dict[str, frozenset] = {}  # For O(1) lookups
 _initialized = False
 
@@ -77,6 +84,29 @@ def load_irregular(dialect: str) -> Dict:
         _irregular_cache[dialect] = json.load(f)
     
     return _irregular_cache[dialect]
+
+
+def load_rules(dialect: str) -> Dict:
+    """Load affix rules for a dialect. Cached after first load."""
+    dialect = dialect.lower()
+    
+    # Fast path: return cached
+    if dialect in _rules_cache:
+        return _rules_cache[dialect]
+    
+    # Validate dialect
+    if dialect not in SUPPORTED_DIALECTS:
+        return {}
+    
+    file_path = RESOURCES_DIR / RULES_FILES[dialect]
+    if not file_path.exists():
+        _rules_cache[dialect] = {}
+        return {}
+    
+    with open(file_path, "r", encoding="utf-8") as f:
+        _rules_cache[dialect] = json.load(f)
+    
+    return _rules_cache[dialect]
 
 
 def load_roots(dialect: str) -> Dict:

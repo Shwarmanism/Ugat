@@ -3,8 +3,28 @@ Pydantic schemas for API request/response validation.
 Ugat-Lemmatizer Project
 """
 
-from typing import List, Optional
+from typing import List, Optional, Dict, Any, Union
 from pydantic import BaseModel, Field
+
+
+# =========================
+# Shared Models
+# =========================
+
+class LexiconEntry(BaseModel):
+    """Entry in the lexicon search results."""
+    term: str
+    details: Union[str, Dict[str, Any], List[Dict[str, Any]]]
+    metadata: Dict[str, Any]
+
+
+class LexiconSearchResponse(BaseModel):
+    """Response for lexicon search."""
+    items: List[LexiconEntry]
+    total: int
+    page: int
+    total_pages: int
+
 
 
 # =========================

@@ -1,40 +1,8 @@
 // Backend API URL
 const API_URL = 'http://localhost:8000/api/v1';
 
-// Mock lexicons and rules for demonstration
-const mockLexicon = {
-    hiligaynon: {
-        roots: ['basa', 'lakad', 'bata', 'saya', 'labas', 'laro', 'kain', 'inom', 'punta'],
-        irregular: {
-            'pumunta': 'punta',
-            'kumain': 'kain',
-            'uminom': 'inom'
-        },
-        affixes: {
-            prefixes: ['nag', 'mag', 'um', 'ma', 'ka', 'pa', 'na'],
-            suffixes: ['an', 'in', 'han'],
-            infixes: ['um', 'in']
-        }
-    },
-    cebuano: {
-        roots: ['kaon', 'bugas', 'tubig', 'balay'],
-        irregular: {},
-        affixes: {
-            prefixes: ['nag', 'mag', 'mi', 'mo'],
-            suffixes: ['an', 'on'],
-            infixes: ['um']
-        }
-    },
-    ilocano: {
-        roots: ['pan', 'merkado', 'balay', 'danum'],
-        irregular: {},
-        affixes: {
-            prefixes: ['nag', 'ag', 'um', 'ma'],
-            suffixes: ['an', 'en'],
-            infixes: ['um', 'in']
-        }
-    }
-};
+// Mock lexicons removed - using Backend API
+
 
 // Animation on load
 window.addEventListener('load', () => {
@@ -54,7 +22,10 @@ function showPage(pageId) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Main lemmatization function
+// Global variables for mismatch handling
+let pendingMismatchData = null;
+
+// Main lemmatize function
 function lemmatize() {
     const input = document.getElementById('userInput').value.trim();
     const dialect = document.getElementById('dialectSelect').value;
@@ -97,138 +68,181 @@ function lemmatize() {
             return response.json();
         })
         .then(data => {
-            const results = [];
-            // Flatten nested sentences structure from API
-            data.sentences.forEach(sentence => {
-                sentence.forEach(tokenData => {
-                    results.push({
-                        token: tokenData.token,
-                        pos: tokenData.pos,
-                        type: tokenData.type,
-                        affixes: tokenData.affixes,
-                        lemma: tokenData.root,
-                        irregular: tokenData.type === 'irregular',
-                        stripped: tokenData.stripped || '-'
-                    });
-                });
-            });
+            // --- MOCK TRIGGER FOR DEMO ---
+            // If input contains "mismatch" (case-insensitive), force a mismatch scenario
+            if (input.toLowerCase().includes("mismatch")) {
+                // Mock a detected dialect that involves the other dialects
+                // If user selected cebuano, suggest hiligaynon
+                const suggestions = ['hiligaynon', 'cebuano', 'ilocano'];
+                const randomOther = suggestions.find(d => d !== dialect) || 'hiligaynon';
 
-            // Update summary
-            const detectedDialect = data.dialect.charAt(0).toUpperCase() + data.dialect.slice(1);
-            document.getElementById('detectedDialect').textContent = detectedDialect;
-            document.getElementById('tokensProcessed').textContent = results.length;
-            document.getElementById('totalLemmas').textContent = results.length; // Simplified count
-            document.getElementById('irregularWords').textContent = results.filter(r => r.irregular).length;
+                data.detected_dialect = randomOther;
+                data.dialect_probabilities = {};
 
-            if (outputFormat === 'text') {
-                document.getElementById('resultsTableContainer').style.display = 'none';
-                document.getElementById('resultsText').style.display = 'block';
+                // Assign probabilities
+                data.dialect_probabilities[randomOther] = 0.75;
+                data.dialect_probabilities[dialect] = 0.15;
+                // Assign rest to third one
+                const third = suggestions.find(d => d !== dialect && d !== randomOther);
+                if (third) data.dialect_probabilities[third] = 0.10;
+            }
+            // -----------------------------
 
-                let textReport = 'UGAT ANALYSIS REPORT\n';
-                textReport += '====================\n';
-                textReport += `Dialect: ${detectedDialect}\n`;
-                textReport += `Total Tokens: ${results.length}\n`;
-                textReport += '--------------------\n\n';
+            // Check for dialect mismatch
+            if (data.detected_dialect && data.detected_dialect !== dialect) {
+                // Store data for "Continue" action
+                pendingMismatchData = {
+                    input,
+                    data,
+                    settings: { mode, outputFormat, showToken, showPOS, showType, showAffixes, showLemma, showStripped },
+                    detected: data.detected_dialect
+                };
 
-                results.forEach((r, index) => {
-                    textReport += `${index + 1}. Token:   ${r.token}\n`;
-                    if (showPOS) textReport += `   POS Tag: ${r.pos}\n`;
-                    if (showType) textReport += `   Type:    ${r.type}\n`;
-                    if (showAffixes) textReport += `   Affixes: ${r.affixes.join(', ') || '-'}\n`;
-                    if (showStripped) textReport += `   Stripped: ${r.stripped}\n`;
-                    if (showLemma) textReport += `   Lemma:   ${r.lemma}\n`;
-                    textReport += '\n';
-                });
-
-                document.getElementById('resultsText').textContent = textReport;
-            } else {
-                document.getElementById('resultsTableContainer').style.display = 'block';
-                document.getElementById('resultsText').style.display = 'none';
-
-                // Manage Table Headers
-                document.getElementById('thToken').style.display = showToken ? '' : 'none';
-                document.getElementById('thPOS').style.display = showPOS ? '' : 'none';
-                document.getElementById('thType').style.display = showType ? '' : 'none';
-                document.getElementById('thAffixes').style.display = showAffixes ? '' : 'none';
-                document.getElementById('thStripped').style.display = showStripped ? '' : 'none';
-                document.getElementById('thLemma').style.display = showLemma ? '' : 'none';
-
-                // Populate results table
-                resultsBody.innerHTML = '';
-                results.forEach(r => {
-                    const row = resultsBody.insertRow();
-                    let html = '';
-                    if (showToken) html += `<td><strong>${r.token}</strong></td>`;
-                    if (showPOS) html += `<td>${r.pos}</td>`;
-                    if (showType) html += `<td>${r.type}</td>`;
-                    if (showAffixes) html += `<td>${r.affixes.join(', ') || '-'}</td>`;
-                    if (showStripped) html += `<td>${r.stripped}</td>`;
-                    if (showLemma) html += `<td><span class="lemma-highlight">${r.lemma}</span></td>`;
-                    row.innerHTML = html;
-                });
+                showMismatchModal(dialect, data.detected_dialect, data.dialect_probabilities);
+                // Clear loading state slightly
+                resultsBody.innerHTML = '<tr><td colspan="5" style="text-align:center;">Paused (Mismatch Detected)</td></tr>';
+                return;
             }
 
-            // Populate breakdown
-            const breakdownContent = document.getElementById('breakdownContent');
-            breakdownContent.innerHTML = '';
-            results.forEach(r => {
-                if (r.affixes && r.affixes.length > 0) {
-                    const item = document.createElement('div');
-                    item.className = 'breakdown-item';
-                    item.innerHTML = `
-                    <h3>Word: ${r.token}</h3>
-                    <div class="breakdown-details">
-                        <div class="detail-item">
-                            <div class="detail-label">Affixes</div>
-                            <div class="detail-value">${r.affixes.join(', ')}</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Root</div>
-                            <div class="detail-value">${r.lemma}</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">POS</div>
-                            <div class="detail-value">${r.pos}</div>
-                        </div>
-                    </div>
-                `;
-                    breakdownContent.appendChild(item);
-                }
-            });
-
-            // Show success modal
-            showSuccessModal(results.length, results.length);
-
-            // Save to history
-            saveToHistory(input, results, detectedDialect);
-
-            // Store for export/logging
-            window.lastAnalysisData = {
-                settings: {
-                    dialect: dialect === 'auto' ? 'hiligaynon' : dialect,
-                    mode: mode,
-                    outputFormat: outputFormat,
-                    showToken: showToken,
-                    showPOS: showPOS,
-                    showType: showType,
-                    showAffixes: showAffixes,
-                    showLemma: showLemma,
-                    timestamp: new Date().toISOString()
-                },
-                input: input,
-                results: results
-            };
-
-            // Log to console as requested
-            console.log("--- Ugat Analysis Data ---");
-            console.log(window.lastAnalysisData);
-            console.log("--------------------------");
+            // Proceed with rendering results (extracted to helper for reuse)
+            renderResults(data, { outputFormat, showToken, showPOS, showType, showAffixes, showStripped, showLemma, dialect, input, mode });
         })
         .catch(error => {
             console.error('Error:', error);
             resultsBody.innerHTML = '<tr><td colspan="5" style="text-align:center; color:red;">Error processing text. Ensure backend is running.</td></tr>';
-            alert('Error connecting to backend server.');
+            // alert('Error connecting to backend server.'); // Suppress alert for better UX
         });
+}
+
+// Render Results Helper
+function renderResults(data, config) {
+    const results = [];
+    // Flatten nested sentences structure from API
+    data.sentences.forEach(sentence => {
+        sentence.forEach(tokenData => {
+            results.push({
+                token: tokenData.token,
+                pos: tokenData.pos,
+                type: tokenData.type,
+                affixes: tokenData.affixes,
+                lemma: tokenData.root,
+                irregular: tokenData.type === 'irregular',
+                stripped: tokenData.stripped || '-'
+            });
+        });
+    });
+
+    // Update summary
+    const detectedDialect = (data.dialect || config.dialect).charAt(0).toUpperCase() + (data.dialect || config.dialect).slice(1);
+    document.getElementById('detectedDialect').textContent = detectedDialect;
+    document.getElementById('tokensProcessed').textContent = results.length;
+    document.getElementById('totalLemmas').textContent = results.length; // Simplified count
+    document.getElementById('irregularWords').textContent = results.filter(r => r.irregular).length;
+
+    if (config.outputFormat === 'text') {
+        document.getElementById('resultsTableContainer').style.display = 'none';
+        document.getElementById('resultsText').style.display = 'block';
+
+        let textReport = 'UGAT ANALYSIS REPORT\n';
+        textReport += '====================\n';
+        textReport += `Dialect: ${detectedDialect}\n`;
+        textReport += `Total Tokens: ${results.length}\n`;
+        textReport += '--------------------\n\n';
+
+        results.forEach((r, index) => {
+            textReport += `${index + 1}. Token:   ${r.token}\n`;
+            if (config.showPOS) textReport += `   POS Tag: ${r.pos}\n`;
+            if (config.showType) textReport += `   Type:    ${r.type}\n`;
+            if (config.showAffixes) textReport += `   Affixes: ${r.affixes.join(', ') || '-'}\n`;
+            if (config.showStripped) textReport += `   Stripped: ${r.stripped}\n`;
+            if (config.showLemma) textReport += `   Lemma:   ${r.lemma}\n`;
+            textReport += '\n';
+        });
+
+        document.getElementById('resultsText').textContent = textReport;
+    } else {
+        document.getElementById('resultsTableContainer').style.display = 'block';
+        document.getElementById('resultsText').style.display = 'none';
+        const resultsBody = document.getElementById('resultsBody');
+
+        // Manage Table Headers
+        document.getElementById('thToken').style.display = config.showToken ? '' : 'none';
+        document.getElementById('thPOS').style.display = config.showPOS ? '' : 'none';
+        document.getElementById('thType').style.display = config.showType ? '' : 'none';
+        document.getElementById('thAffixes').style.display = config.showAffixes ? '' : 'none';
+        document.getElementById('thStripped').style.display = config.showStripped ? '' : 'none';
+        document.getElementById('thLemma').style.display = config.showLemma ? '' : 'none';
+
+        // Populate results table
+        resultsBody.innerHTML = '';
+        results.forEach(r => {
+            const row = resultsBody.insertRow();
+            let html = '';
+            if (config.showToken) html += `<td><strong>${r.token}</strong></td>`;
+            if (config.showPOS) html += `<td>${r.pos}</td>`;
+            if (config.showType) html += `<td>${r.type}</td>`;
+            if (config.showAffixes) html += `<td>${r.affixes.join(', ') || '-'}</td>`;
+            if (config.showStripped) html += `<td>${r.stripped}</td>`;
+            if (config.showLemma) html += `<td><span class="lemma-highlight">${r.lemma}</span></td>`;
+            row.innerHTML = html;
+        });
+    }
+
+    // Populate breakdown
+    const breakdownContent = document.getElementById('breakdownContent');
+    breakdownContent.innerHTML = '';
+    results.forEach(r => {
+        if (r.affixes && r.affixes.length > 0) {
+            const item = document.createElement('div');
+            item.className = 'breakdown-item';
+            item.innerHTML = `
+            <h3>Word: ${r.token}</h3>
+            <div class="breakdown-details">
+                <div class="detail-item">
+                    <div class="detail-label">Affixes</div>
+                    <div class="detail-value">${r.affixes.join(', ')}</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Root</div>
+                    <div class="detail-value">${r.lemma}</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">POS</div>
+                    <div class="detail-value">${r.pos}</div>
+                </div>
+            </div>
+        `;
+            breakdownContent.appendChild(item);
+        }
+    });
+
+    // Show success modal
+    showSuccessModal(results.length, results.length);
+
+    // Save to history
+    saveToHistory(config.input, results, detectedDialect);
+
+    // Store for export/logging
+    window.lastAnalysisData = {
+        settings: {
+            dialect: config.dialect === 'auto' ? 'hiligaynon' : config.dialect,
+            mode: config.mode,
+            outputFormat: config.outputFormat,
+            showToken: config.showToken,
+            showPOS: config.showPOS,
+            showType: config.showType,
+            showAffixes: config.showAffixes,
+            showLemma: config.showLemma,
+            timestamp: new Date().toISOString()
+        },
+        input: config.input,
+        results: results
+    };
+
+    // Log to console as requested
+    console.log("--- Ugat Analysis Data ---");
+    console.log(window.lastAnalysisData);
+    console.log("--------------------------");
 }
 
 // Show success modal
@@ -253,60 +267,7 @@ function closeSuccessModal() {
     }, 300);
 }
 
-// Process individual token
-function processToken(token, dialect) {
-    // Determine dialect lexicon
-    const dialectKey = dialect === 'auto' ? 'hiligaynon' : dialect;
-    const lexicon = mockLexicon[dialectKey] || mockLexicon.hiligaynon;
 
-    let lemma = token;
-    let affixes = [];
-    let candidates = [];
-    let irregular = false;
-
-    // Check irregular
-    if (lexicon.irregular[token]) {
-        lemma = lexicon.irregular[token];
-        irregular = true;
-        candidates.push(lemma);
-    } else {
-        // Strip prefixes
-        for (let prefix of lexicon.affixes.prefixes) {
-            if (token.startsWith(prefix)) {
-                affixes.push(prefix + '-');
-                lemma = token.substring(prefix.length);
-                break;
-            }
-        }
-
-        // Strip suffixes
-        for (let suffix of lexicon.affixes.suffixes) {
-            if (lemma.endsWith(suffix)) {
-                affixes.push('-' + suffix);
-                lemma = lemma.substring(0, lemma.length - suffix.length);
-                break;
-            }
-        }
-
-        candidates.push(lemma);
-
-        // Check if in lexicon, if not, use original token
-        if (!lexicon.roots.includes(lemma)) {
-            candidates.push(token);
-            // Keep the lemma as processed, or fallback to token if preferred
-        }
-    }
-
-    return {
-        token,
-        lemma,
-        pos: 'Verb', // Mock POS - in real system, this would be determined by POS tagger
-        affixes,
-        candidates,
-        irregular,
-        rule: affixes.length > 0 ? 'V-affix rule #' + Math.floor(Math.random() * 10 + 1) : 'Direct lookup'
-    };
-}
 
 // Save to history
 function saveToHistory(text, results, dialect) {
@@ -324,80 +285,136 @@ function saveToHistory(text, results, dialect) {
 }
 
 // Lexicon tab switching
-function showLexiconTab(tab) {
+async function showLexiconTab(tab) {
+    window.currentLexiconTab = tab; // Store state
     const content = document.getElementById('lexiconTableContent');
+    content.innerHTML = '<div style="text-align:center; padding: 2rem;">Loading lexicon data...</div>';
 
-    if (tab === 'roots') {
-        content.innerHTML = `
-            <table>
+    // Get selected dialect filter
+    const filterSelect = document.getElementById('lexiconDialectFilter');
+    const selectedDialect = filterSelect ? filterSelect.value : 'all';
+
+    let dialects = ['ilocano', 'cebuano', 'hiligaynon'];
+
+    // If specific dialect selected, only fetch that one
+    if (selectedDialect && selectedDialect !== 'all') {
+        dialects = [selectedDialect];
+    }
+
+    // Parallel fetch for chosen dialects
+    const requests = dialects.map(d =>
+        fetch(`${API_URL}/lexicon?type=${tab}&dialect=${d}&page_size=1000`)
+            .then(res => {
+                if (!res.ok) throw new Error(`Failed to fetch ${d}`);
+                return res.json();
+            })
+            .then(data => ({ dialect: d, items: data.items }))
+            .catch(err => ({ dialect: d, items: [], error: err }))
+    );
+
+    try {
+        const results = await Promise.all(requests);
+        let allItems = [];
+
+        // Aggregate results
+        results.forEach(r => {
+            if (r.items) {
+                r.items.forEach(item => {
+                    item._dialect = r.dialect; // Tag with dialect
+                    allItems.push(item);
+                });
+            }
+        });
+
+        // Sort by term
+        allItems.sort((a, b) => a.term.localeCompare(b.term));
+
+        // Create table inside scroll container
+        let tableHtml = '<div class="table-scroll-container"><table>';
+
+        if (tab === 'roots') {
+            tableHtml += `
                 <thead>
                     <tr>
                         <th>Word</th>
                         <th>Dialect</th>
                         <th>POS</th>
-                        <th>Notes</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr><td>basa</td><td>Hiligaynon</td><td>Verb</td><td>Root word: to read</td></tr>
-                    <tr><td>lakad</td><td>Hiligaynon</td><td>Verb</td><td>Root word: to walk</td></tr>
-                    <tr><td>bata</td><td>Hiligaynon</td><td>Noun</td><td>Root word: child</td></tr>
-                    <tr><td>saya</td><td>Hiligaynon</td><td>Noun/Adj</td><td>Root word: happy/happiness</td></tr>
-                    <tr><td>laro</td><td>Hiligaynon</td><td>Noun/Verb</td><td>Root word: play/game</td></tr>
-                    <tr><td>kaon</td><td>Cebuano</td><td>Verb</td><td>Root word: to eat</td></tr>
-                    <tr><td>bugas</td><td>Cebuano</td><td>Noun</td><td>Root word: rice</td></tr>
-                    <tr><td>pan</td><td>Ilocano</td><td>Verb</td><td>Root word: to go</td></tr>
-                    <tr><td>merkado</td><td>Ilocano</td><td>Noun</td><td>Root word: market</td></tr>
-                </tbody>
-            </table>
-        `;
-    } else if (tab === 'irregular') {
-        content.innerHTML = `
-            <table>
+                <tbody>`;
+
+            if (allItems.length === 0) {
+                tableHtml += '<tr><td colspan="3" style="text-align:center;">No data found.</td></tr>';
+            } else {
+                allItems.forEach(item => {
+                    const pos = typeof item.details === 'string' ? item.details : (item.details.pos || JSON.stringify(item.details));
+                    tableHtml += `
+                        <tr>
+                            <td>${item.term}</td>
+                            <td style="text-transform: capitalize;">${item._dialect}</td>
+                            <td>${pos}</td>
+                        </tr>`;
+                });
+            }
+
+        } else if (tab === 'irregular') {
+            tableHtml += `
                 <thead>
                     <tr>
-                        <th>Irregular Form</th>
-                        <th>Lemma</th>
-                        <th>Dialect</th>
-                        <th>Notes</th>
+                        <th>Word</th>
+                        <th>Equivalent</th>
+                        <th>POS</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr><td>pumunta</td><td>punta</td><td>Hiligaynon</td><td>Irregular verb: to go</td></tr>
-                    <tr><td>kumain</td><td>kain</td><td>Hiligaynon</td><td>Irregular verb: to eat</td></tr>
-                    <tr><td>uminom</td><td>inom</td><td>Hiligaynon</td><td>Irregular verb: to drink</td></tr>
-                    <tr><td>dumating</td><td>dating</td><td>Hiligaynon</td><td>Irregular verb: to arrive</td></tr>
-                    <tr><td>sumama</td><td>sama</td><td>Hiligaynon</td><td>Irregular verb: to accompany</td></tr>
-                </tbody>
-            </table>
-        `;
-    } else if (tab === 'affixes') {
-        content.innerHTML = `
-            <table>
+                <tbody>`;
+
+            if (allItems.length === 0) {
+                tableHtml += '<tr><td colspan="3" style="text-align:center;">No data found.</td></tr>';
+            } else {
+                allItems.forEach(item => {
+                    const equiv = item.details.equivalent || '-';
+                    const pos = item.details.pos || '-';
+                    tableHtml += `
+                        <tr>
+                            <td>${item.term}</td>
+                            <td>${equiv}</td>
+                            <td>${pos}</td>
+                        </tr>`;
+                });
+            }
+
+        } else if (tab === 'affixes') {
+            tableHtml += `
                 <thead>
                     <tr>
                         <th>Affix</th>
                         <th>Type</th>
                         <th>Dialect</th>
-                        <th>Function</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr><td>nag-</td><td>Prefix</td><td>Hiligaynon</td><td>Past tense marker (completed action)</td></tr>
-                    <tr><td>mag-</td><td>Prefix</td><td>Hiligaynon</td><td>Future/imperative marker</td></tr>
-                    <tr><td>-um-</td><td>Infix</td><td>Hiligaynon</td><td>Actor focus marker</td></tr>
-                    <tr><td>-in</td><td>Suffix</td><td>Hiligaynon</td><td>Object focus marker</td></tr>
-                    <tr><td>-an</td><td>Suffix</td><td>Hiligaynon</td><td>Locative focus marker</td></tr>
-                    <tr><td>ma-</td><td>Prefix</td><td>Hiligaynon</td><td>Accidental/abilitative marker</td></tr>
-                    <tr><td>pa-</td><td>Prefix</td><td>Hiligaynon</td><td>Causative marker</td></tr>
-                    <tr><td>ka-</td><td>Prefix</td><td>Hiligaynon</td><td>Recent completion marker</td></tr>
-                    <tr><td>mi-</td><td>Prefix</td><td>Cebuano</td><td>Past tense marker</td></tr>
-                    <tr><td>mo-</td><td>Prefix</td><td>Cebuano</td><td>Future tense marker</td></tr>
-                    <tr><td>ag-</td><td>Prefix</td><td>Ilocano</td><td>Action marker</td></tr>
-                    <tr><td>-en</td><td>Suffix</td><td>Ilocano</td><td>Object focus marker</td></tr>
-                </tbody>
-            </table>
-        `;
+                <tbody>`;
+
+            if (allItems.length === 0) {
+                tableHtml += '<tr><td colspan="3" style="text-align:center;">No data found.</td></tr>';
+            } else {
+                allItems.forEach(item => {
+                    const type = item.metadata.affix_type || '-';
+                    tableHtml += `
+                        <tr>
+                            <td>${item.term}</td>
+                            <td>${type}</td>
+                            <td style="text-transform: capitalize;">${item._dialect}</td>
+                        </tr>`;
+                });
+            }
+        }
+
+        tableHtml += '</tbody></table></div>'; // Close scroll container
+        content.innerHTML = tableHtml;
+
+    } catch (error) {
+        console.error('Error fetching lexicon:', error);
+        content.innerHTML = `<div style="text-align:center; color:red; padding: 2rem;">Error loading data: ${error.message}</div>`;
     }
 }
 
@@ -415,4 +432,108 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
+    // Dialect Filter Event Listener
+    const dialectFilter = document.getElementById('lexiconDialectFilter');
+    if (dialectFilter) {
+        dialectFilter.addEventListener('change', function () {
+            // Re-fetch/render current active tab with new filter
+            if (window.currentLexiconTab) {
+                showLexiconTab(window.currentLexiconTab);
+            } else {
+                showLexiconTab('roots');
+            }
+        });
+    }
 });
+
+// --- Mismatch Modal Helper Functions ---
+
+function showMismatchModal(currentDialect, suggestedDialect, probabilities) {
+    const modal = document.getElementById('mismatchModal');
+
+    // Update Text
+    document.getElementById('selectedDialectDisplay').textContent = capitalize(currentDialect);
+
+    // Update Action Buttons
+    document.getElementById('btnSuggestedName').textContent = capitalize(suggestedDialect);
+    document.getElementById('btnCurrentName').textContent = capitalize(currentDialect);
+
+    // Visualization
+    const container = document.getElementById('confidenceContainer');
+    container.innerHTML = '';
+
+    // Sort probabilities
+    const sorted = Object.entries(probabilities || {}).sort(([, a], [, b]) => b - a);
+
+    sorted.forEach(([d, score]) => {
+        const percentage = Math.round(score * 100);
+        const isSuggested = d === suggestedDialect;
+
+        const item = document.createElement('div');
+        item.className = `confidence-item ${isSuggested ? 'suggested' : ''}`;
+        item.innerHTML = `
+            <div class="conf-row">
+                <span>${capitalize(d)}</span>
+                <span>${percentage}%</span>
+            </div>
+            <div class="conf-bar-bg">
+                <div class="conf-bar-fill" style="width: 0%"></div>
+            </div>
+        `;
+        container.appendChild(item);
+
+        // Animate bar
+        setTimeout(() => {
+            item.querySelector('.conf-bar-fill').style.width = `${percentage}%`;
+        }, 100);
+    });
+
+    modal.classList.add('show');
+}
+
+function keepCurrentDialect() {
+    if (pendingMismatchData) {
+        // Proceed with original request
+        renderResults(pendingMismatchData.data, {
+            ...pendingMismatchData.settings,
+            dialect: document.getElementById('dialectSelect').value,
+            input: pendingMismatchData.input
+        });
+
+        // Clear pending
+        pendingMismatchData = null;
+    }
+    closeMismatchModal();
+}
+
+function switchToSuggested() {
+    if (pendingMismatchData) {
+        const newDialect = pendingMismatchData.detected;
+
+        // Update UI
+        document.getElementById('dialectSelect').value = newDialect;
+
+        // Re-run processing with new dialect
+        closeMismatchModal();
+        setTimeout(lemmatize, 100); // Small delay to allow UI update
+
+        pendingMismatchData = null;
+    }
+}
+
+function cancelProcessing() {
+    pendingMismatchData = null;
+    closeMismatchModal();
+    // Clear loading state
+    document.getElementById('resultsBody').innerHTML = '';
+}
+
+function closeMismatchModal() {
+    document.getElementById('mismatchModal').classList.remove('show');
+}
+
+function capitalize(s) {
+    if (!s) return '';
+    return s.charAt(0).toUpperCase() + s.slice(1);
+}

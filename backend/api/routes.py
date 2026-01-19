@@ -7,9 +7,13 @@ from fastapi import APIRouter, HTTPException
 from .schemas import (
     TagRequest, TagResponse,
     LemmatizeRequest, LemmatizeResponse,
-    DialectsResponse, TokenResult
+    DialectsResponse, TokenResult,
+    LexiconSearchResponse, LexiconEntry
 )
-from pipeline import text_preprocess, pos_tagging, process_tokens, SUPPORTED_DIALECTS
+from pipeline import (
+    text_preprocess, pos_tagging, process_tokens, 
+    SUPPORTED_DIALECTS, load_roots, load_irregular, load_rules
+)
 
 # Create router
 router = APIRouter()
@@ -37,6 +41,111 @@ def validate_dialect(dialect: str) -> str:
 def get_dialects():
     """Get list of available dialects."""
     return DialectsResponse(available_dialects=VALID_DIALECTS)
+
+
+@router.get("/lexicon", response_model=LexiconSearchResponse)
+def search_lexicon(
+    type: str,
+    dialect: str,
+    q: str = "",
+    page: int = 1,
+    page_size: int = 50
+):
+    """
+    Search lexicon resources (roots, irregulars, affixes).
+    Supports partial text search and pagination.
+    """
+    dialect = validate_dialect(dialect)
+    type = type.lower()
+    
+    # Load data based on type
+    data = {}
+    if type == "roots":
+        data = load_roots(dialect)
+    elif type == "irregular":
+        data = load_irregular(dialect)
+    elif type == "affixes":
+        data = load_rules(dialect)
+    else:
+        raise HTTPException(
+            status_code=400, 
+            detail="Invalid type. Must be 'roots', 'irregular', or 'affixes'"
+        )
+
+    # Convert to list of LexiconEntry
+    items = []
+    
+    # Handle different data structures
+    if type == "roots":
+        # Structure: {root: pos}
+        for root, pos in data.items():
+            items.append(LexiconEntry(
+                term=root,
+                details=pos,
+                metadata={"type": "root"}
+            ))
+            
+    elif type == "irregular":
+        # Structure: {inflected: {equivalent, pos}}
+        for inflected, info in data.items():
+            # Check if info is dict or just string (handle inconsistencies)
+            if isinstance(info, dict):
+                items.append(LexiconEntry(
+                    term=inflected,
+                    details=info,
+                    metadata={"type": "irregular"}
+                ))
+            else:
+                 items.append(LexiconEntry(
+                    term=inflected,
+                    details={"equivalent": info, "pos": "UNK"},
+                    metadata={"type": "irregular"}
+                ))
+            
+    elif type == "affixes":
+        # Structure: {POS: {prefix_rules: [...], ...}}
+        # Flattening allows searching by affix string
+        for pos_category, rules in data.items():
+            # Process prefix, suffix, infix rules
+            for rule_type, rule_list in rules.items():
+                if isinstance(rule_list, list):
+                    for rule in rule_list:
+                        # Extract the actual affix string (prefix, suffix, infix)
+                        affix_key = next((k for k in rule if k in ["prefix", "suffix", "infix"]), None)
+                        if affix_key:
+                            term = rule[affix_key]
+                            items.append(LexiconEntry(
+                                term=term,
+                                details=rule,
+                                metadata={
+                                    "type": "affix",
+                                    "pos": pos_category,
+                                    "affix_type": affix_key
+                                }
+                            ))
+
+    # Filter by query
+    if q:
+        q = q.lower()
+        items = [i for i in items if q in i.term.lower()]
+    
+    # Sort items by term
+    items.sort(key=lambda x: x.term)
+
+    # Pagination
+    total = len(items)
+    start = (page - 1) * page_size
+    end = start + page_size
+    paginated_items = items[start:end]
+    
+    total_pages = (total + page_size - 1) // page_size if page_size > 0 else 1
+
+    return LexiconSearchResponse(
+        items=paginated_items,
+        total=total,
+        page=page,
+        total_pages=total_pages
+    )
 
 
 @router.post("/tag", response_model=TagResponse)
