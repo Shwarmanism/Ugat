@@ -12,8 +12,10 @@ from core import (
     format_tokens_for_crf,
     get_available_dialects,
     # Morphology
-    get_morph_engine,
+    get_morph_engine,   
     lemmatize,
+    #Error Handling
+    DialectVerifier
 )
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -50,6 +52,8 @@ _irregular_cache: Dict[str, Dict] = {}
 _root_cache: Dict[str, Dict] = {}
 _root_set_cache: Dict[str, frozenset] = {}  # For O(1) lookups
 _initialized = False
+
+_verifier = DialectVerifier()
 
 
 def load_irregular(dialect: str) -> Dict:
@@ -321,6 +325,38 @@ def main_pipeline(raw_text, lang, mode="crf"):
     """
     Complete NLP pipeline from raw text to lemmatization.
     """
+    # ─────────────────────────────────────────────────────────────────────────
+    # STEP 0: DIALECT VERIFICATION (GATEKEEPER)
+    # ─────────────────────────────────────────────────────────────────────────
+    verification = _verifier.get_confidence(raw_text, lang)
+    
+    if not verification['is_match']:
+        # Calculate percentages for your frontend progress bars
+        raw_scores = verification['scores']
+        total_score = sum(raw_scores.values())
+        
+        # Convert raw scores (e.g., 5, 2) into percentages (e.g., 75, 20)
+        breakdown = {}
+        if total_score > 0:
+            for d, score in raw_scores.items():
+                breakdown[d] = round((score / total_score) * 100)
+        else:
+            # Fallback if no scores
+            breakdown = {d: 0 for d in ["ilocano", "cebuano", "hiligaynon"]}
+
+        print(f"[WARN] Dialect Mismatch: Selected '{lang}' but detected '{verification['detected']}'")
+        
+        # Return the specific JSON structure your frontend likely needs
+        return {
+            "status": "error",
+            "error_code": "DIALECT_MISMATCH",
+            "message": "The input patterns suggest a different dialect.",
+            "detected_dialect": verification['detected'],
+            "confidence_scores": breakdown, # Passes { "hiligaynon": 75, "cebuano": 15 ... }
+            "tokens": [] # Return empty to prevent UI crashes
+        }
+    # ─────────────────────────────────────────────────────────────────────────
+
     # Step 1: Preprocess
     preprocessed = text_preprocess(raw_text, lang)
     
@@ -330,7 +366,7 @@ def main_pipeline(raw_text, lang, mode="crf"):
     # Step 3: Process each token (irregular check + morphology)
     processed = process_tokens(tagged, mode=mode)
     
-    # Step 4: Build simple result
+    # Step 4: Build result
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     output_path = OUTPUT_DIR / "pipeline_results.json"
     
@@ -347,6 +383,7 @@ def main_pipeline(raw_text, lang, mode="crf"):
             })
     
     result = {
+        "status": "success",
         "language": lang,
         "input": raw_text,
         "total_tokens": len(tokens_summary),
@@ -356,17 +393,44 @@ def main_pipeline(raw_text, lang, mode="crf"):
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
     
-    print(f"✓ Results saved to {output_path.name}")
     return result
 
     
 if __name__ == "__main__":  
-    # Quick test
-    test_text = "Ang kamatuoran mogawas ra."
-    result = main_pipeline(test_text, "cebuano", mode="crf")
-    
-    print(f"\nInput: {test_text}")
-    print(f"{'Token':<15} {'Lemma':<15} {'POS':<10} {'Type':<12}")
-    print("-" * 55)
-    for t in result["tokens"]:
-        print(f"{t['token']:<15} {t['lemma']:<15} {t['pos']:<10} {t['type']:<12}")
+    print("="*60)
+    print("🛠️  PIPELINE MISMATCH TEST")
+    print("="*60)
+
+    # 1. DEFINE A MISMATCH SCENARIO
+    # "Nagdalagan ang ido" is Hiligaynon (The dog ran).
+    # But the user mistakenly selects "cebuano".
+    test_text = "Nagdalagan ang ido" 
+    selected_dialect = "cebuano"
+
+    print(f"📝 Input Text:      '{test_text}'")
+    print(f"👉 User Selection:  '{selected_dialect}'")
+    print("-" * 60)
+
+    # 2. RUN PIPELINE
+    # This should trigger the Gatekeeper (Step 0) and block the request.
+    result = main_pipeline(test_text, selected_dialect, mode="crf")
+
+    # 3. ANALYZE THE RESPONSE
+    print("\n🔍 SYSTEM RESPONSE:")
+    if result.get("status") == "error":
+        print(f"   [SUCCESS] The system blocked the mismatch!")
+        print(f"   Error Code:   {result.get('error_code')}")
+        print(f"   Message:      {result.get('message')}")
+        print(f"   Detected:     {result.get('detected_dialect').upper()}")
+        print(f"   Suggestion:   {result.get('suggestion')}")
+        
+        # Display the scores like your Frontend would
+        print(f"\n   📊 Confidence Scores (Frontend Data):")
+        scores = result.get('confidence_scores', {})
+        for dialect, score in scores.items():
+            bar = "█" * (score // 5)  # Simple ASCII bar chart
+            print(f"      {dialect.title():<12}: {score}%  {bar}")
+            
+    else:
+        print("   [FAILED] The system allowed the mismatch (Check your DialectVerifier logic).")
+        print(result)
