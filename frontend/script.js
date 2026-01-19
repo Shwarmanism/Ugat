@@ -30,6 +30,12 @@ function lemmatize() {
     const input = document.getElementById('userInput').value.trim();
     const dialect = document.getElementById('dialectSelect').value;
 
+    // Reset force state for new requests unless explicitly set
+    if (!window.isRetryingForced) {
+        window.lastForceState = false;
+    }
+    window.isRetryingForced = false;
+
     if (!input) {
         alert('Please enter some text to lemmatize.');
         return;
@@ -58,7 +64,8 @@ function lemmatize() {
         body: JSON.stringify({
             text: input,
             dialect: dialect, // API requires specific dialect
-            mode: mode
+            mode: mode,
+            force: window.lastForceState || false
         })
     })
         .then(response => {
@@ -68,49 +75,31 @@ function lemmatize() {
             return response.json();
         })
         .then(data => {
-            // --- MOCK TRIGGER FOR DEMO ---
-            // If input contains "mismatch" (case-insensitive), force a mismatch scenario
-            if (input.toLowerCase().includes("mismatch")) {
-                // Mock a detected dialect that involves the other dialects
-                // If user selected cebuano, suggest hiligaynon
-                const suggestions = ['hiligaynon', 'cebuano', 'ilocano'];
-                const randomOther = suggestions.find(d => d !== dialect) || 'hiligaynon';
-
-                data.detected_dialect = randomOther;
-                data.dialect_probabilities = {};
-
-                // Assign probabilities
-                data.dialect_probabilities[randomOther] = 0.75;
-                data.dialect_probabilities[dialect] = 0.15;
-                // Assign rest to third one
-                const third = suggestions.find(d => d !== dialect && d !== randomOther);
-                if (third) data.dialect_probabilities[third] = 0.10;
-            }
-            // -----------------------------
-
-            // Check for dialect mismatch
-            if (data.detected_dialect && data.detected_dialect !== dialect) {
+            // Check for dialect mismatch (driven by backend)
+            if (data.status === 'error' && data.error_code === 'DIALECT_MISMATCH') {
                 // Store data for "Continue" action
                 pendingMismatchData = {
                     input,
-                    data,
+                    data: null, // No results yet, will re-fetch if forced
                     settings: { mode, outputFormat, showToken, showPOS, showType, showAffixes, showLemma, showStripped },
-                    detected: data.detected_dialect
+                    detected: data.detected_dialect,
+                    forced: false
                 };
 
-                showMismatchModal(dialect, data.detected_dialect, data.dialect_probabilities);
-                // Clear loading state slightly
+                // The backend now provides real confidence scores
+                showMismatchModal(dialect, data.detected_dialect, data.confidence_scores);
+
+                // Clear loading state
                 resultsBody.innerHTML = '<tr><td colspan="5" style="text-align:center;">Paused (Mismatch Detected)</td></tr>';
                 return;
             }
 
             // Proceed with rendering results (extracted to helper for reuse)
-            renderResults(data, { outputFormat, showToken, showPOS, showType, showAffixes, showStripped, showLemma, dialect, input, mode });
+            renderResults(data, { outputFormat, showToken, showPOS, showType, showAffixes, showLemma, showStripped, dialect, input, mode });
         })
         .catch(error => {
             console.error('Error:', error);
             resultsBody.innerHTML = '<tr><td colspan="5" style="text-align:center; color:red;">Error processing text. Ensure backend is running.</td></tr>';
-            // alert('Error connecting to backend server.'); // Suppress alert for better UX
         });
 }
 
@@ -467,7 +456,7 @@ function showMismatchModal(currentDialect, suggestedDialect, probabilities) {
     const sorted = Object.entries(probabilities || {}).sort(([, a], [, b]) => b - a);
 
     sorted.forEach(([d, score]) => {
-        const percentage = Math.round(score * 100);
+        const percentage = Math.round(score); // Backend already sends 0-100
         const isSuggested = d === suggestedDialect;
 
         const item = document.createElement('div');
@@ -494,12 +483,12 @@ function showMismatchModal(currentDialect, suggestedDialect, probabilities) {
 
 function keepCurrentDialect() {
     if (pendingMismatchData) {
-        // Proceed with original request
-        renderResults(pendingMismatchData.data, {
-            ...pendingMismatchData.settings,
-            dialect: document.getElementById('dialectSelect').value,
-            input: pendingMismatchData.input
-        });
+        // Set flags to force the next request
+        window.lastForceState = true;
+        window.isRetryingForced = true;
+
+        // Re-run processing (this time it will force)
+        lemmatize();
 
         // Clear pending
         pendingMismatchData = null;
