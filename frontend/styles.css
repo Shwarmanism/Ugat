@@ -597,3 +597,118 @@ footer {
         font-size: 2rem;
     }
 }
+
+
+
+
+/* Mismatch/Warning Modal */
+.warning-modal {
+    border-top: 5px solid #ff9800;
+    max-width: 500px;
+}
+
+.warning-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: #e65100;
+}
+
+.warning-icon {
+    width: 32px;
+    height: 32px;
+    color: #ff9800;
+}
+
+.warning-message {
+    color: #5d4037;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Confidence Bars */
+.confidence-container {
+    background: #fdfbf7;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #efebe9;
+}
+
+.confidence-item {
+    margin-bottom: 0.8rem;
+}
+
+.confidence-item:last-child {
+    margin-bottom: 0;
+}
+
+.conf-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    color: #5d4037;
+    font-weight: 500;
+}
+
+.conf-bar-bg {
+    height: 8px;
+    background: #efebe9;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.conf-bar-fill {
+    height: 100%;
+    background: var(--gold);
+    border-radius: 4px;
+    width: 0%;
+    transition: width 1s ease-out;
+}
+
+/* Highlight the suggested dialect */
+.confidence-item.suggested .conf-bar-fill {
+    background: var(--deep-brown);
+}
+
+.confidence-item.suggested .conf-row {
+    font-weight: 700;
+}
+
+/* Vertical Actions */
+.modal-actions-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.modal-actions-vertical .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-secondary {
+    background: #efebe9;
+    color: #5d4037;
+}
+
+.btn-secondary:hover {
+    background: #d7ccc8;
+}
+
+.btn-text {
+    background: transparent;
+    color: #8d6e63;
+    box-shadow: none;
+    padding: 0.5rem;
+}
+
+.btn-text:hover {
+    color: #5d4037;
+    text-decoration: underline;
+    background: transparent;
+    transform: none;
+    box-shadow: none;
+}
