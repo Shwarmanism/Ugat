@@ -65,24 +65,43 @@ def predict_pos(features: List[Dict], dialect: str) -> List[str]:
 
 
 def format_tokens_for_crf(tokens: List[str]) -> List[Dict]:
-
+    """
+    Format tokens using the ENHANCED feature set.
+    MUST match the features used in training!
+    """
     features = []
     
     for i, token in enumerate(tokens):
+        # 1. Context (Neighbors)
         prev_word = tokens[i - 1] if i > 0 else "BOS"
         next_word = tokens[i + 1] if i < len(tokens) - 1 else "EOS"
         
+        token_lower = token.lower()
+        
         token_features = {
+            # 1. Basic Identity
             "token": token,
-            "lower": token.lower(),
-            "prefix3": token[:3].lower() if len(token) >= 3 else token.lower(),
-            "suffix3": token[-3:].lower() if len(token) >= 3 else token.lower(),
+            "lower": token_lower,
+            
+            # 2. Morphology (The "X-Ray" vision you added to training)
+            "prefix2": token_lower[:2],  # Crucial for 'ag-', 'um'
+            "prefix3": token_lower[:3],  # Crucial for 'nag', 'mag'
+            "suffix2": token_lower[-2:], 
+            "suffix3": token_lower[-3:], 
+            
+            # 3. Orthography & patterns
+            "is_first": i == 0,
+            "is_last": i == len(tokens) - 1,
+            "is_capitalized": token[0].isupper(),
+            "is_all_caps": token.isupper(),
+            "is_numeric": token.isdigit(),
+            "has_hyphen": "-" in token, # CRITICAL for distinguishing 'nag-' verbs
+            
+            # 4. Context Window
             "prev_word": prev_word,
             "next_word": next_word,
-            "is_title": token.istitle(),
-            "is_upper": token.isupper(),
-            "is_digit": token.isdigit(),
-            "length": str(len(token)),
+            # This helps distinguish nouns (after 'ang/ti') from verbs
+            "prev_is_marker": prev_word.lower() in ["ti", "ni", "ang", "si", "ug", "sang", "sa", "iti"],
         }
         features.append(token_features)
     

@@ -1,0 +1,71 @@
+==================================================
+FINAL TEST CASES
+==================================================
+
+
+
+==================================================
+ILOCANO
+==================================================
+
+[TRICKY] Ag-agawid kami no malpas ti trabaho.
+# "Ag-agawid" -> Strip "Ag-" -> "Agawid" -> Strip "Ag-" (redup?) -> Lemma: "awid"
+# Note: "awid" needs to be in your dictionary for this to work.
+# If "awid" is missing, use "Ag-trabaho" below.
+EXPECTED: Ag-agawid/VERB/awid kami/PRON/kami no/CONJ/no malpas/VERB/malpas ti/DET/ti trabaho/NOUN/trabaho ./PUNCT/.
+
+[HARD] Ginatangna ti dakkel a tinapay.
+# "Ginatangna" -> Strip "-na" -> "Ginatang" -> Strip "-in-" -> Lemma: "gatang"
+EXPECTED: Ginatangna/VERB/gatang ti/DET/ti dakkel/ADJ/dakkel a/PART/a tinapay/NOUN/tinapay ./PUNCT/.
+
+[COMPLEX] Kayatko nga agbasa ti libro ngem awan ti oras.
+# "Kayatko" -> Strip "-ko" (I want) -> Lemma: "kayat"
+# "Agbasa" -> Strip "Ag-" -> Lemma: "basa"
+EXPECTED: Kayatko/VERB/kayat nga/PART/nga agbasa/VERB/basa ti/DET/ti libro/NOUN/libro ngem/CONJ/ngem awan/ADV/awan ti/DET/ti oras/NOUN/oras ./PUNCT/.
+
+===================================================
+HILIGAYNON
+===================================================
+
+[TRICKY] Nagalakat-lakat kami sa plaza.
+# Logic: Strip "Naga-" -> "lakat-lakat". Strip "lakat-" -> Find "lakat" (walk).
+# Root "lakat" is in your dictionary.
+EXPECTED: Nagalakat-lakat/VERB/lakat kami/PRON/kami sa/ADP/sa plaza/NOUN/plaza ./PUNCT/.
+
+[MEDIUM] Guapa-guapa gid ang bata ni Maria.
+# Logic: "Guapa-guapa" -> Strip "guapa-" -> Find "guapa".
+# Root "guapa" is in your dictionary.
+EXPECTED: Guapa-guapa/ADJ/guapa gid/PART/gid ang/DET/ang bata/NOUN/bata ni/DET/ni Maria/NOUN/Maria ./PUNCT/
+
+[COMPLEX] Nagahimo sila sang balay-balay.
+# Logic: Token "balay-balay" -> Detect Hyphen -> Split -> Check if "balay" is in dict.
+# Root "balay" (house) IS in your dictionary.
+EXPECTED: Nagahimo/VERB/himo sila/PRON/sila sang/ADP/sang balay-balay/NOUN/balay ./PUNCT/.
+
+====================================================
+CEBUANO
+====================================================
+
+[SIMPLE] Mokaon ang bata og tinapay.
+# "Mokaon" -> Strips "Mo-" -> Finds "kaon" in dictionary
+EXPECTED: Mokaon/VERB/kaon ang/DET/ang bata/NOUN/bata og/PART/og tinapay/NOUN/tinapay ./PUNCT/.
+
+[MEDIUM] Gihigugma ko ikaw.
+# "Gihigugma" -> Strips "Gi-" -> Finds "higugma" (love - verb) in dictionary
+EXPECTED: Gihigugma/VERB/higugma ko/PRON/ako ikaw/PRON/ikaw ./PUNCT/.
+
+[COMPLEX] Gipahibalo sa kapitan ang balita.
+# "Gipahibalo" -> Strips "Gi-" (Pass 1) -> "Pahibalo" -> Strips "Pa-" (Pass 2) -> Finds "hibalo"
+EXPECTED: Gipahibalo/VERB/hibalo sa/ADP/sa kapitan/NOUN/kapitan ang/DET/ang balita/NOUN/balita ./PUNCT/.
+
+[TRICKY] Naglantaw-lantaw siya sa dagat.
+# "Naglantaw-lantaw" -> Strips "Nag-" -> "Lantaw-lantaw" -> Redup logic -> Finds "lantaw"
+EXPECTED: Naglantaw-lantaw/VERB/lantaw siya/PRON/siya sa/ADP/sa dagat/NOUN/dagat ./PUNCT/.
+
+[HARD] Ang kamatuoran mogawas ra.
+# "Kamatuoran" -> Strips "Ka--an" -> Finds "matuod"? 
+# CHECK: Dict has "kamatuoran" explicitly as NOUN. It should match directly.
+# BUT: Dict also has "matud" (Adv) and "katinuod" (Noun). 
+# If exact match fails, strip "Ka--an" -> "matuod". (Dict doesn't have "matuod", has "kamatuoran").
+EXPECTED: Ang/DET/ang kamatuoran/NOUN/kamatuoran mogawas/VERB/gawas ra/PART/ra ./PUNCT/.
+# Note: "Mogawas" -> "Gawas" is in dict.

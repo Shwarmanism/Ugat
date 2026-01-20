@@ -4,12 +4,17 @@ Endpoints for POS tagging and lemmatization.
 """
 
 from fastapi import APIRouter, HTTPException
+from typing import Union
 from .schemas import (
     TagRequest, TagResponse,
-    LemmatizeRequest, LemmatizeResponse,
-    DialectsResponse, TokenResult
+    LemmatizeRequest, LemmatizeResponse, MismatchResponse,
+    DialectsResponse, TokenResult,
+    LexiconSearchResponse, LexiconEntry
 )
-from pipeline import text_preprocess, pos_tagging, process_tokens, SUPPORTED_DIALECTS
+from pipeline import (
+    text_preprocess, pos_tagging, process_tokens, 
+    SUPPORTED_DIALECTS, load_roots, load_irregular, load_rules
+)
 
 # Create router
 router = APIRouter()
@@ -39,6 +44,111 @@ def get_dialects():
     return DialectsResponse(available_dialects=VALID_DIALECTS)
 
 
+@router.get("/lexicon", response_model=LexiconSearchResponse)
+def search_lexicon(
+    type: str,
+    dialect: str,
+    q: str = "",
+    page: int = 1,
+    page_size: int = 50
+):
+    """
+    Search lexicon resources (roots, irregulars, affixes).
+    Supports partial text search and pagination.
+    """
+    dialect = validate_dialect(dialect)
+    type = type.lower()
+    
+    # Load data based on type
+    data = {}
+    if type == "roots":
+        data = load_roots(dialect)
+    elif type == "irregular":
+        data = load_irregular(dialect)
+    elif type == "affixes":
+        data = load_rules(dialect)
+    else:
+        raise HTTPException(
+            status_code=400, 
+            detail="Invalid type. Must be 'roots', 'irregular', or 'affixes'"
+        )
+
+    # Convert to list of LexiconEntry
+    items = []
+    
+    # Handle different data structures
+    if type == "roots":
+        # Structure: {root: pos}
+        for root, pos in data.items():
+            items.append(LexiconEntry(
+                term=root,
+                details=pos,
+                metadata={"type": "root"}
+            ))
+            
+    elif type == "irregular":
+        # Structure: {inflected: {equivalent, pos}}
+        for inflected, info in data.items():
+            # Check if info is dict or just string (handle inconsistencies)
+            if isinstance(info, dict):
+                items.append(LexiconEntry(
+                    term=inflected,
+                    details=info,
+                    metadata={"type": "irregular"}
+                ))
+            else:
+                 items.append(LexiconEntry(
+                    term=inflected,
+                    details={"equivalent": info, "pos": "UNK"},
+                    metadata={"type": "irregular"}
+                ))
+            
+    elif type == "affixes":
+        # Structure: {POS: {prefix_rules: [...], ...}}
+        # Flattening allows searching by affix string
+        for pos_category, rules in data.items():
+            # Process prefix, suffix, infix rules
+            for rule_type, rule_list in rules.items():
+                if isinstance(rule_list, list):
+                    for rule in rule_list:
+                        # Extract the actual affix string (prefix, suffix, infix)
+                        affix_key = next((k for k in rule if k in ["prefix", "suffix", "infix"]), None)
+                        if affix_key:
+                            term = rule[affix_key]
+                            items.append(LexiconEntry(
+                                term=term,
+                                details=rule,
+                                metadata={
+                                    "type": "affix",
+                                    "pos": pos_category,
+                                    "affix_type": affix_key
+                                }
+                            ))
+
+    # Filter by query
+    if q:
+        q = q.lower()
+        items = [i for i in items if q in i.term.lower()]
+    
+    # Sort items by term
+    items.sort(key=lambda x: x.term)
+
+    # Pagination
+    total = len(items)
+    start = (page - 1) * page_size
+    end = start + page_size
+    paginated_items = items[start:end]
+    
+    total_pages = (total + page_size - 1) // page_size if page_size > 0 else 1
+
+    return LexiconSearchResponse(
+        items=paginated_items,
+        total=total,
+        page=page,
+        total_pages=total_pages
+    )
+
+
 @router.post("/tag", response_model=TagResponse)
 def tag_text(request: TagRequest):
     """
@@ -64,15 +174,44 @@ def tag_text(request: TagRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@router.post("/lemmatize", response_model=LemmatizeResponse)
+@router.post("/lemmatize", response_model=Union[LemmatizeResponse, MismatchResponse])
 def lemmatize_text(request: LemmatizeRequest):
     """
     Full lemmatization pipeline.
     Preprocesses text, tags POS, and extracts root words.
+    Includes dialect verification.
     """
     dialect = validate_dialect(request.dialect)
     
     try:
+        # Step 0: Dialect Verification
+        # We access the verifier from pipeline.py (it's initialized there)
+        from pipeline import _verifier
+        
+        # Only verify if NOT forced
+        if not request.force:
+            verification = _verifier.get_confidence(request.text, dialect)
+            
+            if not verification['is_match']:
+                # Calculate percentages for response
+                raw_scores = verification['scores']
+                total_score = sum(raw_scores.values())
+            
+                breakdown = {}
+                if total_score > 0:
+                    for d, score in raw_scores.items():
+                        breakdown[d] = round((score / total_score) * 100, 1)
+                else:
+                    breakdown = {d: 0.0 for d in ["ilocano", "cebuano", "hiligaynon"]}
+                    
+                return MismatchResponse(
+                    message="The input patterns suggest a different dialect.",
+                    detected_dialect=verification['detected'],
+                    confidence_scores=breakdown,
+                    status="error",
+                    error_code="DIALECT_MISMATCH"
+                )
+
         # Step 1: Preprocess (segment + tokenize)
         preprocessed = text_preprocess(request.text, dialect)
         

@@ -1,18 +1,8 @@
 {
-  "language": "hiligaynon",
-  "input": "Nagkaon ang bata sa balay.",
-  "total_tokens": 6,
+  "language": "cebuano",
+  "input": "Ang kamatuoran mogawas ra.",
+  "total_tokens": 5,
   "tokens": [
-    {
-      "token": "nagkaon",
-      "lemma": "kaon",
-      "pos": "VERB",
-      "type": "morphed",
-      "affixes": [
-        "prefix"
-      ],
-      "stripped": "nag"
-    },
     {
       "token": "ang",
       "lemma": "ang",
@@ -22,26 +12,28 @@
       "stripped": ""
     },
     {
-      "token": "bata",
-      "lemma": "bata",
+      "token": "kamatuoran",
+      "lemma": "kamatuoran",
       "pos": "NOUN",
       "type": "root",
       "affixes": [],
       "stripped": ""
     },
     {
-      "token": "sa",
-      "lemma": "sa",
-      "pos": "ADP",
-      "type": "function",
-      "affixes": [],
-      "stripped": ""
+      "token": "mogawas",
+      "lemma": "gawas",
+      "pos": "ADVERB",
+      "type": "morphed",
+      "affixes": [
+        "prefix"
+      ],
+      "stripped": "mo"
     },
     {
-      "token": "balay",
-      "lemma": "balay",
-      "pos": "NOUN",
-      "type": "root",
+      "token": "ra",
+      "lemma": "ra",
+      "pos": "PART",
+      "type": "morphed",
       "affixes": [],
       "stripped": ""
     },

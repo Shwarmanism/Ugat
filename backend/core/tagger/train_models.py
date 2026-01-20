@@ -40,9 +40,9 @@ LANGUAGE_CONFIGS: Dict[str, str] = {
 # CRF Training Parameters
 CRF_PARAMS = {
     "algorithm": "lbfgs",
-    "c1": 0.1,              # L1 regularization coefficient
-    "c2": 0.1,              # L2 regularization coefficient
-    "max_iterations": 100,
+    "c1": 0.1,
+    "c2": 0.05,            # Lower L2 slightly
+    "max_iterations": 200, # Increased from 100 to ensure convergence
     "all_possible_transitions": True,
 }
 
@@ -56,54 +56,42 @@ RANDOM_STATE = 42
 # ----------------------------
 # Data Preprocessing
 # ----------------------------
-def get_sentence_fingerprint(sentence_features: List[Dict]) -> str:
-    return " ".join(feat["token"] for feat in sentence_features)
+def get_sentence_fingerprint(sentence_features: List[Dict], labels: List[str]) -> str:
+    """Create a unique signature for a sentence + its tags."""
+    tokens = " ".join(feat["token"] for feat in sentence_features)
+    tags = " ".join(labels)
+    return f"{tokens}|||{tags}"
 
-
-def deduplicate_sentences( sentences: List[List[Dict]], 
-    labels: List[List[str]], verbose: bool = True
+def deduplicate_sentences(
+    sentences: List[List[Dict]], 
+    labels: List[List[str]], 
+    verbose: bool = True
 ) -> Tuple[List[List[Dict]], List[List[str]], Dict]:
-    """
-    Remove duplicate sentences from the dataset.
     
-    This prevents data leakage where the same sentence appears in both
-    training and test sets, which would artificially inflate accuracy.
-    
-    Args:
-        sentences: List of sentence feature lists
-        labels: Corresponding POS labels
-        verbose: Whether to print deduplication stats
-        
-    Returns:
-        Tuple of (unique_sentences, unique_labels, stats_dict)
-    """
-    seen_fingerprints = {}
+    seen_fingerprints = set()
     unique_sentences = []
     unique_labels = []
     duplicate_count = 0
     
     for sent, lbl in zip(sentences, labels):
-        fingerprint = get_sentence_fingerprint(sent)
+        # Pass BOTH sentence and label to fingerprint
+        fingerprint = get_sentence_fingerprint(sent, lbl)
         
         if fingerprint not in seen_fingerprints:
-            seen_fingerprints[fingerprint] = 1
+            seen_fingerprints.add(fingerprint)
             unique_sentences.append(sent)
             unique_labels.append(lbl)
         else:
-            seen_fingerprints[fingerprint] += 1
             duplicate_count += 1
     
-    # Collect stats
     stats = {
         "original_count": len(sentences),
         "unique_count": len(unique_sentences),
         "duplicates_removed": duplicate_count,
-        "duplicate_ratio": duplicate_count / len(sentences) if sentences else 0
     }
     
     if verbose and duplicate_count > 0:
         print(f"  ⚠ Deduplication: Removed {duplicate_count} duplicate sentences")
-        print(f"    ({stats['original_count']} → {stats['unique_count']} unique)")
     
     return unique_sentences, unique_labels, stats
 
@@ -113,13 +101,7 @@ def deduplicate_sentences( sentences: List[List[Dict]],
 # ----------------------------
 def load_crf_data(file_path: Path, deduplicate: bool = True) -> Tuple[List[List[Dict]], List[List[str]]]:
     """
-    Load CRF data from a tab-delimited file.
-
-    Expected format per line (7 columns, tab-separated):
-        token, lowercase, prefix3, suffix3, prev_word, next_word, POS_label
-    Returns:
-        Tuple of (sentences, labels) where each sentence is a list of 
-        feature dictionaries and labels is a list of POS tags
+    Load CRF data with ENHANCED feature extraction for Philippine languages.
     """
     sentences = []
     labels = []
@@ -133,7 +115,7 @@ def load_crf_data(file_path: Path, deduplicate: bool = True) -> Tuple[List[List[
         for line_num, line in enumerate(f, 1):
             line = line.strip()
             
-            # Empty line = sentence boundary (alternative to punctuation)
+            # Sentence boundary
             if not line:
                 if current_sentence:
                     sentences.append(current_sentence)
@@ -143,46 +125,61 @@ def load_crf_data(file_path: Path, deduplicate: bool = True) -> Tuple[List[List[
                 continue
 
             cols = line.split("\t")
-            if len(cols) != EXPECTED_COLUMNS:
-                # Skip malformed rows but warn if there are many
+            # Relaxed check: allow lines that might have fewer cols if we can salvage the token/label
+            if len(cols) < 2: 
                 continue
 
             token = cols[0]
-            features = cols[1:-1]  # 5 features
+            # If your file format varies, adjust index -1 for label
             label = cols[-1]
+            
+            # --- FEATURE ENGINEERING START ---
+            token_lower = token.lower()
+            
+            # Grab context from file columns if available, otherwise default
+            # (Assumes cols: token, lower, p3, s3, prev, next, label)
+            prev_word = cols[4] if len(cols) >= 6 else "BOS"
+            next_word = cols[5] if len(cols) >= 6 else "EOS"
 
-            # Build feature dictionary for this token
             token_features = {
+                # 1. Basic Identity
                 "token": token,
-                "lower": token.lower(),
-                "prefix3": features[0] if len(features) > 0 else token[:3].lower(),
-                "suffix3": features[1] if len(features) > 1 else token[-3:].lower(),
-                "prev_word": features[2] if len(features) > 2 else "BOS",
-                "next_word": features[3] if len(features) > 3 else "EOS",
+                "lower": token_lower,
                 
-                # Additional computed features
-                "is_title": token.istitle(),
-                "is_upper": token.isupper(),
-                "is_digit": token.isdigit(),
-                "length": str(len(token)),
+                # 2. Morphology (Crucial for Ilocano/Cebuano/Hiligaynon)
+                "prefix2": token_lower[:2],  # Captures 'um', 'in', 'ka', 'ma'
+                "prefix3": token_lower[:3],  # Captures 'nag', 'mag', 'pag'
+                "suffix2": token_lower[-2:], # Captures 'an', 'on', 'in'
+                "suffix3": token_lower[-3:], # Captures 'han', 'hon'
+                
+                # 3. Orthography & patterns
+                "is_first": len(current_sentence) == 0,
+                "is_last": False, # We can't know this yet, usually handled by 'next_word' being EOS
+                "is_capitalized": token[0].isupper(),
+                "is_all_caps": token.isupper(),
+                "is_numeric": token.isdigit(),
+                "has_hyphen": "-" in token, # CRITICAL for "nag-", "taga-", "maka-"
+                
+                # 4. Context Window (The "neighbors")
+                "prev_word": prev_word,
+                "next_word": next_word,
+                "prev_is_marker": prev_word.lower() in ["ti", "ni", "ang", "si", "ug", "sang", "sa", "iti"],
             }
+            # --- FEATURE ENGINEERING END ---
 
             current_sentence.append(token_features)
             current_labels.append(label)
 
-            # Punctuation marks sentence boundary
             if token in SENTENCE_END_PUNCT:
                 sentences.append(current_sentence)
                 labels.append(current_labels)
                 current_sentence = []
                 current_labels = []
 
-    # Don't forget the last sentence if no ending punctuation
     if current_sentence:
         sentences.append(current_sentence)
         labels.append(current_labels)
 
-    # Apply deduplication to prevent data leakage
     if deduplicate and sentences:
         sentences, labels, _ = deduplicate_sentences(sentences, labels)
 

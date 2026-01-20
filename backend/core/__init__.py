@@ -1,6 +1,8 @@
 # Preprocessing
 from .preprocessing import tokenizer, segmenter
 
+from .error_handling import DialectVerifier
+
 # Tagging
 from .tagger import (
     crf_predict,
@@ -31,4 +33,6 @@ __all__ = [
     "lemmatize",
     "is_root",
     "get_morph_engine",
+    #Error Handling
+    "DialectVerifier"
 ]
