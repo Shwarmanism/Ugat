@@ -267,6 +267,8 @@ class MorphologicalEngine:
             if len(parts) >= 2 and all(p == parts[0] for p in parts):
                 return parts[0]
 
+         
+
         # 2. Non-Hyphenated Full Reduplication (e.g., arawaraw)
         # Check if word is even length and halves are identical
         if len(word) >= 6 and len(word) % 2 == 0:
@@ -445,9 +447,9 @@ class MorphologicalEngine:
             if len(parts) == 2:
                 prefix_part, stem_part = parts
                 if prefix_part in prefixes and len(stem_part) >= 3:
-                    return { "lemma": stem_part, "rule": "Heuristic: Hyphen Stripping", "status": "heuristic", "affixes": [f"{prefix_part}-"], "pos": pos }
+                    return { "lemma": stem_part, "rule": "Heuristic: Hyphen Stripping", "status": "heuristic", "affixes": ["prefix"], "pos": pos }
                 if len(prefix_part) <= 4 and len(stem_part) >= 3:
-                    return { "lemma": stem_part, "rule": "Heuristic: Hyphen Stripping", "status": "heuristic", "affixes": [f"{prefix_part}-"], "pos": pos }
+                    return { "lemma": stem_part, "rule": "Heuristic: Hyphen Stripping", "status": "heuristic", "affixes": ["prefix"], "pos": pos }
         if applied_affixes and current_form != original_word:
             if len(current_form) >= 3:
                 return { "lemma": current_form, "rule": f"Heuristic: {'+'.join(applied_affixes)} (OOV)", "status": "heuristic", "affixes": applied_affixes, "pos": pos }
