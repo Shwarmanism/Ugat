@@ -50,7 +50,7 @@
                     </svg>
                     UGAT
                 </h1>
-                <p class="tagline">A Philippine Dialect Lemmatizer for Tagalog, Cebuano, and Ilocano</p>
+                <p class="tagline">A Philippine Dialect Lemmatizer for Hiligaynon, Cebuano, and Ilocano</p>
                 <p class="subtext">Supports affix stripping, morphological analysis, and dialect-specific lemma
                     generation.</p>
             </div>
@@ -67,9 +67,9 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
                 <div class="input-group">
                     <label for="dialectSelect">Select Dialect:</label>
                     <select id="dialectSelect">
+                        <option value="hiligaynon">Hiligaynon</option>
                         <option value="cebuano">Cebuano</option>
                         <option value="ilocano">Ilocano</option>
-                        <option value="hiligaynon">Hiligaynon</option>
                     </select>
                 </div>
 
@@ -110,7 +110,7 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
                                 <th id="thToken">Token</th>
                                 <th id="thPOS">POS Tag</th>
                                 <th id="thType">Type</th>
-                                <th id="thAffixes">Affixes</th>
+                                <th id="thAffixes">Affixes & Reduplication</th>
                                 <th id="thStripped">Stripped</th>
                                 <th id="thLemma">Lemma</th>
                             </tr>
@@ -192,18 +192,7 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
         <div class="container">
             <h1 style="margin-bottom: 2rem;">Processing History</h1>
             <div id="historyContent">
-                <div class="history-item">
-                    <div class="history-text">"Ang batang naglalaro sa labas"</div>
-                    <div class="history-meta">→ lemmas: bata, laro, labas (Tagalog) • 2 minutes ago</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-text">"Nagkaon na ko ug bugas"</div>
-                    <div class="history-meta">→ lemmas: kaon, bugas (Cebuano) • 15 minutes ago</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-text">"Mapan kami idiay merkado"</div>
-                    <div class="history-meta">→ lemmas: pan, merkado (Ilocano) • 1 hour ago</div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -231,8 +220,7 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
                         <span style="font-size: 0.9rem; color: #666; margin-right: 0.5rem;">Filter:</span>
                         <select id="lexiconDialectFilter"
                             style="border: none; padding: 0.6rem; font-size: 1rem; background: transparent; outline: none; cursor: pointer;">
-                            <option value="all">All Dialects</option>
-                            <option value="ilocano">Ilocano</option>
+                            <option value="ilocano" selected>Ilocano</option>
                             <option value="cebuano">Cebuano</option>
                             <option value="hiligaynon">Hiligaynon</option>
                         </select>
@@ -241,36 +229,7 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
 
                 <div class="results-table" style="margin-top: 2rem;">
                     <div id="lexiconTableContent">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Word</th>
-                                    <th>Dialect</th>
-                                    <th>POS</th>
-                                    <th>Notes</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>basa</td>
-                                    <td>Tagalog</td>
-                                    <td>Verb</td>
-                                    <td>Root word: to read</td>
-                                </tr>
-                                <tr>
-                                    <td>lakad</td>
-                                    <td>Tagalog</td>
-                                    <td>Verb</td>
-                                    <td>Root word: to walk</td>
-                                </tr>
-                                <tr>
-                                    <td>bata</td>
-                                    <td>Tagalog</td>
-                                    <td>Noun</td>
-                                    <td>Root word: child</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <!-- Dynamically populated by showLexiconTab() -->
                     </div>
                 </div>
             </div>
@@ -283,7 +242,8 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
             <div class="about-section">
                 <h2>Project Background</h2>
                 <p>The modern landscape of Natural Language Processing (NLP) remains heavily skewed toward high-resource
-                    languages like English. Philippine languages, including major dialects such as Tagalog, Cebuano, and
+                    languages like English. Philippine languages, including major dialects such as Hiligaynon, Cebuano,
+                    and
                     Ilocano, distinctly exemplify the challenge of processing low-resource languages with rich,
                     agglutinative morphology.</p>
                 <p><strong>Ugat</strong> is an intelligent system specifically designed to accurately detect and
@@ -295,12 +255,12 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
             <div class="about-section">
                 <h2>The NLP Problem We Address</h2>
                 <p>Philippine languages are characterized by complex word variations systematically derived from a
-                    single root through prefixes, infixes, suffixes, and reduplication. For example, the Tagalog root
+                    single root through prefixes, infixes, suffixes, and reduplication. For example, the Hiligaynon root
                     word <em>basa</em> (read) can transform into:</p>
                 <ul style="margin-left: 2rem; margin-top: 1rem;">
                     <li><strong>nagbasa</strong> — read (past tense)</li>
-                    <li><strong>bumabasa</strong> — reading (present tense)</li>
-                    <li><strong>babasahin</strong> — will be read (future tense)</li>
+                    <li><strong>nagabasa</strong> — reading (present tense)</li>
+                    <li><strong>basahon</strong> — will be read (future tense)</li>
                 </ul>
                 <p style="margin-top: 1rem;">This morphological complexity generates vast vocabulary permutations,
                     making it difficult for standard NLP systems to process them efficiently.</p>
