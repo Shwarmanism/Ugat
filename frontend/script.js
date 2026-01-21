@@ -19,6 +19,15 @@ window.addEventListener('load', () => {
 function showPage(pageId) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById(pageId).classList.add('active');
+    
+    // Show/hide navigation based on page
+    const nav = document.getElementById('mainNav');
+    if (pageId === 'landing') {
+        nav.classList.remove('show');
+    } else {
+        nav.classList.add('show');
+    }
+    
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
