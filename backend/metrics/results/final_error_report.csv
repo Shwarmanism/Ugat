@@ -1,0 +1,16 @@
+Dialect,Word,Actual_POS,CRF_POS,Actual_Lemma,CRF_Lemma
+ILOCANO,Agbuybuya,VERB,VERB,buya,agbuybuya
+ILOCANO,Agkatkatawa,VERB,VERB,katawa,agkatkatawa
+ILOCANO,idiay,ADP,ADV,idiay,diay
+ILOCANO,Nagkatawa,VERB,VERB,katawa,nagkatawa
+ILOCANO,ub-ubbing,NOUN,NOUN,ubing,ub-ubbing
+ILOCANO,Ag-agawid,VERB,VERB,awid,ag-agawid
+ILOCANO,Ginatangna,VERB,VERB,gatang,ginatangna
+ILOCANO,Linuto,VERB,VERB,luto,linuto
+ILOCANO,da,PRON,PRON,da,isúda
+ILOCANO,agturposka,VERB,VERB,turpos,agturposka
+ILOCANO,agtrabahoka,VERB,VERB,trabaho,agtrabahoka
+ILOCANO,idiay,ADP,ADV,idiay,diay
+ILOCANO,Manila,NOUN,NOUN,Manila,manila
+ILOCANO,Kayatko,VERB,VERB,kayat,kayatko
+ILOCANO,agbasa,VERB,VERB,basa,agbasa

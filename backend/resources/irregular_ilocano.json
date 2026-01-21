@@ -578,5 +578,9 @@
     "biagko": {
         "equivalent": "biag",
         "pos": "NOUN"
+    },
+    "ubbing": {
+        "equivalent": "ubing",
+        "pos": "NOUN"
     }
 }
