@@ -17,6 +17,7 @@
     "avanzada": "NOUN",
     "awag": "NOUN",
     "awan": "ADVERB",
+    "awid": "VERB",
     "baag": "NOUN",
     "baak": "ADJECTIVE",
     "babai": "ADJECTIVE",
@@ -668,7 +669,6 @@
     "gimo": "VERB",
     "gin": "VERB",
     "gina": "VERB",
-    "ginatang": "VERB",
     "gin-awa": "NOUN",
     "gind": "VERB",
     "ging": "VERB",
@@ -1481,7 +1481,7 @@
     "tabon": "NOUN",
     "tabuk": "NOUN",
     "trabaho": "VERB",
-    "turpos" : "VERB",
+    "turpos": "VERB",
     "tadek": "VERB",
     "tagay": "NOUN",
     "ub-ub": "NOUN",
@@ -1502,7 +1502,6 @@
     "yawi": "VERB",
     "dagiti": "DET",
     "iti": "ADP",
-    "ubbing": "NOUN",
     "parke": "NOUN",
     "tinapay": "NOUN"
 }

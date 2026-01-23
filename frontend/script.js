@@ -19,6 +19,15 @@ window.addEventListener('load', () => {
 function showPage(pageId) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById(pageId).classList.add('active');
+    
+    // Show/hide navigation based on page
+    const nav = document.getElementById('mainNav');
+    if (pageId === 'landing') {
+        nav.classList.remove('show');
+    } else {
+        nav.classList.add('show');
+    }
+    
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -281,7 +290,7 @@ async function showLexiconTab(tab) {
 
     // Get selected dialect filter
     const filterSelect = document.getElementById('lexiconDialectFilter');
-    const selectedDialect = filterSelect ? filterSelect.value : 'all';
+    const selectedDialect = filterSelect ? filterSelect.value : 'ilocano';
 
     let dialects = ['ilocano', 'cebuano', 'hiligaynon'];
 
@@ -292,7 +301,7 @@ async function showLexiconTab(tab) {
 
     // Parallel fetch for chosen dialects
     const requests = dialects.map(d =>
-        fetch(`${API_URL}/lexicon?type=${tab}&dialect=${d}&page_size=1000`)
+        fetch(`${API_URL}/lexicon?type=${tab}&dialect=${d}&page_size=5000`)
             .then(res => {
                 if (!res.ok) throw new Error(`Failed to fetch ${d}`);
                 return res.json();
@@ -434,6 +443,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    // Auto-load Ilocano root words on page load
+    showLexiconTab('roots');
 });
 
 // --- Mismatch Modal Helper Functions ---

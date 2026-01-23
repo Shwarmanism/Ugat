@@ -11,7 +11,7 @@ ILOCANO
 [TRICKY] Ag-agawid kami no malpas ti trabaho.
 # "Ag-agawid" -> Strip "Ag-" -> "Agawid" -> Strip "Ag-" (redup?) -> Lemma: "awid"
 # Note: "awid" needs to be in your dictionary for this to work.
-# If "awid" is missing, use "Ag-trabaho" below.
+# If "awid" is missing, use "Ag-    trabaho" below.
 EXPECTED: Ag-agawid/VERB/awid kami/PRON/kami no/CONJ/no malpas/VERB/malpas ti/DET/ti trabaho/NOUN/trabaho ./PUNCT/.
 
 [HARD] Ginatangna ti dakkel a tinapay.

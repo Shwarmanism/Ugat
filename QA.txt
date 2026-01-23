@@ -1,73 +1,73 @@
-# ==============================================================================
-# COMPLEX ILOCANO TEST CASES (Reduplication, Hyphens, Enclitics)
-# ==============================================================================
+    # ==============================================================================
+    # COMPLEX ILOCANO TEST CASES (Reduplication, Hyphens, Enclitics)
+    # ==============================================================================
 
-# ------------------------------------------------------------------------------
-# 1. REDUPLICATION (Progressive/Continuous Action)
-# ------------------------------------------------------------------------------
-# SCENARIO: "Agbuybuya" (Watching)
-# LOGIC: Root "buya" (watch). Prefix "Ag-". Reduplication "buy-".
-# ------------------------------------------------------------------------------
+    # ------------------------------------------------------------------------------
+    # 1. REDUPLICATION (Progressive/Continuous Action)
+    # ------------------------------------------------------------------------------
+    # SCENARIO: "Agbuybuya" (Watching)
+    # LOGIC: Root "buya" (watch). Prefix "Ag-". Reduplication "buy-".
+    # ------------------------------------------------------------------------------
 
-[COMPLEX] Agbuybuya dagiti ubbing iti plaza.
-# "Agbuybuya" -> Strip "Ag-" -> "Buybuya" -> Strip Redup "Buy-" -> Lemma: "buya"
-# "Ubbing" -> Plural of "ubing". Your dictionary has "ubbing", but "ubing" is the singular root.
-EXPECTED: Agbuybuya/VERB/buya dagiti/DET/dagiti ubbing/NOUN/ubing iti/ADP/iti plaza/NOUN/plaza ./PUNCT/.
+    [COMPLEX] Agbuybuya dagiti ubbing iti plaza.
+    # "Agbuybuya" -> Strip "Ag-" -> "Buybuya" -> Strip Redup "Buy-" -> Lemma: "buya"
+    # "Ubbing" -> Plural of "ubing". Your dictionary has "ubbing", but "ubing" is the singular root.
+    EXPECTED: Agbuybuya/VERB/buya dagiti/DET/dagiti ubbing/NOUN/ubing iti/ADP/iti plaza/NOUN/plaza ./PUNCT/.
 
-[COMPLEX] Agkatkatawa ti lalaki idiay balay.
-# "Agkatkatawa" -> Strip "Ag-" -> "Katkatawa" -> Strip Redup "Kat-" -> Lemma: "katawa"
-# Root "katawa" (laugh) and "lalaki" (man) are in your list.
-EXPECTED: Agkatkatawa/VERB/katawa ti/DET/ti lalaki/NOUN/lalaki idiay/ADP/idiay balay/NOUN/balay ./PUNCT/.
-
-
-# ------------------------------------------------------------------------------
-# 2. HYPHENATION (Vowel-Starting Roots & Plurals)
-# ------------------------------------------------------------------------------
-# SCENARIO: "Ub-ubbing" (Children - Reduplicated Plural with Hyphen)
-# LOGIC: Hyphens often confuse strippers. The engine must handle "ub-" as a redup pattern.
-# ------------------------------------------------------------------------------
-
-[TRICKY] Nagkatawa dagiti ub-ubbing.
-# "Nagkatawa" -> Strip "Nag-" -> Lemma: "katawa"
-# "Ub-ubbing" -> Strip "Ub-" (redup) -> Lemma: "ubing"
-EXPECTED: Nagkatawa/VERB/katawa dagiti/DET/dagiti ub-ubbing/NOUN/ubing ./PUNCT/.
-
-[TRICKY] Ag-agawid kami no malpas ti trabaho.
-# "Ag-agawid" -> Strip "Ag-" -> "Agawid" -> Strip "Ag-" (redup?) -> Lemma: "awid"
-# Note: "awid" needs to be in your dictionary for this to work.
-# If "awid" is missing, use "Ag-trabaho" below.
-EXPECTED: Ag-agawid/VERB/awid kami/PRON/kami no/CONJ/no malpas/VERB/malpas ti/DET/ti trabaho/NOUN/trabaho ./PUNCT/.
+    [COMPLEX] Agkatkatawa ti lalaki idiay balay.
+    # "Agkatkatawa" -> Strip "Ag-" -> "Katkatawa" -> Strip Redup "Kat-" -> Lemma: "katawa"
+    # Root "katawa" (laugh) and "lalaki" (man) are in your list.
+    EXPECTED: Agkatkatawa/VERB/katawa ti/DET/ti lalaki/NOUN/lalaki idiay/ADP/idiay balay/NOUN/balay ./PUNCT/.
 
 
-# ------------------------------------------------------------------------------
-# 3. COMPLEX AFFIXES (Infix + Suffix + Enclitic)
-# ------------------------------------------------------------------------------
-# SCENARIO: "Ginatangna" (He/She bought it)
-# LOGIC: Root "gatang". Infix "-in-" (Past). Suffix "-na" (He/She).
-# ------------------------------------------------------------------------------
+    # ------------------------------------------------------------------------------
+    # 2. HYPHENATION (Vowel-Starting Roots & Plurals)
+    # ------------------------------------------------------------------------------
+    # SCENARIO: "Ub-ubbing" (Children - Reduplicated Plural with Hyphen)
+    # LOGIC: Hyphens often confuse strippers. The engine must handle "ub-" as a redup pattern.
+    # ------------------------------------------------------------------------------
 
-[HARD] Ginatangna ti dakkel a tinapay.
-# "Ginatangna" -> Strip "-na" -> "Ginatang" -> Strip "-in-" -> Lemma: "gatang"
-EXPECTED: Ginatangna/VERB/gatang ti/DET/ti dakkel/ADJ/dakkel a/PART/a tinapay/NOUN/tinapay ./PUNCT/.
+    [TRICKY] Nagkatawa dagiti ub-ubbing.
+    # "Nagkatawa" -> Strip "Nag-" -> Lemma: "katawa"
+    # "Ub-ubbing" -> Strip "Ub-" (redup) -> Lemma: "ubing"
+    EXPECTED: Nagkatawa/VERB/katawa dagiti/DET/dagiti ub-ubbing/NOUN/ubing ./PUNCT/.
 
-[HARD] Linuto da ti manok para kenkuana.
-# "Linuto" -> Strip "-in-" -> Lemma: "luto"
-# "Kenkuana" (Him/Her) is in your dictionary.
-EXPECTED: Linuto/VERB/luto da/PRON/da ti/DET/ti manok/NOUN/manok para/PREP/para kenkuana/PRON/kenkuana ./PUNCT/.
+    [TRICKY] Ag-agawid kami no malpas ti trabaho.
+    # "Ag-agawid" -> Strip "Ag-" -> "Agawid" -> Strip "Ag-" (redup?) -> Lemma: "awid"
+    # Note: "awid" needs to be in your dictionary for this to work.
+    # If "awid" is missing, use "Ag-trabaho" below.
+    EXPECTED: Ag-agawid/VERB/awid kami/PRON/kami no/CONJ/no malpas/VERB/malpas ti/DET/ti trabaho/NOUN/trabaho ./PUNCT/.
 
 
-# ------------------------------------------------------------------------------
-# 4. MULTI-CLAUSE SENTENCES (Conditionals)
-# ------------------------------------------------------------------------------
-# SCENARIO: "If... Then..." (Nu... Ket...)
-# ------------------------------------------------------------------------------
+    # ------------------------------------------------------------------------------
+    # 3. COMPLEX AFFIXES (Infix + Suffix + Enclitic)
+    # ------------------------------------------------------------------------------
+    # SCENARIO: "Ginatangna" (He/She bought it)
+    # LOGIC: Root "gatang". Infix "-in-" (Past). Suffix "-na" (He/She).
+    # ------------------------------------------------------------------------------
 
-[COMPLEX] Nu agturposka, agtrabahoka idiay Manila.
-# "Agturposka" -> Strip "-ka" -> "Agturpos" -> Strip "Ag-" -> Lemma: "turpos"
-# "Agtrabahoka" -> Strip "-ka" -> "Agtrabaho" -> Strip "Ag-" -> Lemma: "trabaho"
-EXPECTED: Nu/CONJ/nu agturposka/VERB/turpos ,/PUNCT agtrabahoka/VERB/trabaho idiay/ADP/idiay Manila/NOUN/Manila ./PUNCT/.
+    [HARD] Ginatangna ti dakkel a tinapay.
+    # "Ginatangna" -> Strip "-na" -> "Ginatang" -> Strip "-in-" -> Lemma: "gatang"
+    EXPECTED: Ginatangna/VERB/gatang ti/DET/ti dakkel/ADJ/dakkel a/PART/a tinapay/NOUN/tinapay ./PUNCT/.
 
-[COMPLEX] Kayatko nga agbasa ti libro ngem awan ti oras.
-# "Kayatko" -> Strip "-ko" (I want) -> Lemma: "kayat"
-# "Agbasa" -> Strip "Ag-" -> Lemma: "basa"
-EXPECTED: Kayatko/VERB/kayat nga/PART/nga agbasa/VERB/basa ti/DET/ti libro/NOUN/libro ngem/CONJ/ngem awan/ADV/awan ti/DET/ti oras/NOUN/oras ./PUNCT/.
+    [HARD] Linuto da ti manok para kenkuana.
+    # "Linuto" -> Strip "-in-" -> Lemma: "luto"
+    # "Kenkuana" (Him/Her) is in your dictionary.
+    EXPECTED: Linuto/VERB/luto da/PRON/da ti/DET/ti manok/NOUN/manok para/PREP/para kenkuana/PRON/kenkuana ./PUNCT/.
+
+
+    # ------------------------------------------------------------------------------
+    # 4. MULTI-CLAUSE SENTENCES (Conditionals)
+    # ------------------------------------------------------------------------------
+    # SCENARIO: "If... Then..." (Nu... Ket...)
+    # ------------------------------------------------------------------------------
+
+    [COMPLEX] Nu agturposka, agtrabahoka idiay Manila.
+    # "Agturposka" -> Strip "-ka" -> "Agturpos" -> Strip "Ag-" -> Lemma: "turpos"
+    # "Agtrabahoka" -> Strip "-ka" -> "Agtrabaho" -> Strip "Ag-" -> Lemma: "trabaho"
+    EXPECTED: Nu/CONJ/nu agturposka/VERB/turpos ,/PUNCT agtrabahoka/VERB/trabaho idiay/ADP/idiay Manila/NOUN/Manila ./PUNCT/.
+
+    [COMPLEX] Kayatko nga agbasa ti libro ngem awan ti oras.
+    # "Kayatko" -> Strip "-ko" (I want) -> Lemma: "kayat"
+    # "Agbasa" -> Strip "Ag-" -> Lemma: "basa"
+    EXPECTED: Kayatko/VERB/kayat nga/PART/nga agbasa/VERB/basa ti/DET/ti libro/NOUN/libro ngem/CONJ/ngem awan/ADV/awan ti/DET/ti oras/NOUN/oras ./PUNCT/.

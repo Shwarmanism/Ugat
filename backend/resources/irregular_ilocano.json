@@ -445,7 +445,10 @@
     },
     "ammoda": {
         "equivalent": "ammot",
-        "pos": ["VERB", "NOUN"]
+        "pos": [
+            "VERB",
+            "NOUN"
+        ]
     },
     "nalaing": {
         "equivalent": "laing",
@@ -549,7 +552,10 @@
     },
     "saan met": {
         "equivalent": "saan",
-        "pos": ["ADJ", "ADV"]
+        "pos": [
+            "ADJ",
+            "ADV"
+        ]
     },
     "saanen": {
         "equivalent": "saan",
@@ -577,6 +583,10 @@
     },
     "biagko": {
         "equivalent": "biag",
+        "pos": "NOUN"
+    },
+    "ubbing": {
+        "equivalent": "ubing",
         "pos": "NOUN"
     }
 }
