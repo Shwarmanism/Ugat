@@ -329,7 +329,6 @@ def process_tokens(tagged_data: Dict, mode: str = "crf") -> Dict:
                 print(f"DEBUG: Token='{token}', Root='{morph_result['root']}', Stripped='{stripped_content}'")
                 
                 # If specific affixes were found, try to reconstruct stripped from them if direct replace is messy
-                # If specific affixes were found, try to reconstruct stripped from them if direct replace is messy
                 if not stripped_content and morph_result["affixes"]:
                      # Simple heuristic: join affixes and remove hyphens
                      stripped_content = "".join(a.replace("-", "") for a in morph_result["affixes"])
@@ -424,43 +423,3 @@ def main_pipeline(raw_text, lang, mode="crf"):
         json.dump(result, f, indent=2, ensure_ascii=False)
     
     return result
-
-    
-if __name__ == "__main__":  
-    print("="*60)
-    print("🛠️  PIPELINE MISMATCH TEST")
-    print("="*60)
-
-    # 1. DEFINE A MISMATCH SCENARIO
-    # "Nagdalagan ang ido" is Hiligaynon (The dog ran).
-    # But the user mistakenly selects "cebuano".
-    test_text = "Nagdalagan ang ido" 
-    selected_dialect = "cebuano"
-
-    print(f"📝 Input Text:      '{test_text}'")
-    print(f"👉 User Selection:  '{selected_dialect}'")
-    print("-" * 60)
-
-    # 2. RUN PIPELINE
-    # This should trigger the Gatekeeper (Step 0) and block the request.
-    result = main_pipeline(test_text, selected_dialect, mode="crf")
-
-    # 3. ANALYZE THE RESPONSE
-    print("\n🔍 SYSTEM RESPONSE:")
-    if result.get("status") == "error":
-        print(f"   [SUCCESS] The system blocked the mismatch!")
-        print(f"   Error Code:   {result.get('error_code')}")
-        print(f"   Message:      {result.get('message')}")
-        print(f"   Detected:     {result.get('detected_dialect').upper()}")
-        print(f"   Suggestion:   {result.get('suggestion')}")
-        
-        # Display the scores like your Frontend would
-        print(f"\n   📊 Confidence Scores (Frontend Data):")
-        scores = result.get('confidence_scores', {})
-        for dialect, score in scores.items():
-            bar = "█" * (score // 5)  # Simple ASCII bar chart
-            print(f"      {dialect.title():<12}: {score}%  {bar}")
-            
-    else:
-        print("   [FAILED] The system allowed the mismatch (Check your DialectVerifier logic).")
-        print(result)
