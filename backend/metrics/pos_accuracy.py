@@ -145,7 +145,7 @@ ax = sns.barplot(
     x="Dialect", 
     y="Accuracy", 
     hue="Model", 
-    palette=["#95a5a6", "#2ecc71"], # Grey for Rule-Based, Green for Hybrid
+    palette=["#34495e", "#3498db"], # Grey for Rule-Based, Green for Hybrid
     edgecolor="0.2"
 )
 
