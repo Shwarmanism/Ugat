@@ -53,9 +53,9 @@ nav {
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
+
 
 .logo {
     display: flex;
@@ -76,6 +76,8 @@ nav {
     display: flex;
     gap: 2rem;
     list-style: none;
+    flex: 1;
+    justify-content: flex-end;
 }
 
 .nav-links a {
@@ -390,6 +392,7 @@ footer {
 
 .page.active {
     display: block;
+    min-height: 60vh;
 }
 
 .about-section {
@@ -711,4 +714,483 @@ footer {
     background: transparent;
     transform: none;
     box-shadow: none;
+}
+
+/* ============================================
+   LANDING PAGE STYLES
+   ============================================ */
+
+#mainNav {
+    display: none;
+}
+
+#mainNav.show {
+    display: block;
+}
+
+#landingNav {
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    box-shadow: none;
+    top: 0;
+    z-index: 100;
+}
+
+/* Center UGAT logo on landing page */
+#landingNav .nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#landingNav .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+}
+
+.back-to-landing-btn {
+    background: var(--gold) !important;
+    color: var(--deep-brown) !important;
+    padding: 0.6rem 1.5rem !important;
+    border-radius: 50px !important;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: auto;
+}
+
+.back-to-landing-btn:hover {
+    background: #ffca28 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+}
+
+.back-to-landing-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.landing-hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4e342e 0%, #5d4037 50%, #6d4c41 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 8rem 0 4rem;
+}
+
+.landing-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.03) 20px, rgba(255,255,255,0.03) 40px),
+        repeating-linear-gradient(-45deg, transparent, transparent 20px, rgba(255,255,255,0.02) 20px, rgba(255,255,255,0.02) 40px);
+}
+
+.landing-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 8rem;  
+    position: relative;
+    z-index: 1;
+}
+
+.landing-text {
+    flex: 1;
+    color: white;
+    text-align: left;
+    padding-right: 4rem;  
+    max-width: 600px;
+    position: relative;
+}
+
+
+.landing-text::after {
+    content: '';
+    position: absolute;
+    right: -4rem;  
+    top: 10%;
+    bottom: 10%;
+    width: 2px;
+    background: linear-gradient(
+        to bottom, 
+        transparent, 
+        rgba(255, 193, 7, 0.6), 
+        rgba(255, 193, 7, 0.6), 
+        transparent
+    );
+}
+
+.landing-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 193, 7, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.badge-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--gold);
+}
+
+.landing-badge span {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.landing-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.landing-title .highlight {
+    color: var(--gold);
+    position: relative;
+}
+
+.landing-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    text-align: left;
+}
+
+.landing-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    justify-content: flex-start;
+}
+
+.feature-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.feature-chip svg {
+    width: 18px;
+    height: 18px;
+    color: var(--gold);
+}
+
+.btn-hero {
+    background: var(--gold);
+    color: var(--deep-brown);
+    border: none;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 193, 7, 0.3);
+}
+
+.btn-hero:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 193, 7, 0.4);
+    background: #ffca28;
+}
+
+.btn-hero svg {
+    width: 20px;
+    height: 20px;
+}
+
+.landing-image {
+    flex: 1.2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+    overflow: visible;
+}
+
+.hero-img {
+    width: 110%;  /* Increased from 100% */
+    max-width: 650px;  /* Increased from 500px */
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+/* Stats Section */
+.stats-section {
+    background: white;
+    padding: 4rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f9f9f9 0%, #fff 100%);
+    border-radius: 15px;
+    border: 2px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--shadow);
+    border-color: var(--gold);
+}
+
+.stat-card .stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--warm-green);
+    margin-bottom: 0.5rem;
+}
+
+.stat-card .stat-label {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Features Section */
+.features-section {
+    background: var(--pale-beige);
+    padding: 5rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--deep-brown);
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.feature-icon svg {
+    width: 35px;
+    height: 35px;
+    color: white;
+}
+
+.feature-card h3 {
+    color: var(--deep-brown);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Team Section */
+.team-section {
+    background: white;
+    padding: 5rem 0;
+}
+
+.team-grid-landing {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.team-card {
+    background: linear-gradient(135deg, #f9f9f9 0%, #fff 100%);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid #f0f0f0;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--warm-green);
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+    border: 4px solid var(--gold);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-card h3 {
+    color: var(--deep-brown);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.team-role {
+    color: var(--warm-green);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.team-school {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--deep-brown) 0%, #5d4037 100%);
+    padding: 5rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.03) 20px, rgba(255,255,255,0.03) 40px);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-section h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Responsive adjustments for landing page */
+@media (max-width: 768px) {
+    .landing-content {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 4rem;
+    }
+
+    .landing-title {
+        font-size: 2.5rem;
+    }
+
+    .landing-image {
+        margin-top: 3rem;
+    }
+
+    .features-grid,
+    .team-grid-landing {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

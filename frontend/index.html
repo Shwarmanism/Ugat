@@ -9,11 +9,219 @@
 </head>
 
 <body>
+    <!-- LANDING PAGE -->
+    <div id="landing" class="page active">
+        <nav id="landingNav">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <svg class="logo-icon" viewBox="0 0 100 100" fill="currentColor">
+                        <path d="M50 90 L50 50 M50 50 L30 30 M50 50 L70 30 M30 30 L20 40 M70 30 L80 40 M50 50 L50 10" stroke="currentColor" stroke-width="4" fill="none"/>
+                        <circle cx="50" cy="10" r="5" fill="currentColor"/>
+                        <circle cx="20" cy="40" r="4" fill="currentColor"/>
+                        <circle cx="80" cy="40" r="4" fill="currentColor"/>
+                    </svg>
+                    UGAT
+                </a>
+            </div>
+        </nav>
+
+        <div class="landing-hero">
+            <div class="landing-content">
+                <div class="landing-text">
+                    <div class="landing-badge">
+                        <svg class="badge-icon" viewBox="0 0 100 100" fill="currentColor">
+                            <path d="M50 90 L50 50 M50 50 L25 25 M50 50 L75 25 M25 25 L10 35 M75 25 L90 35" stroke="currentColor" stroke-width="5" fill="none"/>
+                            <circle cx="50" cy="10" r="8" fill="currentColor"/>
+                            <circle cx="10" cy="35" r="6" fill="currentColor"/>
+                            <circle cx="90" cy="35" r="6" fill="currentColor"/>
+                        </svg>
+                        <span>Philippine NLP Innovation</span>
+                    </div>
+                    <h1 class="landing-title">
+                        Discover the <span class="highlight">Roots</span> of Philippine Languages
+                    </h1>
+                    <p class="landing-subtitle">
+                        UGAT is an intelligent lemmatization system for Cebuano, Ilocano, and Hiligaynon. Transform inflected words into their base forms with advanced morphological analysis.
+                    </p>
+                    <div class="landing-features">
+                        <div class="feature-chip">
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            Affix Stripping
+                        </div>
+                        <div class="feature-chip">
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            Morphological Analysis
+                        </div>
+                        <div class="feature-chip">
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            Multi-Dialect Support
+                        </div>
+                    </div>
+                    <button class="btn-hero" onclick="showPage('home')">
+                        Get Started
+                        <svg viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="landing-image">
+                    <img src="img/Landing.png" alt="Philippine Languages Visualization" class="hero-img">
+                    <div class="image-decoration"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Languages Supported</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Affix Rules</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Root Words</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Fast</div>
+                        <div class="stat-label">Processing Speed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features-section">
+            <div class="container">
+                <h2 class="section-title">Powerful Features for Philippine Languages</h2>
+                <p class="section-subtitle">Advanced morphological processing designed specifically for low-resource Philippine languages</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #7cb342 0%, #689f38 100%);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Intelligent Affix Detection</h3>
+                        <p>Automatically identifies and strips prefixes, suffixes, and infixes across multiple Philippine dialects</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #ffc107 0%, #ffa000 100%);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h3>Real-time Processing</h3>
+                        <p>Get instant lemmatization results with detailed morphological breakdowns</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #4e342e 0%, #3e2723 100%);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12"/>
+                            </svg>
+                        </div>
+                        <h3>Comprehensive Lexicon</h3>
+                        <p>Built-in dictionary of root words, irregular forms, and morphological rules</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <div class="team-section">
+            <div class="container">
+                <h2 class="section-title">Meet the Development Team</h2>
+                <p class="section-subtitle">Computer Science students from Polytechnic University of the Philippines</p>
+                
+                <div class="team-grid-landing">
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="img/Danielo.jpg" alt="Danielo Kim Ang">
+                        </div>
+                        <h3>Danielo Kim Ang</h3>
+                        <p class="team-role">Developer</p>
+                        <p class="team-school">CCIS, Polytechnic University of the Philippines</p>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="img/nhico.jpg" alt="Nhico Jhon Paragas">
+                        </div>
+                        <h3>Nhico Jhon Paragas</h3>
+                        <p class="team-role">Developer</p>
+                        <p class="team-school">CCIS, Polytechnic University of the Philippines</p>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="img/kristine.JPEG" alt="Kristine Patoc">
+                        </div>
+                        <h3>Kristine Patoc</h3>
+                        <p class="team-role">Developer</p>
+                        <p class="team-school">CCIS, Polytechnic University of the Philippines</p>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="img/Isaac.png" alt="Isaac Emmanuel Ylanan">
+                        </div>
+                        <h3>Isaac Emmanuel Ylanan</h3>
+                        <p class="team-role">Developer</p>
+                        <p class="team-school">CCIS, Polytechnic University of the Philippines</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Explore Philippine Language Roots?</h2>
+                    <p>Start lemmatizing Cebuano, Ilocano, and Hiligaynon text today</p>
+                    <button class="btn-hero" onclick="showPage('home')">
+                        Get Started Now
+                        <svg viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<body>
     <div class="pattern-header"></div>
 
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="logo" onclick="showPage('home')">
+   <nav id="mainNav">
+    <div class="nav-container">
+        <div class="nav-left">
+            <a href="#" class="back-to-landing-btn" onclick="showPage('landing')">
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
+                </svg>
+                Back to Landing
+            </a>
+            <a href="#" class="logo" onclick="showPage('landing')">
                 <svg class="logo-icon" viewBox="0 0 100 100" fill="currentColor">
                     <path d="M50 90 L50 50 M50 50 L30 30 M50 50 L70 30 M30 30 L20 40 M70 30 L80 40 M50 50 L50 10"
                         stroke="currentColor" stroke-width="4" fill="none" />
@@ -23,18 +231,19 @@
                 </svg>
                 UGAT
             </a>
-            <ul class="nav-links">
-                <li><a href="#" onclick="showPage('home')">Home</a></li>
-                <li><a href="#" onclick="showPage('settings')">Settings</a></li>
-                <li><a href="#" onclick="showPage('history')">History</a></li>
-                <li><a href="#" onclick="showPage('lexicon')">Lexicon</a></li>
-                <li><a href="#" onclick="showPage('about')">About</a></li>
-            </ul>
         </div>
-    </nav>
+        <ul class="nav-links">
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('settings')">Settings</a></li>
+            <li><a href="#" onclick="showPage('history')">History</a></li>
+            <li><a href="#" onclick="showPage('lexicon')">Lexicon</a></li>
+            <li><a href="#" onclick="showPage('about')">About</a></li>
+        </ul>
+    </div>
+</nav>
 
     <!-- HOME PAGE -->
-    <div id="home" class="page active">
+    <div id="home" class="page">
         <div class="container">
             <div class="hero">
                 <h1>
@@ -50,7 +259,7 @@
                     </svg>
                     UGAT
                 </h1>
-                <p class="tagline">A Philippine Dialect Lemmatizer for Tagalog, Cebuano, and Ilocano</p>
+                <p class="tagline">A Philippine Dialect Lemmatizer for Hiligaynon, Cebuano, and Ilocano</p>
                 <p class="subtext">Supports affix stripping, morphological analysis, and dialect-specific lemma
                     generation.</p>
             </div>
@@ -67,9 +276,9 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
                 <div class="input-group">
                     <label for="dialectSelect">Select Dialect:</label>
                     <select id="dialectSelect">
+                        <option value="hiligaynon">Hiligaynon</option>
                         <option value="cebuano">Cebuano</option>
                         <option value="ilocano">Ilocano</option>
-                        <option value="hiligaynon">Hiligaynon</option>
                     </select>
                 </div>
 
@@ -110,7 +319,7 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
                                 <th id="thToken">Token</th>
                                 <th id="thPOS">POS Tag</th>
                                 <th id="thType">Type</th>
-                                <th id="thAffixes">Affixes</th>
+                                <th id="thAffixes">Affixes & Reduplication</th>
                                 <th id="thStripped">Stripped</th>
                                 <th id="thLemma">Lemma</th>
                             </tr>
@@ -192,18 +401,7 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
         <div class="container">
             <h1 style="margin-bottom: 2rem;">Processing History</h1>
             <div id="historyContent">
-                <div class="history-item">
-                    <div class="history-text">"Ang batang naglalaro sa labas"</div>
-                    <div class="history-meta">→ lemmas: bata, laro, labas (Tagalog) • 2 minutes ago</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-text">"Nagkaon na ko ug bugas"</div>
-                    <div class="history-meta">→ lemmas: kaon, bugas (Cebuano) • 15 minutes ago</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-text">"Mapan kami idiay merkado"</div>
-                    <div class="history-meta">→ lemmas: pan, merkado (Ilocano) • 1 hour ago</div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -231,8 +429,7 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
                         <span style="font-size: 0.9rem; color: #666; margin-right: 0.5rem;">Filter:</span>
                         <select id="lexiconDialectFilter"
                             style="border: none; padding: 0.6rem; font-size: 1rem; background: transparent; outline: none; cursor: pointer;">
-                            <option value="all">All Dialects</option>
-                            <option value="ilocano">Ilocano</option>
+                            <option value="ilocano" selected>Ilocano</option>
                             <option value="cebuano">Cebuano</option>
                             <option value="hiligaynon">Hiligaynon</option>
                         </select>
@@ -241,36 +438,7 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
 
                 <div class="results-table" style="margin-top: 2rem;">
                     <div id="lexiconTableContent">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Word</th>
-                                    <th>Dialect</th>
-                                    <th>POS</th>
-                                    <th>Notes</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>basa</td>
-                                    <td>Tagalog</td>
-                                    <td>Verb</td>
-                                    <td>Root word: to read</td>
-                                </tr>
-                                <tr>
-                                    <td>lakad</td>
-                                    <td>Tagalog</td>
-                                    <td>Verb</td>
-                                    <td>Root word: to walk</td>
-                                </tr>
-                                <tr>
-                                    <td>bata</td>
-                                    <td>Tagalog</td>
-                                    <td>Noun</td>
-                                    <td>Root word: child</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <!-- Dynamically populated by showLexiconTab() -->
                     </div>
                 </div>
             </div>
@@ -283,7 +451,8 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
             <div class="about-section">
                 <h2>Project Background</h2>
                 <p>The modern landscape of Natural Language Processing (NLP) remains heavily skewed toward high-resource
-                    languages like English. Philippine languages, including major dialects such as Tagalog, Cebuano, and
+                    languages like English. Philippine languages, including major dialects such as Hiligaynon, Cebuano,
+                    and
                     Ilocano, distinctly exemplify the challenge of processing low-resource languages with rich,
                     agglutinative morphology.</p>
                 <p><strong>Ugat</strong> is an intelligent system specifically designed to accurately detect and
@@ -295,12 +464,12 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
             <div class="about-section">
                 <h2>The NLP Problem We Address</h2>
                 <p>Philippine languages are characterized by complex word variations systematically derived from a
-                    single root through prefixes, infixes, suffixes, and reduplication. For example, the Tagalog root
+                    single root through prefixes, infixes, suffixes, and reduplication. For example, the Hiligaynon root
                     word <em>basa</em> (read) can transform into:</p>
                 <ul style="margin-left: 2rem; margin-top: 1rem;">
                     <li><strong>nagbasa</strong> — read (past tense)</li>
-                    <li><strong>bumabasa</strong> — reading (present tense)</li>
-                    <li><strong>babasahin</strong> — will be read (future tense)</li>
+                    <li><strong>nagabasa</strong> — reading (present tense)</li>
+                    <li><strong>basahon</strong> — will be read (future tense)</li>
                 </ul>
                 <p style="margin-top: 1rem;">This morphological complexity generates vast vocabulary permutations,
                     making it difficult for standard NLP systems to process them efficiently.</p>
@@ -423,7 +592,7 @@ Example: Ang mga batang naglalaro sa labas ay masasaya."></textarea>
         <p>Ugat - Philippine Dialect Lemmatizer </p>
         <p style="margin-top: 0.5rem; font-size: 0.9rem;">Empowering low-resource Philippine languages through NLP
             technology</p>
-        <p>@2025 All rights reserved
+        <p>@2026 All rights reserved
             Made by students of Polytechnic University of the Philippines-Manila</p>
     </footer>
 
